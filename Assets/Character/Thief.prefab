@@ -492,7 +492,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.1
-  camSpeed: 12
+  camSpeed: 10
 --- !u!1 &6501310672267175682
 GameObject:
   m_ObjectHideFlags: 0
