@@ -9,6 +9,7 @@ public class GuardMovement : MonoBehaviour {
 
       private void Start() {
             controller = GetComponent<CharacterController>();
+            Cursor.lockState = CursorLockMode.Locked;
       }
 
       private void FixedUpdate() {
