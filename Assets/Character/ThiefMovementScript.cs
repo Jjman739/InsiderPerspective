@@ -7,17 +7,17 @@ public class ThiefMovementScript : MonoBehaviour {
       private CharacterController controller;
       private Camera mainCamera;
 
-      public float speed = 0.1f;
-      public float camSpeed = 5f;
+      public float moveSpeed = 0.1f;
+      public float turnSpeed = 5f;
 
       private void Start() {
             controller = GetComponent<CharacterController>();
       }
 
       private void FixedUpdate() {
-            Vector3 move = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
-            Vector3 twist = new Vector3(0, Input.GetAxis("Mouse X"), 0);
-            controller.Move(transform.rotation * move * speed);
-            transform.Rotate(camSpeed * twist);
+            Vector3 move = new Vector3(0, 0, Input.GetAxis("ThiefMove"));
+            Vector3 twist = new Vector3(0, Input.GetAxis("ThiefTurn"), 0);
+            controller.Move(transform.rotation * move * moveSpeed);
+            transform.Rotate(turnSpeed * twist);
       }
 }
