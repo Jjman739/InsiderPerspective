@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GuardMovement : MonoBehaviour {
       private CharacterController controller;
+      private bool interacting = false;
 
       public float turnSpeed = 5f;
 
@@ -21,5 +22,18 @@ public class GuardMovement : MonoBehaviour {
                   euler.x = 315;
             }
             transform.rotation = Quaternion.Euler(euler.x, euler.y, 0);
+      }
+
+      private void Update() {
+            if (Input.GetButton("GuardInteract")) {
+                  if (!interacting) {
+                        interacting = true;
+                        Debug.Log("Hello!");
+                  }
+            } else {
+                  if (interacting) {
+                        interacting = false;
+                  }
+            }
       }
 }
