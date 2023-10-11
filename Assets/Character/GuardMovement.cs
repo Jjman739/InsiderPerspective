@@ -3,13 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class GuardMovement : MonoBehaviour {
-      private CharacterController controller;
       private bool interacting = false;
 
       public float turnSpeed = 5f;
 
       private void Start() {
-            controller = GetComponent<CharacterController>();
             Cursor.lockState = CursorLockMode.Locked;
       }
 
