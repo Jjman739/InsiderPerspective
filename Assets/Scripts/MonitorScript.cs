@@ -19,6 +19,7 @@ public class MonitorScript : MonoBehaviour
 
     public void Freeze() {
           source.enabled = false;
+          freezeTime = 5;
           Debug.Log("Froze camera: "+source.name);
     }
 

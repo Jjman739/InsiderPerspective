@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class GuardMovement : MonoBehaviour {
       private bool interacting = false;
@@ -31,15 +32,20 @@ public class GuardMovement : MonoBehaviour {
                         RaycastHit hitInfo;
                         float maxDistance = 100f;
                         if (Physics.Raycast(origin, direction, out hitInfo, maxDistance)) {
-                              Debug.Log("Hit "+hitInfo.collider.name);
-                        } else {
-                              Debug.Log("No hit.");
+                              Interact(hitInfo.collider.gameObject);
                         }
                   }
             } else {
                   if (interacting) {
                         interacting = false;
                   }
+            }
+      }
+
+      private void Interact(GameObject target) {
+            MonitorScript monitor = target.GetComponent<MonitorScript>();
+            if (monitor != null) {
+                  monitor.Freeze();
             }
       }
 }
