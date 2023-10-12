@@ -26,7 +26,15 @@ public class GuardMovement : MonoBehaviour {
             if (Input.GetButton("GuardInteract")) {
                   if (!interacting) {
                         interacting = true;
-                        Debug.Log("Hello!");
+                        Vector3 origin = gameObject.transform.position;
+                        Vector3 direction = gameObject.transform.forward;
+                        RaycastHit hitInfo;
+                        float maxDistance = 100f;
+                        if (Physics.Raycast(origin, direction, out hitInfo, maxDistance)) {
+                              Debug.Log("Hit "+hitInfo.collider.name);
+                        } else {
+                              Debug.Log("No hit.");
+                        }
                   }
             } else {
                   if (interacting) {
