@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class ThiefMovementScript : MonoBehaviour {
+      //TODO: test comment, delete this immediately
       private Vector2 movement;
       private CharacterController controller;
       private Camera mainCamera;
