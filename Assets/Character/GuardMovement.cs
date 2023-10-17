@@ -1,14 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class GuardMovement : MonoBehaviour {
-      private CharacterController controller;
+      private bool interacting = false;
 
       public float turnSpeed = 5f;
 
       private void Start() {
-            controller = GetComponent<CharacterController>();
             Cursor.lockState = CursorLockMode.Locked;
       }
 
@@ -21,5 +21,31 @@ public class GuardMovement : MonoBehaviour {
                   euler.x = 315;
             }
             transform.rotation = Quaternion.Euler(euler.x, euler.y, 0);
+      }
+
+      private void Update() {
+            if (Input.GetButton("GuardInteract")) {
+                  if (!interacting) {
+                        interacting = true;
+                        Vector3 origin = gameObject.transform.position;
+                        Vector3 direction = gameObject.transform.forward;
+                        RaycastHit hitInfo;
+                        float maxDistance = 100f;
+                        if (Physics.Raycast(origin, direction, out hitInfo, maxDistance)) {
+                              Interact(hitInfo.collider.gameObject);
+                        }
+                  }
+            } else {
+                  if (interacting) {
+                        interacting = false;
+                  }
+            }
+      }
+
+      private void Interact(GameObject target) {
+            MonitorScript monitor = target.GetComponent<MonitorScript>();
+            if (monitor != null) {
+                  monitor.Freeze();
+            }
       }
 }
