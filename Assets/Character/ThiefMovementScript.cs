@@ -19,5 +19,8 @@ public class ThiefMovementScript : MonoBehaviour {
             Vector3 twist = new Vector3(0, Input.GetAxis("ThiefTurn"), 0);
             controller.Move(transform.rotation * move * moveSpeed);
             transform.Rotate(turnSpeed * twist);
+
+
+
       }
 }
