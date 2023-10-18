@@ -12,4 +12,9 @@ public class StartNetwork : MonoBehaviour
     {
         NetworkManager.Singleton.StartClient();
     }
+
+    public void StartLocal()
+    {
+        
+    }
 }
