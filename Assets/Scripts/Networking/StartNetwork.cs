@@ -1,3 +1,4 @@
+using System.Threading.Tasks;
 using Unity.Netcode;
 using Unity.Netcode.Transports.UTP;
 using Unity.Networking.Transport.Relay;
@@ -9,18 +10,19 @@ using UnityEngine;
 
 public class StartNetwork : MonoBehaviour
 {
-    private async void Start()
-    {
-        await UnityServices.InitializeAsync();
 
-        AuthenticationService.Instance.SignedIn += () =>
-        {
-            Debug.Log("Signed in " + AuthenticationService.Instance.PlayerId);
-        };
-        await AuthenticationService.Instance.SignInAnonymouslyAsync();      
+    public static StartNetwork Instance { get; private set; }
+    public string PlayerType;
+
+    private void Start()
+    {
+        if (Instance != null)
+            return;
+        
+        Instance = this;     
     }
 
-    public async void StartHost()
+    public async Task<string> CreateRelay(string type)
     {
         try 
         {
@@ -28,21 +30,24 @@ public class StartNetwork : MonoBehaviour
 
             string joinCode = await RelayService.Instance.GetJoinCodeAsync(allocation.AllocationId);
 
-            Debug.Log(joinCode);
-
             RelayServerData relayServerData = new RelayServerData(allocation, "dtls");
 
             NetworkManager.Singleton.GetComponent<UnityTransport>().SetRelayServerData(relayServerData);
 
+            PlayerType = type;
+
             NetworkManager.Singleton.StartHost();
+
+            return joinCode;
         }
         catch (RelayServiceException e)
         {
             Debug.LogError(e);
+            return null;
         }
     }
 
-    public async void StartClient(string joinCode)
+    public async void JoinRelay(string joinCode, string type)
     {
         try
         {
@@ -52,6 +57,8 @@ public class StartNetwork : MonoBehaviour
             RelayServerData relayServerData = new RelayServerData(joinAllocation, "dtls");
             
             NetworkManager.Singleton.GetComponent<UnityTransport>().SetRelayServerData(relayServerData);
+
+            PlayerType = type;
 
             NetworkManager.Singleton.StartClient();
         }
