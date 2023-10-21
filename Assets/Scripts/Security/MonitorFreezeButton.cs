@@ -5,12 +5,15 @@ using UnityEngine;
 public class MonitorFreezeButton : Pressable
 {
       public Camera source;
-      private float freezeTime = 0;
+      // How long to actually freeze for
+      public float freezeDuration = 30;
+      // How long it's currently frozen
+      private float currentFreezeTime = 0;
 
       public void Update() {
-            if (freezeTime > 0) {
-                  freezeTime -= Time.deltaTime;
-                  if (freezeTime <= 0) {
+            if (currentFreezeTime > 0) {
+                  currentFreezeTime -= Time.deltaTime;
+                  if (currentFreezeTime <= 0) {
                         source.enabled = true;
                         Debug.Log("Unfroze camera: "+source.name);
                   }
@@ -19,7 +22,7 @@ public class MonitorFreezeButton : Pressable
 
       override public void Press() {
             source.enabled = false;
-            freezeTime = 5;
+            currentFreezeTime = freezeDuration;
             Debug.Log("Froze camera: "+source.name);
       }
 }
