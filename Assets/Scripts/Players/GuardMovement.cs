@@ -5,6 +5,7 @@ public class GuardMovement : NetworkBehaviour {
     private CharacterController controller;
 
     [SerializeField] private float turnSpeed = 5f;
+    private bool interacting = false;
 
     private void Start()
     {
