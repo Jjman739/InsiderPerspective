@@ -966,9 +966,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerTypeText: {fileID: 1725407872}
-  moveSpeedSlider: {fileID: 1259405147}
   moveSpeedValueText: {fileID: 1997669425}
-  turnSpeedSlider: {fileID: 1012080421}
   turnSpeedValueText: {fileID: 382787179}
 --- !u!1 &321813910
 GameObject:
