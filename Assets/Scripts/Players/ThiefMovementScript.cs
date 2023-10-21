@@ -33,4 +33,7 @@ public class ThiefMovementScript : NetworkBehaviour
         controller.Move(transform.rotation * move * moveSpeed);
         transform.Rotate(turnSpeed * twist);
     }
+
+    public void SetMoveSpeed(float speed) { moveSpeed = speed; }
+    public void SetTurnSpeed(float speed) { turnSpeed = speed; }
 }
