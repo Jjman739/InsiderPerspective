@@ -7,5 +7,4 @@ public abstract class Pressable : MonoBehaviour
     public bool pressed = false;
 
     public abstract void Press();
-    public abstract void Unpress();
 }

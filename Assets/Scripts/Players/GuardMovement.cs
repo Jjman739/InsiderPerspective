@@ -26,5 +26,25 @@ public class GuardMovement : NetworkBehaviour {
             euler.x = 315;
         }
         transform.rotation = Quaternion.Euler(euler.x, euler.y, 0);
+
+
+        if (Input.GetButton("GuardInteract") != interacting) {
+            interacting = Input.GetButton("GuardInteract");
+            if (!interacting) {
+                interacting = true;
+
+                Vector3 origin = gameObject.transform.position;
+                Vector3 direction = gameObject.transform.forward;
+                RaycastHit hitInfo;
+                float maxDistance = 100f;
+                if (Physics.Raycast(origin, direction, out hitInfo, maxDistance)) {
+                      Pressable target = hitInfo.collider.gameObject.GetComponent<Pressable>();
+                      if (target != null) {
+                           target.Press();
+                      }
+                }
+            }
+        }
+
     }
 }
