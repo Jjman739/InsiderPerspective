@@ -31,8 +31,7 @@ public class GuardMovement : NetworkBehaviour {
 
         if (Input.GetButton("GuardInteract") != interacting) {
             interacting = Input.GetButton("GuardInteract");
-            if (!interacting) {
-                interacting = true;
+            if (interacting) {
 
                 Vector3 origin = gameObject.transform.position;
                 Vector3 direction = gameObject.transform.forward;
