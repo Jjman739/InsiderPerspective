@@ -12,12 +12,22 @@ public class GuardMovement : NetworkBehaviour {
         if (!IsHost && !IsOwner) return;
 
         controller = GetComponent<CharacterController>();
-        //Cursor.lockState = CursorLockMode.Locked;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     private void Update()
     {
         if (!IsHost && !IsOwner) return;
+
+        if (Input.GetKeyDown(KeyCode.Tab))
+        {
+            if (Cursor.lockState == CursorLockMode.Locked)
+                Cursor.lockState = CursorLockMode.None;
+            else
+                Cursor.lockState = CursorLockMode.Locked;
+        }
+
+        if (Cursor.lockState != CursorLockMode.Locked) return;
 
         Vector3 euler = transform.rotation.eulerAngles;
         euler += turnSpeed * new Vector3(Input.GetAxis("GuardY"), Input.GetAxis("GuardX"), 0);
@@ -27,7 +37,6 @@ public class GuardMovement : NetworkBehaviour {
             euler.x = 315;
         }
         transform.rotation = Quaternion.Euler(euler.x, euler.y, 0);
-
 
         if (Input.GetButton("GuardInteract") != interacting) {
             interacting = Input.GetButton("GuardInteract");
