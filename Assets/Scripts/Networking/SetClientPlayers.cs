@@ -1,17 +1,22 @@
 using Unity.Netcode;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SetClientPlayers : NetworkBehaviour
 {
     [SerializeField] private GameObject guardPrefab;
     [SerializeField] private GameObject thiefPrefab;
-
+    [SerializeField] private Transform thiefSpawnPoint;
     public override void OnNetworkSpawn()
     {
-        if (IsServer)
+        if (StartNetwork.Instance.PlayerType == "Guard")
+        {
             SpawnPlayerServerRpc(NetworkManager.Singleton.LocalClientId, 0);
+        }
         else
+        {
             SpawnPlayerServerRpc(NetworkManager.Singleton.LocalClientId, 1);
+        }
     }
 
     [ServerRpc(RequireOwnership = false)]
@@ -21,7 +26,7 @@ public class SetClientPlayers : NetworkBehaviour
         if (prefabId == 0)
             newPlayer = Instantiate(guardPrefab);
         else
-            newPlayer = Instantiate(thiefPrefab);
+            newPlayer = Instantiate(thiefPrefab, thiefSpawnPoint);
 
         NetworkObject netObj = newPlayer.GetComponent<NetworkObject>();
         newPlayer.SetActive(true);
