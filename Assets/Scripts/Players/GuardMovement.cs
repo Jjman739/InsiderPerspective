@@ -12,7 +12,7 @@ public class GuardMovement : NetworkBehaviour {
         if (!IsHost && !IsOwner) return;
 
         controller = GetComponent<CharacterController>();
-        Cursor.lockState = CursorLockMode.Locked;
+        //Cursor.lockState = CursorLockMode.Locked;
     }
 
     private void Update()
@@ -47,4 +47,6 @@ public class GuardMovement : NetworkBehaviour {
         }
 
     }
+
+    public void SetTurnSpeed(float speed) { turnSpeed = speed; }
 }
