@@ -10,16 +10,16 @@ using UnityEngine;
 
 public class StartNetwork : MonoBehaviour
 {
-
     public static StartNetwork Instance { get; private set; }
     public string PlayerType;
+    [SerializeField] private GameObject parameterMenu;
 
     private void Start()
     {
         if (Instance != null)
             return;
         
-        Instance = this;     
+        Instance = this;
     }
 
     public async Task<string> CreateRelay(string type)
@@ -37,6 +37,9 @@ public class StartNetwork : MonoBehaviour
             PlayerType = type;
 
             NetworkManager.Singleton.StartHost();
+
+            parameterMenu.SetActive(true);
+            parameterMenu.GetComponent<ParameterMenu>().Initialize();
 
             return joinCode;
         }
@@ -61,6 +64,9 @@ public class StartNetwork : MonoBehaviour
             PlayerType = type;
 
             NetworkManager.Singleton.StartClient();
+            
+            parameterMenu.SetActive(true);
+            parameterMenu.GetComponent<ParameterMenu>().Initialize();
         }
         catch (RelayServiceException e)
         {
