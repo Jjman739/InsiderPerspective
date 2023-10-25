@@ -6,6 +6,7 @@ public class SetClientPlayers : NetworkBehaviour
 {
     [SerializeField] private GameObject guardPrefab;
     [SerializeField] private GameObject thiefPrefab;
+    [SerializeField] private Transform guardSpawnPoint;
     [SerializeField] private Transform thiefSpawnPoint;
     public override void OnNetworkSpawn()
     {
@@ -24,9 +25,11 @@ public class SetClientPlayers : NetworkBehaviour
     {
         GameObject newPlayer;
         if (prefabId == 0)
-            newPlayer = Instantiate(guardPrefab);
+            newPlayer = Instantiate(guardPrefab, guardSpawnPoint.position, Quaternion.identity);
         else
-            newPlayer = Instantiate(thiefPrefab, thiefSpawnPoint);
+            newPlayer = Instantiate(thiefPrefab, thiefSpawnPoint.position, Quaternion.identity);
+
+        Debug.Log(newPlayer.transform.position);
 
         NetworkObject netObj = newPlayer.GetComponent<NetworkObject>();
         newPlayer.SetActive(true);
