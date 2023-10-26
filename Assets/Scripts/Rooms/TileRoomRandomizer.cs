@@ -14,6 +14,7 @@ public class TileRoomRandomizer : MonoBehaviour
     {
         SelectTrapRows();
         DisableAllTraps();
+        EnableSelectedTraps();
     }
 
     private void SelectTrapRows()
@@ -65,5 +66,41 @@ public class TileRoomRandomizer : MonoBehaviour
                 }
             }
         }
+    }
+
+    private void EnableSelectedTraps()
+    {
+          int i = 0;
+          foreach (Transform trapRow in transform)
+          {
+              if ((i == trapRow1) || (i == trapRow2))
+              {
+                    foreach (Transform trap in trapRow)
+                    {
+                        TrapToggle toggler = trap.gameObject.GetComponent<TrapToggle>();
+                        if (toggler != null)
+                        {
+                            toggler.TrapEnable();
+                        }
+                    }
+              }
+              else
+              {
+                    int j = 0;
+                    foreach (Transform trap in trapRow)
+                    {
+                         if ((j == trapCol1) || (j == trapCol2) || (j == trapCol3))
+                         {
+                               TrapToggle toggler = trap.gameObject.GetComponent<TrapToggle>();
+                               if (toggler != null)
+                               {
+                                     toggler.TrapEnable();
+                               }
+                         }
+                         j++;
+                   }
+              }
+              i++;
+          }
     }
 }
