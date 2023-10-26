@@ -7,7 +7,9 @@ public class WaypointMover : MonoBehaviour
     [SerializeField] private Transform waypointsObject;
     [SerializeField] private float moveSpeed = 5f;
     [SerializeField] private float distanceThreshold = 0.1f;
-    private WaypointInfo currentWaypoint;
+    private WaypointInfo lastWaypoint;
+    private WaypointInfo nextWaypoint;
+    private WaypointInfo overrideTarget;
     private List<WaypointInfo> waypoints = new List<WaypointInfo>();
     private WaypointManager waypointManager;
 
@@ -20,22 +22,43 @@ public class WaypointMover : MonoBehaviour
             waypoints.Add(t.GetComponent<WaypointInfo>());
         }
 
-        currentWaypoint = waypointManager.GetNextWaypoint(currentWaypoint);
-        transform.position = currentWaypoint.transform.position;
+        nextWaypoint = waypointManager.GetNextWaypoint(nextWaypoint);
+        transform.position = nextWaypoint.transform.position;
 
-        currentWaypoint = waypointManager.GetNextWaypoint(currentWaypoint);
-        transform.LookAt(currentWaypoint.transform);
+        lastWaypoint = nextWaypoint;
+
+        nextWaypoint = waypointManager.GetNextWaypoint(nextWaypoint);
+        transform.LookAt(nextWaypoint.transform);
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.position = Vector3.MoveTowards(transform.position, currentWaypoint.transform.position, moveSpeed * Time.deltaTime);
+        transform.position = Vector3.MoveTowards(transform.position, nextWaypoint.transform.position, moveSpeed * Time.deltaTime);
 
-        if (Vector3.Distance(transform.position, currentWaypoint.transform.position) < distanceThreshold)
+        if (Vector3.Distance(transform.position, nextWaypoint.transform.position) < distanceThreshold)
         {
-            currentWaypoint = waypointManager.GetNextWaypoint(currentWaypoint);
-            transform.LookAt(currentWaypoint.transform);
+            lastWaypoint = nextWaypoint;
+
+            if (overrideTarget is not null && lastWaypoint.transform.GetSiblingIndex() == overrideTarget.transform.GetSiblingIndex())
+            {
+                overrideTarget = null;
+            }
+
+            if (overrideTarget is null)
+                nextWaypoint = waypointManager.GetNextWaypoint(nextWaypoint);
+            else
+                nextWaypoint = waypointManager.GetNextWaypointWithOverride(nextWaypoint, overrideTarget);
+            transform.LookAt(nextWaypoint.transform);
         }
     }
+
+    public void SetOverrideTarget(int targetIndex)
+    {
+        overrideTarget = waypointManager.GetWaypointByIndex(targetIndex);
+    }
+
+    public WaypointInfo GetLastWaypoint() { return lastWaypoint; }
+
+    public WaypointInfo GetOverrideTarget() { return overrideTarget; }
 }
