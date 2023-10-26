@@ -32,13 +32,17 @@ public class TileRoomRandomizer : MonoBehaviour
 
         trapRow1 = availableRows[Random.Range(0, availableRows.Count)];
         availableRows.Remove(trapRow1);
+        availableRows.Remove(trapRow1 - 2);
         availableRows.Remove(trapRow1 - 1);
         availableRows.Remove(trapRow1 + 1);
+        availableRows.Remove(trapRow1 + 2);
 
         trapRow2 = availableRows[Random.Range(0, availableRows.Count)];
         availableRows.Remove(trapRow2);
         availableRows.Remove(trapRow2 - 1);
+        availableRows.Remove(trapRow2 - 2);
         availableRows.Remove(trapRow2 + 1);
+        availableRows.Remove(trapRow2 + 2);
 
         trapCol1 = availableCols[Random.Range(0, availableCols.Count-1)];
         availableCols.Remove(trapCol1);
