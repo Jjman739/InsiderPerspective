@@ -4,7 +4,19 @@ using UnityEngine;
 
 public class TileRoomRandomizer : MonoBehaviour
 {
+    private int trapRow1;
+    private int trapRow2;
+    private int trapCol1;
+    private int trapCol2;
+    private int trapCol3;
+
     void Start()
+    {
+        SelectTrapRows();
+        DisableAllTraps();
+    }
+
+    private void SelectTrapRows()
     {
         List<int> availableRows = new List<int>();
         List<int> availableCols = new List<int>();
@@ -17,26 +29,41 @@ public class TileRoomRandomizer : MonoBehaviour
              availableCols.Add(i);
         }
 
-        int trapRow1 = availableRows[Random.Range(0, availableRows.Count)];
+        trapRow1 = availableRows[Random.Range(0, availableRows.Count)];
         availableRows.Remove(trapRow1);
         availableRows.Remove(trapRow1 - 1);
         availableRows.Remove(trapRow1 + 1);
 
-        int trapRow2 = availableRows[Random.Range(0, availableRows.Count)];
+        trapRow2 = availableRows[Random.Range(0, availableRows.Count)];
         availableRows.Remove(trapRow2);
         availableRows.Remove(trapRow2 - 1);
         availableRows.Remove(trapRow2 + 1);
 
-        int trapCol1 = availableRows[Random.Range(0, availableCols.Count-1)];
+        trapCol1 = availableCols[Random.Range(0, availableCols.Count-1)];
         availableCols.Remove(trapCol1);
         availableCols.Remove(trapCol1 - 1);
-        int trapCol2 = trapCol1 + 1;
+        trapCol2 = trapCol1 + 1;
         availableCols.Remove(trapCol2);
         availableCols.Remove(trapCol2 + 1);
 
-        int trapCol3 = availableRows[Random.Range(0, availableCols.Count-1)];
+        trapCol3 = availableCols[Random.Range(0, availableCols.Count-1)];
         availableCols.Remove(trapCol3);
         availableCols.Remove(trapCol3 - 1);
         availableCols.Remove(trapCol3 + 1);
+    }
+
+    private void DisableAllTraps()
+    {
+        foreach (Transform trapRow in transform)
+        {
+            foreach (Transform trap in trapRow)
+            {
+                TrapToggle toggler = trap.gameObject.GetComponent<TrapToggle>();
+                if (toggler != null)
+                {
+                    toggler.TrapDisable();
+                }
+            }
+        }
     }
 }

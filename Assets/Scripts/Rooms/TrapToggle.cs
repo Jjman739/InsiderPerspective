@@ -10,7 +10,15 @@ public class TrapToggle : MonoBehaviour
     {
         foreach(GameObject item in toggleObjects)
         {
-            GameObject.Destroy(item);
+            item.SetActive(false);
+        }
+    }
+
+    public void TrapEnable()
+    {
+        foreach(GameObject item in toggleObjects)
+        {
+            item.SetActive(true);
         }
     }
 }
