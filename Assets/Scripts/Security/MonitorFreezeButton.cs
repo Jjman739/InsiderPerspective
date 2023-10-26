@@ -14,15 +14,13 @@ public class MonitorFreezeButton : Pressable
             if (currentFreezeTime > 0) {
                   currentFreezeTime -= Time.deltaTime;
                   if (currentFreezeTime <= 0) {
-                        source.enabled = true;
-                        Debug.Log("Unfroze camera: "+source.name);
+                        Debug.Log("Resumed camera: "+source.name);
                   }
             }
       }
 
       override public void Press() {
-            source.enabled = false;
             currentFreezeTime = freezeDuration;
-            Debug.Log("Froze camera: "+source.name);
+            Debug.Log("Suppressed camera: "+source.name);
       }
 }
