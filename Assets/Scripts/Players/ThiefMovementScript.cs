@@ -17,8 +17,8 @@ public class ThiefMovementScript : MonoBehaviour
     private void Start()
     {
         controller = GetComponent<CharacterController>();
-        cameraHolder = transform.GetChild(0).gameObject;
-        cameraHolder.SetActive(IsOwner);
+        //cameraHolder = transform.GetChild(0).gameObject;
+        //cameraHolder.SetActive(IsOwner);
     }
 
     private void FixedUpdate()
