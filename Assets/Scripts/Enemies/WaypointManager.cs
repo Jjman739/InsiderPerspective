@@ -1,18 +1,32 @@
 using System.Collections.Generic;
 using System.Linq;
+using Unity.Netcode;
 using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
 
-public class WaypointManager : MonoBehaviour
+public class WaypointManager : NetworkBehaviour
 {
     [Range(0f, 2f)]
     [SerializeField] private float waypointSize = 1f;
+    [SerializeField] private Transform waypointParent;
+    [SerializeField] private GameObject patrollingGuardPrefab;
+    [SerializeField] private Minimap minimap;
+
+    public override void OnNetworkSpawn()
+    {
+        GameObject guard = Instantiate(patrollingGuardPrefab, Vector3.zero, Quaternion.identity);
+        guard.GetComponent<NetworkObject>().Spawn();
+        guard.GetComponent<WaypointMover>().SetWaypointManager(this);
+        guard.GetComponent<WaypointMover>().SetWaypoints(waypointParent);
+        guard.GetComponent<WaypointMover>().Initialize();
+        minimap.SetPatrollingGuards(new List<WaypointMover> { guard.GetComponent<WaypointMover>() });
+    }
 
     public WaypointInfo GetNextWaypoint(WaypointInfo currentWaypoint)
     {
         if (currentWaypoint is null)
-            return transform.GetChild(Random.Range(0,transform.childCount)).GetComponent<WaypointInfo>();
+            return waypointParent.GetChild(Random.Range(0,waypointParent.childCount)).GetComponent<WaypointInfo>();
 
         List<WaypointInfo> possibleWaypoints = currentWaypoint.GetConnectedWaypoints();
 
@@ -31,7 +45,6 @@ public class WaypointManager : MonoBehaviour
             allChecked.Add(nextWaypoint.GetIndex());
 
             if(nextWaypoint.GetIndex() == target.GetIndex()) {
-                Debug.Log($"you will never see this run, so i will say the n word here {parentWaypoint.GetIndex()} times");
                 if(parentWaypoint is null) {
                     return nextWaypoint;
                 }
@@ -55,6 +68,6 @@ public class WaypointManager : MonoBehaviour
 
     public WaypointInfo GetWaypointByIndex(int index)
     {
-        return transform.GetChild(index).GetComponent<WaypointInfo>();
+        return waypointParent.GetChild(index).GetComponent<WaypointInfo>();
     }
 }

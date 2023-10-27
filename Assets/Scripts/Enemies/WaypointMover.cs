@@ -1,10 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Netcode;
 using UnityEngine;
 
-public class WaypointMover : MonoBehaviour
+public class WaypointMover : NetworkBehaviour
 {
-    [SerializeField] private Transform waypointsObject;
     [SerializeField] private float moveSpeed = 5f;
     [SerializeField] private float distanceThreshold = 0.1f;
     private WaypointInfo lastWaypoint;
@@ -12,11 +12,13 @@ public class WaypointMover : MonoBehaviour
     private WaypointInfo overrideTarget;
     private List<WaypointInfo> waypoints = new List<WaypointInfo>();
     private WaypointManager waypointManager;
+    private Transform waypointsObject;
+
+    private bool initialized = false;
 
     // Start is called before the first frame update
-    void Start()
+    public void Initialize()
     {
-        waypointManager = waypointsObject.GetComponent<WaypointManager>();
         foreach (Transform t in waypointsObject)
         {
             waypoints.Add(t.GetComponent<WaypointInfo>());
@@ -29,18 +31,22 @@ public class WaypointMover : MonoBehaviour
 
         nextWaypoint = waypointManager.GetNextWaypoint(nextWaypoint);
         transform.LookAt(nextWaypoint.transform);
+
+        initialized = true;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (!initialized) return;
+
         transform.position = Vector3.MoveTowards(transform.position, nextWaypoint.transform.position, moveSpeed * Time.deltaTime);
 
         if (Vector3.Distance(transform.position, nextWaypoint.transform.position) < distanceThreshold)
         {
             lastWaypoint = nextWaypoint;
-
-            if (overrideTarget is not null && lastWaypoint.transform.GetSiblingIndex() == overrideTarget.transform.GetSiblingIndex())
+            
+            if (overrideTarget is not null && lastWaypoint.GetIndex() == overrideTarget.GetIndex())
             {
                 overrideTarget = null;
             }
@@ -58,7 +64,9 @@ public class WaypointMover : MonoBehaviour
         overrideTarget = waypointManager.GetWaypointByIndex(targetIndex);
     }
 
-    public WaypointInfo GetLastWaypoint() { return lastWaypoint; }
+    public void SetWaypointManager(WaypointManager manager) { waypointManager = manager; }
 
+    public void SetWaypoints(Transform obj) { waypointsObject = obj; }
+    public WaypointInfo GetLastWaypoint() { return lastWaypoint; }
     public WaypointInfo GetOverrideTarget() { return overrideTarget; }
 }

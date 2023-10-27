@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Minimap : MonoBehaviour
 {
-    [SerializeField] private List<WaypointMover> patrollingGuards;
+    private List<WaypointMover> patrollingGuards = new List<WaypointMover>();
     int overrideTargetIndex = -1;
 
     private void Update()
@@ -17,6 +17,8 @@ public class Minimap : MonoBehaviour
             else
                 t.GetComponent<MeshRenderer>().materials[0].color = Color.black;
         }
+
+        if (patrollingGuards.Count <= 0) return;
 
         foreach (WaypointMover guard in patrollingGuards)
         {
@@ -42,4 +44,6 @@ public class Minimap : MonoBehaviour
 
         return true;
     }
+
+    public void SetPatrollingGuards(List<WaypointMover> guards) { patrollingGuards = guards; }
 }

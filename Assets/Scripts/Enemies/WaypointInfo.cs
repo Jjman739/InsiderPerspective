@@ -2,16 +2,17 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Unity.Netcode;
 using UnityEngine;
 
 public class WaypointInfo : MonoBehaviour
 {
-    private WaypointManager waypointManager;
+    private Transform waypointManager;
     private List<WaypointInfo> attachedWaypoints = new List<WaypointInfo>();
 
     private void Awake()
     {
-        waypointManager = transform.parent.GetComponent<WaypointManager>();
+        waypointManager = transform.parent;
         
         foreach(Transform t in waypointManager.transform)
         {
