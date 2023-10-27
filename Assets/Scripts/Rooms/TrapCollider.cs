@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class TileTrap : MonoBehaviour
+public class TrapCollider : MonoBehaviour
 {
     void OnTriggerEnter(Collider other)
     {
