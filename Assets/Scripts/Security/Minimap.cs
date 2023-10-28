@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Minimap : MonoBehaviour
 {
-    private List<WaypointMover> patrollingGuards = new List<WaypointMover>();
+    private List<PatrollingGuard> patrollingGuards = new List<PatrollingGuard>();
     int overrideTargetIndex = -1;
 
     private void Update()
@@ -20,7 +20,7 @@ public class Minimap : MonoBehaviour
 
         if (patrollingGuards.Count <= 0) return;
 
-        foreach (WaypointMover guard in patrollingGuards)
+        foreach (PatrollingGuard guard in patrollingGuards)
         {
             int guardLocation = guard.GetLastWaypoint().transform.GetSiblingIndex();
             transform.GetChild(guardLocation).GetComponent<MeshRenderer>().materials[0].color = Color.red;
@@ -35,7 +35,7 @@ public class Minimap : MonoBehaviour
         if (overrideTargetIndex is not -1)
             return false;
 
-        foreach (WaypointMover guard in patrollingGuards)
+        foreach (PatrollingGuard guard in patrollingGuards)
         {
             guard.SetOverrideTarget(targetIndex);
         }
@@ -44,6 +44,6 @@ public class Minimap : MonoBehaviour
 
         return true;
     }
-
-    public void SetPatrollingGuards(List<WaypointMover> guards) { patrollingGuards = guards; }
+    public void AddPatrollingGuard(PatrollingGuard guard) { patrollingGuards.Add(guard); }
+    public void SetPatrollingGuards(List<PatrollingGuard> guards) { patrollingGuards = guards; }
 }
