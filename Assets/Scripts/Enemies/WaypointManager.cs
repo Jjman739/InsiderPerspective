@@ -17,10 +17,10 @@ public class WaypointManager : MonoBehaviour
     {
         GameObject guard = Instantiate(patrollingGuardPrefab, Vector3.zero, Quaternion.identity);
         //guard.GetComponent<NetworkObject>().Spawn();
-        guard.GetComponent<WaypointMover>().SetWaypointManager(this);
-        guard.GetComponent<WaypointMover>().SetWaypoints(waypointParent);
-        guard.GetComponent<WaypointMover>().Initialize();
-        minimap.SetPatrollingGuards(new List<WaypointMover> { guard.GetComponent<WaypointMover>() });
+        guard.GetComponent<PatrollingGuard>().SetWaypointManager(this);
+        guard.GetComponent<PatrollingGuard>().SetWaypoints(waypointParent);
+        guard.GetComponent<PatrollingGuard>().Initialize();
+        minimap.SetPatrollingGuards(new List<PatrollingGuard> { guard.GetComponent<PatrollingGuard>() });
     }
 
     public WaypointInfo GetNextWaypoint(WaypointInfo currentWaypoint)
