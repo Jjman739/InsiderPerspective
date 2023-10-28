@@ -2,50 +2,66 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using Unity.Netcode;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class ParameterMenu : MonoBehaviour
 {
-    private const string thiefString = "THIEF";
-    private const string guardString = "GUARD";
-    private string playerString;
-    private GameObject localPlayer;
+    [SerializeField] private GameObject thief;
+    [SerializeField] private GameObject guard;
+    [SerializeField] private GameObject patrollingGuard;
 
-    [SerializeField] private TextMeshProUGUI playerTypeText;
     [SerializeField] private TextMeshProUGUI moveSpeedValueText;
     [SerializeField] private TextMeshProUGUI turnSpeedValueText;
+    [SerializeField] private TextMeshProUGUI mouseSensitivityText;
+    [SerializeField] private TextMeshProUGUI guardSpeedValueText;
+    [SerializeField] private TextMeshProUGUI alertTimeValueText;
 
-    public void Initialize()
+    private void Update()
     {
-        if (NetworkManager.Singleton.LocalClient.PlayerObject)
-            localPlayer = NetworkManager.Singleton.LocalClient.PlayerObject.gameObject;
-
-        playerString = localPlayer && localPlayer.GetComponent<GuardMovement>() ? guardString : thiefString;
-        playerTypeText.text = $"Player Type: {playerString}";
-    }
-
-    public void UpdatePlayerMoveSpeed(float speed)
-    {
-        if (localPlayer.GetComponent<ThiefMovementScript>())
+        if (Input.GetKeyDown(KeyCode.Tab))
         {
-            localPlayer.GetComponent<ThiefMovementScript>().SetMoveSpeed(speed);
-            moveSpeedValueText.text = speed.ToString();
+            if (Cursor.lockState == CursorLockMode.Locked)
+            {
+                GetComponent<CanvasGroup>().alpha = 1;
+                Cursor.lockState = CursorLockMode.None;
+            }
+            else
+            {
+                GetComponent<CanvasGroup>().alpha = 0;
+                Cursor.lockState = CursorLockMode.Locked;
+            }
         }
     }
 
-    public void UpdatePlayerTurnSpeed(float speed)
+    public void UpdateThiefMoveSpeed(float speed)
     {
-        localPlayer = NetworkManager.Singleton.LocalClient.PlayerObject.gameObject;
-        if (localPlayer.GetComponent<ThiefMovementScript>())
-        {
-            localPlayer.GetComponent<ThiefMovementScript>().SetTurnSpeed(speed);
-            turnSpeedValueText.text = speed.ToString();
-        }
-        else if (localPlayer.GetComponent<GuardMovement>())
-        {
-            localPlayer.GetComponent<GuardMovement>().SetTurnSpeed(speed);
-            turnSpeedValueText.text = speed.ToString();
-        }
+        thief.GetComponent<ThiefMovementScript>().SetMoveSpeed(speed);
+        moveSpeedValueText.text = speed.ToString();
+    }
+
+    public void UpdateThiefTurnSpeed(float speed)
+    {
+        thief.GetComponent<ThiefMovementScript>().SetTurnSpeed(speed);
+        turnSpeedValueText.text = speed.ToString();
+    }
+
+    public void UpdateMouseSensitivity(float sensitivity)
+    {
+        guard.GetComponent<GuardMovement>().SetTurnSpeed(sensitivity);
+        mouseSensitivityText.text = sensitivity.ToString();
+    }
+
+    public void UpdateGuardMoveSpeed(float speed)
+    {
+        patrollingGuard.GetComponent<PatrollingGuard>().SetMoveSpeed(speed);
+        guardSpeedValueText.text = speed.ToString();
+    }
+
+    public void UpdateGuardAlertTimer(float time)
+    {
+        thief.GetComponent<ThiefMovementScript>().SetAlertTimer(time);
+        alertTimeValueText.text = time.ToString();
     }
 }

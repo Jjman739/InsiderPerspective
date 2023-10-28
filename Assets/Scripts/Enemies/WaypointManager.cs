@@ -7,20 +7,18 @@ using UnityEngine;
 
 public class WaypointManager : MonoBehaviour
 {
-    [Range(0f, 2f)]
-    [SerializeField] private float waypointSize = 1f;
+    [SerializeField] private List<GameObject> guards = new List<GameObject>();
     [SerializeField] private Transform waypointParent;
-    [SerializeField] private GameObject patrollingGuardPrefab;
     [SerializeField] private Minimap minimap;
 
     void Start()
     {
-        GameObject guard = Instantiate(patrollingGuardPrefab, Vector3.zero, Quaternion.identity);
-        //guard.GetComponent<NetworkObject>().Spawn();
-        guard.GetComponent<WaypointMover>().SetWaypointManager(this);
-        guard.GetComponent<WaypointMover>().SetWaypoints(waypointParent);
-        guard.GetComponent<WaypointMover>().Initialize();
-        minimap.SetPatrollingGuards(new List<WaypointMover> { guard.GetComponent<WaypointMover>() });
+        foreach (GameObject guard in guards)
+        {
+            PatrollingGuard patrollingGuard = guard.GetComponent<PatrollingGuard>();
+            patrollingGuard.Initialize(this, waypointParent);
+            minimap.AddPatrollingGuard(patrollingGuard);
+        }
     }
 
     public WaypointInfo GetNextWaypoint(WaypointInfo currentWaypoint)

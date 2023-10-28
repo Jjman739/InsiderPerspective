@@ -15,14 +15,6 @@ public class GuardMovement : MonoBehaviour {
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Tab))
-        {
-            if (Cursor.lockState == CursorLockMode.Locked)
-                Cursor.lockState = CursorLockMode.None;
-            else
-                Cursor.lockState = CursorLockMode.Locked;
-        }
-
         if (Cursor.lockState != CursorLockMode.Locked) return;
 
         Vector3 euler = transform.rotation.eulerAngles;
