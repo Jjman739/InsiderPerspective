@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Unity.Netcode;
 
-public class TileRoomRandomizer : NetworkBehaviour
+public class TileRoomRandomizer : MonoBehaviour
 {
     private int trapRow1;
     private int trapRow2;
@@ -11,7 +11,7 @@ public class TileRoomRandomizer : NetworkBehaviour
     private int trapCol2;
     private int trapCol3;
 
-    public override void OnNetworkSpawn()
+    void Start()
     {
         SelectTrapRows();
         DisableAllTraps();

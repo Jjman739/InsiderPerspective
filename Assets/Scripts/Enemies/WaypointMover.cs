@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Unity.Netcode;
 using UnityEngine;
 
-public class WaypointMover : NetworkBehaviour
+public class WaypointMover : MonoBehaviour
 {
     [SerializeField] private float moveSpeed = 5f;
     [SerializeField] private float distanceThreshold = 0.1f;
@@ -45,7 +45,7 @@ public class WaypointMover : NetworkBehaviour
         if (Vector3.Distance(transform.position, nextWaypoint.transform.position) < distanceThreshold)
         {
             lastWaypoint = nextWaypoint;
-            
+
             if (overrideTarget is not null && lastWaypoint.GetIndex() == overrideTarget.GetIndex())
             {
                 overrideTarget = null;

@@ -1,7 +1,7 @@
 using Unity.Netcode;
 using UnityEngine;
 
-public class GuardMovement : NetworkBehaviour {
+public class GuardMovement : MonoBehaviour {
     private CharacterController controller;
 
     [SerializeField] private float turnSpeed = 5f;
@@ -9,16 +9,12 @@ public class GuardMovement : NetworkBehaviour {
 
     private void Start()
     {
-        if (!IsHost && !IsOwner) return;
-
         controller = GetComponent<CharacterController>();
         Cursor.lockState = CursorLockMode.Locked;
     }
 
     private void Update()
     {
-        if (!IsHost && !IsOwner) return;
-
         if (Input.GetKeyDown(KeyCode.Tab))
         {
             if (Cursor.lockState == CursorLockMode.Locked)
