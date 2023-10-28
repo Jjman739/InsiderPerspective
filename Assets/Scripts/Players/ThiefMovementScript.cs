@@ -52,4 +52,5 @@ public class ThiefMovementScript : MonoBehaviour
     public void SetMoveSpeed(float speed) { moveSpeed = speed; }
     public void SetTurnSpeed(float speed) { turnSpeed = speed; }
     public void SetInLineOfSight(bool inSight) { inLineOfSight = inSight; }
+    public void SetAlertTimer(float time) { alertTimer = time; }
 }

@@ -17,8 +17,11 @@ public class PatrollingGuard : MonoBehaviour
     private bool initialized = false;
 
     // Start is called before the first frame update
-    public void Initialize()
+    public void Initialize(WaypointManager manager, Transform wpObject)
     {
+        waypointManager = manager;
+        waypointsObject = wpObject;
+
         foreach (Transform t in waypointsObject)
         {
             waypoints.Add(t.GetComponent<WaypointInfo>());
@@ -69,4 +72,5 @@ public class PatrollingGuard : MonoBehaviour
     public void SetWaypoints(Transform obj) { waypointsObject = obj; }
     public WaypointInfo GetLastWaypoint() { return lastWaypoint; }
     public WaypointInfo GetOverrideTarget() { return overrideTarget; }
+    public void SetMoveSpeed(float speed) { moveSpeed = speed; }
 }

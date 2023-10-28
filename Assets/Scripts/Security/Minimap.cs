@@ -44,6 +44,6 @@ public class Minimap : MonoBehaviour
 
         return true;
     }
-
+    public void AddPatrollingGuard(PatrollingGuard guard) { patrollingGuards.Add(guard); }
     public void SetPatrollingGuards(List<PatrollingGuard> guards) { patrollingGuards = guards; }
 }
