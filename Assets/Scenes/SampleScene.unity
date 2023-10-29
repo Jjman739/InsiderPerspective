@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44553274, g: 0.4952088, b: 0.57411814, a: 1}
+  m_IndirectSpecularColor: {r: 0.44553238, g: 0.4952085, b: 0.5741176, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -221,6 +221,10 @@ PrefabInstance:
       propertyPath: alertMeter
       value: 
       objectReference: {fileID: 844278459}
+    - target: {fileID: 988405178396776603, guid: 7604196884fb4ff41b12b946132a92fe, type: 3}
+      propertyPath: treasureCount
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3348841602411470165, guid: 7604196884fb4ff41b12b946132a92fe, type: 3}
       propertyPath: m_LocalPosition.x
       value: -142.9692

@@ -424,7 +424,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1893e26bd91480e4fa89e3c6bd7beaca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  goal: 1
+  treasureCount: 0
+  goal: 8
 --- !u!1 &6800124188568921770
 GameObject:
   m_ObjectHideFlags: 0
