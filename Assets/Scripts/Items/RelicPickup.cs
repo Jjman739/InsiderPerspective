@@ -8,10 +8,10 @@ public class RelicPickup : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        ThiefInventory inv = other.gameObject.GetComponent<ThiefInventory>();
+        ThiefTreasure inv = other.gameObject.GetComponent<ThiefTreasure>();
         if (inv != null)
         {
-            inv.TreasureValue += Value;
+            inv.treasureCount += Value;
             GameObject.Destroy(gameObject);
         }
     }

@@ -215,7 +215,7 @@ GameObject:
   - component: {fileID: 923715824190225795}
   - component: {fileID: 9057069766262060411}
   - component: {fileID: 7297641987852475166}
-  - component: {fileID: 1514794193049443426}
+  - component: {fileID: 988405178396776603}
   m_Layer: 0
   m_Name: Thief
   m_TagString: Player
@@ -357,6 +357,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 0.1
   turnSpeed: 5
+  jumpHeight: 0.5
+  gravity: -10
+  charge: 5
+  alertTimer: 2
+  alertMeter: {fileID: 0}
 --- !u!114 &9057069766262060411
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -407,7 +412,7 @@ MonoBehaviour:
   InLocalSpace: 0
   Interpolate: 1
   SlerpPosition: 0
---- !u!114 &1514794193049443426
+--- !u!114 &988405178396776603
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -416,10 +421,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 6501310672267175682}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1fe67fc4e0211e5458dc940c12e6109c, type: 3}
+  m_Script: {fileID: 11500000, guid: 1893e26bd91480e4fa89e3c6bd7beaca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TreasureValue: 0
+  goal: 1
 --- !u!1 &6800124188568921770
 GameObject:
   m_ObjectHideFlags: 0
