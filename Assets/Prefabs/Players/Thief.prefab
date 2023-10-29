@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &51098579865991101
 Transform:
   m_ObjectHideFlags: 0
@@ -360,6 +360,8 @@ MonoBehaviour:
   jumpHeight: 0.5
   gravity: -10
   charge: 5
+  alertTimer: 2
+  alertMeter: {fileID: 0}
 --- !u!114 &9057069766262060411
 MonoBehaviour:
   m_ObjectHideFlags: 0
