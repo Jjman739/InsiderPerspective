@@ -23,15 +23,4 @@ public class ThiefTreasure : MonoBehaviour
             SceneManager.LoadScene("WinScene");
         }
     }
-
-    void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.CompareTag("Treasure"))
-        {
-            ScoreTracker.control.treasureValue++;
-            treasureCount++;
-            Destroy(other.gameObject);
-            
-        }
-    }
 }
