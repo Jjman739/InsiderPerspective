@@ -358,7 +358,7 @@ MonoBehaviour:
   jumpHeight: 0.5
   gravity: -10
   charge: 5
-  alertTimer: 2
+  alertTimer: 1
   alertMeter: {fileID: 0}
 --- !u!114 &988405178396776603
 MonoBehaviour:
