@@ -14,6 +14,9 @@ public class MoveGuardButton : Pressable
     override public void Press()
     {
         if (minimap.OverrideGuardTarget(transform.GetSiblingIndex()))
+        {
+            GetComponent<AudioSource>().Play();
             GetComponent<MeshRenderer>().materials[0].color = Color.yellow;
+        }
     }
 }
