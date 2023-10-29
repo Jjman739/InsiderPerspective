@@ -95,7 +95,7 @@ public class ThiefMovementScript : MonoBehaviour
             chargeTimer = 60;
             if(chargeTimer > 1)
             {
-                chargeTimer -= 1;
+                charge -= 1;
             }
             else
             {
