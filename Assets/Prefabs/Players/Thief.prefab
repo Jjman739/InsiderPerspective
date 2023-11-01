@@ -214,6 +214,7 @@ GameObject:
   - component: {fileID: 4517522756590822068}
   - component: {fileID: -7040398787914363862}
   - component: {fileID: 988405178396776603}
+  - component: {fileID: 503376195182715850}
   m_Layer: 0
   m_Name: Thief
   m_TagString: Player
@@ -374,6 +375,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   treasureCount: 0
   goal: 3
+--- !u!114 &503376195182715850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6501310672267175682}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7ece0b0f2b4d8e4c956dc7dbc367cd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6800124188568921770
 GameObject:
   m_ObjectHideFlags: 0
