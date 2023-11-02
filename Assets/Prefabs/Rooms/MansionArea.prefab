@@ -139,6 +139,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 9107001984964667295}
     m_Modifications:
+    - target: {fileID: 1127673471282600748, guid: af6e732255b67f04a8ad2ab892f0488e, type: 3}
+      propertyPath: GlobalObjectIdHash
+      value: 951099334
+      objectReference: {fileID: 0}
     - target: {fileID: 3868360972269367235, guid: af6e732255b67f04a8ad2ab892f0488e, type: 3}
       propertyPath: m_Name
       value: TileRoom (1)
@@ -209,6 +213,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 9107001984964667295}
     m_Modifications:
+    - target: {fileID: 759606843870468461, guid: 5510454ce06267747aa9667ec96c8623, type: 3}
+      propertyPath: m_CullingMask.m_Bits
+      value: 55
+      objectReference: {fileID: 0}
     - target: {fileID: 1130301890606882061, guid: 5510454ce06267747aa9667ec96c8623, type: 3}
       propertyPath: m_LocalScale.y
       value: 20
@@ -225,6 +233,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 12.77
       objectReference: {fileID: 0}
+    - target: {fileID: 1798251005087050043, guid: 5510454ce06267747aa9667ec96c8623, type: 3}
+      propertyPath: m_CullingMask.m_Bits
+      value: 55
+      objectReference: {fileID: 0}
     - target: {fileID: 1979831622282849664, guid: 5510454ce06267747aa9667ec96c8623, type: 3}
       propertyPath: m_LocalScale.y
       value: 20
@@ -232,6 +244,10 @@ PrefabInstance:
     - target: {fileID: 1979831622282849664, guid: 5510454ce06267747aa9667ec96c8623, type: 3}
       propertyPath: m_LocalPosition.y
       value: 12.77
+      objectReference: {fileID: 0}
+    - target: {fileID: 3129700154877800509, guid: 5510454ce06267747aa9667ec96c8623, type: 3}
+      propertyPath: m_CullingMask.m_Bits
+      value: 55
       objectReference: {fileID: 0}
     - target: {fileID: 3500997272642107231, guid: 5510454ce06267747aa9667ec96c8623, type: 3}
       propertyPath: m_LocalScale.x
@@ -281,6 +297,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4052957167175797911, guid: 5510454ce06267747aa9667ec96c8623, type: 3}
+      propertyPath: m_CullingMask.m_Bits
+      value: 55
+      objectReference: {fileID: 0}
     - target: {fileID: 5969483294032809799, guid: 5510454ce06267747aa9667ec96c8623, type: 3}
       propertyPath: m_LocalScale.y
       value: 20
@@ -292,6 +312,14 @@ PrefabInstance:
     - target: {fileID: 6224597903717207326, guid: 5510454ce06267747aa9667ec96c8623, type: 3}
       propertyPath: m_Name
       value: Hallway
+      objectReference: {fileID: 0}
+    - target: {fileID: 7519374375882204676, guid: 5510454ce06267747aa9667ec96c8623, type: 3}
+      propertyPath: m_CullingMask.m_Bits
+      value: 55
+      objectReference: {fileID: 0}
+    - target: {fileID: 8385275144857286383, guid: 5510454ce06267747aa9667ec96c8623, type: 3}
+      propertyPath: m_CullingMask.m_Bits
+      value: 55
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -311,6 +339,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 9107001984964667295}
     m_Modifications:
+    - target: {fileID: 1127673471282600748, guid: af6e732255b67f04a8ad2ab892f0488e, type: 3}
+      propertyPath: GlobalObjectIdHash
+      value: 951099334
+      objectReference: {fileID: 0}
     - target: {fileID: 3868360972269367235, guid: af6e732255b67f04a8ad2ab892f0488e, type: 3}
       propertyPath: m_Name
       value: TileRoom
@@ -381,6 +413,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 9107001984964667295}
     m_Modifications:
+    - target: {fileID: 1127673471282600748, guid: af6e732255b67f04a8ad2ab892f0488e, type: 3}
+      propertyPath: GlobalObjectIdHash
+      value: 951099334
+      objectReference: {fileID: 0}
     - target: {fileID: 3868360972269367235, guid: af6e732255b67f04a8ad2ab892f0488e, type: 3}
       propertyPath: m_Name
       value: TileRoom (3)
@@ -451,6 +487,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 9107001984964667295}
     m_Modifications:
+    - target: {fileID: 1127673471282600748, guid: af6e732255b67f04a8ad2ab892f0488e, type: 3}
+      propertyPath: GlobalObjectIdHash
+      value: 951099334
+      objectReference: {fileID: 0}
     - target: {fileID: 3868360972269367235, guid: af6e732255b67f04a8ad2ab892f0488e, type: 3}
       propertyPath: m_Name
       value: TileRoom (2)
