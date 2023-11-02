@@ -5,6 +5,7 @@ using UnityEngine;
 public class ThiefPhoto : MonoBehaviour
 {
     [SerializeField] private float photoCooldown = 1f;
+    [SerializeField] private Camera photoCamera;
     private bool photoActive = false;
     private float photoCooldownTimer = 0;
 
@@ -25,5 +26,6 @@ public class ThiefPhoto : MonoBehaviour
     {
         photoCooldownTimer = photoCooldown;
         Debug.Log("Click!");
+        photoCamera.Render();
     }
 }
