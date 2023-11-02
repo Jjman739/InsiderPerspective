@@ -37,4 +37,6 @@ public class ControllableCamera : MonoBehaviour
     }
 
     public Camera GetCamera() { return camera; }
+    public Transform GetCameraGroup() { return transform.parent; }
+    public int GetCameraGroupIndex() { return transform.GetSiblingIndex(); }
 }

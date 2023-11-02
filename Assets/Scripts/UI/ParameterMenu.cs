@@ -17,12 +17,13 @@ public class ParameterMenu : MonoBehaviour
     [SerializeField] private TextMeshProUGUI mouseSensitivityText;
     [SerializeField] private TextMeshProUGUI guardSpeedValueText;
     [SerializeField] private TextMeshProUGUI alertTimeValueText;
+    private bool menuOpen = false;
 
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Tab))
         {
-            if (Cursor.lockState == CursorLockMode.Locked)
+            if (!menuOpen)
             {
                 GetComponent<CanvasGroup>().alpha = 1;
                 Cursor.lockState = CursorLockMode.None;
@@ -30,8 +31,10 @@ public class ParameterMenu : MonoBehaviour
             else
             {
                 GetComponent<CanvasGroup>().alpha = 0;
-                Cursor.lockState = CursorLockMode.Locked;
+                if (!CameraViewer.Instance.IsViewing())
+                    Cursor.lockState = CursorLockMode.Locked;
             }
+            menuOpen = !menuOpen;
         }
     }
 
