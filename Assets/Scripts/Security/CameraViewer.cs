@@ -21,6 +21,14 @@ public class CameraViewer : Singleton<CameraViewer>
         cameraSwapButtons = cameraUI.transform.Find("SwapButtons");
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            BreakCamera(currentCameraIndex);
+        }
+    }
+
     public void ViewCamera(ControllableCamera camera)
     {
         Cursor.lockState = CursorLockMode.None;
@@ -57,6 +65,31 @@ public class CameraViewer : Singleton<CameraViewer>
         currentCamera = currentCameraGroup.GetChild(index).GetComponent<ControllableCamera>();
         currentCameraIndex = currentCamera.GetCameraGroupIndex();
         currentCamera.EnterView();
+    }
+
+    public void MoveUp()
+    {
+        currentCamera.MoveVertical(false);
+    }
+
+    public void MoveDown()
+    {
+        currentCamera.MoveVertical(true);
+    }
+
+    public void MoveLeft()
+    {
+        currentCamera.MoveHorizontal(false);
+    }
+
+    public void MoveRight()
+    {
+        currentCamera.MoveHorizontal(true);
+    }
+
+    public void BreakCamera(int index)
+    {
+        currentCameraGroup.GetChild(index).GetComponent<ControllableCamera>().Break();
     }
 
     private void generateCameraGroupButtons()
