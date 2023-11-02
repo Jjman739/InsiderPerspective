@@ -10,7 +10,7 @@ public class GameOverScore : MonoBehaviour
     public TextMeshProUGUI scoreText;
     //public int maxScore;
 
-    private int score = ScoreTracker.control.treasureValue;
+    private int score = ScoreTracker.Instance.treasureValue;
 
     // Start is called before the first frame update
     void Start()

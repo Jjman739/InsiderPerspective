@@ -220,6 +220,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1209884360094613233}
   - component: {fileID: 8385275144857286383}
+  - component: {fileID: 2741973592729246728}
   m_Layer: 0
   m_Name: Camera 2
   m_TagString: Untagged
@@ -293,6 +294,18 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!114 &2741973592729246728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2086509830577740044}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b16c4c626b82b4f41853ba5b6586b03e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3234385354353179816
 GameObject:
   m_ObjectHideFlags: 0
@@ -513,6 +526,7 @@ GameObject:
   m_Component:
   - component: {fileID: 155292515596710398}
   - component: {fileID: 4052957167175797911}
+  - component: {fileID: 3046708486675550021}
   m_Layer: 0
   m_Name: HallCamera 5
   m_TagString: Untagged
@@ -586,6 +600,18 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!114 &3046708486675550021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5626478721507362559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b16c4c626b82b4f41853ba5b6586b03e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5789076837920915843
 GameObject:
   m_ObjectHideFlags: 0
@@ -596,6 +622,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1927112189295909415}
   - component: {fileID: 759606843870468461}
+  - component: {fileID: 2153732340487102683}
   m_Layer: 0
   m_Name: HallCamera 6
   m_TagString: Untagged
@@ -669,6 +696,18 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!114 &2153732340487102683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5789076837920915843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b16c4c626b82b4f41853ba5b6586b03e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6224597903717207326
 GameObject:
   m_ObjectHideFlags: 0
@@ -721,6 +760,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6709120634022850093}
   - component: {fileID: 7519374375882204676}
+  - component: {fileID: 589544218924246313}
   m_Layer: 0
   m_Name: HallCamera 4
   m_TagString: Untagged
@@ -794,6 +834,18 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!114 &589544218924246313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6662195010769044339}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b16c4c626b82b4f41853ba5b6586b03e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7266920506079844750
 GameObject:
   m_ObjectHideFlags: 0
@@ -804,6 +856,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8574473975521800304}
   - component: {fileID: 1798251005087050043}
+  - component: {fileID: 8700893863129842396}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -877,6 +930,18 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!114 &8700893863129842396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7266920506079844750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b16c4c626b82b4f41853ba5b6586b03e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7675021451007843149
 GameObject:
   m_ObjectHideFlags: 0
@@ -992,6 +1057,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4621694169339740695}
   - component: {fileID: 3129700154877800509}
+  - component: {fileID: 2627526736298187615}
   m_Layer: 0
   m_Name: HallCamera 3
   m_TagString: Untagged
@@ -1065,3 +1131,15 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!114 &2627526736298187615
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8898266770064420033}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b16c4c626b82b4f41853ba5b6586b03e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

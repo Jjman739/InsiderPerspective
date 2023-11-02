@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 814850327160114930}
   - component: {fileID: 8163070444584415281}
+  - component: {fileID: -5391777654023198161}
+  - component: {fileID: 4247527811645318366}
   m_Layer: 0
   m_Name: MonitorAndButton
   m_TagString: Untagged
@@ -47,6 +49,41 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attachedCamera: {fileID: 0}
+--- !u!114 &-5391777654023198161
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2012172063644537463}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d012e2a7b9a695b419481e6ae218e87e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultMaterial: {fileID: 2100000, guid: 4526b0c3938ed624aa109be53bca4b2a, type: 2}
+  selectedMaterial: {fileID: 2100000, guid: 3ed669ef9a93fc841b27ab87a3653284, type: 2}
+--- !u!65 &4247527811645318366
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2012172063644537463}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 5.117269, y: 5.2685156, z: 1.5041552}
+  m_Center: {x: -0.008402586, y: -0.016805172, z: 0.5713763}
 --- !u!1 &8437829667778859596
 GameObject:
   m_ObjectHideFlags: 0
