@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TrapCollider : MonoBehaviour
 {
@@ -6,8 +7,8 @@ public class TrapCollider : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            Debug.Log("Dead");
-            Destroy(other.gameObject);
+            Debug.Log("Hit a trap.");
+            SceneManager.LoadScene("LoseScene");
         }
     }
 }

@@ -1,27 +1,25 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Exit : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        Debug.Log(other.gameObject.name);
+        ThiefTreasure thiefTreasure = other.gameObject.GetComponent<ThiefTreasure>();
+        Debug.Log(thiefTreasure);
+        if (thiefTreasure != null)
         {
-            Debug.Log("A winner is you");
-            
+            Debug.Log(thiefTreasure.treasureCount);
+            Debug.Log(thiefTreasure.goal);
+            if (thiefTreasure.treasureCount >= thiefTreasure.goal)
+            {
+                  Debug.Log("Win!");
+                  SceneManager.LoadScene("WinScene");
+            }
         }
     }
 }

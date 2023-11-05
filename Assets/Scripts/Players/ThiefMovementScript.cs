@@ -74,7 +74,7 @@ public class ThiefMovementScript : MonoBehaviour
             if (currentAlertTimer <= 0)
             {
                 Debug.Log("Caught");
-                Destroy(this);
+                SceneManager.LoadScene("LoseScene");
             }
         }
         else if (currentAlertTimer < alertTimer)
@@ -99,15 +99,11 @@ public class ThiefMovementScript : MonoBehaviour
             }
             else
             {
-                Destroy(gameObject);
+                Debug.Log("Out of battery.");
+                SceneManager.LoadScene("LoseScene");
             }
         }
 
-    }
-
-    void OnDestroy()
-    {
-        SceneManager.LoadScene("LoseScene");
     }
 
     public void SetMoveSpeed(float speed) { moveSpeed = speed; }
