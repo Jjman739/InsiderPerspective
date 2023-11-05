@@ -12,7 +12,7 @@ public class RelicPickup : MonoBehaviour
         if (inv != null)
         {
             inv.treasureCount += Value;
-            ScoreTracker.control.treasureValue++;
+            ScoreTracker.Instance.treasureValue++;
             GetComponent<CapsuleCollider>().enabled = false;
             Destroy(transform.GetChild(0).gameObject);
             GetComponent<AudioSource>().Play();
