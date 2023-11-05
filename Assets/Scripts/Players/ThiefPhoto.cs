@@ -25,7 +25,6 @@ public class ThiefPhoto : MonoBehaviour
     private void TakePhoto()
     {
         photoCooldownTimer = photoCooldown;
-        Debug.Log("Click!");
         photoCamera.Render();
     }
 }
