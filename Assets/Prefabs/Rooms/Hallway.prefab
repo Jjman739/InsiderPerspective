@@ -105,6 +105,43 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &257535904027518791
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 324910374914460840}
+  m_Layer: 0
+  m_Name: Cameras
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &324910374914460840
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 257535904027518791}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1232.1077, y: 252.49266, z: 23.000675}
+  m_LocalScale: {x: 1.4285713, y: 1, z: 1.4285713}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 8574473975521800304}
+  - {fileID: 1209884360094613233}
+  - {fileID: 4621694169339740695}
+  - {fileID: 6709120634022850093}
+  - {fileID: 155292515596710398}
+  - {fileID: 1927112189295909415}
+  m_Father: {fileID: 3500997272642107231}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1611381710958972421
 GameObject:
   m_ObjectHideFlags: 0
@@ -220,8 +257,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1209884360094613233}
   - component: {fileID: 8385275144857286383}
+  - component: {fileID: 2741973592729246728}
   m_Layer: 0
-  m_Name: Camera 2
+  m_Name: HallCamera 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -236,11 +274,11 @@ Transform:
   m_GameObject: {fileID: 2086509830577740044}
   serializedVersion: 2
   m_LocalRotation: {x: -0.32283366, y: -0.41509855, z: 0.16090566, w: -0.8352132}
-  m_LocalPosition: {x: -17.700008, y: 15.5, z: -51.2}
-  m_LocalScale: {x: 1.4285717, y: 1.4285716, z: 1}
+  m_LocalPosition: {x: -874.8654, y: -236.99266, z: -51.940475}
+  m_LocalScale: {x: 1, y: 1.2345436, z: 0.8358194}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 3500997272642107231}
+  m_Father: {fileID: 324910374914460840}
   m_LocalEulerAnglesHint: {x: 137.712, y: -127.168, z: 179.941}
 --- !u!20 &8385275144857286383
 Camera:
@@ -293,6 +331,18 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!114 &2741973592729246728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2086509830577740044}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b16c4c626b82b4f41853ba5b6586b03e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3234385354353179816
 GameObject:
   m_ObjectHideFlags: 0
@@ -513,6 +563,7 @@ GameObject:
   m_Component:
   - component: {fileID: 155292515596710398}
   - component: {fileID: 4052957167175797911}
+  - component: {fileID: 3046708486675550021}
   m_Layer: 0
   m_Name: HallCamera 5
   m_TagString: Untagged
@@ -529,11 +580,11 @@ Transform:
   m_GameObject: {fileID: 5626478721507362559}
   serializedVersion: 2
   m_LocalRotation: {x: 0.12017201, y: -0.8797493, z: 0.34010482, w: 0.30972347}
-  m_LocalPosition: {x: 55, y: 12.1, z: -14.5}
-  m_LocalScale: {x: 1.4285717, y: 1.4285716, z: 1}
+  m_LocalPosition: {x: -823.9754, y: -240.39265, z: -26.250475}
+  m_LocalScale: {x: 1, y: 1.2345431, z: 0.83581984}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 3500997272642107231}
+  m_Father: {fileID: 324910374914460840}
   m_LocalEulerAnglesHint: {x: 137.712, y: 38.767, z: 179.941}
 --- !u!20 &4052957167175797911
 Camera:
@@ -586,6 +637,18 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!114 &3046708486675550021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5626478721507362559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b16c4c626b82b4f41853ba5b6586b03e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5789076837920915843
 GameObject:
   m_ObjectHideFlags: 0
@@ -596,6 +659,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1927112189295909415}
   - component: {fileID: 759606843870468461}
+  - component: {fileID: 2153732340487102683}
   m_Layer: 0
   m_Name: HallCamera 6
   m_TagString: Untagged
@@ -612,11 +676,11 @@ Transform:
   m_GameObject: {fileID: 5789076837920915843}
   serializedVersion: 2
   m_LocalRotation: {x: -0.29594186, y: -0.5003651, z: 0.5198546, w: -0.6259428}
-  m_LocalPosition: {x: 17.09999, y: 15.9, z: -51.2}
-  m_LocalScale: {x: 1.4285717, y: 1.4285716, z: 1}
+  m_LocalPosition: {x: -850.50543, y: -236.59267, z: -51.940475}
+  m_LocalScale: {x: 1.0539018, y: 1.0346497, z: 0.9380144}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 3500997272642107231}
+  m_Father: {fileID: 324910374914460840}
   m_LocalEulerAnglesHint: {x: 117.035995, y: -135.481, z: 128.72101}
 --- !u!20 &759606843870468461
 Camera:
@@ -669,6 +733,18 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!114 &2153732340487102683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5789076837920915843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b16c4c626b82b4f41853ba5b6586b03e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6224597903717207326
 GameObject:
   m_ObjectHideFlags: 0
@@ -703,12 +779,7 @@ Transform:
   - {fileID: 1979831622282849664}
   - {fileID: 1356823922421141572}
   - {fileID: 5969483294032809799}
-  - {fileID: 8574473975521800304}
-  - {fileID: 1209884360094613233}
-  - {fileID: 4621694169339740695}
-  - {fileID: 6709120634022850093}
-  - {fileID: 155292515596710398}
-  - {fileID: 1927112189295909415}
+  - {fileID: 324910374914460840}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6662195010769044339
@@ -721,6 +792,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6709120634022850093}
   - component: {fileID: 7519374375882204676}
+  - component: {fileID: 589544218924246313}
   m_Layer: 0
   m_Name: HallCamera 4
   m_TagString: Untagged
@@ -737,11 +809,11 @@ Transform:
   m_GameObject: {fileID: 6662195010769044339}
   serializedVersion: 2
   m_LocalRotation: {x: -0.37053114, y: 0.3685623, z: -0.25645015, w: -0.8130817}
-  m_LocalPosition: {x: 59.19999, y: 19.33, z: -81.979996}
-  m_LocalScale: {x: 1.4285717, y: 1.4285716, z: 1}
+  m_LocalPosition: {x: -821.03546, y: -233.16266, z: -73.48647}
+  m_LocalScale: {x: 1.008875, y: 1.1511545, z: 0.8879796}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 3500997272642107231}
+  m_Father: {fileID: 324910374914460840}
   m_LocalEulerAnglesHint: {x: 127.66699, y: -222.052, z: 193.621}
 --- !u!20 &7519374375882204676
 Camera:
@@ -794,6 +866,18 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!114 &589544218924246313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6662195010769044339}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b16c4c626b82b4f41853ba5b6586b03e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7266920506079844750
 GameObject:
   m_ObjectHideFlags: 0
@@ -804,8 +888,9 @@ GameObject:
   m_Component:
   - component: {fileID: 8574473975521800304}
   - component: {fileID: 1798251005087050043}
+  - component: {fileID: 8700893863129842396}
   m_Layer: 0
-  m_Name: Camera
+  m_Name: HallCamera 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -820,11 +905,11 @@ Transform:
   m_GameObject: {fileID: 7266920506079844750}
   serializedVersion: 2
   m_LocalRotation: {x: 0.00048206563, y: -0.93267804, z: 0.3607096, w: 0.0001864387}
-  m_LocalPosition: {x: 21.899992, y: 15.5, z: -36}
-  m_LocalScale: {x: 1.4285717, y: 1.4285716, z: 1}
+  m_LocalPosition: {x: -847.1454, y: -236.99266, z: -41.30047}
+  m_LocalScale: {x: 1, y: 1.2345444, z: 0.835819}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 3500997272642107231}
+  m_Father: {fileID: 324910374914460840}
   m_LocalEulerAnglesHint: {x: 137.712, y: 0, z: 179.941}
 --- !u!20 &1798251005087050043
 Camera:
@@ -877,6 +962,18 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!114 &8700893863129842396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7266920506079844750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b16c4c626b82b4f41853ba5b6586b03e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7675021451007843149
 GameObject:
   m_ObjectHideFlags: 0
@@ -992,6 +1089,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4621694169339740695}
   - component: {fileID: 3129700154877800509}
+  - component: {fileID: 2627526736298187615}
   m_Layer: 0
   m_Name: HallCamera 3
   m_TagString: Untagged
@@ -1008,11 +1106,11 @@ Transform:
   m_GameObject: {fileID: 8898266770064420033}
   serializedVersion: 2
   m_LocalRotation: {x: 0.16090477, y: -0.8352143, z: 0.32283416, w: 0.41509622}
-  m_LocalPosition: {x: 57.1, y: 15.5, z: -52.1}
-  m_LocalScale: {x: 1.4285717, y: 1.4285716, z: 1}
+  m_LocalPosition: {x: -822.50543, y: -236.99266, z: -52.570477}
+  m_LocalScale: {x: 1, y: 1.2345436, z: 0.83581954}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 3500997272642107231}
+  m_Father: {fileID: 324910374914460840}
   m_LocalEulerAnglesHint: {x: 137.712, y: 52.831, z: 179.941}
 --- !u!20 &3129700154877800509
 Camera:
@@ -1065,3 +1163,15 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!114 &2627526736298187615
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8898266770064420033}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b16c4c626b82b4f41853ba5b6586b03e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
