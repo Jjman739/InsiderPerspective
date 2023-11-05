@@ -35,5 +35,10 @@ public class SceneSwitch : MonoBehaviour
         Application.Quit();
     }
 
+    public void MainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
+
 
 }
