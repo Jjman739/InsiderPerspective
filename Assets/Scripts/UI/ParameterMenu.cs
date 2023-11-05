@@ -40,30 +40,35 @@ public class ParameterMenu : MonoBehaviour
 
     public void UpdateThiefMoveSpeed(float speed)
     {
+        if (!menuOpen) return;
         thief.GetComponent<ThiefMovementScript>().SetMoveSpeed(speed);
         moveSpeedValueText.text = speed.ToString();
     }
 
     public void UpdateThiefTurnSpeed(float speed)
     {
+        if (!menuOpen) return;
         thief.GetComponent<ThiefMovementScript>().SetTurnSpeed(speed);
         turnSpeedValueText.text = speed.ToString();
     }
 
     public void UpdateMouseSensitivity(float sensitivity)
     {
+        if (!menuOpen) return;
         guard.GetComponent<GuardMovement>().SetTurnSpeed(sensitivity);
         mouseSensitivityText.text = sensitivity.ToString();
     }
 
     public void UpdateGuardMoveSpeed(float speed)
     {
+        if (!menuOpen) return;
         patrollingGuard.GetComponent<PatrollingGuard>().SetMoveSpeed(speed);
         guardSpeedValueText.text = speed.ToString();
     }
 
     public void UpdateGuardAlertTimer(float time)
     {
+        if (!menuOpen) return;
         thief.GetComponent<ThiefMovementScript>().SetAlertTimer(time);
         alertTimeValueText.text = time.ToString();
     }
