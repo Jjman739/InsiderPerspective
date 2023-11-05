@@ -17,8 +17,15 @@ public class SceneSwitch : MonoBehaviour
         
     }
 
-    public void Restart()
+    public void StartGame()
     {
         SceneManager.LoadScene("SampleScene");
     }
+
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
+
+
 }

@@ -26,6 +26,8 @@ public class ThiefMovementScript : MonoBehaviour
     [SerializeField] private float alertTimer = 2f;
     [SerializeField] private Slider alertMeter;
 
+    public int health = 3;
+
     private void Start()
     {
         controller = GetComponent<CharacterController>();
@@ -103,6 +105,20 @@ public class ThiefMovementScript : MonoBehaviour
             }
         }
 
+   
+
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Trap"))
+        {
+            health--;
+            if (health == 0)
+            {
+                Destroy(this);
+            }
+        }
     }
 
     void OnDestroy()
@@ -114,4 +130,6 @@ public class ThiefMovementScript : MonoBehaviour
     public void SetTurnSpeed(float speed) { turnSpeed = speed; }
     public void SetInLineOfSight(bool inSight) { inLineOfSight = inSight; }
     public void SetAlertTimer(float time) { alertTimer = time; }
+
 }
+
