@@ -10,15 +10,19 @@ public class CameraViewer : Singleton<CameraViewer>
     [SerializeField] private Camera mainCamera;
     [SerializeField] private GameObject cameraUI;
     [SerializeField] private GameObject cameraSwapButtonPrefab;
+    [SerializeField] private AudioClip cameraSwivel;
+    [SerializeField] private AudioClip cameraClick;
     private Transform cameraSwapButtons;
     private Transform currentCameraGroup;
     private ControllableCamera currentCamera;
     private int currentCameraIndex;
+    private AudioSource audioSource;
 
     private void Start()
     {
         cameraUI.SetActive(false);
         cameraSwapButtons = cameraUI.transform.Find("SwapButtons");
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -65,26 +69,36 @@ public class CameraViewer : Singleton<CameraViewer>
         currentCamera = currentCameraGroup.GetChild(index).GetComponent<ControllableCamera>();
         currentCameraIndex = currentCamera.GetCameraGroupIndex();
         currentCamera.EnterView();
+        audioSource.clip = cameraClick;
+        audioSource.Play();
     }
 
     public void MoveUp()
     {
         currentCamera.MoveVertical(false);
+        audioSource.clip = cameraSwivel;
+        audioSource.Play();
     }
 
     public void MoveDown()
     {
         currentCamera.MoveVertical(true);
+        audioSource.clip = cameraSwivel;
+        audioSource.Play();
     }
 
     public void MoveLeft()
     {
         currentCamera.MoveHorizontal(false);
+        audioSource.clip = cameraSwivel;
+        audioSource.Play();
     }
 
     public void MoveRight()
     {
         currentCamera.MoveHorizontal(true);
+        audioSource.clip = cameraSwivel;
+        audioSource.Play();
     }
 
     public void BreakCamera(int index)

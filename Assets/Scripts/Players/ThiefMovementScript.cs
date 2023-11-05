@@ -10,6 +10,7 @@ public class ThiefMovementScript : MonoBehaviour
     private Vector3 move;
     private Vector3 twist;
     private CharacterController controller;
+    private AudioSource audioSource;
     private float currentAlertTimer;
     private bool inLineOfSight;
 
@@ -25,11 +26,14 @@ public class ThiefMovementScript : MonoBehaviour
     [SerializeField] private int charge = 5;
     [SerializeField] private float alertTimer = 2f;
     [SerializeField] private Slider alertMeter;
+    [SerializeField] private AudioClip robotJump;
+    [SerializeField] private AudioClip robotWalk;
 
     private void Start()
     {
         controller = GetComponent<CharacterController>();
         currentAlertTimer = alertTimer;
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void FixedUpdate()
@@ -39,6 +43,17 @@ public class ThiefMovementScript : MonoBehaviour
 
         //jump control
         bool grounded = controller.isGrounded;
+
+        if (grounded && move != Vector3.zero)
+        {   
+            audioSource.clip = robotWalk;
+            audioSource.loop = true;
+            audioSource.Play();
+        }
+        else
+        {
+            audioSource.Stop();
+        }
 
         if (grounded)
         {
@@ -61,6 +76,9 @@ public class ThiefMovementScript : MonoBehaviour
         {
             jumpTimer = 0;
             jumpSpeed = Mathf.Sqrt(jumpHeight * -gravity * 2);
+            audioSource.clip = robotJump;
+            audioSource.loop = false;
+            audioSource.Play();
         }
 
         move.y = jumpSpeed;
