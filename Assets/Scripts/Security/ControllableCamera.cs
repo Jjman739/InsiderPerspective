@@ -80,7 +80,6 @@ public class ControllableCamera : MonoBehaviour
 
     private void checkIsMoving()
     {
-        Debug.Log($"{shouldMove}, {isMoving}");
         if ((shouldMove && !isMoving) || (!shouldMove && isMoving))
         {
             currentDelayTimer -= Time.deltaTime;

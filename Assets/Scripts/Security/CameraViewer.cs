@@ -70,6 +70,7 @@ public class CameraViewer : Singleton<CameraViewer>
         currentCameraIndex = currentCamera.GetCameraGroupIndex();
         currentCamera.EnterView();
         audioSource.clip = cameraClick;
+        audioSource.loop = false;
         audioSource.Play();
     }
 
@@ -77,28 +78,32 @@ public class CameraViewer : Singleton<CameraViewer>
     {
         currentCamera.SetMoveUp(moving);
         audioSource.clip = cameraSwivel;
-        audioSource.Play();
+        audioSource.loop = moving;
+        if (moving) audioSource.Play(); else audioSource.Stop();
     }
 
     public void SetMoveDown(bool moving)
     {
         currentCamera.SetMoveDown(moving);
         audioSource.clip = cameraSwivel;
-        audioSource.Play();
+        audioSource.loop = moving;
+        if (moving) audioSource.Play(); else audioSource.Stop();
     }
 
     public void SetMoveLeft(bool moving)
     {
         currentCamera.SetMoveLeft(moving);
         audioSource.clip = cameraSwivel;
-        audioSource.Play();
+        audioSource.loop = moving;
+        if (moving) audioSource.Play(); else audioSource.Stop();
     }
 
     public void SetMoveRight(bool moving)
     {
         currentCamera.SetMoveRight(moving);
         audioSource.clip = cameraSwivel;
-        audioSource.Play();
+        audioSource.loop = moving;
+        if (moving) audioSource.Play(); else audioSource.Stop();
     }
 
     public void BreakCamera(int index)
