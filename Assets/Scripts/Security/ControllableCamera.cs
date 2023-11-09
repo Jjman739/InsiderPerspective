@@ -7,12 +7,14 @@ public class ControllableCamera : MonoBehaviour
     private float rotationInterval = 10f;
     private new Camera camera;
     private RenderTexture targetTexture;
+    private AudioListener audioListener;
     private bool viewing;
     private bool broken;
 
     private void Start()
     {
         camera = GetComponent<Camera>();
+        audioListener = GetComponent<AudioListener>();
         targetTexture = camera.targetTexture;
     }
 
@@ -22,6 +24,8 @@ public class ControllableCamera : MonoBehaviour
         {
             camera.enabled = false;
         }
+
+        audioListener.enabled = viewing;
     }
 
     public void EnterView()
