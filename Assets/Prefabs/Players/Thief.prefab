@@ -253,6 +253,11 @@ MonoBehaviour:
   alertMeter: {fileID: 0}
   robotJump: {fileID: 0}
   robotWalk: {fileID: 0}
+  forwardButton: ThiefMoveUp
+  backwardButton: ThiefMoveDown
+  leftButton: ThiefMoveLeft
+  rightButton: ThiefMoveRight
+  jumpButton: Jump
 --- !u!114 &988405178396776603
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -281,6 +286,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   photoCooldown: 1
   photoCamera: {fileID: 8802622465906049448}
+  photoButton: ThiefPhoto
 --- !u!82 &2182103579036937626
 AudioSource:
   m_ObjectHideFlags: 0
@@ -390,6 +396,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraRoot: {fileID: 7623088855656258813}
+  photo: {fileID: 503376195182715850}
+  movement: {fileID: -7040398787914363862}
 --- !u!1001 &6006679463548131492
 PrefabInstance:
   m_ObjectHideFlags: 0
