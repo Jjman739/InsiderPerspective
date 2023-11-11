@@ -9,12 +9,14 @@ public class ThiefPhoto : MonoBehaviour
     private bool photoActive = false;
     private float photoCooldownTimer = 0;
 
+    public string photoButton = "ThiefPhoto";
+
     void Update()
     {
         photoCooldownTimer -= Time.deltaTime;
-        if (Input.GetButton("ThiefPhoto") != photoActive)
+        if (Input.GetButton(photoButton) != photoActive)
         {
-            photoActive = Input.GetButton("ThiefPhoto");
+            photoActive = Input.GetButton(photoButton);
             if (photoActive && photoCooldownTimer <= 0)
             {
                 TakePhoto();
