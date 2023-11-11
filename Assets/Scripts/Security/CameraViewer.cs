@@ -27,10 +27,10 @@ public class CameraViewer : Singleton<CameraViewer>
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.P))
+        /*if (Input.GetKeyDown(KeyCode.P))
         {
             BreakCamera(currentCameraIndex);
-        }
+        }*/
     }
 
     public void ViewCamera(ControllableCamera camera)
@@ -70,35 +70,40 @@ public class CameraViewer : Singleton<CameraViewer>
         currentCameraIndex = currentCamera.GetCameraGroupIndex();
         currentCamera.EnterView();
         audioSource.clip = cameraClick;
+        audioSource.loop = false;
         audioSource.Play();
     }
 
-    public void MoveUp()
+    public void SetMoveUp(bool moving)
     {
-        currentCamera.MoveVertical(false);
+        currentCamera.SetMoveUp(moving);
         audioSource.clip = cameraSwivel;
-        audioSource.Play();
+        audioSource.loop = moving;
+        if (moving) audioSource.Play(); else audioSource.Stop();
     }
 
-    public void MoveDown()
+    public void SetMoveDown(bool moving)
     {
-        currentCamera.MoveVertical(true);
+        currentCamera.SetMoveDown(moving);
         audioSource.clip = cameraSwivel;
-        audioSource.Play();
+        audioSource.loop = moving;
+        if (moving) audioSource.Play(); else audioSource.Stop();
     }
 
-    public void MoveLeft()
+    public void SetMoveLeft(bool moving)
     {
-        currentCamera.MoveHorizontal(false);
+        currentCamera.SetMoveLeft(moving);
         audioSource.clip = cameraSwivel;
-        audioSource.Play();
+        audioSource.loop = moving;
+        if (moving) audioSource.Play(); else audioSource.Stop();
     }
 
-    public void MoveRight()
+    public void SetMoveRight(bool moving)
     {
-        currentCamera.MoveHorizontal(true);
+        currentCamera.SetMoveRight(moving);
         audioSource.clip = cameraSwivel;
-        audioSource.Play();
+        audioSource.loop = moving;
+        if (moving) audioSource.Play(); else audioSource.Stop();
     }
 
     public void BreakCamera(int index)

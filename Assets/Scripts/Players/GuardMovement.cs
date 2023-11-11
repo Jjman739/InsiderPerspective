@@ -6,15 +6,21 @@ public class GuardMovement : MonoBehaviour {
 
     [SerializeField] private float turnSpeed = 5f;
     private bool interacting = false;
+    private AudioListener audioListener;
+    private Camera mainCamera;
 
     private void Start()
     {
         controller = GetComponent<CharacterController>();
         Cursor.lockState = CursorLockMode.Locked;
+        audioListener = GetComponent<AudioListener>();
+        mainCamera = GetComponent<Camera>();
     }
 
     private void Update()
     {
+        audioListener.enabled = mainCamera.enabled;
+
         if (Cursor.lockState != CursorLockMode.Locked) return;
 
         Vector3 euler = transform.rotation.eulerAngles;
@@ -42,7 +48,6 @@ public class GuardMovement : MonoBehaviour {
                 }
             }
         }
-
     }
 
     public void SetTurnSpeed(float speed) { turnSpeed = speed; }

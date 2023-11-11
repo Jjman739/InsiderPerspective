@@ -1,19 +1,36 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class ControllableCamera : MonoBehaviour
 {
-    private float rotationInterval = 10f;
+    private enum Direction
+    {
+        UP,
+        DOWN,
+        LEFT,
+        RIGHT,
+        NONE
+    }
+    private float rotationInterval = 0.2f;
+    private float delayTimer = 0.5f;
+    private float currentDelayTimer;
     private new Camera camera;
     private RenderTexture targetTexture;
+    private AudioListener audioListener;
+    private bool shouldMove;
+    private bool isMoving;
+    private Direction moveDirection;
     private bool viewing;
     private bool broken;
 
     private void Start()
     {
         camera = GetComponent<Camera>();
+        audioListener = GetComponent<AudioListener>();
         targetTexture = camera.targetTexture;
+        currentDelayTimer = delayTimer;
     }
 
     private void Update()
@@ -21,6 +38,60 @@ public class ControllableCamera : MonoBehaviour
         if (camera.targetTexture is null && !viewing)
         {
             camera.enabled = false;
+        }
+
+        audioListener.enabled = viewing;
+
+        checkIsMoving();
+
+        if (isMoving)
+        {
+            if (moveDirection == Direction.UP)
+            {
+                moveVertical(false);
+            }
+
+            if (moveDirection == Direction.DOWN)
+            {
+                moveVertical(true);
+            }
+
+            if (moveDirection == Direction.LEFT)
+            {
+                moveHorizontal(false);
+            }
+
+            if (moveDirection == Direction.RIGHT)
+            {
+                moveHorizontal(true);
+            }
+        }
+    }
+
+    private void moveHorizontal(bool positive)
+    {
+        transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y + (rotationInterval * (positive ? 1 : -1)), transform.eulerAngles.z);
+    }
+
+    private void moveVertical(bool positive)
+    {
+        transform.eulerAngles = new Vector3(transform.eulerAngles.x + (rotationInterval * (positive ? 1 : -1)), transform.eulerAngles.y, transform.eulerAngles.z);
+    }
+
+    private void checkIsMoving()
+    {
+        if ((shouldMove && !isMoving) || (!shouldMove && isMoving))
+        {
+            currentDelayTimer -= Time.deltaTime;
+
+            if (currentDelayTimer <= 0)
+            {
+                isMoving = shouldMove;
+            }
+        }
+        else
+        {
+            currentDelayTimer = delayTimer;
         }
     }
 
@@ -43,17 +114,29 @@ public class ControllableCamera : MonoBehaviour
         camera.enabled = false;
         viewing = false;
     }
-
-    public void MoveHorizontal(bool positive)
+    
+    public void SetMoveUp(bool moving)
     {
-        if (broken) return;
-        transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y + (rotationInterval * (positive ? 1 : -1)), transform.eulerAngles.z);
+        moveDirection = Direction.UP;
+        shouldMove = moving;
     }
 
-    public void MoveVertical(bool positive)
+    public void SetMoveDown(bool moving)
     {
-        if (broken) return;
-        transform.eulerAngles = new Vector3(transform.eulerAngles.x + (rotationInterval * (positive ? 1 : -1)), transform.eulerAngles.y, transform.eulerAngles.z);
+        moveDirection = Direction.DOWN;
+        shouldMove = moving;
+    }
+
+    public void SetMoveLeft(bool moving)
+    {
+        moveDirection = Direction.LEFT;
+        shouldMove = moving;
+    }
+
+    public void SetMoveRight(bool moving)
+    {   
+        moveDirection = Direction.RIGHT;
+        shouldMove = moving;
     }
 
     public void Break()
