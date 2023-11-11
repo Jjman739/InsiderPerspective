@@ -29,13 +29,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1749842188120264919}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.6943997, y: -0, z: -0, w: 0.7195895}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0.42, z: 2.58}
-  m_LocalScale: {x: 1.4545, y: 1.6672, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3348841602411470165}
-  m_LocalEulerAnglesHint: {x: -87.959, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!114 &1781154973029045837
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1166,15 +1166,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 8ba645fc0c00dc34e87e33260e9b9253, type: 3}
       propertyPath: m_LocalScale.x
-      value: 372.4299
+      value: 490.89984
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8ba645fc0c00dc34e87e33260e9b9253, type: 3}
       propertyPath: m_LocalScale.y
-      value: 394.26935
+      value: 537.58624
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8ba645fc0c00dc34e87e33260e9b9253, type: 3}
       propertyPath: m_LocalScale.z
-      value: 169.31602
+      value: 373.9514
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8ba645fc0c00dc34e87e33260e9b9253, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1186,7 +1186,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8ba645fc0c00dc34e87e33260e9b9253, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.52
+      value: 2.5081
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8ba645fc0c00dc34e87e33260e9b9253, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1216,13 +1216,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 8ba645fc0c00dc34e87e33260e9b9253, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 8ba645fc0c00dc34e87e33260e9b9253, type: 3}
       propertyPath: m_Name
       value: LineOfSight(Hidden)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 8ba645fc0c00dc34e87e33260e9b9253, type: 3}
       propertyPath: m_Layer
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
