@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641275, b: 0.5748172, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -181,7 +181,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: You are a security guard trying to rob your boss with the help of your
-    little robot friend. Guide them through the mansion using your moniters to find
+    little robot friend. Guide them through the mansion using your monitors to find
     obstacles and navigate to the treasures and then get out without being caught.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -691,9 +691,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Using your mouse click on the moniters to zoom into each room and get access
-    to the different cameras in the room. Use wasd to navigate the robot and use
-    e to capture pictures that will reveal traps. Behind you is a guard map which
+  m_text: Using your mouse, click on the monitors to zoom into each room and get
+    access to the different cameras in the room. Use WASD to navigate the robot and
+    use E to capture pictures that will reveal traps. Behind you is a guard map which
     you can use to divert guards from your position.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
