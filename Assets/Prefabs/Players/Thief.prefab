@@ -398,6 +398,7 @@ MonoBehaviour:
   cameraRoot: {fileID: 7623088855656258813}
   photo: {fileID: 503376195182715850}
   movement: {fileID: -7040398787914363862}
+  treasure: {fileID: 988405178396776603}
 --- !u!1001 &6006679463548131492
 PrefabInstance:
   m_ObjectHideFlags: 0

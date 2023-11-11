@@ -8,12 +8,24 @@ public class ThiefManager : MonoBehaviour
     [SerializeField] private Transform cameraRoot;
     [SerializeField] private ThiefPhoto photo;
     [SerializeField] private ThiefMovementScript movement;
+    [SerializeField] private ThiefTreasure treasure;
 
     public void TakeDamage()
     {
         Debug.Log("Hit a trap.");
         cameraRoot.rotation = Quaternion.Euler(0, Random.Range(0f, 360f), 0);
         ScrambleControls(ref movement.forwardButton, ref movement.backwardButton, ref movement.leftButton, ref movement.rightButton, ref movement.jumpButton, ref photo.photoButton);
+    }
+
+    public bool AttemptWin()
+    {
+        if (treasure.treasureCount >= treasure.goal)
+        {
+            Debug.Log("Win!");
+            SceneManager.LoadScene("WinScene");
+            return true;
+        }
+        return false;
     }
 
     private void ScrambleControls(ref string forward, ref string backward, ref string left, ref string right, ref string jump, ref string cam)
