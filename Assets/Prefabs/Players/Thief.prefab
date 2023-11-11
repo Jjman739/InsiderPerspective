@@ -25,12 +25,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1791231388829054023}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.13052616, y: 0, z: 0, w: 0.9914449}
-  m_LocalPosition: {x: 0, y: 0.5, z: 0.1}
+  m_LocalRotation: {x: 0.13052616, y: -0, z: -0, w: 0.9914449}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 3348841602411470165}
+  m_Father: {fileID: 7623088855656258813}
   m_LocalEulerAnglesHint: {x: 15, y: 0, z: 0}
 --- !u!20 &8802622465906049448
 Camera:
@@ -71,7 +71,7 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 63
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 8400000, guid: c27c1a247a2d40b4c9359e2537bf9fcc, type: 2}
   m_TargetDisplay: 0
@@ -83,6 +83,38 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!1 &4556195708796979272
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7623088855656258813}
+  m_Layer: 0
+  m_Name: CameraRoot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7623088855656258813
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4556195708796979272}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 51098579865991101}
+  m_Father: {fileID: 3348841602411470165}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6501310672267175682
 GameObject:
   m_ObjectHideFlags: 0
@@ -99,6 +131,7 @@ GameObject:
   - component: {fileID: 988405178396776603}
   - component: {fileID: 503376195182715850}
   - component: {fileID: 2182103579036937626}
+  - component: {fileID: 371028469789500382}
   m_Layer: 0
   m_Name: Thief
   m_TagString: Player
@@ -119,8 +152,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 51098579865991101}
   - {fileID: 6113278434657894223}
+  - {fileID: 7623088855656258813}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &7909075326472278700
@@ -220,6 +253,11 @@ MonoBehaviour:
   alertMeter: {fileID: 0}
   robotJump: {fileID: 0}
   robotWalk: {fileID: 0}
+  forwardButton: ThiefMoveUp
+  backwardButton: ThiefMoveDown
+  leftButton: ThiefMoveLeft
+  rightButton: ThiefMoveRight
+  jumpButton: Jump
 --- !u!114 &988405178396776603
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -233,7 +271,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   treasureCount: 0
-  goal: 3
+  goal: 8
 --- !u!114 &503376195182715850
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -248,6 +286,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   photoCooldown: 1
   photoCamera: {fileID: 8802622465906049448}
+  photoButton: ThiefPhoto
 --- !u!82 &2182103579036937626
 AudioSource:
   m_ObjectHideFlags: 0
@@ -344,6 +383,24 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &371028469789500382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6501310672267175682}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3b96a13bf6efff4bba2518511b2585f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cameraRoot: {fileID: 7623088855656258813}
+  photo: {fileID: 503376195182715850}
+  movement: {fileID: -7040398787914363862}
+  treasure: {fileID: 988405178396776603}
+  repairsRemaining: 3
+  needsRepair: 0
 --- !u!1001 &6006679463548131492
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -407,6 +464,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 52f65cefa9f8f714593cf957a097044f, type: 3}
       propertyPath: m_Name
       value: RobotThief_LP
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 52f65cefa9f8f714593cf957a097044f, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -29,6 +29,12 @@ public class ThiefMovementScript : MonoBehaviour
     [SerializeField] private AudioClip robotJump;
     [SerializeField] private AudioClip robotWalk;
 
+    public string forwardButton = "ThiefMoveUp";
+    public string backwardButton = "ThiefMoveDown";
+    public string leftButton = "ThiefMoveLeft";
+    public string rightButton = "ThiefMoveRight";
+    public string jumpButton = "Jump";
+
     private void Start()
     {
         controller = GetComponent<CharacterController>();
@@ -38,8 +44,15 @@ public class ThiefMovementScript : MonoBehaviour
 
     private void FixedUpdate()
     {
-        move = new Vector3(0, 0, Input.GetAxis("ThiefMove"));
-        twist = new Vector3(0, Input.GetAxis("ThiefTurn"), 0);
+        float moveAxis = 0;
+        if (Input.GetButton(forwardButton)) { moveAxis += 1; }
+        if (Input.GetButton(backwardButton)) { moveAxis -= 1; }
+        float turnAxis = 0;
+        if (Input.GetButton(leftButton)) { turnAxis -= 1; }
+        if (Input.GetButton(rightButton)) { turnAxis += 1; }
+
+        move = new Vector3(0, 0, moveAxis);
+        twist = new Vector3(0, turnAxis, 0);
 
         //jump control
         bool grounded = controller.isGrounded;
@@ -72,7 +85,7 @@ public class ThiefMovementScript : MonoBehaviour
 
         jumpSpeed += gravity * Time.deltaTime;
 
-        if (jumpTimer > 0 && Input.GetButton("Jump"))
+        if (jumpTimer > 0 && Input.GetButton(jumpButton))
         {
             jumpTimer = 0;
             jumpSpeed = Mathf.Sqrt(jumpHeight * -gravity * 2);
