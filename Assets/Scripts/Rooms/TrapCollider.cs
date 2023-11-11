@@ -1,14 +1,13 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class TrapCollider : MonoBehaviour
 {
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        ThiefManager manager = other.gameObject.GetComponent<ThiefManager>();
+        if (manager!= null)
         {
-            Debug.Log("Hit a trap.");
-            SceneManager.LoadScene("LoseScene");
+            manager.TakeDamage();
         }
     }
 }

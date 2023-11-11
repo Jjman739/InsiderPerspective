@@ -99,6 +99,7 @@ GameObject:
   - component: {fileID: 988405178396776603}
   - component: {fileID: 503376195182715850}
   - component: {fileID: 2182103579036937626}
+  - component: {fileID: 371028469789500382}
   m_Layer: 0
   m_Name: Thief
   m_TagString: Player
@@ -344,6 +345,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &371028469789500382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6501310672267175682}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3b96a13bf6efff4bba2518511b2585f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &6006679463548131492
 PrefabInstance:
   m_ObjectHideFlags: 0
