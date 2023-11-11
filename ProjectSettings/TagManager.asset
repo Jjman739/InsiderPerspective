@@ -5,14 +5,15 @@ TagManager:
   serializedVersion: 2
   tags:
   - Trap
+  - Treasure
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - HideFromThief
+  - PhotoOnly
   - Water
   - UI
-  - 
+  - HideFromPhoto
   - 
   - 
   - 
