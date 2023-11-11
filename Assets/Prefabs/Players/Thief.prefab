@@ -16,7 +16,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &51098579865991101
 Transform:
   m_ObjectHideFlags: 0
@@ -399,6 +399,8 @@ MonoBehaviour:
   photo: {fileID: 503376195182715850}
   movement: {fileID: -7040398787914363862}
   treasure: {fileID: 988405178396776603}
+  repairsRemaining: 3
+  needsRepair: 0
 --- !u!1001 &6006679463548131492
 PrefabInstance:
   m_ObjectHideFlags: 0
