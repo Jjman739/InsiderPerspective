@@ -4806,6 +4806,16 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: fe2b8e9dc241c844ca2afb6ee3157100, type: 3}
   m_PrefabInstance: {fileID: 9818204}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &760141634 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6501310672267175682, guid: 7a73716f833a39d43aee89db56f1afeb, type: 3}
+  m_PrefabInstance: {fileID: 2068422554}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &760141635 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3348841602411470165, guid: 7a73716f833a39d43aee89db56f1afeb, type: 3}
+  m_PrefabInstance: {fileID: 2068422554}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &761631245
 GameObject:
   m_ObjectHideFlags: 0
@@ -10850,6 +10860,63 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2056231049}
   m_CullTransparentMesh: 1
+--- !u!1001 &2068422554
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 63384972270896139}
+    m_Modifications:
+    - target: {fileID: 3348841602411470165, guid: 7a73716f833a39d43aee89db56f1afeb, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 19
+      objectReference: {fileID: 0}
+    - target: {fileID: 3348841602411470165, guid: 7a73716f833a39d43aee89db56f1afeb, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 30.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3348841602411470165, guid: 7a73716f833a39d43aee89db56f1afeb, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -64.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3348841602411470165, guid: 7a73716f833a39d43aee89db56f1afeb, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3348841602411470165, guid: 7a73716f833a39d43aee89db56f1afeb, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3348841602411470165, guid: 7a73716f833a39d43aee89db56f1afeb, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3348841602411470165, guid: 7a73716f833a39d43aee89db56f1afeb, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3348841602411470165, guid: 7a73716f833a39d43aee89db56f1afeb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3348841602411470165, guid: 7a73716f833a39d43aee89db56f1afeb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3348841602411470165, guid: 7a73716f833a39d43aee89db56f1afeb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6501310672267175682, guid: 7a73716f833a39d43aee89db56f1afeb, type: 3}
+      propertyPath: m_Name
+      value: PatrollingGuard (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7a73716f833a39d43aee89db56f1afeb, type: 3}
 --- !u!1 &2082923079 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6501310672267175682, guid: 7604196884fb4ff41b12b946132a92fe, type: 3}
@@ -11511,6 +11578,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 9107001984964667295, guid: 3278d896a16b67f4ea35fbbdac2813ec, type: 3}
       insertIndex: -1
       addedObject: {fileID: 617542171}
+    - targetCorrespondingSourceObject: {fileID: 9107001984964667295, guid: 3278d896a16b67f4ea35fbbdac2813ec, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 760141635}
     - targetCorrespondingSourceObject: {fileID: 9107001984964667295, guid: 3278d896a16b67f4ea35fbbdac2813ec, type: 3}
       insertIndex: -1
       addedObject: {fileID: 346945686}
@@ -13529,12 +13599,16 @@ PrefabInstance:
       objectReference: {fileID: 346945686}
     - target: {fileID: 2233014786885502307, guid: aa9469775cb731044b846ee008337528, type: 3}
       propertyPath: guards.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2233014786885502307, guid: aa9469775cb731044b846ee008337528, type: 3}
       propertyPath: guards.Array.data[0]
       value: 
       objectReference: {fileID: 617542172}
+    - target: {fileID: 2233014786885502307, guid: aa9469775cb731044b846ee008337528, type: 3}
+      propertyPath: guards.Array.data[1]
+      value: 
+      objectReference: {fileID: 760141634}
     - target: {fileID: 2233014786885502307, guid: aa9469775cb731044b846ee008337528, type: 3}
       propertyPath: patrollingGuardPrefab
       value: 
