@@ -10,11 +10,15 @@ public class ThiefManager : MonoBehaviour
     [SerializeField] private ThiefMovementScript movement;
     [SerializeField] private ThiefTreasure treasure;
 
+    public int repairsRemaining = 3;
+    public bool needsRepair = false;
+
     public void TakeDamage()
     {
         Debug.Log("Hit a trap.");
         cameraRoot.rotation = Quaternion.Euler(0, Random.Range(0f, 360f), 0);
         ScrambleControls(ref movement.forwardButton, ref movement.backwardButton, ref movement.leftButton, ref movement.rightButton, ref movement.jumpButton, ref photo.photoButton);
+        needsRepair = true;
     }
 
     public bool AttemptWin()
@@ -26,6 +30,21 @@ public class ThiefManager : MonoBehaviour
             return true;
         }
         return false;
+    }
+
+    public void Repair()
+    {
+        Debug.Log("Repairing!");
+
+        cameraRoot.rotation = Quaternion.Euler(0f, 0f, 0f);
+        movement.forwardButton = "ThiefMoveUp";
+        movement.backwardButton = "ThiefMoveDown";
+        movement.leftButton = "ThiefMoveLeft";
+        movement.rightButton = "ThiefMoveRight";
+        movement.jumpButton = "Jump";
+        photo.photoButton = "ThiefPhoto";
+        repairsRemaining--;
+        needsRepair = false;
     }
 
     private void ScrambleControls(ref string forward, ref string backward, ref string left, ref string right, ref string jump, ref string cam)
