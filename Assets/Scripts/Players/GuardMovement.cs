@@ -7,14 +7,22 @@ public class GuardMovement : MonoBehaviour {
     [SerializeField] private float turnSpeed = 5f;
     private bool interacting = false;
 
+
     private void Start()
     {
         controller = GetComponent<CharacterController>();
         Cursor.lockState = CursorLockMode.Locked;
+
     }
 
     private void Update()
     {
+
+        if (GameObject.Find("PauseControl").GetComponent<PauseMenu>().paused)
+        {
+            return;
+        }
+
         if (Cursor.lockState != CursorLockMode.Locked) return;
 
         Vector3 euler = transform.rotation.eulerAngles;

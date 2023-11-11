@@ -29,11 +29,14 @@ public class ThiefMovementScript : MonoBehaviour
     [SerializeField] private AudioClip robotJump;
     [SerializeField] private AudioClip robotWalk;
 
+
+
     private void Start()
     {
         controller = GetComponent<CharacterController>();
         currentAlertTimer = alertTimer;
         audioSource = GetComponent<AudioSource>();
+
     }
 
     private void FixedUpdate()
