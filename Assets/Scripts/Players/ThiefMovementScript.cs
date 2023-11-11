@@ -41,6 +41,12 @@ public class ThiefMovementScript : MonoBehaviour
 
     private void FixedUpdate()
     {
+
+        if (GameObject.Find("PauseControl").GetComponent<PauseMenu>().paused)
+        {
+            return;
+        }
+
         move = new Vector3(0, 0, Input.GetAxis("ThiefMove"));
         twist = new Vector3(0, Input.GetAxis("ThiefTurn"), 0);
 
