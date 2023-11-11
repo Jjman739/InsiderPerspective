@@ -39,8 +39,8 @@ public class ControllableCamera : MonoBehaviour
         targetTexture = camera.targetTexture;
         currentDelayTimer = delayTimer;
 
-        rotX = transform.eulerAngles.x;
-        rotY = transform.eulerAngles.y;
+        rotX = transform.localRotation.eulerAngles.x;
+        rotY = transform.localRotation.eulerAngles.y;
     }
 
     private void Update()
@@ -87,7 +87,7 @@ public class ControllableCamera : MonoBehaviour
         {
             rotY = Mathf.Max(rotMinY, rotY - rotationInterval);
         }
-        transform.eulerAngles = new Vector3(rotX, rotY, 0);
+        transform.localRotation = Quaternion.Euler(rotX, rotY, 0);
     }
 
     private void moveVertical(bool positive)
@@ -100,7 +100,7 @@ public class ControllableCamera : MonoBehaviour
         {
             rotX = Mathf.Max(rotMinX, rotX - rotationInterval);
         }
-        transform.eulerAngles = new Vector3(rotX, rotY, 0);
+        transform.localRotation = Quaternion.Euler(rotX, rotY, 0);
     }
 
     private void checkIsMoving()
