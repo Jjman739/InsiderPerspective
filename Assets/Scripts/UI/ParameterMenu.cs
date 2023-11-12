@@ -17,12 +17,13 @@ public class ParameterMenu : MonoBehaviour
     [SerializeField] private TextMeshProUGUI mouseSensitivityText;
     [SerializeField] private TextMeshProUGUI guardSpeedValueText;
     [SerializeField] private TextMeshProUGUI alertTimeValueText;
+    private bool menuOpen = false;
 
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Tab))
         {
-            if (Cursor.lockState == CursorLockMode.Locked)
+            if (!menuOpen)
             {
                 GetComponent<CanvasGroup>().alpha = 1;
                 Cursor.lockState = CursorLockMode.None;
@@ -30,37 +31,44 @@ public class ParameterMenu : MonoBehaviour
             else
             {
                 GetComponent<CanvasGroup>().alpha = 0;
-                Cursor.lockState = CursorLockMode.Locked;
+                if (!CameraViewer.Instance.IsViewing())
+                    Cursor.lockState = CursorLockMode.Locked;
             }
+            menuOpen = !menuOpen;
         }
     }
 
     public void UpdateThiefMoveSpeed(float speed)
     {
+        if (!menuOpen) return;
         thief.GetComponent<ThiefMovementScript>().SetMoveSpeed(speed);
         moveSpeedValueText.text = speed.ToString();
     }
 
     public void UpdateThiefTurnSpeed(float speed)
     {
+        if (!menuOpen) return;
         thief.GetComponent<ThiefMovementScript>().SetTurnSpeed(speed);
         turnSpeedValueText.text = speed.ToString();
     }
 
     public void UpdateMouseSensitivity(float sensitivity)
     {
+        if (!menuOpen) return;
         guard.GetComponent<GuardMovement>().SetTurnSpeed(sensitivity);
         mouseSensitivityText.text = sensitivity.ToString();
     }
 
     public void UpdateGuardMoveSpeed(float speed)
     {
+        if (!menuOpen) return;
         patrollingGuard.GetComponent<PatrollingGuard>().SetMoveSpeed(speed);
         guardSpeedValueText.text = speed.ToString();
     }
 
     public void UpdateGuardAlertTimer(float time)
     {
+        if (!menuOpen) return;
         thief.GetComponent<ThiefMovementScript>().SetAlertTimer(time);
         alertTimeValueText.text = time.ToString();
     }

@@ -10,6 +10,7 @@ public class ThiefMovementScript : MonoBehaviour
     private Vector3 move;
     private Vector3 twist;
     private CharacterController controller;
+    private AudioSource audioSource;
     private float currentAlertTimer;
     private bool inLineOfSight;
 
@@ -25,20 +26,52 @@ public class ThiefMovementScript : MonoBehaviour
     [SerializeField] private int charge = 5;
     [SerializeField] private float alertTimer = 2f;
     [SerializeField] private Slider alertMeter;
+    [SerializeField] private AudioClip robotJump;
+    [SerializeField] private AudioClip robotWalk;
+
+    public string forwardButton = "ThiefMoveUp";
+    public string backwardButton = "ThiefMoveDown";
+    public string leftButton = "ThiefMoveLeft";
+    public string rightButton = "ThiefMoveRight";
+    public string jumpButton = "Jump";
 
     private void Start()
     {
         controller = GetComponent<CharacterController>();
         currentAlertTimer = alertTimer;
+        audioSource = GetComponents<AudioSource>()[0];
     }
 
     private void FixedUpdate()
     {
-        move = new Vector3(0, 0, Input.GetAxis("ThiefMove"));
-        twist = new Vector3(0, Input.GetAxis("ThiefTurn"), 0);
+        if (GameObject.Find("PauseControl").GetComponent<PauseMenu>().paused)
+        {
+            return;
+        }
+
+        float moveAxis = 0;
+        if (Input.GetButton(forwardButton)) { moveAxis += 1; }
+        if (Input.GetButton(backwardButton)) { moveAxis -= 1; }
+        float turnAxis = 0;
+        if (Input.GetButton(leftButton)) { turnAxis -= 1; }
+        if (Input.GetButton(rightButton)) { turnAxis += 1; }
+
+        move = new Vector3(0, 0, moveAxis);
+        twist = new Vector3(0, turnAxis, 0);
 
         //jump control
         bool grounded = controller.isGrounded;
+
+        if (grounded && move != Vector3.zero)
+        {   
+            audioSource.clip = robotWalk;
+            audioSource.loop = true;
+            audioSource.Play();
+        }
+        else
+        {
+            audioSource.Stop();
+        }
 
         if (grounded)
         {
@@ -57,10 +90,13 @@ public class ThiefMovementScript : MonoBehaviour
 
         jumpSpeed += gravity * Time.deltaTime;
 
-        if (jumpTimer > 0 && Input.GetButton("Jump"))
+        if (jumpTimer > 0 && Input.GetButton(jumpButton))
         {
             jumpTimer = 0;
             jumpSpeed = Mathf.Sqrt(jumpHeight * -gravity * 2);
+            audioSource.clip = robotJump;
+            audioSource.loop = false;
+            audioSource.Play();
         }
 
         move.y = jumpSpeed;
@@ -74,7 +110,7 @@ public class ThiefMovementScript : MonoBehaviour
             if (currentAlertTimer <= 0)
             {
                 Debug.Log("Caught");
-                Destroy(this);
+                SceneManager.LoadScene("LoseScene");
             }
         }
         else if (currentAlertTimer < alertTimer)
@@ -99,15 +135,11 @@ public class ThiefMovementScript : MonoBehaviour
             }
             else
             {
-                Destroy(gameObject);
+                Debug.Log("Out of battery.");
+                SceneManager.LoadScene("LoseScene");
             }
         }
 
-    }
-
-    void OnDestroy()
-    {
-        SceneManager.LoadScene("LoseScene");
     }
 
     public void SetMoveSpeed(float speed) { moveSpeed = speed; }
