@@ -5,6 +5,13 @@ using UnityEngine;
 
 public class ControllableCamera : MonoBehaviour
 {
+    [SerializeField] private float rotMinX;
+    [SerializeField] private float rotMaxX;
+    [SerializeField] private float rotMinY;
+    [SerializeField] private float rotMaxY;
+    private float rotX;
+    private float rotY;
+
     private enum Direction
     {
         UP,
@@ -31,6 +38,9 @@ public class ControllableCamera : MonoBehaviour
         audioListener = GetComponent<AudioListener>();
         targetTexture = camera.targetTexture;
         currentDelayTimer = delayTimer;
+
+        rotX = transform.localRotation.eulerAngles.x;
+        rotY = transform.localRotation.eulerAngles.y;
     }
 
     private void Update()
@@ -70,12 +80,27 @@ public class ControllableCamera : MonoBehaviour
 
     private void moveHorizontal(bool positive)
     {
-        transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y + (rotationInterval * (positive ? 1 : -1)), transform.eulerAngles.z);
+        if (positive)
+        {
+            rotY = Mathf.Min(rotMaxY, rotY + rotationInterval);
+        } else
+        {
+            rotY = Mathf.Max(rotMinY, rotY - rotationInterval);
+        }
+        transform.localRotation = Quaternion.Euler(rotX, rotY, 0);
     }
 
     private void moveVertical(bool positive)
     {
-        transform.eulerAngles = new Vector3(transform.eulerAngles.x + (rotationInterval * (positive ? 1 : -1)), transform.eulerAngles.y, transform.eulerAngles.z);
+        if (positive)
+        {
+            rotX = Mathf.Min(rotMaxX, rotX + rotationInterval);
+        }
+        else
+        {
+            rotX = Mathf.Max(rotMinX, rotX - rotationInterval);
+        }
+        transform.localRotation = Quaternion.Euler(rotX, rotY, 0);
     }
 
     private void checkIsMoving()
