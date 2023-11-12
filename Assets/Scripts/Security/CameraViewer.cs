@@ -131,4 +131,13 @@ public class CameraViewer : Singleton<CameraViewer>
     }
 
     public bool IsViewing() { return currentCamera is not null; }
+
+    public bool UsingMain()
+    {
+        if(mainCamera.enabled == true)
+        {
+            return true;
+        }
+        else { return false; }
+    }
 }

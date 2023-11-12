@@ -6,6 +6,7 @@ public class PauseMenu : MonoBehaviour
 {
     public GameObject pauseMenu;
     public bool paused;
+    public GameObject cameraUI;
 
     // Start is called before the first frame update
     void Start()
@@ -28,12 +29,24 @@ public class PauseMenu : MonoBehaviour
                 paused = true;
                 pauseMenu.SetActive(true);
 
+                if (!GameObject.Find("CameraViewer").GetComponent<CameraViewer>().UsingMain())
+                {
+                    cameraUI.SetActive(false);
+                }
+
             }else
             {
                 Cursor.lockState = CursorLockMode.Locked;
                 Time.timeScale = 1;
                 paused = false;
                 pauseMenu.SetActive(false);
+
+                if (!GameObject.Find("CameraViewer").GetComponent<CameraViewer>().UsingMain())
+                {
+                    cameraUI.SetActive(true);
+                    Cursor.lockState = CursorLockMode.None;
+                }
+                else { Cursor.lockState = CursorLockMode.Locked; }
 
             }
             
