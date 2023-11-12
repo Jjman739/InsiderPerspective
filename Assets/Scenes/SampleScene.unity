@@ -983,6 +983,10 @@ PrefabInstance:
       propertyPath: alertMeter
       value: 
       objectReference: {fileID: 844278459}
+    - target: {fileID: 371028469789500382, guid: 7604196884fb4ff41b12b946132a92fe, type: 3}
+      propertyPath: hurtSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 1546ca35f424fd74f9357efcaf7603ee, type: 3}
     - target: {fileID: 923715824190225795, guid: 7604196884fb4ff41b12b946132a92fe, type: 3}
       propertyPath: alertMeter
       value: 

@@ -39,7 +39,7 @@ public class ThiefMovementScript : MonoBehaviour
     {
         controller = GetComponent<CharacterController>();
         currentAlertTimer = alertTimer;
-        audioSource = GetComponent<AudioSource>();
+        audioSource = GetComponents<AudioSource>()[0];
     }
 
     private void FixedUpdate()

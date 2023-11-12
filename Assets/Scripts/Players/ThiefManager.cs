@@ -9,9 +9,16 @@ public class ThiefManager : MonoBehaviour
     [SerializeField] private ThiefPhoto photo;
     [SerializeField] private ThiefMovementScript movement;
     [SerializeField] private ThiefTreasure treasure;
+    [SerializeField] private AudioClip hurtSound;
+    private AudioSource audioSource;
 
     public int repairsRemaining = 3;
     public bool needsRepair = false;
+
+    private void Start()
+    {
+        audioSource = GetComponents<AudioSource>()[1];
+    }
 
     public void TakeDamage()
     {
@@ -19,6 +26,9 @@ public class ThiefManager : MonoBehaviour
         cameraRoot.localRotation = Quaternion.Euler(0, Random.Range(0f, 360f), 0);
         ScrambleControls(ref movement.forwardButton, ref movement.backwardButton, ref movement.leftButton, ref movement.rightButton, ref movement.jumpButton, ref photo.photoButton);
         needsRepair = true;
+        audioSource.clip = hurtSound;
+        audioSource.loop = false;
+        audioSource.Play();
     }
 
     public bool AttemptWin()
