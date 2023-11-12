@@ -97,6 +97,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b16c4c626b82b4f41853ba5b6586b03e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rotMinX: -45
+  rotMaxX: 45
+  rotMinY: 0
+  rotMaxY: 90
 --- !u!81 &6107849139314823314
 AudioListener:
   m_ObjectHideFlags: 0

@@ -19,6 +19,11 @@ public class GuardMovement : MonoBehaviour {
 
     private void Update()
     {
+        if (GameObject.Find("PauseControl").GetComponent<PauseMenu>().paused)
+        {
+            return;
+        }
+
         audioListener.enabled = mainCamera.enabled;
 
         if (Cursor.lockState != CursorLockMode.Locked) return;

@@ -44,6 +44,11 @@ public class ThiefMovementScript : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (GameObject.Find("PauseControl").GetComponent<PauseMenu>().paused)
+        {
+            return;
+        }
+
         float moveAxis = 0;
         if (Input.GetButton(forwardButton)) { moveAxis += 1; }
         if (Input.GetButton(backwardButton)) { moveAxis -= 1; }
