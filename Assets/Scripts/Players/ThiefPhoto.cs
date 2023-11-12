@@ -13,6 +13,12 @@ public class ThiefPhoto : MonoBehaviour
 
     void Update()
     {
+
+        if (GameObject.Find("PauseControl").GetComponent<PauseMenu>().paused)
+        {
+            return;
+        }
+
         photoCooldownTimer -= Time.deltaTime;
         if (Input.GetButton(photoButton) != photoActive)
         {

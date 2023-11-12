@@ -18,17 +18,31 @@ public class SelectMonitor : MonoBehaviour
     }
 
     private void OnMouseEnter()
-    {        
+    {
+        if (GameObject.Find("PauseControl").GetComponent<PauseMenu>().paused)
+        {
+            return;
+        }
         containerCube.GetComponent<MeshRenderer>().material = selectedMaterial;
     }
 
     private void OnMouseExit()
     {
+        if (GameObject.Find("PauseControl").GetComponent<PauseMenu>().paused)
+        {
+            return;
+        }
+
         containerCube.GetComponent<MeshRenderer>().material = defaultMaterial;
     }
 
     private void OnMouseDown()
     {
+        if (GameObject.Find("PauseControl").GetComponent<PauseMenu>().paused)
+        {
+            return;
+        }
+
         CameraViewer.Instance.ViewCamera(attachedCamera);
     }
 }
