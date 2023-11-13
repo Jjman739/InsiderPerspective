@@ -5,6 +5,7 @@ using UnityEngine;
 public class TrapToggle : MonoBehaviour
 {
     public List<GameObject> toggleObjects;
+    public TrapCollider trapCollider;
 
     public void TrapDisable()
     {
