@@ -991,6 +991,10 @@ PrefabInstance:
       propertyPath: alertMeter
       value: 
       objectReference: {fileID: 844278459}
+    - target: {fileID: 2379371928480480473, guid: 7604196884fb4ff41b12b946132a92fe, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 369ac66e629066a4383227bb0c31350d, type: 2}
     - target: {fileID: 3348841602411470165, guid: 7604196884fb4ff41b12b946132a92fe, type: 3}
       propertyPath: m_LocalPosition.x
       value: -158.5
@@ -1035,6 +1039,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Thief
       objectReference: {fileID: 0}
+    - target: {fileID: 8646538334325413121, guid: 7604196884fb4ff41b12b946132a92fe, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 369ac66e629066a4383227bb0c31350d, type: 2}
     - target: {fileID: 9057069766262060411, guid: 7604196884fb4ff41b12b946132a92fe, type: 3}
       propertyPath: GlobalObjectIdHash
       value: 4056695124
