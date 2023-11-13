@@ -11,11 +11,16 @@ public class TileRoomRandomizer : MonoBehaviour
     private int trapCol2;
     private int trapCol3;
 
+    public bool trapsDamage = true;
+    public bool trapsSelfDelete = true;
+    public bool trapsAlertGuard = false;
+
     void Start()
     {
         SelectTrapRows();
         DisableAllTraps();
         EnableSelectedTraps();
+        SetTrapSettings();
     }
 
     private void SelectTrapRows()
@@ -107,5 +112,22 @@ public class TileRoomRandomizer : MonoBehaviour
               }
               i++;
           }
+    }
+
+    private void SetTrapSettings()
+    {
+        foreach (Transform trapRow in transform)
+        {
+            foreach (Transform trap in trapRow)
+            {
+                TrapToggle toggler = trap.gameObject.GetComponent<TrapToggle>();
+                if (toggler != null)
+                {
+                    toggler.trapCollider.damage = trapsDamage;
+                    toggler.trapCollider.selfDelete = trapsSelfDelete;
+                    toggler.trapCollider.alertGuard = trapsAlertGuard;
+                }
+            }
+        }
     }
 }
