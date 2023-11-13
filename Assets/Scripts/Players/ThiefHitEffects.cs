@@ -46,4 +46,12 @@ public class ThiefHitEffects : MonoBehaviour
             cameraTurnSpeed -= 900f * Time.deltaTime;
         }
     }
+
+    public void Repair()
+    {
+        foreach (GameObject camera in cameraTurners)
+        {
+            camera.transform.localRotation = Quaternion.identity;
+        }
+    }
 }

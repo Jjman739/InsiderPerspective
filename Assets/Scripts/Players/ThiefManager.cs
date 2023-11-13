@@ -47,7 +47,7 @@ public class ThiefManager : MonoBehaviour
     {
         Debug.Log("Repairing!");
 
-        cameraRoot.localRotation = Quaternion.identity;
+        hitEffects.Repair();
         movement.forwardButton = "ThiefMoveUp";
         movement.backwardButton = "ThiefMoveDown";
         movement.leftButton = "ThiefMoveLeft";
