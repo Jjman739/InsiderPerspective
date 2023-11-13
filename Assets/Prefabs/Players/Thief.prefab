@@ -159,7 +159,7 @@ GameObject:
   - component: {fileID: 3615335383810445240}
   - component: {fileID: 3589232272794790118}
   - component: {fileID: 8646538334325413121}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: RobotCamera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -242,7 +242,7 @@ GameObject:
   - component: {fileID: 2396343481723261645}
   - component: {fileID: 1573880545539894679}
   - component: {fileID: 2379371928480480473}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: RobotBase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
