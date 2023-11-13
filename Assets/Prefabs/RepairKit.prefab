@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8089181655031208356}
   - component: {fileID: 3454456174090439570}
   - component: {fileID: 6296595009558675029}
+  - component: {fileID: 3081695286191826609}
   m_Layer: 0
   m_Name: RepairKit
   m_TagString: Untagged
@@ -49,7 +50,7 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -68,6 +69,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spinSpeed: 45
+--- !u!114 &3081695286191826609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1645961473510130457}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40a91c070b4782641a07753a7f8dd917, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1961439456337668545
 GameObject:
   m_ObjectHideFlags: 0
@@ -169,7 +182,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
