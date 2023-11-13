@@ -5,6 +5,7 @@ using UnityEngine;
 public class ThiefHitEffects : MonoBehaviour
 {
     [SerializeField] private List<GameObject> cameraTurners;
+    [SerializeField] private List<GameObject> zapEffects;
 
     private float hitTimeRemaining = 0;
     private float cameraTurnSpeed;
@@ -13,12 +14,18 @@ public class ThiefHitEffects : MonoBehaviour
     {
         hitTimeRemaining = 1f;
         cameraTurnSpeed = Random.Range(1080f, 1440f);
-        Debug.Log("Hit!");
+        foreach (GameObject effect in zapEffects)
+        {
+            effect.SetActive(true);
+        }
     }
 
     private void HitEnd()
     {
-        Debug.Log("Over!");
+        foreach (GameObject effect in zapEffects)
+        {
+            effect.SetActive(false);
+        }
     }
 
     void Update()
