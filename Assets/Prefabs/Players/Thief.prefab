@@ -133,6 +133,7 @@ GameObject:
   - component: {fileID: 2182103579036937626}
   - component: {fileID: 371028469789500382}
   - component: {fileID: 73963052499264772}
+  - component: {fileID: 566152502418716680}
   m_Layer: 0
   m_Name: Thief
   m_TagString: Player
@@ -401,6 +402,7 @@ MonoBehaviour:
   movement: {fileID: -7040398787914363862}
   treasure: {fileID: 988405178396776603}
   hurtSound: {fileID: 0}
+  hitEffects: {fileID: 566152502418716680}
   repairsRemaining: 3
   needsRepair: 0
 --- !u!82 &73963052499264772
@@ -499,6 +501,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &566152502418716680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6501310672267175682}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d30924c96bd2f8409857891a42207f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cameraTurners:
+  - {fileID: 4556195708796979272}
+  - {fileID: 2874742167887010416}
 --- !u!1001 &1511893879791230409
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -571,6 +588,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: RobotThief_LP 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2798726692685156977, guid: 2c31accb7bad0d14eb85740d281bcafc, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2798726692685156977, guid: 2c31accb7bad0d14eb85740d281bcafc, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2798726692685156977, guid: 2c31accb7bad0d14eb85740d281bcafc, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2798726692685156977, guid: 2c31accb7bad0d14eb85740d281bcafc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7135390337111460040, guid: 2c31accb7bad0d14eb85740d281bcafc, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -583,5 +616,10 @@ PrefabInstance:
 --- !u!4 &1401158263427725858 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 2c31accb7bad0d14eb85740d281bcafc, type: 3}
+  m_PrefabInstance: {fileID: 1511893879791230409}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2874742167887010416 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -5539865437695195207, guid: 2c31accb7bad0d14eb85740d281bcafc, type: 3}
   m_PrefabInstance: {fileID: 1511893879791230409}
   m_PrefabAsset: {fileID: 0}

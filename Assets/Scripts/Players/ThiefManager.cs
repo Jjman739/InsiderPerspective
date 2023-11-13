@@ -10,6 +10,7 @@ public class ThiefManager : MonoBehaviour
     [SerializeField] private ThiefMovementScript movement;
     [SerializeField] private ThiefTreasure treasure;
     [SerializeField] private AudioClip hurtSound;
+    [SerializeField] private ThiefHitEffects hitEffects;
     private AudioSource audioSource;
 
     public int repairsRemaining = 3;
@@ -23,7 +24,7 @@ public class ThiefManager : MonoBehaviour
     public void TakeDamage()
     {
         Debug.Log("Hit a trap.");
-        cameraRoot.localRotation = Quaternion.Euler(0, Random.Range(0f, 360f), 0);
+        hitEffects.TakeHit();
         ScrambleControls(ref movement.forwardButton, ref movement.backwardButton, ref movement.leftButton, ref movement.rightButton, ref movement.jumpButton, ref photo.photoButton);
         needsRepair = true;
         audioSource.clip = hurtSound;
