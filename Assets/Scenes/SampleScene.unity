@@ -12206,6 +12206,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 927f64366e30c674c812b261032d719b, type: 2}
+    - target: {fileID: 3744112851671055842, guid: 3278d896a16b67f4ea35fbbdac2813ec, type: 3}
+      propertyPath: trapsAlertGuard
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3811346663301541442, guid: 3278d896a16b67f4ea35fbbdac2813ec, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -12277,6 +12281,18 @@ PrefabInstance:
     - target: {fileID: 4448999197707934177, guid: 3278d896a16b67f4ea35fbbdac2813ec, type: 3}
       propertyPath: m_LocalPosition.z
       value: -29.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4575802041565042029, guid: 3278d896a16b67f4ea35fbbdac2813ec, type: 3}
+      propertyPath: trapsDamage
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4575802041565042029, guid: 3278d896a16b67f4ea35fbbdac2813ec, type: 3}
+      propertyPath: trapsAlertGuard
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4575802041565042029, guid: 3278d896a16b67f4ea35fbbdac2813ec, type: 3}
+      propertyPath: trapsSelfDelete
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4812009729526321816, guid: 3278d896a16b67f4ea35fbbdac2813ec, type: 3}
       propertyPath: m_Materials.Array.data[0]
