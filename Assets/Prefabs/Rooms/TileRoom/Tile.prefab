@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2193577329149408473}
   - component: {fileID: 7742602779033127518}
   - component: {fileID: 1038379891966858794}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: TrapIndicator
   m_TagString: Trap
   m_Icon: {fileID: 0}
@@ -159,6 +159,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28f132716cde6954faa4b3ce111ed934, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  toggler: {fileID: 4004124992257218878}
 --- !u!23 &7594298265691484278
 MeshRenderer:
   m_ObjectHideFlags: 0
