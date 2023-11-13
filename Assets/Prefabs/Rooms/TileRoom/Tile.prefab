@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2193577329149408473}
   - component: {fileID: 7742602779033127518}
   - component: {fileID: 1038379891966858794}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: TrapIndicator
   m_TagString: Trap
   m_Icon: {fileID: 0}
