@@ -15,6 +15,8 @@ public class TileRoomRandomizer : MonoBehaviour
     public bool trapsSelfDelete = true;
     public bool trapsAlertGuard = false;
 
+    [SerializeField] private DoorpointManager doorpointManager;
+
     void Start()
     {
         SelectTrapRows();
@@ -127,6 +129,7 @@ public class TileRoomRandomizer : MonoBehaviour
                     toggler.trapCollider.selfDelete = trapsSelfDelete;
                     toggler.trapCollider.alertGuard = trapsAlertGuard;
                 }
+                toggler.trapCollider.GetComponent<TrapCollider>().SetDoorPointManager(doorpointManager);
             }
         }
     }

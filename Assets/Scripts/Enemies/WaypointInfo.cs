@@ -1,20 +1,21 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using Unity.Netcode;
 using UnityEngine;
 
-public class WaypointInfo : MonoBehaviour
+public class WaypointInfo : BaseWaypoint
 {
-    private Transform waypointManager;
-    private List<WaypointInfo> attachedWaypoints = new List<WaypointInfo>();
+    private float radius = 2f;
+    protected List<BaseWaypoint> attachedWaypoints = new List<BaseWaypoint>();
 
-    private void Awake()
+    private void OnDrawGizmos()
     {
-        waypointManager = transform.parent;
-        
-        foreach(Transform t in waypointManager.transform)
+        Gizmos.color = new Color(1, 0, 0, 0.5f);
+        Gizmos.DrawSphere(transform.position, radius);
+    }
+
+    private void Start()
+    {      
+        foreach(Transform t in WaypointManager.Instance.transform)
         {
             float distance = Mathf.Sqrt(Mathf.Pow(t.position.x - transform.position.x, 2) + Mathf.Pow(t.position.z - transform.position.z, 2));
             if (distance < 27 && t.GetSiblingIndex() != transform.GetSiblingIndex())
@@ -22,10 +23,10 @@ public class WaypointInfo : MonoBehaviour
         }
     }
 
-    public List<WaypointInfo> GetConnectedWaypoints() { return attachedWaypoints; }
+    public List<BaseWaypoint> GetConnectedWaypoints() { return attachedWaypoints; }
 
-    public List<WaypointInfo> GetConnectedWaypointsShuffled() { return attachedWaypoints.OrderBy((item) => UnityEngine.Random.Range(0,999)).ToList(); }
+    public List<BaseWaypoint> GetConnectedWaypointsShuffled() { return attachedWaypoints.OrderBy((item) => UnityEngine.Random.Range(0,999)).ToList(); }
 
-    public WaypointInfo GetConnectedWaypoint(int index) { return attachedWaypoints[index]; }
+    public WaypointInfo GetConnectedWaypoint(int index) { return attachedWaypoints[index] as WaypointInfo; }
     public int GetIndex() { return transform.GetSiblingIndex(); }
 }
