@@ -1,11 +1,8 @@
 using System.Collections.Generic;
 using System.Linq;
-using Unity.Netcode;
-using Unity.VisualScripting;
-using UnityEditor;
 using UnityEngine;
 
-public class WaypointManager : MonoBehaviour
+public class WaypointManager : Singleton<WaypointManager>
 {
     [SerializeField] private List<GameObject> guards = new List<GameObject>();
     [SerializeField] private Transform waypointParent;
@@ -21,40 +18,52 @@ public class WaypointManager : MonoBehaviour
         }
     }
 
-    public WaypointInfo GetNextWaypoint(WaypointInfo currentWaypoint)
+    public BaseWaypoint GetNextWaypoint(BaseWaypoint currentWaypoint)
     {
         if (currentWaypoint is null)
             return waypointParent.GetChild(Random.Range(0,waypointParent.childCount)).GetComponent<WaypointInfo>();
 
-        List<WaypointInfo> possibleWaypoints = currentWaypoint.GetConnectedWaypoints();
+        if (currentWaypoint is DoorpointInfo)
+        {
+            return (currentWaypoint as DoorpointInfo).GetPreviousWaypoint();
+        }
+
+        List<BaseWaypoint> possibleWaypoints = (currentWaypoint as WaypointInfo).GetConnectedWaypoints();
 
         return possibleWaypoints[Random.Range(0,possibleWaypoints.Count)];
     }
 
-    public WaypointInfo GetNextWaypointWithOverride(WaypointInfo waypoint, WaypointInfo target)
+    public WaypointInfo GetNextWaypointWithOverride(BaseWaypoint waypoint, WaypointInfo target)
     {
         Queue<(WaypointInfo, WaypointInfo)> toCheck = new Queue<(WaypointInfo, WaypointInfo)>();
         List<int> allChecked = new List<int>();
 
-        toCheck.Enqueue((null, waypoint));
+        toCheck.Enqueue((null, waypoint as WaypointInfo));
 
         while(toCheck.Count > 0) {
             var (parentWaypoint, nextWaypoint) = toCheck.Dequeue();
             allChecked.Add(nextWaypoint.GetIndex());
 
-            if(nextWaypoint.GetIndex() == target.GetIndex()) {
-                if(parentWaypoint is null) {
+            if (nextWaypoint.GetIndex() == target.GetIndex())
+            {
+                if (parentWaypoint is null)
+                {
                     return nextWaypoint;
                 }
 
                 return parentWaypoint;
             }
 
-            foreach(WaypointInfo w in nextWaypoint.GetConnectedWaypointsShuffled()) {
-                if(!allChecked.Contains(w.GetIndex()) && !toCheck.Any((qw) => qw.Item2.GetIndex() == w.GetIndex())) {
-                    if(parentWaypoint is null) {
+            foreach (WaypointInfo w in nextWaypoint.GetConnectedWaypointsShuffled())
+            {
+                if (!allChecked.Contains(w.GetIndex()) && !toCheck.Any((qw) => qw.Item2.GetIndex() == w.GetIndex()))
+                {
+                    if (parentWaypoint is null)
+                    {
                         toCheck.Enqueue((w, w));
-                    }else {
+                    }
+                    else
+                    {
                         toCheck.Enqueue((parentWaypoint, w));
                     }
                 }
@@ -68,4 +77,6 @@ public class WaypointManager : MonoBehaviour
     {
         return waypointParent.GetChild(index).GetComponent<WaypointInfo>();
     }
+
+    public List<GameObject> GetGuards() { return guards; }
 }
