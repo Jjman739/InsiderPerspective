@@ -6,7 +6,6 @@ public class WaypointManager : Singleton<WaypointManager>
 {
     [SerializeField] private List<GameObject> guards = new List<GameObject>();
     [SerializeField] private Transform waypointParent;
-    [SerializeField] private Minimap minimap;
 
     void Start()
     {
@@ -14,7 +13,6 @@ public class WaypointManager : Singleton<WaypointManager>
         {
             PatrollingGuard patrollingGuard = guard.GetComponent<PatrollingGuard>();
             patrollingGuard.Initialize(this, waypointParent);
-            minimap.AddPatrollingGuard(patrollingGuard);
         }
     }
 

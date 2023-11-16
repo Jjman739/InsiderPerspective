@@ -82,7 +82,7 @@ public class PatrollingGuard : MonoBehaviour
         {
             lastWaypoint = nextWaypoint;
 
-            if (overrideTarget != null && (lastWaypoint as WaypointInfo).GetIndex() == overrideTarget.GetIndex())
+            if (overrideTarget != null && lastWaypoint is WaypointInfo && (lastWaypoint as WaypointInfo).GetIndex() == overrideTarget.GetIndex())
             {
                 if (targetDoorpoint != null)
                 {
