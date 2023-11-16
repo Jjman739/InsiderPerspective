@@ -1,49 +1,75 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class Minimap : MonoBehaviour
+public class Minimap : Singleton<Minimap>
 {
-    private List<PatrollingGuard> patrollingGuards = new List<PatrollingGuard>();
-    int overrideTargetIndex = -1;
+    private List<GameObject> mapAreas = new();
+    private List<GameObject> mapRooms = new();
+    private bool currentlyInRoom;
+    private int currentHallwayLocation;
 
-    private void Update()
+    private void Start()
     {
-        foreach (Transform t in transform)
+        foreach (Transform child in transform.GetChild(0))
         {
-            if (overrideTargetIndex != -1 && t.GetSiblingIndex() == overrideTargetIndex)
-                t.GetComponent<MeshRenderer>().materials[0].color = Color.yellow;
-            else
-                t.GetComponent<MeshRenderer>().materials[0].color = Color.black;
+            mapAreas.Add(child.gameObject);
         }
 
-        if (patrollingGuards.Count <= 0) return;
-
-        foreach (PatrollingGuard guard in patrollingGuards)
+        foreach (Transform child in transform.GetChild(1))
         {
-            int guardLocation = guard.GetLastWaypoint().transform.GetSiblingIndex();
-            transform.GetChild(guardLocation).GetComponent<MeshRenderer>().materials[0].color = Color.red;
-
-            if (guard.GetOverrideTarget() is null)
-                overrideTargetIndex = -1;
+            mapRooms.Add(child.gameObject);
         }
     }
 
-    public bool OverrideGuardTarget(int targetIndex)
+    public void UpdatePlayerRoomLocation(int roomIndex)
     {
-        if (overrideTargetIndex is not -1)
-            return false;
+        clearMarkedLocations();
 
-        foreach (PatrollingGuard guard in patrollingGuards)
-        {
-            guard.SetOverrideTarget(targetIndex);
+        currentlyInRoom = true;
+
+        mapRooms[roomIndex].GetComponent<MeshRenderer>().materials[0].color = Color.blue;
+    }
+
+    public void UpdatePlayerHallwayLocation(int areaIndex, bool exitingRoom = false)
+    {
+        currentHallwayLocation = areaIndex;
+
+        if (currentlyInRoom && !exitingRoom)
+        { 
+            return;
         }
 
-        overrideTargetIndex = targetIndex;
+        currentlyInRoom = false;
+    
+        clearMarkedLocations();
 
-        return true;
+        mapAreas[areaIndex].GetComponent<MeshRenderer>().materials[0].color = Color.blue;
     }
-    public void AddPatrollingGuard(PatrollingGuard guard) { patrollingGuards.Add(guard); }
-    public void SetPatrollingGuards(List<PatrollingGuard> guards) { patrollingGuards = guards; }
+
+    public void ExitRoom()
+    {
+        currentlyInRoom = false;
+        UpdatePlayerHallwayLocation(currentHallwayLocation);
+    }
+
+    public Vector3 CameraWorldCoordinateToMinimap(Vector3 worldCoordinate)
+    {
+        return Vector3.zero;
+    }
+
+    private void clearMarkedLocations()
+    {
+        foreach (GameObject area in mapAreas)
+        {
+            area.GetComponent<MeshRenderer>().materials[0].color = Color.gray;
+        }
+
+        foreach (GameObject room in mapRooms)
+        {
+            room.GetComponent<MeshRenderer>().materials[0].color = Color.white;
+        }
+    }
 }
