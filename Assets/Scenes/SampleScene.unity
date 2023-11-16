@@ -5058,6 +5058,11 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!1 &656744829 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4240889295324132814, guid: 19ae8f68a6238cb41871715d2481db18, type: 3}
+  m_PrefabInstance: {fileID: 1851866021627882823}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &659989037
 GameObject:
   m_ObjectHideFlags: 0
@@ -5446,7 +5451,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!108 &705507994
 Light:
   m_ObjectHideFlags: 0
@@ -11658,6 +11663,7 @@ MonoBehaviour:
   cameraSwapButtonPrefab: {fileID: 4571683931863221047, guid: 30cd7a4f74096804a913ba161bfc0a9a, type: 3}
   cameraSwivel: {fileID: 8300000, guid: a6d45541b977357499584165d30ef1bc, type: 3}
   cameraClick: {fileID: 8300000, guid: 62a09e75ab1fa37448593c26a8dc505e, type: 3}
+  photoView: {fileID: 656744829}
 --- !u!82 &1655251039
 AudioSource:
   m_ObjectHideFlags: 0
@@ -14461,7 +14467,7 @@ GameObject:
   - component: {fileID: 2051819149}
   - component: {fileID: 2051819148}
   m_Layer: 5
-  m_Name: TabToToggle
+  m_Name: PToToggle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14506,7 +14512,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: TAB to toggle params menu
+  m_text: P to toggle params menu
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -15774,11 +15780,6 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 927f64366e30c674c812b261032d719b, type: 2}
-    - target: {fileID: 3744112851671055842, guid: 3278d896a16b67f4ea35fbbdac2813ec, type: 3}
-      propertyPath: trapsAlertGuard
-      value: 1
-      objectReference: {fileID: 0}
-      objectReference: {fileID: 2100000, guid: 0c971987e2d1c5f4db231765b27ac896, type: 2}
     - target: {fileID: 3701362975566602607, guid: 3278d896a16b67f4ea35fbbdac2813ec, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -15787,6 +15788,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 0c971987e2d1c5f4db231765b27ac896, type: 2}
+    - target: {fileID: 3744112851671055842, guid: 3278d896a16b67f4ea35fbbdac2813ec, type: 3}
+      propertyPath: trapsAlertGuard
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3764317639269112642, guid: 3278d896a16b67f4ea35fbbdac2813ec, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -16171,14 +16176,14 @@ PrefabInstance:
       propertyPath: rotMinY
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 9209790606198201997, guid: 3278d896a16b67f4ea35fbbdac2813ec, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 9202945826724290061, guid: 3278d896a16b67f4ea35fbbdac2813ec, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 0c971987e2d1c5f4db231765b27ac896, type: 2}
+    - target: {fileID: 9209790606198201997, guid: 3278d896a16b67f4ea35fbbdac2813ec, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 2212898443152874843, guid: 3278d896a16b67f4ea35fbbdac2813ec, type: 3}
@@ -16779,6 +16784,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1655251038}
+    - target: {fileID: 7847096500194734956, guid: 19ae8f68a6238cb41871715d2481db18, type: 3}
+      propertyPath: m_text
+      value: Tab - Show/Hide
+      objectReference: {fileID: 0}
     - target: {fileID: 8898376660492360465, guid: 19ae8f68a6238cb41871715d2481db18, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -18805,9 +18814,6 @@ SceneRoots:
   - {fileID: 2140829771}
   - {fileID: 1265159898}
   - {fileID: 227674740}
-  - {fileID: 802509554}
-  - {fileID: 1179533589}
-  - {fileID: 1488179685}
   - {fileID: 1084457664}
   - {fileID: 1003919801}
   - {fileID: 313369225}
