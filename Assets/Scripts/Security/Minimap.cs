@@ -69,7 +69,7 @@ public class Minimap : Singleton<Minimap>
 
         foreach (GameObject room in mapRooms)
         {
-            room.GetComponent<MeshRenderer>().materials[0].color = Color.black;
+            room.GetComponent<MeshRenderer>().materials[0].color = Color.white;
         }
     }
 }
