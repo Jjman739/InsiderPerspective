@@ -36,7 +36,7 @@ public class Minimap : Singleton<Minimap>
     public void UpdatePlayerHallwayLocation(int areaIndex, bool exitingRoom = false)
     {
         currentHallwayLocation = areaIndex;
-        
+
         if (currentlyInRoom && !exitingRoom)
         { 
             return;
@@ -53,6 +53,11 @@ public class Minimap : Singleton<Minimap>
     {
         currentlyInRoom = false;
         UpdatePlayerHallwayLocation(currentHallwayLocation);
+    }
+
+    public Vector3 CameraWorldCoordinateToMinimap(Vector3 worldCoordinate)
+    {
+        return Vector3.zero;
     }
 
     private void clearMarkedLocations()
