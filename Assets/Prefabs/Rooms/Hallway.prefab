@@ -105,7 +105,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!1 &257535904027518791
+--- !u!1 &251226132543267246
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -113,7 +113,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 324910374914460840}
+  - component: {fileID: 5746361157806559317}
   m_Layer: 0
   m_Name: Cameras
   m_TagString: Untagged
@@ -121,25 +121,25 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &324910374914460840
+--- !u!4 &5746361157806559317
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 257535904027518791}
+  m_GameObject: {fileID: 251226132543267246}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1232.1077, y: 252.49266, z: 23.000675}
-  m_LocalScale: {x: 1.4285713, y: 1, z: 1.4285713}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 5469937296573151430}
-  - {fileID: 8725836111888695463}
   - {fileID: 522372194962407341}
-  - {fileID: 6374174833542044629}
   - {fileID: 2633441937415716621}
+  - {fileID: 5469937296573151430}
   - {fileID: 295678288283937926}
+  - {fileID: 8725836111888695463}
+  - {fileID: 6374174833542044629}
   m_Father: {fileID: 3500997272642107231}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &275584981310964097
@@ -993,7 +993,7 @@ Transform:
   - {fileID: 1979831622282849664}
   - {fileID: 1356823922421141572}
   - {fileID: 5969483294032809799}
-  - {fileID: 324910374914460840}
+  - {fileID: 5746361157806559317}
   - {fileID: 2643657913190405705}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1240,7 +1240,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 324910374914460840}
+    m_TransformParent: {fileID: 5746361157806559317}
     m_Modifications:
     - target: {fileID: 481357583326168729, guid: b91a409196749b34f88f70cf386c9f7d, type: 3}
       propertyPath: rotMaxX
@@ -1263,16 +1263,28 @@ PrefabInstance:
       value: HallCamera5
       objectReference: {fileID: 0}
     - target: {fileID: 7712274910360272697, guid: b91a409196749b34f88f70cf386c9f7d, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.4285713
+      objectReference: {fileID: 0}
+    - target: {fileID: 7712274910360272697, guid: b91a409196749b34f88f70cf386c9f7d, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.1770753
+      objectReference: {fileID: 0}
+    - target: {fileID: 7712274910360272697, guid: b91a409196749b34f88f70cf386c9f7d, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.2514961
+      objectReference: {fileID: 0}
+    - target: {fileID: 7712274910360272697, guid: b91a409196749b34f88f70cf386c9f7d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -823.9754
+      value: 55
       objectReference: {fileID: 0}
     - target: {fileID: 7712274910360272697, guid: b91a409196749b34f88f70cf386c9f7d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -240.39265
+      value: 12.100006
       objectReference: {fileID: 0}
     - target: {fileID: 7712274910360272697, guid: b91a409196749b34f88f70cf386c9f7d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -26.250475
+      value: -14.5
       objectReference: {fileID: 0}
     - target: {fileID: 7712274910360272697, guid: b91a409196749b34f88f70cf386c9f7d, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1318,7 +1330,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 324910374914460840}
+    m_TransformParent: {fileID: 5746361157806559317}
     m_Modifications:
     - target: {fileID: 481357583326168729, guid: b91a409196749b34f88f70cf386c9f7d, type: 3}
       propertyPath: rotMaxX
@@ -1341,16 +1353,28 @@ PrefabInstance:
       value: HallCamera3
       objectReference: {fileID: 0}
     - target: {fileID: 7712274910360272697, guid: b91a409196749b34f88f70cf386c9f7d, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.4285713
+      objectReference: {fileID: 0}
+    - target: {fileID: 7712274910360272697, guid: b91a409196749b34f88f70cf386c9f7d, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.251496
+      objectReference: {fileID: 0}
+    - target: {fileID: 7712274910360272697, guid: b91a409196749b34f88f70cf386c9f7d, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.1770754
+      objectReference: {fileID: 0}
+    - target: {fileID: 7712274910360272697, guid: b91a409196749b34f88f70cf386c9f7d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -822.50543
+      value: 57.099976
       objectReference: {fileID: 0}
     - target: {fileID: 7712274910360272697, guid: b91a409196749b34f88f70cf386c9f7d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -236.99266
+      value: 15.5
       objectReference: {fileID: 0}
     - target: {fileID: 7712274910360272697, guid: b91a409196749b34f88f70cf386c9f7d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -52.570477
+      value: -52.100002
       objectReference: {fileID: 0}
     - target: {fileID: 7712274910360272697, guid: b91a409196749b34f88f70cf386c9f7d, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1396,7 +1420,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 324910374914460840}
+    m_TransformParent: {fileID: 5746361157806559317}
     m_Modifications:
     - target: {fileID: 481357583326168729, guid: b91a409196749b34f88f70cf386c9f7d, type: 3}
       propertyPath: rotMaxX
@@ -1419,16 +1443,28 @@ PrefabInstance:
       value: HallCamera6
       objectReference: {fileID: 0}
     - target: {fileID: 7712274910360272697, guid: b91a409196749b34f88f70cf386c9f7d, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.4285715
+      objectReference: {fileID: 0}
+    - target: {fileID: 7712274910360272697, guid: b91a409196749b34f88f70cf386c9f7d, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.378438
+      objectReference: {fileID: 0}
+    - target: {fileID: 7712274910360272697, guid: b91a409196749b34f88f70cf386c9f7d, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.0501335
+      objectReference: {fileID: 0}
+    - target: {fileID: 7712274910360272697, guid: b91a409196749b34f88f70cf386c9f7d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -850.50543
+      value: 17.099976
       objectReference: {fileID: 0}
     - target: {fileID: 7712274910360272697, guid: b91a409196749b34f88f70cf386c9f7d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -236.59267
+      value: 15.899994
       objectReference: {fileID: 0}
     - target: {fileID: 7712274910360272697, guid: b91a409196749b34f88f70cf386c9f7d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -51.940475
+      value: -51.2
       objectReference: {fileID: 0}
     - target: {fileID: 7712274910360272697, guid: b91a409196749b34f88f70cf386c9f7d, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1474,7 +1510,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 324910374914460840}
+    m_TransformParent: {fileID: 5746361157806559317}
     m_Modifications:
     - target: {fileID: 481357583326168729, guid: b91a409196749b34f88f70cf386c9f7d, type: 3}
       propertyPath: rotMaxX
@@ -1493,16 +1529,28 @@ PrefabInstance:
       value: HallCamera2
       objectReference: {fileID: 0}
     - target: {fileID: 7712274910360272697, guid: b91a409196749b34f88f70cf386c9f7d, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.4285713
+      objectReference: {fileID: 0}
+    - target: {fileID: 7712274910360272697, guid: b91a409196749b34f88f70cf386c9f7d, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.2514961
+      objectReference: {fileID: 0}
+    - target: {fileID: 7712274910360272697, guid: b91a409196749b34f88f70cf386c9f7d, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.1770753
+      objectReference: {fileID: 0}
+    - target: {fileID: 7712274910360272697, guid: b91a409196749b34f88f70cf386c9f7d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -847.1454
+      value: 21.900024
       objectReference: {fileID: 0}
     - target: {fileID: 7712274910360272697, guid: b91a409196749b34f88f70cf386c9f7d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -241.1
+      value: 11.392654
       objectReference: {fileID: 0}
     - target: {fileID: 7712274910360272697, guid: b91a409196749b34f88f70cf386c9f7d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -78.75
+      value: -89.49931
       objectReference: {fileID: 0}
     - target: {fileID: 7712274910360272697, guid: b91a409196749b34f88f70cf386c9f7d, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1514,11 +1562,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7712274910360272697, guid: b91a409196749b34f88f70cf386c9f7d, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 7712274910360272697, guid: b91a409196749b34f88f70cf386c9f7d, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 7712274910360272697, guid: b91a409196749b34f88f70cf386c9f7d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1548,7 +1596,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 324910374914460840}
+    m_TransformParent: {fileID: 5746361157806559317}
     m_Modifications:
     - target: {fileID: 481357583326168729, guid: b91a409196749b34f88f70cf386c9f7d, type: 3}
       propertyPath: rotMaxX
@@ -1571,16 +1619,28 @@ PrefabInstance:
       value: HallCamera1
       objectReference: {fileID: 0}
     - target: {fileID: 7712274910360272697, guid: b91a409196749b34f88f70cf386c9f7d, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.4285713
+      objectReference: {fileID: 0}
+    - target: {fileID: 7712274910360272697, guid: b91a409196749b34f88f70cf386c9f7d, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.1770754
+      objectReference: {fileID: 0}
+    - target: {fileID: 7712274910360272697, guid: b91a409196749b34f88f70cf386c9f7d, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.251496
+      objectReference: {fileID: 0}
+    - target: {fileID: 7712274910360272697, guid: b91a409196749b34f88f70cf386c9f7d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -847.1454
+      value: 21.900024
       objectReference: {fileID: 0}
     - target: {fileID: 7712274910360272697, guid: b91a409196749b34f88f70cf386c9f7d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -236.99266
+      value: 15.5
       objectReference: {fileID: 0}
     - target: {fileID: 7712274910360272697, guid: b91a409196749b34f88f70cf386c9f7d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -41.30047
+      value: -36
       objectReference: {fileID: 0}
     - target: {fileID: 7712274910360272697, guid: b91a409196749b34f88f70cf386c9f7d, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1588,7 +1648,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7712274910360272697, guid: b91a409196749b34f88f70cf386c9f7d, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 7712274910360272697, guid: b91a409196749b34f88f70cf386c9f7d, type: 3}
       propertyPath: m_LocalRotation.y
@@ -1626,7 +1686,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 324910374914460840}
+    m_TransformParent: {fileID: 5746361157806559317}
     m_Modifications:
     - target: {fileID: 481357583326168729, guid: b91a409196749b34f88f70cf386c9f7d, type: 3}
       propertyPath: rotMaxX
@@ -1649,16 +1709,28 @@ PrefabInstance:
       value: HallCamera4
       objectReference: {fileID: 0}
     - target: {fileID: 7712274910360272697, guid: b91a409196749b34f88f70cf386c9f7d, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.4285715
+      objectReference: {fileID: 0}
+    - target: {fileID: 7712274910360272697, guid: b91a409196749b34f88f70cf386c9f7d, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.1770754
+      objectReference: {fileID: 0}
+    - target: {fileID: 7712274910360272697, guid: b91a409196749b34f88f70cf386c9f7d, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.2514958
+      objectReference: {fileID: 0}
+    - target: {fileID: 7712274910360272697, guid: b91a409196749b34f88f70cf386c9f7d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -821.03546
+      value: 59.19995
       objectReference: {fileID: 0}
     - target: {fileID: 7712274910360272697, guid: b91a409196749b34f88f70cf386c9f7d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -233.16266
+      value: 19.330002
       objectReference: {fileID: 0}
     - target: {fileID: 7712274910360272697, guid: b91a409196749b34f88f70cf386c9f7d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -73.48647
+      value: -81.979996
       objectReference: {fileID: 0}
     - target: {fileID: 7712274910360272697, guid: b91a409196749b34f88f70cf386c9f7d, type: 3}
       propertyPath: m_LocalRotation.w
