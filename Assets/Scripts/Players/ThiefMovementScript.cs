@@ -4,6 +4,7 @@ using Unity.Netcode;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using Enumerations;
 
 public class ThiefMovementScript : MonoBehaviour
 {
@@ -40,6 +41,7 @@ public class ThiefMovementScript : MonoBehaviour
         controller = GetComponent<CharacterController>();
         currentAlertTimer = alertTimer;
         audioSource = GetComponents<AudioSource>()[0];
+        DialogueManager.Instance.PlayDialogue(DialogueEvent.GAME_START);
     }
 
     private void FixedUpdate()

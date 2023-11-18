@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Enumerations;
 
 public class ThiefManager : MonoBehaviour
 {
@@ -30,6 +31,7 @@ public class ThiefManager : MonoBehaviour
         audioSource.clip = hurtSound;
         audioSource.loop = false;
         audioSource.Play();
+        DialogueManager.Instance.PlayDialogue(DialogueEvent.SHOCK_ROBOT);
     }
 
     public bool AttemptWin()
