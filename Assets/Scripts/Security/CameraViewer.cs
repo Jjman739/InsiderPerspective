@@ -10,23 +10,83 @@ public class CameraViewer : Singleton<CameraViewer>
     [SerializeField] private Camera mainCamera;
     [SerializeField] private GameObject cameraUI;
     [SerializeField] private GameObject cameraSwapButtonPrefab;
+    [SerializeField] private AudioClip cameraSwivel;
+    [SerializeField] private AudioClip cameraClick;
+    [SerializeField] private GameObject photoView;
     private Transform cameraSwapButtons;
     private Transform currentCameraGroup;
     private ControllableCamera currentCamera;
     private int currentCameraIndex;
+    private AudioSource audioSource;
 
     private void Start()
     {
         cameraUI.SetActive(false);
         cameraSwapButtons = cameraUI.transform.Find("SwapButtons");
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.P))
+        if (currentCamera is null) return;
+
+        if (Input.GetButtonDown("UpArrow"))
+        {
+            SetMoveUp(true);
+        }
+
+        if (Input.GetButtonDown("DownArrow"))
+        {
+            SetMoveDown(true);
+        }
+
+        if (Input.GetButtonDown("LeftArrow"))
+        {
+            SetMoveLeft(true);
+        }
+
+        if (Input.GetButtonDown("RightArrow"))
+        {
+            SetMoveRight(true);
+        }
+
+        if (Input.GetButtonUp("UpArrow"))
+        {
+            SetMoveUp(false);
+        }
+
+        if (Input.GetButtonUp("DownArrow"))
+        {
+            SetMoveDown(false);
+        }
+
+        if (Input.GetButtonUp("LeftArrow"))
+        {
+            SetMoveLeft(false);
+        }
+
+        if (Input.GetButtonUp("RightArrow"))
+        {
+            SetMoveRight(false);
+        }
+
+        if (Input.GetButtonDown("TogglePhotoView"))
+        {
+            photoView.SetActive(!photoView.activeSelf);
+        }
+
+        for (int i = 0; i < 9; i++)
+        {
+            if (Input.GetButtonDown((i + 1).ToString()))
+            {
+                cameraSwapButtons.GetChild(i).GetComponent<Toggle>().isOn = true;
+            }
+        }
+
+        /*if (Input.GetKeyDown(KeyCode.P))
         {
             BreakCamera(currentCameraIndex);
-        }
+        }*/
     }
 
     public void ViewCamera(ControllableCamera camera)
@@ -65,26 +125,41 @@ public class CameraViewer : Singleton<CameraViewer>
         currentCamera = currentCameraGroup.GetChild(index).GetComponent<ControllableCamera>();
         currentCameraIndex = currentCamera.GetCameraGroupIndex();
         currentCamera.EnterView();
+        audioSource.clip = cameraClick;
+        audioSource.loop = false;
+        audioSource.Play();
     }
 
-    public void MoveUp()
+    public void SetMoveUp(bool moving)
     {
-        currentCamera.MoveVertical(false);
+        currentCamera.SetMoveUp(moving);
+        audioSource.clip = cameraSwivel;
+        audioSource.loop = moving;
+        if (moving) audioSource.Play(); else audioSource.Stop();
     }
 
-    public void MoveDown()
+    public void SetMoveDown(bool moving)
     {
-        currentCamera.MoveVertical(true);
+        currentCamera.SetMoveDown(moving);
+        audioSource.clip = cameraSwivel;
+        audioSource.loop = moving;
+        if (moving) audioSource.Play(); else audioSource.Stop();
     }
 
-    public void MoveLeft()
+    public void SetMoveLeft(bool moving)
     {
-        currentCamera.MoveHorizontal(false);
+        currentCamera.SetMoveLeft(moving);
+        audioSource.clip = cameraSwivel;
+        audioSource.loop = moving;
+        if (moving) audioSource.Play(); else audioSource.Stop();
     }
 
-    public void MoveRight()
+    public void SetMoveRight(bool moving)
     {
-        currentCamera.MoveHorizontal(true);
+        currentCamera.SetMoveRight(moving);
+        audioSource.clip = cameraSwivel;
+        audioSource.loop = moving;
+        if (moving) audioSource.Play(); else audioSource.Stop();
     }
 
     public void BreakCamera(int index)
@@ -104,7 +179,7 @@ public class CameraViewer : Singleton<CameraViewer>
             int cameraIndex = i; //this looks dumb but you need it for the lambda so pretend you didn't see this and move on
             GameObject swapButton = Instantiate(cameraSwapButtonPrefab, cameraSwapButtons);
             swapButton.GetComponentInChildren<TextMeshProUGUI>().text = (i + 1).ToString();
-            swapButton.GetComponent<Toggle>().isOn = cameraIndex == currentCameraIndex ? true : false;
+            swapButton.GetComponent<Toggle>().isOn = cameraIndex == currentCameraIndex;
             swapButton.GetComponent<Toggle>().onValueChanged.AddListener((b) =>
             {
                 if (b)
@@ -117,4 +192,13 @@ public class CameraViewer : Singleton<CameraViewer>
     }
 
     public bool IsViewing() { return currentCamera is not null; }
+
+    public bool UsingMain()
+    {
+        if (mainCamera.enabled == true)
+        {
+            return true;
+        }
+        else { return false; }
+    }
 }

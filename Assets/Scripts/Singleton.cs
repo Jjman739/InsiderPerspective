@@ -9,14 +9,15 @@ public class Singleton<T> : MonoBehaviour where T : Component
     {
         get
         {
-            if (_instance == null)
+            //failsafe not needed right now
+            /*if (_instance == null)
             {
                 _instance = FindObjectOfType<T>();
                 if (_instance == null)
                 {
                     return null;
                 }
-            }
+            }*/
             return _instance;
         }
     }
