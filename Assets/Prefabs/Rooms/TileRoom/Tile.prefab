@@ -329,3 +329,4 @@ MonoBehaviour:
   - {fileID: 5047362660871241386}
   - {fileID: 5975885437952733276}
   trapCollider: {fileID: 4994820039930979456}
+  trapIndicator: {fileID: 1038379891966858794}
