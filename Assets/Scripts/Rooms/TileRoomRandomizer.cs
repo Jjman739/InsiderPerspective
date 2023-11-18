@@ -20,9 +20,9 @@ public class TileRoomRandomizer : MonoBehaviour
     void Start()
     {
         SelectTrapRows();
+        SetTrapSettings();
         DisableAllTraps();
         EnableSelectedTraps();
-        SetTrapSettings();
     }
 
     private void SelectTrapRows()

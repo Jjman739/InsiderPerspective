@@ -6,6 +6,7 @@ public class TrapToggle : MonoBehaviour
 {
     public List<GameObject> toggleObjects;
     public TrapCollider trapCollider;
+    public MeshRenderer trapIndicator;
 
     public void TrapDisable()
     {
@@ -20,6 +21,12 @@ public class TrapToggle : MonoBehaviour
         foreach(GameObject item in toggleObjects)
         {
             item.SetActive(true);
+            trapIndicator.materials[0].color = new Color(
+                trapCollider.alertGuard ? 1 : 0,
+                0,
+                trapCollider.damage ? 1 : 0,
+                0.5f
+            );
         }
     }
 }
