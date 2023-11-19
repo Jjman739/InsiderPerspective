@@ -42,13 +42,15 @@ public class ControllableCamera : MonoBehaviour
         rotX = transform.localRotation.eulerAngles.x;
         rotY = transform.localRotation.eulerAngles.y;
 
-        Debug.Log(transform.localPosition);
-        Debug.Log(transform.position);
+        if (camera.targetTexture is null)
+        {
+            camera.enabled = false;
+        }
     }
 
     private void Update()
     {
-        if (camera.targetTexture is null && !viewing)
+        if (camera.enabled && camera.targetTexture is null && !viewing)
         {
             camera.enabled = false;
         }

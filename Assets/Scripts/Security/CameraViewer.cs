@@ -19,6 +19,7 @@ public class CameraViewer : Singleton<CameraViewer>
     private ControllableCamera currentCamera;
     private int currentCameraIndex;
     private AudioSource audioSource;
+    private AttachCamera attachCamera;
 
     private void Start()
     {
@@ -90,7 +91,7 @@ public class CameraViewer : Singleton<CameraViewer>
         }*/
     }
 
-    public void ViewCamera(ControllableCamera camera)
+    public void ViewCamera(ControllableCamera camera, AttachCamera monitor)
     {
         Cursor.lockState = CursorLockMode.None;
         
@@ -98,6 +99,7 @@ public class CameraViewer : Singleton<CameraViewer>
         cameraUI.SetActive(true);
         mainCamera.enabled = false;
 
+        attachCamera = monitor;
         currentCamera = camera;
         currentCameraGroup = camera.GetCameraGroup();
         currentCameraIndex = camera.GetCameraGroupIndex();
@@ -118,6 +120,8 @@ public class CameraViewer : Singleton<CameraViewer>
         currentCamera.ExitView();
         cameraUI.SetActive(false);
         mainCamera.enabled = true;
+
+        attachCamera.SetAttachedCamera(currentCamera.GetCamera());
         
         currentCamera = null;
         currentCameraGroup = null;
