@@ -115,6 +115,8 @@ public class CameraViewer : Singleton<CameraViewer>
         currentCamera.ExitView();
         cameraUI.SetActive(false);
         mainCamera.enabled = true;
+
+        attachCamera.SetAttachedCamera(currentCamera.GetCamera());
         
         currentCamera = null;
         currentCameraGroup = null;
