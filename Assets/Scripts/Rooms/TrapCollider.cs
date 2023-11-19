@@ -2,12 +2,27 @@ using UnityEngine;
 
 public class TrapCollider : MonoBehaviour
 {
+    [SerializeField] private TrapToggle toggler;
+
+    private DoorpointManager doorpointManager;
+
+    public bool damage = true;
+    public bool selfDelete = true;
+    public bool alertGuard = false;
+
     void OnTriggerEnter(Collider other)
     {
-        ThiefManager manager = other.gameObject.GetComponent<ThiefManager>();
-        if (manager!= null)
+        ThiefManager thiefManager = other.gameObject.GetComponent<ThiefManager>();
+        if (thiefManager != null)
         {
-            manager.TakeDamage();
+            if (damage) { thiefManager.TakeDamage(); }
+            if (selfDelete) { toggler.TrapDisable(); }
+            if (alertGuard) { doorpointManager.SendGuardToRoom(); }
         }
+    }
+
+    public void SetDoorPointManager(DoorpointManager dm)
+    {
+        doorpointManager = dm;
     }
 }

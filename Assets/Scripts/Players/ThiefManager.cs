@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Enumerations;
 
 public class ThiefManager : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class ThiefManager : MonoBehaviour
     [SerializeField] private ThiefMovementScript movement;
     [SerializeField] private ThiefTreasure treasure;
     [SerializeField] private AudioClip hurtSound;
+    [SerializeField] private ThiefHitEffects hitEffects;
     private AudioSource audioSource;
 
     public int repairsRemaining = 3;
@@ -23,12 +25,13 @@ public class ThiefManager : MonoBehaviour
     public void TakeDamage()
     {
         Debug.Log("Hit a trap.");
-        cameraRoot.localRotation = Quaternion.Euler(0, Random.Range(0f, 360f), 0);
+        hitEffects.TakeHit();
         ScrambleControls(ref movement.forwardButton, ref movement.backwardButton, ref movement.leftButton, ref movement.rightButton, ref movement.jumpButton, ref photo.photoButton);
         needsRepair = true;
         audioSource.clip = hurtSound;
         audioSource.loop = false;
         audioSource.Play();
+        DialogueManager.Instance.PlayDialogue(DialogueEvent.SHOCK_ROBOT);
     }
 
     public bool AttemptWin()
@@ -46,7 +49,7 @@ public class ThiefManager : MonoBehaviour
     {
         Debug.Log("Repairing!");
 
-        cameraRoot.localRotation = Quaternion.identity;
+        hitEffects.Repair();
         movement.forwardButton = "ThiefMoveUp";
         movement.backwardButton = "ThiefMoveDown";
         movement.leftButton = "ThiefMoveLeft";
