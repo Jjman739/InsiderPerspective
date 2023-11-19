@@ -960,6 +960,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SmallMonitor (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a9468ee0fea918943aded477857a8051, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -15331,7 +15335,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: a9468ee0fea918943aded477857a8051, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -17617,7 +17621,7 @@ PrefabInstance:
     - target: {fileID: 2204412308258612006, guid: 28d58d5839fc0be4a85526eb4c61eca5, type: 3}
       propertyPath: attachedCamera
       value: 
-      objectReference: {fileID: 949450047}
+      objectReference: {fileID: 81475894}
     - target: {fileID: 2221161738693555809, guid: 28d58d5839fc0be4a85526eb4c61eca5, type: 3}
       propertyPath: m_Size.x
       value: 6.423222
@@ -17702,6 +17706,10 @@ PrefabInstance:
       propertyPath: attachedCamera
       value: 
       objectReference: {fileID: 518652194}
+    - target: {fileID: 2567008019498749252, guid: 28d58d5839fc0be4a85526eb4c61eca5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2820550561802460140, guid: 28d58d5839fc0be4a85526eb4c61eca5, type: 3}
       propertyPath: m_Name
       value: WaypointsMinimap
@@ -18060,12 +18068,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3952271885720246251, guid: 28d58d5839fc0be4a85526eb4c61eca5, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3952271885720246251, guid: 28d58d5839fc0be4a85526eb4c61eca5, type: 3}
       propertyPath: attachedCamera
       value: 
-      objectReference: {fileID: 585571231}
+      objectReference: {fileID: 949450047}
     - target: {fileID: 4097076306026792332, guid: 28d58d5839fc0be4a85526eb4c61eca5, type: 3}
       propertyPath: m_LocalScale.x
       value: 7.5226617
@@ -18393,7 +18401,7 @@ PrefabInstance:
     - target: {fileID: 6057101396906190616, guid: 28d58d5839fc0be4a85526eb4c61eca5, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: f8a0e90c2427c514ca72c023c19332fd, type: 2}
+      objectReference: {fileID: 2100000, guid: 88bebcadae7697041b0cc18263900410, type: 2}
     - target: {fileID: 6137535526192248777, guid: 28d58d5839fc0be4a85526eb4c61eca5, type: 3}
       propertyPath: m_Size.x
       value: 10.055783
@@ -18568,7 +18576,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6664461937328305581, guid: 28d58d5839fc0be4a85526eb4c61eca5, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6780008054694695008, guid: 28d58d5839fc0be4a85526eb4c61eca5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -18938,6 +18946,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 3.907
       objectReference: {fileID: 0}
+    - target: {fileID: 8146061876227280583, guid: 28d58d5839fc0be4a85526eb4c61eca5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8227073078439883197, guid: 28d58d5839fc0be4a85526eb4c61eca5, type: 3}
       propertyPath: patrollingGuards.Array.size
       value: 2
@@ -19073,7 +19085,7 @@ PrefabInstance:
     - target: {fileID: 8953660354865599445, guid: 28d58d5839fc0be4a85526eb4c61eca5, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: b30c1f95751289a43bbdef81faacaee0, type: 2}
+      objectReference: {fileID: 2100000, guid: f8a0e90c2427c514ca72c023c19332fd, type: 2}
     - target: {fileID: 9034791553051771652, guid: 28d58d5839fc0be4a85526eb4c61eca5, type: 3}
       propertyPath: m_Size.x
       value: 8.049829
