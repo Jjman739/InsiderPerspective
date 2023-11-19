@@ -42,7 +42,10 @@ public class ControllableCamera : MonoBehaviour
         rotX = transform.localRotation.eulerAngles.x;
         rotY = transform.localRotation.eulerAngles.y;
 
-        
+        if (camera.targetTexture is null)
+        {
+            camera.enabled = false;
+        }
     }
 
     private void Update()
