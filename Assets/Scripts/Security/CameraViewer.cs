@@ -98,6 +98,7 @@ public class CameraViewer : Singleton<CameraViewer>
         cameraUI.SetActive(true);
         mainCamera.enabled = false;
 
+        attachCamera = monitor;
         currentCamera = camera;
         currentCameraGroup = camera.GetCameraGroup();
         currentCameraIndex = camera.GetCameraGroupIndex();
