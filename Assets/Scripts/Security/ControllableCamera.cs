@@ -42,8 +42,7 @@ public class ControllableCamera : MonoBehaviour
         rotX = transform.localRotation.eulerAngles.x;
         rotY = transform.localRotation.eulerAngles.y;
 
-        Debug.Log(transform.localPosition);
-        Debug.Log(transform.position);
+        
     }
 
     private void Update()

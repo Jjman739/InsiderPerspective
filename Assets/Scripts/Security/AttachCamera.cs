@@ -22,6 +22,7 @@ public class AttachCamera : MonoBehaviour
 
     public void SetAttachedCamera(Camera newCamera)
     {
+        Debug.Log(newCamera.name);
         attachedCamera.targetTexture = null;
         attachedCamera = newCamera;
         newCamera.targetTexture = texture;
