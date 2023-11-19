@@ -7,6 +7,7 @@ using Enumerations;
 public class DialogueManager : Singleton<DialogueManager>
 {
     [SerializeField] private AudioClip gameStart;
+    [SerializeField] private AudioClip viewLaptop;
     [SerializeField] private AudioClip viewMonitor;
     [SerializeField] private AudioClip viewFishEyeMonitor;
     [SerializeField] private AudioClip guardTileRoom;
@@ -19,8 +20,10 @@ public class DialogueManager : Singleton<DialogueManager>
     private List<DialogueObject> dialogueObjects = new();
     private DialogueObject currentDialogue;
 
-    private void Start()
+    private new void Awake()
     {
+        base.Awake();
+
         audioSource = GetComponent<AudioSource>();
 
         initializeDialogueObjects();
@@ -29,6 +32,7 @@ public class DialogueManager : Singleton<DialogueManager>
     private void initializeDialogueObjects()
     {
         dialogueObjects.Add(new DialogueObject(gameStart, DialogueEvent.GAME_START));
+        dialogueObjects.Add(new DialogueObject(viewLaptop, DialogueEvent.VIEW_LAPTOP));
         dialogueObjects.Add(new DialogueObject(viewMonitor, DialogueEvent.VIEW_MONITOR));
         dialogueObjects.Add(new DialogueObject(viewFishEyeMonitor, DialogueEvent.VIEW_MONITOR_FISH_EYE));
         dialogueObjects.Add(new DialogueObject(guardTileRoom, DialogueEvent.ENTER_TILE_ROOM_GUARD));
@@ -43,6 +47,11 @@ public class DialogueManager : Singleton<DialogueManager>
         if (!audioSource.isPlaying)
         {
             currentDialogue = null;
+        }
+
+        if (Time.timeScale == 0 && currentDialogue is not null)
+        {
+            currentDialogue.Stop(audioSource);
         }
     }
 
