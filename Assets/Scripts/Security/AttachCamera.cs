@@ -7,6 +7,8 @@ public class AttachCamera : MonoBehaviour
     [SerializeField] private Camera attachedCamera;
     private GameObject monitor;
 
+    private RenderTexture texture;
+
     private void Start()
     {
         monitor = transform.GetChild(0).gameObject;
@@ -17,4 +19,11 @@ public class AttachCamera : MonoBehaviour
     }
 
     public Camera GetAttachedCamera() { return attachedCamera; }
+
+    public void SetAttachedCamera(Camera newCamera)
+    {
+        attachedCamera.targetTexture = null;
+        attachedCamera = newCamera;
+        newCamera.targetTexture = texture;
+    }
 }
