@@ -9,14 +9,14 @@ public class SelectMonitor : MonoBehaviour
     [SerializeField] private Material selectedMaterial;
 
     private GameObject containerCube;
-    private ControllableCamera camera;
+    private ControllableCamera controllableCamera;
     private AttachCamera attachCamera;
 
     private void Start()
     {
         containerCube = transform.Find("ContainerCube").gameObject;
         attachCamera = GetComponent<AttachCamera>();
-        camera = attachCamera.GetAttachedCamera().GetComponent<ControllableCamera>();
+        controllableCamera = attachCamera.GetAttachedCamera().GetComponent<ControllableCamera>();
     }
 
     private void OnMouseEnter()
@@ -45,6 +45,6 @@ public class SelectMonitor : MonoBehaviour
             return;
         }
 
-        CameraViewer.Instance.ViewCamera(camera, attachCamera);
+        CameraViewer.Instance.ViewCamera(controllableCamera, attachCamera);
     }
 }
