@@ -2734,14 +2734,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86979e9a92aa1b747a8481efd647fb46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameStart: {fileID: 8300000, guid: 263f438406f82714996e788c67ca46dd, type: 3}
-  viewMonitor: {fileID: 8300000, guid: 2a0d6bf1ce606684aac328519a2b3eb6, type: 3}
-  viewFishEyeMonitor: {fileID: 8300000, guid: 3a072ded67e74c14589f12f0fbd03942, type: 3}
-  guardTileRoom: {fileID: 8300000, guid: cc1c9745adba9834fb4651c640090df3, type: 3}
-  shockTileRoom: {fileID: 8300000, guid: 6eb820acea62f3740b30a5647a754696, type: 3}
-  shockRobot: {fileID: 8300000, guid: 562b18d8bb6c8c5448be643fb990789f, type: 3}
-  platformerRoom: {fileID: 8300000, guid: 29e2f398e2166344c97a393fc9c550e5, type: 3}
-  gameEnd: {fileID: 8300000, guid: c648e344af84822498341885c3be0fec, type: 3}
+  gameStart: {fileID: 8300000, guid: 75aec6551c8ad6449b5cceb726fb5650, type: 3}
+  viewLaptop: {fileID: 8300000, guid: bd1b492da19d6e445a328618b7c14ec9, type: 3}
+  viewMonitor: {fileID: 8300000, guid: 8992f779c14496642ba2858c47e49730, type: 3}
+  viewFishEyeMonitor: {fileID: 8300000, guid: 8daedfb2c8a393449b56cb30c39da167, type: 3}
+  guardTileRoom: {fileID: 8300000, guid: c28b46a617009aa45803ee92d28e7eda, type: 3}
+  shockTileRoom: {fileID: 8300000, guid: 55e14522681bafb41ad97001d8767a53, type: 3}
+  shockRobot: {fileID: 8300000, guid: 490b232d93beeec4c91dfcfa00a50bc6, type: 3}
+  platformerRoom: {fileID: 8300000, guid: e36366a60cde6b94b8101c9ac5b0ad07, type: 3}
+  gameEnd: {fileID: 8300000, guid: 805fc3428c01799438b34d2080188dcf, type: 3}
 --- !u!1001 &365797625
 PrefabInstance:
   m_ObjectHideFlags: 0
