@@ -48,9 +48,10 @@ public class ControllableCamera : MonoBehaviour
 
     private void Update()
     {
-        if (camera.targetTexture is null && !viewing)
+        if (camera.enabled && camera.targetTexture is null && !viewing)
         {
             camera.enabled = false;
+            Debug.Log("Disabling camera.");
         }
 
         audioListener.enabled = viewing;
