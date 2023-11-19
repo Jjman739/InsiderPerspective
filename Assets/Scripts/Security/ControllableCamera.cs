@@ -52,6 +52,7 @@ public class ControllableCamera : MonoBehaviour
     {
         if (camera.enabled && camera.targetTexture is null && !viewing)
         {
+            Debug.Log("Disabling " + camera.name);
             camera.enabled = false;
         }
 
@@ -127,7 +128,6 @@ public class ControllableCamera : MonoBehaviour
 
     public void EnterView()
     {
-        if (camera.targetTexture == null) { Debug.Log("Entered " + camera.name + " but had no texture!"); }
         camera.targetTexture = null;
         camera.enabled = true;
         viewing = true;
