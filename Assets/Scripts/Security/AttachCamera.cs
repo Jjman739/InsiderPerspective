@@ -28,4 +28,9 @@ public class AttachCamera : MonoBehaviour
         attachedCamera = newCamera;
         newCamera.targetTexture = texture;
     }
+
+    public ControllableCamera GetControllableCamera()
+    {
+        return attachedCamera.GetComponent<ControllableCamera>();
+    }
 }
