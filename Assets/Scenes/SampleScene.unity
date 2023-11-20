@@ -15331,6 +15331,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PauseUI
       objectReference: {fileID: 0}
+    - target: {fileID: 8772396806648000200, guid: b788f4f070685f74fa6f11b09be8727d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8809540807341808270, guid: b788f4f070685f74fa6f11b09be8727d, type: 3}
       propertyPath: m_Colors.m_NormalColor.a
       value: 0.4392157
