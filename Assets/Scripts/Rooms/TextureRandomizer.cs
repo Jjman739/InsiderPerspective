@@ -12,10 +12,4 @@ public class TextureRandomizer : MonoBehaviour
     {
         GetComponent<Renderer>().material.SetTexture("_MainTex", textures[Random.Range(0, textures.Length)]);
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
