@@ -6,13 +6,14 @@ using UnityEngine;
 [RequireComponent(typeof(Camera))]
 public class ColorInvertLens : MonoBehaviour
 {
-    public bool invert = false;
+    public bool m_invert = false;
+    public bool m_blackAndWhite = false;
     [Range(0.0f, 1.0f)]
-    public float red = 1.0f;
+    public float m_red = 1.0f;
     [Range(0.0f, 1.0f)]
-    public float green = 1.0f;
+    public float m_green = 1.0f;
     [Range(0.0f, 1.0f)]
-    public float blue = 1.0f;
+    public float m_blue = 1.0f;
 
     private Material baseMaterial;
 
@@ -20,10 +21,19 @@ public class ColorInvertLens : MonoBehaviour
     {
         baseMaterial = new Material(Shader.Find("Hidden/ColorInvertShader"));
 
-        baseMaterial.SetInteger("_Invert", invert ? 1 : 0);
-        baseMaterial.SetFloat("_Red", red);
-        baseMaterial.SetFloat("_Green", green);
-        baseMaterial.SetFloat("_Blue", blue);
+        baseMaterial.SetInteger("_Invert", m_invert ? 1 : 0);
+        baseMaterial.SetInteger("_BlackAndWhite", m_blackAndWhite ? 1 : 0);
+        baseMaterial.SetFloat("_Red", m_red);
+        baseMaterial.SetFloat("_Green", m_green);
+        baseMaterial.SetFloat("_Blue", m_blue);
+    }
+
+    private void OnValidate() {
+        baseMaterial.SetInteger("_Invert", m_invert ? 1 : 0);
+        baseMaterial.SetInteger("_BlackAndWhite", m_blackAndWhite ? 1 : 0);
+        baseMaterial.SetFloat("_Red", m_red);
+        baseMaterial.SetFloat("_Green", m_green);
+        baseMaterial.SetFloat("_Blue", m_blue);
     }
 
     private void OnRenderImage(RenderTexture source, RenderTexture destination)

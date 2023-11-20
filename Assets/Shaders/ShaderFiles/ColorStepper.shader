@@ -1,13 +1,9 @@
-Shader "Hidden/ColorInvertShader"
+Shader "Hidden/ColorStepper"
 {
     Properties
     {
         _MainTex ("Texture", 2D) = "white" {}
-        _Invert("Invert", Integer) = 0
-        _BlackAndWhite("BlackAndWhite", Integer) = 0
-        _Red("Red", Float) = 1.0
-        _Green("Green", Float) = 1.0
-        _Blue("Blue", Float) = 1.0
+        _Steps("Steps", Integer) = 0
     }
     SubShader
     {
@@ -44,27 +40,33 @@ Shader "Hidden/ColorInvertShader"
 
             sampler2D _MainTex;
 
-            uniform int _Invert;
-            uniform int _BlackAndWhite;
-            uniform float _Red;
-            uniform float _Green;
-            uniform float _Blue;
+            uniform int _Steps;
 
             fixed4 frag (v2f i) : SV_Target
             {
                 fixed4 col = tex2D(_MainTex, i.uv);
 
-                col.rgb *= float3(_Red, _Green, _Blue);
+                float stepIntervalHalved = 0.5f / _Steps;
+                float stepInterval = stepIntervalHalved * 2.0f;
 
-                // Black and White
-                if (_BlackAndWhite == 1) {
-                    float gray = 0.33 * (col.r + col.g + col.b);
-                    col = fixed4(gray, gray, gray, 1.0f);
+                if (col.r % stepInterval < stepIntervalHalved) {
+                    col.r -= col.r % stepInterval;
+                } else {
+                    col.r += stepInterval - col.r % stepInterval;
                 }
-                // Invert the colors
-                if (_Invert == 1) {
-                    col.rgb = 1 - col.rgb;
+
+                if (col.g % stepInterval < stepIntervalHalved) {
+                    col.g -= col.g % stepInterval;
+                } else {
+                    col.g += stepInterval - col.g % stepInterval;
                 }
+
+                if (col.b % stepInterval < stepIntervalHalved) {
+                    col.b -= col.b % stepInterval;
+                } else {
+                    col.b += stepInterval - col.b % stepInterval;
+                }
+
                 return col;
             }
             ENDCG

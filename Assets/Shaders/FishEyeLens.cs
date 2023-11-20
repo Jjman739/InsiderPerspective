@@ -6,7 +6,9 @@ using UnityEngine;
 [RequireComponent(typeof(Camera))]
 public class FishEyeLens : MonoBehaviour
 {
-    public float pow = 1.0f;
+    public float m_power = 1.0f;
+
+    public bool m_excludeOuterPixels = true;
 
     private Material baseMaterial;
 
@@ -14,7 +16,13 @@ public class FishEyeLens : MonoBehaviour
     {
         baseMaterial = new Material(Shader.Find("Hidden/FishEyeShader"));
 
-        baseMaterial.SetFloat("_BarrelPower", pow);
+        baseMaterial.SetFloat("_BarrelPower", m_power);
+        baseMaterial.SetInteger("_ExcludeOuterPixels", m_excludeOuterPixels ? 1 : 0);
+    }
+
+    private void OnValidate() {
+        baseMaterial.SetFloat("_BarrelPower", m_power);
+        baseMaterial.SetInteger("_ExcludeOuterPixels", m_excludeOuterPixels ? 1 : 0);
     }
 
     private void OnRenderImage(RenderTexture source, RenderTexture destination)

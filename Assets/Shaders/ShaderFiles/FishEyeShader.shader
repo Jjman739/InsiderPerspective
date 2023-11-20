@@ -4,6 +4,7 @@ Shader "Hidden/FishEyeShader"
     {
         _MainTex ("Texture", 2D) = "white" {}
         _BarrelPower("Barrel Power", Float) = 1.0
+        _ExcludeOuterPixels("Exclude Outer Pixels", Integer) = 1
     }
     SubShader
     {
@@ -40,6 +41,7 @@ Shader "Hidden/FishEyeShader"
 
             sampler2D _MainTex;
             uniform float _BarrelPower;
+            uniform int _ExcludeOuterPixels;
 
             float2 distort(float2 pos)
             {
@@ -57,7 +59,7 @@ Shader "Hidden/FishEyeShader"
                 float2 xy = 2.0 * i.uv - 1.0;
                 float d = length(xy);
 
-                if (d >= 1.0)
+                if (_ExcludeOuterPixels == 1 && d >= 1.0)
                 {
                     return fixed4(0.0f, 0.0f, 0.0f, 1.0f);
                 }
