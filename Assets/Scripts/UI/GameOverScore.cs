@@ -8,7 +8,7 @@ public class GameOverScore : MonoBehaviour
 {
 
     public TextMeshProUGUI scoreText;
-    //public int maxScore;
+    public int maxScore;
 
     //private int score = ScoreTracker.Instance.treasureValue;
 
