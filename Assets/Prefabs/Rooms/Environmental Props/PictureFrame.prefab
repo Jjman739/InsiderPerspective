@@ -112,15 +112,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: aa3c5522474fc9c47943e6b3471769f9, type: 3}
       propertyPath: m_LocalScale.x
-      value: 20
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: aa3c5522474fc9c47943e6b3471769f9, type: 3}
       propertyPath: m_LocalScale.y
-      value: 20
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: aa3c5522474fc9c47943e6b3471769f9, type: 3}
       propertyPath: m_LocalScale.z
-      value: 20
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: aa3c5522474fc9c47943e6b3471769f9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -207,7 +207,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 538e25341cca34541a49b38d2dc80f43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  materialIndex: 1
   materials:
   - {fileID: 2100000, guid: 51680184247222546b6c75b94b008a44, type: 2}
   - {fileID: 2100000, guid: a7d8b687a890b22458e1ae3e1aa9b77a, type: 2}
