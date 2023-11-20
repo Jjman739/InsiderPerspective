@@ -4,10 +4,14 @@ using UnityEngine;
 
 [ExecuteInEditMode]
 [RequireComponent(typeof(Camera))]
-public class ColorStepper : MonoBehaviour
+public class DarkSpotLens : MonoBehaviour
 {
-    [Range(2, 256)]
-    public int m_steps = 10;
+    [Range(0.0f, 1.0f)]
+    public float m_size = 0.5f;
+    [Range(-1.0f, 1.0f)]
+    public float m_horizontalLocation = 0.0f;
+    [Range(-1.0f, 1.0f)]
+    public float m_verticalLocation = 0.0f;
 
     private Material baseMaterial;
 
@@ -23,9 +27,11 @@ public class ColorStepper : MonoBehaviour
 
     private void SetShaderVariables()
     {
-        baseMaterial = new Material(Shader.Find("Hidden/ColorStepper"));
+        baseMaterial = new Material(Shader.Find("Hidden/DarkSpotShader"));
 
-        baseMaterial.SetInteger("_Steps", m_steps);
+        baseMaterial.SetFloat("_Size", m_size);
+        baseMaterial.SetFloat("_HorizontalLocation", m_horizontalLocation);
+        baseMaterial.SetFloat("_VerticalLocation", m_verticalLocation);
     }
 
     private void OnRenderImage(RenderTexture source, RenderTexture destination)

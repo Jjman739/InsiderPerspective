@@ -4,10 +4,10 @@ using UnityEngine;
 
 [ExecuteInEditMode]
 [RequireComponent(typeof(Camera))]
-public class ColorStepper : MonoBehaviour
+public class FlipLens : MonoBehaviour
 {
-    [Range(2, 256)]
-    public int m_steps = 10;
+    public bool m_flipHorizontally = false;
+    public bool m_flipVertically = false;
 
     private Material baseMaterial;
 
@@ -23,9 +23,10 @@ public class ColorStepper : MonoBehaviour
 
     private void SetShaderVariables()
     {
-        baseMaterial = new Material(Shader.Find("Hidden/ColorStepper"));
+        baseMaterial = new Material(Shader.Find("Hidden/FlipShader"));
 
-        baseMaterial.SetInteger("_Steps", m_steps);
+        baseMaterial.SetInteger("_FlipHorizontally", m_flipHorizontally ? 1 : 0);
+        baseMaterial.SetInteger("_FlipVertically", m_flipVertically ? 1 : 0);
     }
 
     private void OnRenderImage(RenderTexture source, RenderTexture destination)

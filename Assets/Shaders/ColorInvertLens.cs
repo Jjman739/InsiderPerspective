@@ -19,16 +19,18 @@ public class ColorInvertLens : MonoBehaviour
 
     public void Start()
     {
-        baseMaterial = new Material(Shader.Find("Hidden/ColorInvertShader"));
-
-        baseMaterial.SetInteger("_Invert", m_invert ? 1 : 0);
-        baseMaterial.SetInteger("_BlackAndWhite", m_blackAndWhite ? 1 : 0);
-        baseMaterial.SetFloat("_Red", m_red);
-        baseMaterial.SetFloat("_Green", m_green);
-        baseMaterial.SetFloat("_Blue", m_blue);
+        SetShaderVariables();
     }
 
-    private void OnValidate() {
+    private void OnValidate()
+    {
+        SetShaderVariables();
+    }
+
+    private void SetShaderVariables()
+    {
+        baseMaterial = new Material(Shader.Find("Hidden/ColorInvertShader"));
+
         baseMaterial.SetInteger("_Invert", m_invert ? 1 : 0);
         baseMaterial.SetInteger("_BlackAndWhite", m_blackAndWhite ? 1 : 0);
         baseMaterial.SetFloat("_Red", m_red);

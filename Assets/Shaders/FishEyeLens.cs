@@ -14,13 +14,18 @@ public class FishEyeLens : MonoBehaviour
 
     public void Start()
     {
-        baseMaterial = new Material(Shader.Find("Hidden/FishEyeShader"));
-
-        baseMaterial.SetFloat("_BarrelPower", m_power);
-        baseMaterial.SetInteger("_ExcludeOuterPixels", m_excludeOuterPixels ? 1 : 0);
+        SetShaderVariables();
     }
 
-    private void OnValidate() {
+    private void OnValidate()
+    {
+        SetShaderVariables();
+    }
+
+    private void SetShaderVariables()
+    {
+        baseMaterial = new Material(Shader.Find("Hidden/FishEyeShader"));
+
         baseMaterial.SetFloat("_BarrelPower", m_power);
         baseMaterial.SetInteger("_ExcludeOuterPixels", m_excludeOuterPixels ? 1 : 0);
     }

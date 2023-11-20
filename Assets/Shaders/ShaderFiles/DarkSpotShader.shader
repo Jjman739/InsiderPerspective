@@ -1,10 +1,11 @@
-Shader "Hidden/FishEyeShader"
+Shader "Hidden/DarkSpotShader"
 {
     Properties
     {
         _MainTex ("Texture", 2D) = "white" {}
-        _BarrelPower("Barrel Power", Float) = 1.0
-        _ExcludeOuterPixels("Exclude Outer Pixels", Integer) = 1
+		_Size("Size", Range(0.0, 1.0)) = 0.5
+		_HorizontalLocation("Horizontal Location", Range(-1.0, 1.0)) = 0.0
+        _VerticalLocation("Vertical Location", Range(-1.0, 1.0)) = 0.0
     }
     SubShader
     {
@@ -40,33 +41,23 @@ Shader "Hidden/FishEyeShader"
             }
 
             sampler2D _MainTex;
-            uniform float _BarrelPower;
-            uniform int _ExcludeOuterPixels;
 
-            float2 distort(float2 pos)
-            {
-                float theta = atan2(pos.y, pos.x);
-                float radius = length(pos);
-                radius = pow(radius, _BarrelPower);
-                pos.x = radius * cos(theta);
-                pos.y = radius * sin(theta);
-
-                return 0.5 * (pos + 1.0);
-            }
+            uniform float _Size;
+            uniform float _HorizontalLocation;
+            uniform float _VerticalLocation;
 
             fixed4 frag (v2f i) : SV_Target
-            {
-                float2 xy = 2.0 * i.uv - 1.0;
-                float d = length(xy);
+            {                
                 fixed4 col = tex2D(_MainTex, i.uv);
+                float2 xy = (2.0 * i.uv - 1.0) - float2(_HorizontalLocation, _VerticalLocation);
+                float d = length(xy);
 
-                if (_ExcludeOuterPixels == 1 && d >= 1.0)
+                if (d <= _Size)
                 {
                     return fixed4(0.0f, 0.0f, 0.0f, col.w);
                 }
 
-                float2 uv = distort(xy);
-                return tex2D(_MainTex, uv);
+                return col;
             }
             ENDCG
         }

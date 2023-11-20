@@ -1,10 +1,10 @@
-Shader "Hidden/FishEyeShader"
+Shader "Hidden/FlipShader"
 {
     Properties
     {
         _MainTex ("Texture", 2D) = "white" {}
-        _BarrelPower("Barrel Power", Float) = 1.0
-        _ExcludeOuterPixels("Exclude Outer Pixels", Integer) = 1
+		_FlipHorizontally("Flip Horizontally", Integer) = 0
+		_FlipVertically("Flip Vertically", Integer) = 0
     }
     SubShader
     {
@@ -40,33 +40,22 @@ Shader "Hidden/FishEyeShader"
             }
 
             sampler2D _MainTex;
-            uniform float _BarrelPower;
-            uniform int _ExcludeOuterPixels;
 
-            float2 distort(float2 pos)
-            {
-                float theta = atan2(pos.y, pos.x);
-                float radius = length(pos);
-                radius = pow(radius, _BarrelPower);
-                pos.x = radius * cos(theta);
-                pos.y = radius * sin(theta);
-
-                return 0.5 * (pos + 1.0);
-            }
+            uniform int _FlipHorizontally;
+            uniform int _FlipVertically;
 
             fixed4 frag (v2f i) : SV_Target
             {
-                float2 xy = 2.0 * i.uv - 1.0;
-                float d = length(xy);
+                if (_FlipHorizontally == 1) {
+                    i.uv.x = 1 - i.uv.x;
+                }
+                if (_FlipVertically == 1) {
+                    i.uv.y = 1 - i.uv.y;
+                }
+                
                 fixed4 col = tex2D(_MainTex, i.uv);
 
-                if (_ExcludeOuterPixels == 1 && d >= 1.0)
-                {
-                    return fixed4(0.0f, 0.0f, 0.0f, col.w);
-                }
-
-                float2 uv = distort(xy);
-                return tex2D(_MainTex, uv);
+                return col;
             }
             ENDCG
         }
