@@ -325,6 +325,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 014a2c7dc37b2d04b91faa8a44d1861d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  strayTrapCount: 31
   trapsDamage: 1
   trapsSelfDelete: 1
   trapsAlertGuard: 1
