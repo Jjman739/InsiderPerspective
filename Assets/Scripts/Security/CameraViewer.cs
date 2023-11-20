@@ -4,6 +4,7 @@ using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
+using Enumerations;
 
 public class CameraViewer : Singleton<CameraViewer>
 {
@@ -12,11 +13,13 @@ public class CameraViewer : Singleton<CameraViewer>
     [SerializeField] private GameObject cameraSwapButtonPrefab;
     [SerializeField] private AudioClip cameraSwivel;
     [SerializeField] private AudioClip cameraClick;
+    [SerializeField] private GameObject photoView;
     private Transform cameraSwapButtons;
     private Transform currentCameraGroup;
     private ControllableCamera currentCamera;
     private int currentCameraIndex;
     private AudioSource audioSource;
+    private AttachCamera attachCamera;
 
     private void Start()
     {
@@ -27,13 +30,68 @@ public class CameraViewer : Singleton<CameraViewer>
 
     private void Update()
     {
+        if (currentCamera is null) return;
+
+        if (Input.GetButtonDown("UpArrow"))
+        {
+            SetMoveUp(true);
+        }
+
+        if (Input.GetButtonDown("DownArrow"))
+        {
+            SetMoveDown(true);
+        }
+
+        if (Input.GetButtonDown("LeftArrow"))
+        {
+            SetMoveLeft(true);
+        }
+
+        if (Input.GetButtonDown("RightArrow"))
+        {
+            SetMoveRight(true);
+        }
+
+        if (Input.GetButtonUp("UpArrow"))
+        {
+            SetMoveUp(false);
+        }
+
+        if (Input.GetButtonUp("DownArrow"))
+        {
+            SetMoveDown(false);
+        }
+
+        if (Input.GetButtonUp("LeftArrow"))
+        {
+            SetMoveLeft(false);
+        }
+
+        if (Input.GetButtonUp("RightArrow"))
+        {
+            SetMoveRight(false);
+        }
+
+        if (Input.GetButtonDown("TogglePhotoView"))
+        {
+            photoView.SetActive(!photoView.activeSelf);
+        }
+
+        for (int i = 0; i < 9; i++)
+        {
+            if (Input.GetButtonDown((i + 1).ToString()))
+            {
+                cameraSwapButtons.GetChild(i).GetComponent<Toggle>().isOn = true;
+            }
+        }
+
         /*if (Input.GetKeyDown(KeyCode.P))
         {
             BreakCamera(currentCameraIndex);
         }*/
     }
 
-    public void ViewCamera(ControllableCamera camera)
+    public void ViewCamera(ControllableCamera camera, AttachCamera monitor)
     {
         Cursor.lockState = CursorLockMode.None;
         
@@ -41,6 +99,7 @@ public class CameraViewer : Singleton<CameraViewer>
         cameraUI.SetActive(true);
         mainCamera.enabled = false;
 
+        attachCamera = monitor;
         currentCamera = camera;
         currentCameraGroup = camera.GetCameraGroup();
         currentCameraIndex = camera.GetCameraGroupIndex();
@@ -48,6 +107,10 @@ public class CameraViewer : Singleton<CameraViewer>
         generateCameraGroupButtons();
 
         SwapCamera(currentCameraIndex);
+
+        DialogueManager.Instance.PlayDialogue(DialogueEvent.VIEW_MONITOR);
+
+        //TODO: play DialogueEvent.VIEW_FISH_EYE_MONITOR if camera is a fish eye camera
     }
 
     public void ExitCamera()
@@ -57,6 +120,8 @@ public class CameraViewer : Singleton<CameraViewer>
         currentCamera.ExitView();
         cameraUI.SetActive(false);
         mainCamera.enabled = true;
+
+        attachCamera.SetAttachedCamera(currentCamera.GetCamera());
         
         currentCamera = null;
         currentCameraGroup = null;
@@ -123,7 +188,7 @@ public class CameraViewer : Singleton<CameraViewer>
             int cameraIndex = i; //this looks dumb but you need it for the lambda so pretend you didn't see this and move on
             GameObject swapButton = Instantiate(cameraSwapButtonPrefab, cameraSwapButtons);
             swapButton.GetComponentInChildren<TextMeshProUGUI>().text = (i + 1).ToString();
-            swapButton.GetComponent<Toggle>().isOn = cameraIndex == currentCameraIndex ? true : false;
+            swapButton.GetComponent<Toggle>().isOn = cameraIndex == currentCameraIndex;
             swapButton.GetComponent<Toggle>().onValueChanged.AddListener((b) =>
             {
                 if (b)

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Enumerations;
 
 public class RelicPickup : MonoBehaviour
 {
@@ -16,6 +17,11 @@ public class RelicPickup : MonoBehaviour
             GetComponent<CapsuleCollider>().enabled = false;
             Destroy(transform.GetChild(0).gameObject);
             GetComponent<AudioSource>().Play();
+
+            if (inv.treasureCount >= inv.goal)
+            {
+                DialogueManager.Instance.PlayDialogue(DialogueEvent.GAME_END);
+            }
         }
     }
 }

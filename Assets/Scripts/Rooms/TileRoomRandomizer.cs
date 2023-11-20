@@ -11,9 +11,16 @@ public class TileRoomRandomizer : MonoBehaviour
     private int trapCol2;
     private int trapCol3;
 
+    public bool trapsDamage = true;
+    public bool trapsSelfDelete = true;
+    public bool trapsAlertGuard = false;
+
+    [SerializeField] private DoorpointManager doorpointManager;
+
     void Start()
     {
         SelectTrapRows();
+        SetTrapSettings();
         DisableAllTraps();
         EnableSelectedTraps();
     }
@@ -107,5 +114,23 @@ public class TileRoomRandomizer : MonoBehaviour
               }
               i++;
           }
+    }
+
+    private void SetTrapSettings()
+    {
+        foreach (Transform trapRow in transform)
+        {
+            foreach (Transform trap in trapRow)
+            {
+                TrapToggle toggler = trap.gameObject.GetComponent<TrapToggle>();
+                if (toggler != null)
+                {
+                    toggler.trapCollider.damage = trapsDamage;
+                    toggler.trapCollider.selfDelete = trapsSelfDelete;
+                    toggler.trapCollider.alertGuard = trapsAlertGuard;
+                }
+                toggler.trapCollider.GetComponent<TrapCollider>().SetDoorPointManager(doorpointManager);
+            }
+        }
     }
 }
