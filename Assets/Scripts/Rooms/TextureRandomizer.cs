@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TextureSwap : MonoBehaviour
+public class TextureRandomizer : MonoBehaviour
 {
 
-    public Texture[] textures;
+    public Texture2D[] textures;
 
     // Start is called before the first frame update
     void Start()
