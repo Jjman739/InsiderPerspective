@@ -412,6 +412,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6897426948725233962}
+  - component: {fileID: 244851815418849606}
   m_Layer: 0
   m_Name: Traps
   m_TagString: Untagged
@@ -442,6 +443,22 @@ Transform:
   - {fileID: 1161327119979330414}
   m_Father: {fileID: 6261284614492023444}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &244851815418849606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4436452796152281239}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebd6c19c89a6a0d4ebf10a59147f594c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trapsDamage: 1
+  trapsSelfDelete: 1
+  trapsAlertGuard: 0
+  doorpointManager: {fileID: 2573588812405160362}
 --- !u!1 &7334925113379390732
 GameObject:
   m_ObjectHideFlags: 0
