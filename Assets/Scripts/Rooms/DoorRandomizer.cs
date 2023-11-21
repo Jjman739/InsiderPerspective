@@ -11,6 +11,8 @@ public class DoorRandomizer : MonoBehaviour
 
     void Start()
     {
+        closedWalls = new List<GameObject>();
+
         foreach (Transform child in transform)
         {
             closedWalls.Add(child.gameObject);
@@ -18,7 +20,7 @@ public class DoorRandomizer : MonoBehaviour
 
         int openStart = Random.Range(1, closedWalls.Count - (1 + openingWidth));
         
-        for (int i = openStart; i < openingWidth; i++)
+        for (int i = openStart; i < openStart + openingWidth; i++)
         {
             GameObject wall = closedWalls[i];
             Instantiate(openWall, wall.transform.position, wall.transform.rotation, transform);
