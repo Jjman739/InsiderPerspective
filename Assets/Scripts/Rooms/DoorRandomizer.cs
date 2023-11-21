@@ -7,7 +7,8 @@ public class DoorRandomizer : MonoBehaviour
     [SerializeField] private GameObject openWall;
     private List<GameObject> closedWalls;
 
-    public int openingWidth;
+    public int openingWidthMin;
+    public int openingWidthMax;
 
     void Start()
     {
@@ -18,6 +19,7 @@ public class DoorRandomizer : MonoBehaviour
             closedWalls.Add(child.gameObject);
         }
 
+        int openingWidth = Random.Range(openingWidthMin, openingWidthMax);
         int openStart = Random.Range(1, closedWalls.Count - (1 + openingWidth));
         
         for (int i = openStart; i < openStart + openingWidth; i++)

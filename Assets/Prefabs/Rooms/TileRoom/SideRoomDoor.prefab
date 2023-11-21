@@ -60,7 +60,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   openWall: {fileID: 469607716848415577, guid: 1c44b1648ba877347a229c0ad8bd5fb7, type: 3}
-  openingWidth: 3
+  openingWidthMin: 2
+  openingWidthMax: 6
 --- !u!1001 &525362856448200120
 PrefabInstance:
   m_ObjectHideFlags: 0
