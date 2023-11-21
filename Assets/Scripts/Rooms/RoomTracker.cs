@@ -23,6 +23,8 @@ public class RoomTracker : MonoBehaviour
             isShockTileRoom = tileRoomRandomizer.trapsDamage;
             isGuardTileRoom = tileRoomRandomizer.trapsAlertGuard;
         }
+
+
     }
 
     private void OnTriggerEnter(Collider other)
@@ -43,7 +45,7 @@ public class RoomTracker : MonoBehaviour
                 }
             }
 
-            if (isPlatformerRoom)
+            else
             {
                 DialogueManager.Instance.PlayDialogue(DialogueEvent.PLATFORMER_ROOM);
             }
