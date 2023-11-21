@@ -4,11 +4,14 @@ using UnityEngine;
 
 [ExecuteInEditMode]
 [RequireComponent(typeof(Camera))]
-public class FishEyeLens : MonoBehaviour
+public class DarkSpotLens : MonoBehaviour
 {
-    public float m_power = 1.0f;
-
-    public bool m_excludeOuterPixels = true;
+    [Range(0.0f, 1.0f)]
+    public float m_size = 0.5f;
+    [Range(-1.0f, 1.0f)]
+    public float m_horizontalLocation = 0.0f;
+    [Range(-1.0f, 1.0f)]
+    public float m_verticalLocation = 0.0f;
 
     private Material baseMaterial;
 
@@ -24,10 +27,11 @@ public class FishEyeLens : MonoBehaviour
 
     private void SetShaderVariables()
     {
-        baseMaterial = new Material(Shader.Find("Hidden/FishEyeShader"));
+        baseMaterial = new Material(Shader.Find("Hidden/DarkSpotShader"));
 
-        baseMaterial.SetFloat("_BarrelPower", m_power);
-        baseMaterial.SetInteger("_ExcludeOuterPixels", m_excludeOuterPixels ? 1 : 0);
+        baseMaterial.SetFloat("_Size", m_size);
+        baseMaterial.SetFloat("_HorizontalLocation", m_horizontalLocation);
+        baseMaterial.SetFloat("_VerticalLocation", m_verticalLocation);
     }
 
     private void OnRenderImage(RenderTexture source, RenderTexture destination)

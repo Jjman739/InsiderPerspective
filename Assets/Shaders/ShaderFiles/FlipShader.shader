@@ -1,13 +1,10 @@
-Shader "Hidden/ColorInvertShader"
+Shader "Hidden/FlipShader"
 {
     Properties
     {
         _MainTex ("Texture", 2D) = "white" {}
-        _Invert("Invert", Integer) = 0
-        _BlackAndWhite("BlackAndWhite", Integer) = 0
-        _Red("Red", Float) = 1.0
-        _Green("Green", Float) = 1.0
-        _Blue("Blue", Float) = 1.0
+		_FlipHorizontally("Flip Horizontally", Integer) = 0
+		_FlipVertically("Flip Vertically", Integer) = 0
     }
     SubShader
     {
@@ -44,27 +41,20 @@ Shader "Hidden/ColorInvertShader"
 
             sampler2D _MainTex;
 
-            uniform int _Invert;
-            uniform int _BlackAndWhite;
-            uniform float _Red;
-            uniform float _Green;
-            uniform float _Blue;
+            uniform int _FlipHorizontally;
+            uniform int _FlipVertically;
 
             fixed4 frag (v2f i) : SV_Target
             {
+                if (_FlipHorizontally == 1) {
+                    i.uv.x = 1 - i.uv.x;
+                }
+                if (_FlipVertically == 1) {
+                    i.uv.y = 1 - i.uv.y;
+                }
+                
                 fixed4 col = tex2D(_MainTex, i.uv);
 
-                col.rgb *= float3(_Red, _Green, _Blue);
-
-                // Black and White
-                if (_BlackAndWhite == 1) {
-                    float gray = 0.33 * (col.r + col.g + col.b);
-                    col = fixed4(gray, gray, gray, 1.0f);
-                }
-                // Invert the colors
-                if (_Invert == 1) {
-                    col.rgb = 1 - col.rgb;
-                }
                 return col;
             }
             ENDCG

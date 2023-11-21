@@ -4,11 +4,10 @@ using UnityEngine;
 
 [ExecuteInEditMode]
 [RequireComponent(typeof(Camera))]
-public class FishEyeLens : MonoBehaviour
+public class BlurLens : MonoBehaviour
 {
-    public float m_power = 1.0f;
-
-    public bool m_excludeOuterPixels = true;
+    [Range(0.0f, 0.1f)]
+    public float m_blurSize = 0.01f;
 
     private Material baseMaterial;
 
@@ -24,10 +23,9 @@ public class FishEyeLens : MonoBehaviour
 
     private void SetShaderVariables()
     {
-        baseMaterial = new Material(Shader.Find("Hidden/FishEyeShader"));
+        baseMaterial = new Material(Shader.Find("Hidden/BlurShader"));
 
-        baseMaterial.SetFloat("_BarrelPower", m_power);
-        baseMaterial.SetInteger("_ExcludeOuterPixels", m_excludeOuterPixels ? 1 : 0);
+        baseMaterial.SetFloat("_BlurSize", m_blurSize);
     }
 
     private void OnRenderImage(RenderTexture source, RenderTexture destination)

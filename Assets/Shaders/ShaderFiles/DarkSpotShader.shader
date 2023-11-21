@@ -1,13 +1,11 @@
-Shader "Hidden/ColorInvertShader"
+Shader "Hidden/DarkSpotShader"
 {
     Properties
     {
         _MainTex ("Texture", 2D) = "white" {}
-        _Invert("Invert", Integer) = 0
-        _BlackAndWhite("BlackAndWhite", Integer) = 0
-        _Red("Red", Float) = 1.0
-        _Green("Green", Float) = 1.0
-        _Blue("Blue", Float) = 1.0
+		_Size("Size", Range(0.0, 1.0)) = 0.5
+		_HorizontalLocation("Horizontal Location", Range(-1.0, 1.0)) = 0.0
+        _VerticalLocation("Vertical Location", Range(-1.0, 1.0)) = 0.0
     }
     SubShader
     {
@@ -44,27 +42,21 @@ Shader "Hidden/ColorInvertShader"
 
             sampler2D _MainTex;
 
-            uniform int _Invert;
-            uniform int _BlackAndWhite;
-            uniform float _Red;
-            uniform float _Green;
-            uniform float _Blue;
+            uniform float _Size;
+            uniform float _HorizontalLocation;
+            uniform float _VerticalLocation;
 
             fixed4 frag (v2f i) : SV_Target
-            {
+            {                
                 fixed4 col = tex2D(_MainTex, i.uv);
+                float2 xy = (2.0 * i.uv - 1.0) - float2(_HorizontalLocation, _VerticalLocation);
+                float d = length(xy);
 
-                col.rgb *= float3(_Red, _Green, _Blue);
+                if (d <= _Size)
+                {
+                    return fixed4(0.0f, 0.0f, 0.0f, col.w);
+                }
 
-                // Black and White
-                if (_BlackAndWhite == 1) {
-                    float gray = 0.33 * (col.r + col.g + col.b);
-                    col = fixed4(gray, gray, gray, 1.0f);
-                }
-                // Invert the colors
-                if (_Invert == 1) {
-                    col.rgb = 1 - col.rgb;
-                }
                 return col;
             }
             ENDCG

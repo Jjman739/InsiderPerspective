@@ -1,13 +1,9 @@
-Shader "Hidden/ColorInvertShader"
+Shader "Hidden/BlurShader"
 {
     Properties
     {
         _MainTex ("Texture", 2D) = "white" {}
-        _Invert("Invert", Integer) = 0
-        _BlackAndWhite("BlackAndWhite", Integer) = 0
-        _Red("Red", Float) = 1.0
-        _Green("Green", Float) = 1.0
-        _Blue("Blue", Float) = 1.0
+		_BlurSize("Blur Size", Range(0.0, 0.1)) = 0.05
     }
     SubShader
     {
@@ -44,28 +40,23 @@ Shader "Hidden/ColorInvertShader"
 
             sampler2D _MainTex;
 
-            uniform int _Invert;
-            uniform int _BlackAndWhite;
-            uniform float _Red;
-            uniform float _Green;
-            uniform float _Blue;
+            uniform float _BlurSize;
 
             fixed4 frag (v2f i) : SV_Target
             {
-                fixed4 col = tex2D(_MainTex, i.uv);
+                fixed4 sum = fixed4(0.0, 0.0, 0.0, 0.0);
 
-                col.rgb *= float3(_Red, _Green, _Blue);
+				sum += tex2D(_MainTex, half2(i.uv.x, i.uv.y - 4.0 * _BlurSize)) * 0.05;
+				sum += tex2D(_MainTex, half2(i.uv.x, i.uv.y - 3.0 * _BlurSize)) * 0.09;
+				sum += tex2D(_MainTex, half2(i.uv.x, i.uv.y - 2.0 * _BlurSize)) * 0.12;
+				sum += tex2D(_MainTex, half2(i.uv.x, i.uv.y - _BlurSize)) * 0.15;
+				sum += tex2D(_MainTex, half2(i.uv.x, i.uv.y)) * 0.16;
+				sum += tex2D(_MainTex, half2(i.uv.x, i.uv.y + _BlurSize)) * 0.15;
+				sum += tex2D(_MainTex, half2(i.uv.x, i.uv.y + 2.0 * _BlurSize)) * 0.12;
+				sum += tex2D(_MainTex, half2(i.uv.x, i.uv.y + 3.0 * _BlurSize)) * 0.09;
+				sum += tex2D(_MainTex, half2(i.uv.x, i.uv.y + 4.0 * _BlurSize)) * 0.05;
 
-                // Black and White
-                if (_BlackAndWhite == 1) {
-                    float gray = 0.33 * (col.r + col.g + col.b);
-                    col = fixed4(gray, gray, gray, 1.0f);
-                }
-                // Invert the colors
-                if (_Invert == 1) {
-                    col.rgb = 1 - col.rgb;
-                }
-                return col;
+                return sum;
             }
             ENDCG
         }

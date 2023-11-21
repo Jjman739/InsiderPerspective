@@ -4,11 +4,10 @@ using UnityEngine;
 
 [ExecuteInEditMode]
 [RequireComponent(typeof(Camera))]
-public class FishEyeLens : MonoBehaviour
+public class FlipLens : MonoBehaviour
 {
-    public float m_power = 1.0f;
-
-    public bool m_excludeOuterPixels = true;
+    public bool m_flipHorizontally = false;
+    public bool m_flipVertically = false;
 
     private Material baseMaterial;
 
@@ -24,10 +23,10 @@ public class FishEyeLens : MonoBehaviour
 
     private void SetShaderVariables()
     {
-        baseMaterial = new Material(Shader.Find("Hidden/FishEyeShader"));
+        baseMaterial = new Material(Shader.Find("Hidden/FlipShader"));
 
-        baseMaterial.SetFloat("_BarrelPower", m_power);
-        baseMaterial.SetInteger("_ExcludeOuterPixels", m_excludeOuterPixels ? 1 : 0);
+        baseMaterial.SetInteger("_FlipHorizontally", m_flipHorizontally ? 1 : 0);
+        baseMaterial.SetInteger("_FlipVertically", m_flipVertically ? 1 : 0);
     }
 
     private void OnRenderImage(RenderTexture source, RenderTexture destination)

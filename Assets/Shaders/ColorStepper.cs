@@ -4,11 +4,10 @@ using UnityEngine;
 
 [ExecuteInEditMode]
 [RequireComponent(typeof(Camera))]
-public class FishEyeLens : MonoBehaviour
+public class ColorStepper : MonoBehaviour
 {
-    public float m_power = 1.0f;
-
-    public bool m_excludeOuterPixels = true;
+    [Range(2, 256)]
+    public int m_steps = 10;
 
     private Material baseMaterial;
 
@@ -24,10 +23,9 @@ public class FishEyeLens : MonoBehaviour
 
     private void SetShaderVariables()
     {
-        baseMaterial = new Material(Shader.Find("Hidden/FishEyeShader"));
+        baseMaterial = new Material(Shader.Find("Hidden/ColorStepper"));
 
-        baseMaterial.SetFloat("_BarrelPower", m_power);
-        baseMaterial.SetInteger("_ExcludeOuterPixels", m_excludeOuterPixels ? 1 : 0);
+        baseMaterial.SetInteger("_Steps", m_steps);
     }
 
     private void OnRenderImage(RenderTexture source, RenderTexture destination)
