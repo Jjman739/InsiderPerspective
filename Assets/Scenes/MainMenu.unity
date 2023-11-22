@@ -479,7 +479,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &238835189
 RectTransform:
   m_ObjectHideFlags: 0
@@ -697,7 +697,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: "- Mouse click on monitors to zoom into each room and get access to the
     different cameras in the room.\n-WASD to navigate the robot\n-E to capture pictures
-    that will reveal traps. \n-Use guard map to help navigate the mansiom"
+    that will reveal traps. \n-Use minimap to help navigate the mansion"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1190170671ebee044bf8fe1daa5af12c, type: 2}
   m_sharedMaterial: {fileID: 6658444963916742679, guid: 1190170671ebee044bf8fe1daa5af12c, type: 2}
@@ -1185,7 +1185,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.745283, g: 0.745283, b: 0.745283, a: 0.3137255}
+  m_Color: {r: 0.34669814, g: 0.39760882, b: 0.46226418, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2384,7 +2384,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2028200639
 Transform:
   m_ObjectHideFlags: 0
