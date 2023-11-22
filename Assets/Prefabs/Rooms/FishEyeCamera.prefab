@@ -85,9 +85,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2589072669745163451}
     m_Modifications:
+    - target: {fileID: 481357583326168729, guid: b91a409196749b34f88f70cf386c9f7d, type: 3}
+      propertyPath: rotMaxX
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 481357583326168729, guid: b91a409196749b34f88f70cf386c9f7d, type: 3}
+      propertyPath: rotMaxY
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 481357583326168729, guid: b91a409196749b34f88f70cf386c9f7d, type: 3}
+      propertyPath: rotMinX
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4900169476381128665, guid: b91a409196749b34f88f70cf386c9f7d, type: 3}
       propertyPath: m_Name
       value: Camera
+      objectReference: {fileID: 0}
+    - target: {fileID: 6113658307437034838, guid: b91a409196749b34f88f70cf386c9f7d, type: 3}
+      propertyPath: field of view
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 7712274910360272697, guid: b91a409196749b34f88f70cf386c9f7d, type: 3}
       propertyPath: m_LocalPosition.x
