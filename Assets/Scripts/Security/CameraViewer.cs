@@ -113,9 +113,14 @@ public class CameraViewer : Singleton<CameraViewer>
 
         SwapCamera(currentCameraIndex);
 
-        DialogueManager.Instance.PlayDialogue(DialogueEvent.VIEW_MONITOR);
-
-        //TODO: play DialogueEvent.VIEW_FISH_EYE_MONITOR if camera is a fish eye camera
+        if (camera.IsFishEye())
+        {
+            DialogueManager.Instance.PlayDialogue(DialogueEvent.VIEW_MONITOR_FISH_EYE);
+        }
+        else
+        {
+            DialogueManager.Instance.PlayDialogue(DialogueEvent.VIEW_MONITOR);
+        }
     }
 
     public void ExitCamera()

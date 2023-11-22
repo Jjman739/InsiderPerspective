@@ -31,6 +31,7 @@ public class ControllableCamera : MonoBehaviour
     private Direction moveDirection;
     private bool viewing;
     private bool broken;
+    [SerializeField] private bool isFishEye;
 
     private void Start()
     {
@@ -182,4 +183,5 @@ public class ControllableCamera : MonoBehaviour
     public int GetCameraGroupIndex() { return transform.GetSiblingIndex(); }
     public bool GetBroken() { return broken; }
     public void SetBroken(bool broken) { this.broken = broken; }
+    public bool IsFishEye() { return isFishEye; }
 }
