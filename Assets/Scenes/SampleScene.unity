@@ -6077,6 +6077,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 0c971987e2d1c5f4db231765b27ac896, type: 2}
+    - target: {fileID: 604486435740083722, guid: 3278d896a16b67f4ea35fbbdac2813ec, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 673683135665743736, guid: 3278d896a16b67f4ea35fbbdac2813ec, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -6719,7 +6723,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 0c971987e2d1c5f4db231765b27ac896, type: 2}
     - target: {fileID: 9209790606198201997, guid: 3278d896a16b67f4ea35fbbdac2813ec, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -7728,6 +7732,10 @@ PrefabInstance:
       propertyPath: attachedCamera
       value: 
       objectReference: {fileID: 81475894}
+    - target: {fileID: 2210880320628592703, guid: 28d58d5839fc0be4a85526eb4c61eca5, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2221161738693555809, guid: 28d58d5839fc0be4a85526eb4c61eca5, type: 3}
       propertyPath: m_Size.x
       value: 6.423222
@@ -8344,6 +8352,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 5e95d28581572d741a52aab79cae244f, type: 2}
+    - target: {fileID: 4893592184709283335, guid: 28d58d5839fc0be4a85526eb4c61eca5, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5025932916217384450, guid: 28d58d5839fc0be4a85526eb4c61eca5, type: 3}
       propertyPath: m_LocalScale.x
       value: 3.6574802
