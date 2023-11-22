@@ -11,6 +11,10 @@ public class TileRoomRandomizer : MonoBehaviour
     private int trapCol2;
     private int trapCol3;
 
+    private List<TrapToggle> allTraps;
+
+    public int strayTrapCount;
+
     public bool trapsDamage = true;
     public bool trapsSelfDelete = true;
     public bool trapsAlertGuard = false;
@@ -19,10 +23,13 @@ public class TileRoomRandomizer : MonoBehaviour
 
     void Start()
     {
+        if (strayTrapCount > 30) { strayTrapCount = 30; }
+        allTraps = new List<TrapToggle>();
+        DisableAllTraps();
         SelectTrapRows();
         SetTrapSettings();
-        DisableAllTraps();
         EnableSelectedTraps();
+        EnableStrayTraps();
     }
 
     private void SelectTrapRows()
@@ -75,6 +82,7 @@ public class TileRoomRandomizer : MonoBehaviour
                 if (toggler != null)
                 {
                     toggler.TrapDisable();
+                    allTraps.Add(toggler);
                 }
             }
         }
@@ -82,38 +90,55 @@ public class TileRoomRandomizer : MonoBehaviour
 
     private void EnableSelectedTraps()
     {
-          int i = 0;
-          foreach (Transform trapRow in transform)
-          {
-              if ((i == trapRow1) || (i == trapRow2))
-              {
-                    foreach (Transform trap in trapRow)
+        int i = 0;
+        foreach (Transform trapRow in transform)
+        {
+            if ((i == trapRow1) || (i == trapRow2))
+            {
+                foreach (Transform trap in trapRow)
+                {
+                    TrapToggle toggler = trap.gameObject.GetComponent<TrapToggle>();
+                    if (toggler != null)
                     {
-                        TrapToggle toggler = trap.gameObject.GetComponent<TrapToggle>();
-                        if (toggler != null)
-                        {
-                            toggler.TrapEnable();
-                        }
+                        toggler.TrapEnable();
                     }
-              }
-              else
-              {
-                    int j = 0;
-                    foreach (Transform trap in trapRow)
+                }
+            }
+            else
+            {
+                int j = 0;
+                foreach (Transform trap in trapRow)
+                {
+                    if ((j == trapCol1) || (j == trapCol2) || (j == trapCol3))
                     {
-                         if ((j == trapCol1) || (j == trapCol2) || (j == trapCol3))
+                         TrapToggle toggler = trap.gameObject.GetComponent<TrapToggle>();
+                         if (toggler != null)
                          {
-                               TrapToggle toggler = trap.gameObject.GetComponent<TrapToggle>();
-                               if (toggler != null)
-                               {
-                                     toggler.TrapEnable();
-                               }
+                             toggler.TrapEnable();
                          }
-                         j++;
-                   }
-              }
-              i++;
-          }
+                    }
+                    j++;
+                }
+            }
+            i++;
+        }
+    }
+
+    private void EnableStrayTraps()
+    {
+        for (int i = 0; i < strayTrapCount; i++)
+        {
+            TrapToggle trap = allTraps[Random.Range(0, allTraps.Count)];
+            if (trap.isEnabled)
+            {
+                // If it's already on, pick a new one.
+                i--;
+            }
+            else
+            {
+                trap.TrapEnable();
+            }
+        }
     }
 
     private void SetTrapSettings()

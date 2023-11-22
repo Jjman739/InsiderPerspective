@@ -7,6 +7,7 @@ public class TrapToggle : MonoBehaviour
     public List<GameObject> toggleObjects;
     public TrapCollider trapCollider;
     public MeshRenderer trapIndicator;
+    public bool isEnabled = true;
 
     public void TrapDisable()
     {
@@ -14,6 +15,7 @@ public class TrapToggle : MonoBehaviour
         {
             item.SetActive(false);
         }
+        isEnabled = false;
     }
 
     public void TrapEnable()
@@ -28,5 +30,6 @@ public class TrapToggle : MonoBehaviour
                 0.5f
             );
         }
+        isEnabled = true;
     }
 }

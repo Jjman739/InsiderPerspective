@@ -672,7 +672,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   treasureCount: 0
-  goal: 8
+  goal: 6
 --- !u!114 &503376195182715850
 MonoBehaviour:
   m_ObjectHideFlags: 0

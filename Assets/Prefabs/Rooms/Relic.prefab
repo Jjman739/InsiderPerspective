@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 717447500279575401}
   - component: {fileID: 4749066385410182541}
   - component: {fileID: 5151294396070596322}
+  - component: {fileID: 7897162738564184053}
   m_Layer: 0
   m_Name: Relic
   m_TagString: Treasure
@@ -33,6 +34,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 682933793672801672}
+  - {fileID: 1387026899673902137}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!136 &717447500279575401
@@ -167,6 +169,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &7897162738564184053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2864547810284871222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d1f4af8e6142d9498c341eba7f48faa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8193989630950816611
 GameObject:
   m_ObjectHideFlags: 0
@@ -179,7 +193,7 @@ GameObject:
   - component: {fileID: 485100607490038393}
   - component: {fileID: 8521167283954299218}
   m_Layer: 0
-  m_Name: Model
+  m_Name: Tusk
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -250,3 +264,69 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1001 &1492113010679090130
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 5850475496155396086}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: ff45212f606781448ae5c1d32cfaa51c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.000000020529368
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ff45212f606781448ae5c1d32cfaa51c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.2079027
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ff45212f606781448ae5c1d32cfaa51c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ff45212f606781448ae5c1d32cfaa51c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.67014396
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ff45212f606781448ae5c1d32cfaa51c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.22562602
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ff45212f606781448ae5c1d32cfaa51c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.67014396
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ff45212f606781448ae5c1d32cfaa51c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.22562602
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ff45212f606781448ae5c1d32cfaa51c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ff45212f606781448ae5c1d32cfaa51c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ff45212f606781448ae5c1d32cfaa51c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -37.215
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: ff45212f606781448ae5c1d32cfaa51c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3ed669ef9a93fc841b27ab87a3653284, type: 2}
+    - target: {fileID: 919132149155446097, guid: ff45212f606781448ae5c1d32cfaa51c, type: 3}
+      propertyPath: m_Name
+      value: Katana
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ff45212f606781448ae5c1d32cfaa51c, type: 3}
+--- !u!4 &1387026899673902137 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ff45212f606781448ae5c1d32cfaa51c, type: 3}
+  m_PrefabInstance: {fileID: 1492113010679090130}
+  m_PrefabAsset: {fileID: 0}
