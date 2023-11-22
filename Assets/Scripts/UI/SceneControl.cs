@@ -11,16 +11,12 @@ public class SceneControl : MonoBehaviour
     {
         Scene current = SceneManager.GetActiveScene();
 
+        Time.timeScale = 1;
+
         if (current.name != "SampleScene")
         {
             Cursor.lockState = CursorLockMode.None;
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     public void StartGame()
