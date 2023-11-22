@@ -12,6 +12,8 @@ public class WaypointManager : Singleton<WaypointManager>
         foreach (GameObject guard in guards)
         {
             PatrollingGuard patrollingGuard = guard.GetComponent<PatrollingGuard>();
+            Debug.Log(patrollingGuard);
+            Debug.Log(waypointParent);
             patrollingGuard.Initialize(this, waypointParent);
         }
     }
