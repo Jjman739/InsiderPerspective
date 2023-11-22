@@ -35,8 +35,6 @@ public class WaypointManager : Singleton<WaypointManager>
         foreach (GameObject guard in guards)
         {
             PatrollingGuard patrollingGuard = guard.GetComponent<PatrollingGuard>();
-            Debug.Log(patrollingGuard);
-            Debug.Log(waypointParent);
             patrollingGuard.Initialize(this, waypointParent);
         }
         guardsInitialized = true;
@@ -53,10 +51,6 @@ public class WaypointManager : Singleton<WaypointManager>
         }
 
         List<BaseWaypoint> possibleWaypoints = (currentWaypoint as WaypointInfo).GetConnectedWaypoints();
-
-        Debug.Log((currentWaypoint as WaypointInfo).GetIndex());
-
-        Debug.Log(possibleWaypoints.Count);
 
         return possibleWaypoints[Random.Range(0,possibleWaypoints.Count)];
     }

@@ -21,7 +21,7 @@ public class ParameterMenu : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.P))
+        if (Input.GetButtonDown("ParameterMenu"))
         {
             if (!menuOpen)
             {

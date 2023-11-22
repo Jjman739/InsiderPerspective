@@ -4381,6 +4381,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6bc25b01eb00abd449bceb681447cab9, type: 3}
+--- !u!114 &1334058923 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8576541940132222948, guid: 6bc25b01eb00abd449bceb681447cab9, type: 3}
+  m_PrefabInstance: {fileID: 1334058922}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aeb2b55c7b96a114fabc80d01f0e5395, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1338241675
 GameObject:
   m_ObjectHideFlags: 0
@@ -5600,7 +5611,7 @@ GameObject:
   - component: {fileID: 2051819149}
   - component: {fileID: 2051819148}
   m_Layer: 5
-  m_Name: PToToggle
+  m_Name: ToToggle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5645,7 +5656,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: P to toggle params menu
+  m_text: '''['' to toggle params menu'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -5891,6 +5902,14 @@ PrefabInstance:
       propertyPath: m_hasFontAssetChanged
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 487470855856090056, guid: b788f4f070685f74fa6f11b09be8727d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1694231133}
+    - target: {fileID: 487470855856090056, guid: b788f4f070685f74fa6f11b09be8727d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: QuitGame
+      objectReference: {fileID: 0}
     - target: {fileID: 2484957235851834250, guid: b788f4f070685f74fa6f11b09be8727d, type: 3}
       propertyPath: m_fontAsset
       value: 
@@ -5914,6 +5933,14 @@ PrefabInstance:
     - target: {fileID: 4472788398629047202, guid: b788f4f070685f74fa6f11b09be8727d, type: 3}
       propertyPath: m_hasFontAssetChanged
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4584297361331709603, guid: b788f4f070685f74fa6f11b09be8727d, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 14.542
+      objectReference: {fileID: 0}
+    - target: {fileID: 5952699900840679138, guid: b788f4f070685f74fa6f11b09be8727d, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 69.8
       objectReference: {fileID: 0}
     - target: {fileID: 6548476127009785609, guid: b788f4f070685f74fa6f11b09be8727d, type: 3}
       propertyPath: m_LocalScale.x
@@ -6022,6 +6049,22 @@ PrefabInstance:
     - target: {fileID: 7306455557755564857, guid: b788f4f070685f74fa6f11b09be8727d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7915679703605973062, guid: b788f4f070685f74fa6f11b09be8727d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1334058923}
+    - target: {fileID: 7915679703605973062, guid: b788f4f070685f74fa6f11b09be8727d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Unpause
+      objectReference: {fileID: 0}
+    - target: {fileID: 7915679703605973062, guid: b788f4f070685f74fa6f11b09be8727d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PauseMenu, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8469596388723992054, guid: b788f4f070685f74fa6f11b09be8727d, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 42.520996
       objectReference: {fileID: 0}
     - target: {fileID: 8772396806648000200, guid: b788f4f070685f74fa6f11b09be8727d, type: 3}
       propertyPath: m_Name
