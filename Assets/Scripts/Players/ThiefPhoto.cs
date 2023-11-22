@@ -8,13 +8,18 @@ public class ThiefPhoto : MonoBehaviour
     [SerializeField] private Camera photoCamera;
     private bool photoActive = false;
     private float photoCooldownTimer = 0;
-
+    private GameObject pauseControl;
     public string photoButton = "ThiefPhoto";
+
+    private void Start()
+    {
+        pauseControl = GameObject.Find("PauseControl");
+    }
 
     void Update()
     {
 
-        if (GameObject.Find("PauseControl").GetComponent<PauseMenu>().paused)
+        if (pauseControl is not null && pauseControl.GetComponent<PauseMenu>().paused)
         {
             return;
         }

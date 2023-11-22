@@ -6,6 +6,7 @@ using UnityEngine;
 public class PatrollingGuard : MonoBehaviour
 {
     [SerializeField] private float moveSpeed = 5f;
+    [SerializeField] private float rotationSpeed = 0.4f;
     private float distanceThreshold = 0.1f;
     private BaseWaypoint lastWaypoint;
     private BaseWaypoint nextWaypoint;
@@ -17,7 +18,7 @@ public class PatrollingGuard : MonoBehaviour
     private bool initialized = false;
     private DoorpointInfo targetDoorpoint;
     private bool searchMode = false;
-    [SerializeField] private float searchTimer = 5f;
+    [SerializeField] private float searchTimer = 10f;
     private float currentSearchTimer;
     private GameObject flashlight;
     [SerializeField] private float searchScaleAmount = 2f;
@@ -70,9 +71,7 @@ public class PatrollingGuard : MonoBehaviour
             }
             else
             {
-                float rotation = 2;
-                transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y + rotation, transform.rotation.eulerAngles.z);
-
+                transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y + rotationSpeed, transform.rotation.eulerAngles.z);
             }
         }
 

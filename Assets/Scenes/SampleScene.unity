@@ -485,6 +485,10 @@ PrefabInstance:
       propertyPath: GlobalObjectIdHash
       value: 3386020903
       objectReference: {fileID: 0}
+    - target: {fileID: 1524640511070304385, guid: a60b6599e21938c44bf75e46673cc013, type: 3}
+      propertyPath: turnSpeed
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 5767428820094326179, guid: a60b6599e21938c44bf75e46673cc013, type: 3}
       propertyPath: m_LocalPosition.x
       value: -163.1094
@@ -1651,6 +1655,14 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1047470908}
+    - target: {fileID: 834473241140816224, guid: 7a73716f833a39d43aee89db56f1afeb, type: 3}
+      propertyPath: searchTimer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 834473241140816224, guid: 7a73716f833a39d43aee89db56f1afeb, type: 3}
+      propertyPath: rotationSpeed
+      value: 0.4
+      objectReference: {fileID: 0}
     - target: {fileID: 1781154973029045837, guid: 7a73716f833a39d43aee89db56f1afeb, type: 3}
       propertyPath: m_Mesh
       value: 
