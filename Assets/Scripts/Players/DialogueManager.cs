@@ -52,8 +52,6 @@ public class DialogueManager : Singleton<DialogueManager>
             currentDialogue = null;
         }
 
-        Debug.Log(Input.GetButton("SkipDialogue"));
-
         if ((Input.GetButton("SkipDialogue") || Time.timeScale == 0) && currentDialogue is not null)
         {
             currentDialogue.Stop(audioSource);

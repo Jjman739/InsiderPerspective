@@ -157,4 +157,5 @@ public class PatrollingGuard : MonoBehaviour
     public BaseWaypoint GetLastWaypoint() { return lastWaypoint; }
     public WaypointInfo GetOverrideTarget() { return overrideTarget; }
     public void SetMoveSpeed(float speed) { moveSpeed = speed; }
+    public bool IsInitialized() { return initialized; }
 }

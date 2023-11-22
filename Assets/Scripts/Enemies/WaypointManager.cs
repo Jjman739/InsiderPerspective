@@ -6,8 +6,31 @@ public class WaypointManager : Singleton<WaypointManager>
 {
     [SerializeField] private List<GameObject> guards = new List<GameObject>();
     [SerializeField] private Transform waypointParent;
+    private bool waypointsInitialized = false;
+    private bool guardsInitialized = false;
 
-    void Start()
+    void Update()
+    {
+        if (checkWaypointsInitialized() && !guardsInitialized)
+        {
+            initializeGuards();
+        }
+    }
+
+    private bool checkWaypointsInitialized()
+    {
+        if (waypointsInitialized) return true;
+
+        foreach (Transform child in waypointParent)
+        {
+            if (!child.GetComponent<WaypointInfo>().IsInitialized()) return false;
+        }
+
+        waypointsInitialized = true;
+        return true;
+    }
+
+    private void initializeGuards()
     {
         foreach (GameObject guard in guards)
         {
@@ -16,6 +39,7 @@ public class WaypointManager : Singleton<WaypointManager>
             Debug.Log(waypointParent);
             patrollingGuard.Initialize(this, waypointParent);
         }
+        guardsInitialized = true;
     }
 
     public BaseWaypoint GetNextWaypoint(BaseWaypoint currentWaypoint)
@@ -29,6 +53,10 @@ public class WaypointManager : Singleton<WaypointManager>
         }
 
         List<BaseWaypoint> possibleWaypoints = (currentWaypoint as WaypointInfo).GetConnectedWaypoints();
+
+        Debug.Log((currentWaypoint as WaypointInfo).GetIndex());
+
+        Debug.Log(possibleWaypoints.Count);
 
         return possibleWaypoints[Random.Range(0,possibleWaypoints.Count)];
     }
