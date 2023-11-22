@@ -9,8 +9,11 @@ public class RepairPickup : MonoBehaviour
         ThiefManager thief = other.gameObject.GetComponent<ThiefManager>();
         if (thief != null)
         {
-            thief.Repair();
-            Destroy(gameObject);
+            if (thief.needsRepair)
+            {
+                thief.Repair();
+                Destroy(gameObject);
+            }
         }
     }
 }
