@@ -6,7 +6,7 @@ using UnityEngine;
 public class PatrollingGuard : MonoBehaviour
 {
     [SerializeField] private float moveSpeed = 5f;
-    [SerializeField] private float rotationSpeed = 0.4f;
+    [SerializeField] private float rotationSpeed = 72f;
     private float distanceThreshold = 0.1f;
     private BaseWaypoint lastWaypoint;
     private BaseWaypoint nextWaypoint;
@@ -66,12 +66,12 @@ public class PatrollingGuard : MonoBehaviour
                 lastWaypoint = oldWaypoint;
                 transform.LookAt(nextWaypoint.transform);
                 flashlight.transform.localPosition = new Vector3(flashlight.transform.localPosition.x, flashlight.transform.localPosition.y, flashlight.transform.localPosition.z / searchScaleAmount);
-                flashlight.transform.localScale = new Vector3(flashlight.transform.localScale.x, flashlight.transform.localScale.y / searchScaleAmount, flashlight.transform.localScale.z);
+                flashlight.transform.localScale /= searchScaleAmount;
                 searchMode = false;
             }
             else
             {
-                transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y + rotationSpeed, transform.rotation.eulerAngles.z);
+                transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y + (rotationSpeed * Time.deltaTime), transform.rotation.eulerAngles.z);
             }
         }
 
@@ -103,7 +103,7 @@ public class PatrollingGuard : MonoBehaviour
                     currentSearchTimer = searchTimer;
                     transform.rotation = Quaternion.Euler(Vector3.zero);
                     flashlight.transform.localPosition = new Vector3(flashlight.transform.localPosition.x, flashlight.transform.localPosition.y, flashlight.transform.localPosition.z * searchScaleAmount);
-                    flashlight.transform.localScale = new Vector3(flashlight.transform.localScale.x, flashlight.transform.localScale.y * searchScaleAmount, flashlight.transform.localScale.z);
+                    flashlight.transform.localScale *= searchScaleAmount;
                     searchMode = true;
                 }
             }

@@ -760,7 +760,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
-  searchTimer: 5
+  rotationSpeed: 72
+  searchTimer: 10
+  searchScaleAmount: 2
 --- !u!1 &6800124188568921770
 GameObject:
   m_ObjectHideFlags: 0

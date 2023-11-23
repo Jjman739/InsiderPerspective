@@ -1790,14 +1790,6 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1047470908}
-    - target: {fileID: 834473241140816224, guid: 7a73716f833a39d43aee89db56f1afeb, type: 3}
-      propertyPath: searchTimer
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 834473241140816224, guid: 7a73716f833a39d43aee89db56f1afeb, type: 3}
-      propertyPath: rotationSpeed
-      value: 0.4
-      objectReference: {fileID: 0}
     - target: {fileID: 1781154973029045837, guid: 7a73716f833a39d43aee89db56f1afeb, type: 3}
       propertyPath: m_Mesh
       value: 
