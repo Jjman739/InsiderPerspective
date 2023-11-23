@@ -6,6 +6,7 @@ public class WaypointInfo : BaseWaypoint
 {
     private float radius = 2f;
     protected List<BaseWaypoint> attachedWaypoints = new List<BaseWaypoint>();
+    private bool initialized = false;
 
     private void OnDrawGizmos()
     {
@@ -19,8 +20,12 @@ public class WaypointInfo : BaseWaypoint
         {
             float distance = Mathf.Sqrt(Mathf.Pow(t.position.x - transform.position.x, 2) + Mathf.Pow(t.position.z - transform.position.z, 2));
             if (distance < 27 && t.GetSiblingIndex() != transform.GetSiblingIndex())
+            {
                 attachedWaypoints.Add(t.GetComponent<WaypointInfo>());
+            }
         }
+
+        initialized = true;
     }
 
     public List<BaseWaypoint> GetConnectedWaypoints() { return attachedWaypoints; }
@@ -29,4 +34,5 @@ public class WaypointInfo : BaseWaypoint
 
     public WaypointInfo GetConnectedWaypoint(int index) { return attachedWaypoints[index] as WaypointInfo; }
     public int GetIndex() { return transform.GetSiblingIndex(); }
+    public bool IsInitialized() { return initialized; }
 }

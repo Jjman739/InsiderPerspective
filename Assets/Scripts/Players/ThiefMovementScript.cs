@@ -19,13 +19,15 @@ public class ThiefMovementScript : MonoBehaviour
 
     private float jumpTimer;
     private float jumpSpeed;
+    private GameObject pauseControl;
 
     [SerializeField] private float moveSpeed = 0.1f;
     [SerializeField] private float turnSpeed = 5f;
     [SerializeField] private float jumpHeight = .5f;
     [SerializeField] private float gravity = -10f;
     [SerializeField] private int charge = 5;
-    [SerializeField] private float alertTimer = 2f;
+    [SerializeField] private float alertTimer = 0.5f;
+    [SerializeField] private float alertDecayScalar = 0.5f;
     [SerializeField] private Slider alertMeter;
     [SerializeField] private AudioClip robotJump;
     [SerializeField] private AudioClip robotWalk;
@@ -41,12 +43,17 @@ public class ThiefMovementScript : MonoBehaviour
         controller = GetComponent<CharacterController>();
         currentAlertTimer = alertTimer;
         audioSource = GetComponents<AudioSource>()[0];
-        DialogueManager.Instance.PlayDialogue(DialogueEvent.GAME_START);
+        pauseControl = GameObject.Find("PauseControl");
+        
+        if (DialogueManager.Instance is not null)
+        {
+            DialogueManager.Instance.PlayDialogue(DialogueEvent.GAME_START);
+        }
     }
 
     private void FixedUpdate()
     {
-        if (GameObject.Find("PauseControl").GetComponent<PauseMenu>().paused)
+        if (pauseControl is not null && pauseControl.GetComponent<PauseMenu>().paused)
         {
             return;
         }
@@ -117,7 +124,7 @@ public class ThiefMovementScript : MonoBehaviour
         }
         else if (currentAlertTimer < alertTimer)
         {
-            currentAlertTimer += Time.deltaTime;
+            currentAlertTimer += Time.deltaTime * alertDecayScalar;
             Mathf.Min(currentAlertTimer, alertTimer);
         }
 

@@ -19,38 +19,46 @@ public class PauseMenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetButtonDown("Pause"))
         {
             if(!paused) 
             {
-                Cursor.lockState = CursorLockMode.None;
-                Time.timeScale = 0;
-                paused = true;
-                pauseMenu.SetActive(true);
-
-                if (!GameObject.Find("CameraViewer").GetComponent<CameraViewer>().UsingMain())
-                {
-                    cameraUI.SetActive(false);
-                }
-
-            }else
+                Pause();
+            }
+            else
             {
-                Cursor.lockState = CursorLockMode.Locked;
-                Time.timeScale = 1;
-                paused = false;
-                pauseMenu.SetActive(false);
-
-                if (!GameObject.Find("CameraViewer").GetComponent<CameraViewer>().UsingMain())
-                {
-                    cameraUI.SetActive(true);
-                    Cursor.lockState = CursorLockMode.None;
-                }
-                else { Cursor.lockState = CursorLockMode.Locked; }
-
+                Unpause();
             }
             
         }
+    }
+
+    public void Pause()
+    {
+        Cursor.lockState = CursorLockMode.None;
+        Time.timeScale = 0;
+        paused = true;
+        pauseMenu.SetActive(true);
+
+        if (!GameObject.Find("CameraViewer").GetComponent<CameraViewer>().UsingMain())
+        {
+            cameraUI.SetActive(false);
+        }
+    }
+
+    public void Unpause()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+        Time.timeScale = 1;
+        paused = false;
+        pauseMenu.SetActive(false);
+
+        if (!GameObject.Find("CameraViewer").GetComponent<CameraViewer>().UsingMain())
+        {
+            cameraUI.SetActive(true);
+            Cursor.lockState = CursorLockMode.None;
+        }
+        else { Cursor.lockState = CursorLockMode.Locked; }
     }
 
     public bool GetPaused()

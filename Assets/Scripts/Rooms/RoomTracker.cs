@@ -12,8 +12,7 @@ public class RoomTracker : MonoBehaviour
     private bool isTileRoom = false;
     private bool isShockTileRoom = false;
     private bool isGuardTileRoom = false;
-    private bool isPlatformerRoom = false;
-
+    
     private void Start()
     {
         tileRoomRandomizer = transform.parent.GetComponentInChildren<TileRoomRandomizer>();
@@ -23,8 +22,6 @@ public class RoomTracker : MonoBehaviour
             isShockTileRoom = tileRoomRandomizer.trapsDamage;
             isGuardTileRoom = tileRoomRandomizer.trapsAlertGuard;
         }
-
-
     }
 
     private void OnTriggerEnter(Collider other)

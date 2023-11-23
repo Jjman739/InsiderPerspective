@@ -15,6 +15,7 @@ public class DialogueManager : Singleton<DialogueManager>
     [SerializeField] private AudioClip shockRobot;
     [SerializeField] private AudioClip platformerRoom;
     [SerializeField] private AudioClip gameEnd;
+    [SerializeField] private GameObject skipDialogueText;
 
     private AudioSource audioSource;
     private List<DialogueObject> dialogueObjects = new();
@@ -44,12 +45,14 @@ public class DialogueManager : Singleton<DialogueManager>
 
     private void Update()
     {
+        skipDialogueText.SetActive(audioSource.isPlaying);
+
         if (!audioSource.isPlaying)
         {
             currentDialogue = null;
         }
 
-        if (Time.timeScale == 0 && currentDialogue is not null)
+        if ((Input.GetButton("SkipDialogue") || Time.timeScale == 0) && currentDialogue is not null)
         {
             currentDialogue.Stop(audioSource);
         }
