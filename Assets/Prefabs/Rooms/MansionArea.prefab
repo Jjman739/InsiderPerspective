@@ -189,8 +189,8 @@ Transform:
   - {fileID: 1140348700550560184}
   - {fileID: 4448999197707934177}
   - {fileID: 2061450638414835356}
-  - {fileID: 8006747787421459736}
   - {fileID: 8155919646156782069}
+  - {fileID: 8006747787421459736}
   - {fileID: 8860959760903418992}
   - {fileID: 5329929354556377815}
   - {fileID: 8550585683639852850}
@@ -2457,11 +2457,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1092714709029951619, guid: 51faa5c6fd958d24b82f55ba264f569b, type: 3}
       propertyPath: roomIndex
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1727639598322172174, guid: 51faa5c6fd958d24b82f55ba264f569b, type: 3}
       propertyPath: m_Name
-      value: StorageRoomA
+      value: PlatformRoomD
       objectReference: {fileID: 0}
     - target: {fileID: 6261284614492023444, guid: 51faa5c6fd958d24b82f55ba264f569b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2738,7 +2738,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3868360972269367235, guid: af6e732255b67f04a8ad2ab892f0488e, type: 3}
       propertyPath: m_Name
-      value: TileRoom (1)
+      value: TileRoomB
       objectReference: {fileID: 0}
     - target: {fileID: 6396444353274284996, guid: af6e732255b67f04a8ad2ab892f0488e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2783,6 +2783,10 @@ PrefabInstance:
     - target: {fileID: 6771522439774412149, guid: af6e732255b67f04a8ad2ab892f0488e, type: 3}
       propertyPath: GlobalObjectIdHash
       value: 1344337051
+      objectReference: {fileID: 0}
+    - target: {fileID: 8835205784011049136, guid: af6e732255b67f04a8ad2ab892f0488e, type: 3}
+      propertyPath: roomIndex
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 9176646339631595091, guid: af6e732255b67f04a8ad2ab892f0488e, type: 3}
       propertyPath: GlobalObjectIdHash
@@ -3746,7 +3750,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3737255215512822070, guid: 69e3a9047b0a1e24593214d74ef17b94, type: 3}
       propertyPath: m_Name
-      value: Storage Room B
+      value: PlatformRoomC
+      objectReference: {fileID: 0}
+    - target: {fileID: 8741593343828504842, guid: 69e3a9047b0a1e24593214d74ef17b94, type: 3}
+      propertyPath: roomIndex
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4316,7 +4324,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3868360972269367235, guid: af6e732255b67f04a8ad2ab892f0488e, type: 3}
       propertyPath: m_Name
-      value: TileRoom
+      value: TileRoomA
       objectReference: {fileID: 0}
     - target: {fileID: 6396444353274284996, guid: af6e732255b67f04a8ad2ab892f0488e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4361,6 +4369,10 @@ PrefabInstance:
     - target: {fileID: 6771522439774412149, guid: af6e732255b67f04a8ad2ab892f0488e, type: 3}
       propertyPath: GlobalObjectIdHash
       value: 3701301345
+      objectReference: {fileID: 0}
+    - target: {fileID: 8835205784011049136, guid: af6e732255b67f04a8ad2ab892f0488e, type: 3}
+      propertyPath: roomIndex
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9176646339631595091, guid: af6e732255b67f04a8ad2ab892f0488e, type: 3}
       propertyPath: GlobalObjectIdHash
