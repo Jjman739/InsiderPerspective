@@ -5,7 +5,7 @@ public class UINavigation : MonoBehaviour
 {
     public void PlayGame()
     {
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("Main");
     }
 
     public void Credits()

@@ -13,7 +13,7 @@ public class SceneControl : MonoBehaviour
 
         Time.timeScale = 1;
 
-        if (current.name != "SampleScene")
+        if (current.name != "Main")
         {
             Cursor.lockState = CursorLockMode.None;
         }
@@ -21,7 +21,7 @@ public class SceneControl : MonoBehaviour
 
     public void StartGame()
     {
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("Main");
     }
 
     public void QuitGame()
