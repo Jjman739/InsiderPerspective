@@ -1,15 +1,12 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Enumerations;
 
 public class TileFloorRandomizer : MonoBehaviour
 {
-    private int trapRow1;
-    private int trapRow2;
-    private int trapCol1;
-    private int trapCol2;
-    private int trapCol3;
+    private List<int> trapRows = new();
+    private List<int> trapColumns = new();
+    private int trapRowCount;
+    private int trapColumnCount;
 
     private List<TrapToggle> allTraps;
 
@@ -18,12 +15,14 @@ public class TileFloorRandomizer : MonoBehaviour
     private bool trapsDamage = true;
     private bool trapsSelfDelete = true;
     private bool trapsAlertGuard = false;
+    private TileRoomModifiers tileRoomModifiers;
     [SerializeField] private DoorpointManager doorpointManager;
 
     void Start()
     {
         if (strayTrapCount > 30) { strayTrapCount = 30; }
         allTraps = new List<TrapToggle>();
+        tileRoomModifiers = transform.parent.GetComponent<TileRoomModifiers>();
         DisableAllTraps();
         SelectTrapRows();
         SetTrapSettings();
@@ -44,31 +43,28 @@ public class TileFloorRandomizer : MonoBehaviour
              availableCols.Add(i);
         }
 
-        trapRow1 = availableRows[Random.Range(0, availableRows.Count)];
-        availableRows.Remove(trapRow1);
-        availableRows.Remove(trapRow1 - 2);
-        availableRows.Remove(trapRow1 - 1);
-        availableRows.Remove(trapRow1 + 1);
-        availableRows.Remove(trapRow1 + 2);
+        trapRowCount = tileRoomModifiers.GetModifierByType(typeof(TileRoomRowCount)).GetLevel() + 1;
+        trapColumnCount = tileRoomModifiers.GetModifierByType(typeof(TileRoomColumnCount)).GetLevel() + 1;
 
-        trapRow2 = availableRows[Random.Range(0, availableRows.Count)];
-        availableRows.Remove(trapRow2);
-        availableRows.Remove(trapRow2 - 1);
-        availableRows.Remove(trapRow2 - 2);
-        availableRows.Remove(trapRow2 + 1);
-        availableRows.Remove(trapRow2 + 2);
+        for (int i = 0; i < trapRowCount; i++)
+        {
+            int row = availableRows[Random.Range(0, availableRows.Count)];
+            availableRows.Remove(row - 2);
+            availableRows.Remove(row - 1);
+            availableRows.Remove(row);
+            availableRows.Remove(row + 1);
+            availableRows.Remove(row + 2);
+            trapRows.Add(row);
+        }
 
-        trapCol1 = availableCols[Random.Range(0, availableCols.Count-1)];
-        availableCols.Remove(trapCol1);
-        availableCols.Remove(trapCol1 - 1);
-        trapCol2 = trapCol1 + 1;
-        availableCols.Remove(trapCol2);
-        availableCols.Remove(trapCol2 + 1);
-
-        trapCol3 = availableCols[Random.Range(0, availableCols.Count-1)];
-        availableCols.Remove(trapCol3);
-        availableCols.Remove(trapCol3 - 1);
-        availableCols.Remove(trapCol3 + 1);
+        for (int i = 0; i < trapColumnCount; i++)
+        {
+            int column = availableCols[Random.Range(0, availableCols.Count - 1)];
+            availableCols.Remove(column - 1);
+            availableCols.Remove(column);
+            availableCols.Remove(column + 1);
+            trapColumns.Add(column);
+        }
     }
 
     private void DisableAllTraps()
@@ -92,7 +88,7 @@ public class TileFloorRandomizer : MonoBehaviour
         int i = 0;
         foreach (Transform trapRow in transform)
         {
-            if ((i == trapRow1) || (i == trapRow2))
+            if (trapRows.Contains(i))
             {
                 foreach (Transform trap in trapRow)
                 {
@@ -108,7 +104,7 @@ public class TileFloorRandomizer : MonoBehaviour
                 int j = 0;
                 foreach (Transform trap in trapRow)
                 {
-                    if ((j == trapCol1) || (j == trapCol2) || (j == trapCol3))
+                    if (trapColumns.Contains(j))
                     {
                          TrapToggle toggler = trap.gameObject.GetComponent<TrapToggle>();
                          if (toggler != null)

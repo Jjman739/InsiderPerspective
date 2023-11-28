@@ -1,14 +1,12 @@
-using System.Collections;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using Enumerations;
-using UnityEngine.Tilemaps;
 
-public class TileRoom : MonoBehaviour
+public abstract class RoomDifficultyBuilder : MonoBehaviour
 {
-    [SerializeField] private RoomDifficulty difficulty;
-
-    private List<RoomModifier> modifiers = new();
+    [SerializeField] protected RoomDifficulty difficulty;
+    protected List<RoomModifier> modifiers = new();
     private int availablePoints;
 
     private void Start()
@@ -28,16 +26,10 @@ public class TileRoom : MonoBehaviour
 
             modifier.LevelUp();
             availablePoints -= modifier.GetCost();
-
-            Debug.Log($"Current Points: {availablePoints}");
-            Debug.Log($"Current Points: {modifier.GetPoints()}");
         }
     }
 
-    private void initializeModifiers()
-    {
-        modifiers.Add(new TileRoomRowCount());
-    }
+    protected abstract void initializeModifiers();
 
     private RoomModifier getRandomWeightedModifier()
     {
@@ -55,7 +47,7 @@ public class TileRoom : MonoBehaviour
             return null;
         }
 
-        int randomNum = Random.Range(0, totalWeight);
+        int randomNum = UnityEngine.Random.Range(0, totalWeight);
 
         foreach (RoomModifier modifier in modifiers)
         {
@@ -93,5 +85,18 @@ public class TileRoom : MonoBehaviour
                 availablePoints = 0;
                 break;
         }
+    }
+
+    public RoomModifier GetModifierByType(Type modifierType)
+    {
+        foreach (RoomModifier modifier in modifiers)
+        {
+            if (modifier.GetType() == modifierType)
+            {
+                return modifier;
+            }
+        }
+
+        return null;
     }
 }

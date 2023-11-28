@@ -5,9 +5,9 @@ using Enumerations;
 
 public abstract class RoomModifier
 {
-    protected int weight = 5;
-    protected int weightDecay = 1;
-    protected int cost = 1;
+    protected int weight;
+    protected int weightDecay;
+    protected int cost;
     protected int points = 0;
     protected int level { get { return points / cost; } }
     public int GetWeight() { return weight; }

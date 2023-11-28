@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TileRoomRowCount : RoomModifier
+public class TileRoomColumnCount : RoomModifier
 {
-    public TileRoomRowCount()
+    public TileRoomColumnCount()
     {
         weight = 20;
         weightDecay = 10;
