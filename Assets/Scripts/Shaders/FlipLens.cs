@@ -13,15 +13,15 @@ public class FlipLens : MonoBehaviour
 
     public void Start()
     {
-        SetShaderVariables();
+        ApplyShaderVariables();
     }
 
     private void OnValidate()
     {
-        SetShaderVariables();
+        ApplyShaderVariables();
     }
 
-    public void SetShaderVariables()
+    public void ApplyShaderVariables()
     {
         baseMaterial = new Material(Shader.Find("Hidden/FlipShader"));
 
