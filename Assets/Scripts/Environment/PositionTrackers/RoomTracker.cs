@@ -8,19 +8,19 @@ public class RoomTracker : MonoBehaviour
 {
     [SerializeField] private int roomIndex = -1;
 
-    private TileRoomRandomizer tileRoomRandomizer;
+    private TileFloorRandomizer tileRoomRandomizer;
     private bool isTileRoom = false;
     private bool isShockTileRoom = false;
     private bool isGuardTileRoom = false;
     
     private void Start()
     {
-        tileRoomRandomizer = transform.parent.GetComponentInChildren<TileRoomRandomizer>();
+        tileRoomRandomizer = transform.parent.GetComponentInChildren<TileFloorRandomizer>();
         if (tileRoomRandomizer is not null)
         {
             isTileRoom = true;
-            isShockTileRoom = tileRoomRandomizer.trapsDamage;
-            isGuardTileRoom = tileRoomRandomizer.trapsAlertGuard;
+            isShockTileRoom = tileRoomRandomizer.DoTrapsDamage();
+            isGuardTileRoom = tileRoomRandomizer.DoTrapsAlertGuards();
         }
     }
 

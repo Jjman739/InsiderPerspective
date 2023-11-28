@@ -1,9 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Unity.Netcode;
+using Enumerations;
 
-public class TileRoomRandomizer : MonoBehaviour
+public class TileFloorRandomizer : MonoBehaviour
 {
     private int trapRow1;
     private int trapRow2;
@@ -13,12 +13,11 @@ public class TileRoomRandomizer : MonoBehaviour
 
     private List<TrapToggle> allTraps;
 
-    public int strayTrapCount;
+    private int strayTrapCount;
 
-    public bool trapsDamage = true;
-    public bool trapsSelfDelete = true;
-    public bool trapsAlertGuard = false;
-
+    private bool trapsDamage = true;
+    private bool trapsSelfDelete = true;
+    private bool trapsAlertGuard = false;
     [SerializeField] private DoorpointManager doorpointManager;
 
     void Start()
@@ -158,4 +157,8 @@ public class TileRoomRandomizer : MonoBehaviour
             }
         }
     }
+
+    public bool DoTrapsDamage() { return trapsDamage; }
+    public bool DoTrapsAlertGuards() { return trapsAlertGuard; }
+    public bool DoTrapsSelfDelete() { return trapsSelfDelete; }
 }

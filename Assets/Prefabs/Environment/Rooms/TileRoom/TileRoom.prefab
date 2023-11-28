@@ -167,7 +167,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6396444353274284996}
-  - component: {fileID: 1127673471282600748}
+  - component: {fileID: 4079198041705764199}
   m_Layer: 0
   m_Name: TileRoom
   m_TagString: Untagged
@@ -202,7 +202,7 @@ Transform:
   - {fileID: 7698235024303660556}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1127673471282600748
+--- !u!114 &4079198041705764199
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -211,17 +211,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 3868360972269367235}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
+  m_Script: {fileID: 11500000, guid: ff1c6166b4160a0488b641a6da08516d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 951099334
-  AlwaysReplicateAsRoot: 0
-  SynchronizeTransform: 1
-  ActiveSceneSynchronization: 0
-  SceneMigrationSynchronization: 1
-  SpawnWithObservers: 1
-  DontDestroyWithOwner: 0
-  AutoObjectParentSync: 1
+  difficulty: 0
 --- !u!1 &4091752722429323357
 GameObject:
   m_ObjectHideFlags: 0
@@ -1190,6 +1183,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6396444353274284996}
     m_Modifications:
+    - target: {fileID: 2415157217698355272, guid: dd0db8e9aa5f6d34781298db4a5f18b1, type: 3}
+      propertyPath: doorpointManager
+      value: 
+      objectReference: {fileID: 6430467403654335234}
     - target: {fileID: 5105530073306788308, guid: dd0db8e9aa5f6d34781298db4a5f18b1, type: 3}
       propertyPath: doorpointManager
       value: 
