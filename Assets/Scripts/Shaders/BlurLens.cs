@@ -21,7 +21,7 @@ public class BlurLens : MonoBehaviour
         SetShaderVariables();
     }
 
-    private void SetShaderVariables()
+    public void SetShaderVariables()
     {
         baseMaterial = new Material(Shader.Find("Hidden/BlurShader"));
 

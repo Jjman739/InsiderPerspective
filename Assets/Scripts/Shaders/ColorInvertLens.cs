@@ -27,7 +27,7 @@ public class ColorInvertLens : MonoBehaviour
         SetShaderVariables();
     }
 
-    private void SetShaderVariables()
+    public void SetShaderVariables()
     {
         baseMaterial = new Material(Shader.Find("Hidden/ColorInvertShader"));
 

@@ -25,7 +25,7 @@ public class DarkSpotLens : MonoBehaviour
         SetShaderVariables();
     }
 
-    private void SetShaderVariables()
+    public void SetShaderVariables()
     {
         baseMaterial = new Material(Shader.Find("Hidden/DarkSpotShader"));
 
