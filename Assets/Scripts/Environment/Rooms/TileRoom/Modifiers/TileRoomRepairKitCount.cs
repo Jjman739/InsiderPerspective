@@ -4,6 +4,6 @@ public class TileRoomRepairKitCount : RoomModifier
     {
         weight = 15;
         weightDecay = 5;
-        cost = 2;
+        cost = 1;
     }
 }

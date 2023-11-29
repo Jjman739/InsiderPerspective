@@ -4,6 +4,6 @@ public class TileRoomDoorwayWidth : RoomModifier
     {
         weight = 18;
         weightDecay = 3;
-        cost = 2;
+        cost = 3;
     }
 }

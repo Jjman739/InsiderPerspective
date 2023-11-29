@@ -61,7 +61,7 @@ public class CameraShaderRandomizer : MonoBehaviour
         if (shader is BlurLens)
         {
             BlurLens blurLens = shader as BlurLens;
-            blurLens.m_blurSize += 0.05f * (UnityEngine.Random.Range(0,2) == 1 ? 1 : -1);
+            blurLens.m_blurSize += 0.01f * (UnityEngine.Random.Range(0,2) == 1 ? 1 : -1);
         }
 
         else if (shader is ColorInvertLens)

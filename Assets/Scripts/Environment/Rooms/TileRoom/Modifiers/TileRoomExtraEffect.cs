@@ -4,6 +4,6 @@ public class TileRoomExtraEffect : RoomModifier
     {
         weight = 5;
         weightDecay = 5;
-        cost = 10;
+        cost = 15;
     }
 }

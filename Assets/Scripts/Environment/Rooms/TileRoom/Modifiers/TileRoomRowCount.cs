@@ -4,6 +4,6 @@ public class TileRoomRowCount : RoomModifier
     {
         weight = 20;
         weightDecay = 10;
-        cost = 5;
+        cost = 10;
     }
 }
