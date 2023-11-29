@@ -436,26 +436,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7604196884fb4ff41b12b946132a92fe, type: 3}
---- !u!1 &205065701 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5789910813010618218, guid: 3278d896a16b67f4ea35fbbdac2813ec, type: 3}
-  m_PrefabInstance: {fileID: 63384972270896138}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &205065706
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 205065701}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c402f3e88bcb2904083dad047f40c821, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_size: 0.5
-  m_horizontalLocation: -0.434
-  m_verticalLocation: 0.412
 --- !u!1 &206129785
 GameObject:
   m_ObjectHideFlags: 0
@@ -1180,25 +1160,6 @@ MonoBehaviour:
   platformerRoom: {fileID: 8300000, guid: 912d55089bf2e16438d53822ffbdf2d7, type: 3}
   gameEnd: {fileID: 8300000, guid: dbb9848458a40c74eb10112c8e8072ab, type: 3}
   skipDialogueText: {fileID: 191177198}
---- !u!1 &381999631 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 309584739632299754, guid: 3278d896a16b67f4ea35fbbdac2813ec, type: 3}
-  m_PrefabInstance: {fileID: 63384972270896138}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &381999636
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 381999631}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d3829e4061cc24944a5d56ae184591d9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_flipHorizontally: 1
-  m_flipVertically: 1
 --- !u!1 &382787177
 GameObject:
   m_ObjectHideFlags: 0
@@ -6959,12 +6920,6 @@ PrefabInstance:
       insertIndex: 10
       addedObject: {fileID: 346945686}
     m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 309584739632299754, guid: 3278d896a16b67f4ea35fbbdac2813ec, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 381999636}
-    - targetCorrespondingSourceObject: {fileID: 5789910813010618218, guid: 3278d896a16b67f4ea35fbbdac2813ec, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 205065706}
     - targetCorrespondingSourceObject: {fileID: 4747572426691146946, guid: 3278d896a16b67f4ea35fbbdac2813ec, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1455609851}

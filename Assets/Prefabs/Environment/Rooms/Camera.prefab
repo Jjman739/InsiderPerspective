@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7712274910360272697}
   - component: {fileID: 6113658307437034838}
   - component: {fileID: 481357583326168729}
+  - component: {fileID: 6299903405930996714}
   - component: {fileID: 6107849139314823314}
   m_Layer: 0
   m_Name: Camera
@@ -101,6 +102,19 @@ MonoBehaviour:
   rotMaxX: 45
   rotMinY: 0
   rotMaxY: 90
+  isFishEye: 0
+--- !u!114 &6299903405930996714
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4900169476381128665}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e3d39b2a39e7ed418c8cb70cc3dd60a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!81 &6107849139314823314
 AudioListener:
   m_ObjectHideFlags: 0

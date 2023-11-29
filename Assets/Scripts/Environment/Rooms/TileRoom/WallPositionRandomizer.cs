@@ -57,8 +57,6 @@ public class WallPositionRandomizer : MonoBehaviour
             {
                 blocker.SetActive(false);
             }
-
-            Debug.Log($"{tileRoomModifiers.GetRoomDifficulty()} wall width: {size}");
         }
     }
 }

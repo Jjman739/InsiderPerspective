@@ -9,5 +9,7 @@ public class TileRoomModifiers : RoomDifficultyBuilder
         modifiers.Add(new TileRoomStrayTilesCount());
         modifiers.Add(new TileRoomDoorwayWidth());
         modifiers.Add(new TileRoomWallWidth());
+        modifiers.Add(new TileRoomEasyShaders());
+        modifiers.Add(new TileRoomHardShaders());
     }
 }
