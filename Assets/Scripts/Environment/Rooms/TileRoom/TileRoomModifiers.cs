@@ -4,5 +4,10 @@ public class TileRoomModifiers : RoomDifficultyBuilder
     {
         modifiers.Add(new TileRoomRowCount());
         modifiers.Add(new TileRoomColumnCount());
+        modifiers.Add(new TileRoomRepairKitCount());
+        modifiers.Add(new TileRoomExtraEffect());
+        modifiers.Add(new TileRoomStrayTilesCount());
+        modifiers.Add(new TileRoomDoorwayWidth());
+        modifiers.Add(new TileRoomWallWidth());
     }
 }

@@ -20,4 +20,11 @@ namespace Enumerations
         HARD,
         LEET
     }
+
+    public enum TrapType
+    {
+        SHOCK,
+        ALERT_GUARD,
+        ADD_SHADER
+    }
 }

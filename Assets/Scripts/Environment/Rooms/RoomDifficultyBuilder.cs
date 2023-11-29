@@ -9,7 +9,7 @@ public abstract class RoomDifficultyBuilder : MonoBehaviour
     protected List<RoomModifier> modifiers = new();
     private int availablePoints;
 
-    private void Start()
+    private void Awake()
     {
         calculateAvailablePoints();
 
@@ -99,4 +99,19 @@ public abstract class RoomDifficultyBuilder : MonoBehaviour
 
         return null;
     }
+
+    public int GetModifierLevelByType(Type modifierType)
+    {
+        foreach (RoomModifier modifier in modifiers)
+        {
+            if (modifier.GetType() == modifierType)
+            {
+                return modifier.GetLevel();
+            }
+        }
+
+        return -1;
+    }
+
+    public RoomDifficulty GetRoomDifficulty() { return difficulty; }
 }
