@@ -19,6 +19,7 @@ public class GuardMovement : MonoBehaviour {
 
     private void Update()
     {
+        Debug.Log(Cursor.lockState);
         if (GameObject.Find("PauseControl").GetComponent<PauseMenu>().paused)
         {
             return;

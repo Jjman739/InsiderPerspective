@@ -26,17 +26,12 @@ public class CameraShaderRandomizer : MonoBehaviour
 
         if (tileRoomModifiers is null) return;
 
-        Debug.Log("tile room modifiers is not null");
-
         for (int i = 0; i < tileRoomModifiers.GetModifierLevelByType(typeof(TileRoomEasyShaders)); i++)
         {
-            Debug.Log("spending easy point");
-
             Type chosenShader = easyShaders[UnityEngine.Random.Range(0, easyShaders.Count)];
 
             if (gameObject.GetComponent(chosenShader) is null)
             {
-                Debug.Log($"shader null, adding component {chosenShader}");
                 gameObject.AddComponent(chosenShader);
             }
 

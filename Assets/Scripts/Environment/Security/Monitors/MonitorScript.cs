@@ -12,7 +12,6 @@ public class MonitorScript : MonoBehaviour
                 freezeTime -= Time.deltaTime;
                 if (freezeTime <= 0) {
                       source.enabled = true;
-                      Debug.Log("Unfroze camera: "+source.name);
                 }
           }
     }
@@ -20,7 +19,6 @@ public class MonitorScript : MonoBehaviour
     public void Freeze() {
           source.enabled = false;
           freezeTime = 5;
-          Debug.Log("Froze camera: "+source.name);
     }
 
 }
