@@ -22,7 +22,7 @@ public class CameraShaderRandomizer : MonoBehaviour
 
     public void Start()
     {
-        tileRoomModifiers = transform.parent.parent.GetComponent<TileRoomModifiers>();
+        tileRoomModifiers = transform.parent.GetComponent<TileRoomModifiers>();
 
         if (tileRoomModifiers is null) return;
 
@@ -30,24 +30,30 @@ public class CameraShaderRandomizer : MonoBehaviour
         {
             Type chosenShader = easyShaders[UnityEngine.Random.Range(0, easyShaders.Count)];
 
-            if (gameObject.GetComponent(chosenShader) is null)
+            GameObject camera = transform.GetChild(UnityEngine.Random.Range(0, transform.childCount)).gameObject;
+
+
+            if (camera.GetComponent(chosenShader) is null)
             {
-                gameObject.AddComponent(chosenShader);
+                Debug.Log("adding component");
+                camera.AddComponent(chosenShader);
             }
 
-            randomizeShaderValues(GetComponent(chosenShader) as ShaderBase);
+            randomizeShaderValues(camera.GetComponent(chosenShader) as ShaderBase);
         }
 
         for (int i = 0; i < tileRoomModifiers.GetModifierLevelByType(typeof(TileRoomHardShaders)); i++)
         {
             Type chosenShader = hardShaders[UnityEngine.Random.Range(0, hardShaders.Count)];
 
-            if (GetComponent(chosenShader) is null)
+            GameObject camera = transform.GetChild(UnityEngine.Random.Range(0, transform.childCount)).gameObject;
+
+            if (camera.GetComponent(chosenShader) is null)
             {
-                gameObject.AddComponent(chosenShader);
+                camera.AddComponent(chosenShader);
             }
 
-            randomizeShaderValues(GetComponent(chosenShader) as ShaderBase);
+            randomizeShaderValues(camera.GetComponent(chosenShader) as ShaderBase);
         }
     }
 

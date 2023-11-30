@@ -82,7 +82,7 @@ public class CameraViewer : Singleton<CameraViewer>
             ExitCamera();
         }
 
-        for (int i = 0; i < 9; i++)
+        for (int i = 0; i < cameraSwapButtons.childCount; i++)
         {
             if (Input.GetButtonDown((i + 1).ToString()))
             {

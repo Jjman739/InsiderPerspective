@@ -6499,10 +6499,6 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 0c971987e2d1c5f4db231765b27ac896, type: 2}
-    - target: {fileID: 2298610235136416405, guid: 3278d896a16b67f4ea35fbbdac2813ec, type: 3}
-      propertyPath: roomIndex
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2326217540831461258, guid: 3278d896a16b67f4ea35fbbdac2813ec, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -6682,10 +6678,6 @@ PrefabInstance:
     - target: {fileID: 4448999197707934177, guid: 3278d896a16b67f4ea35fbbdac2813ec, type: 3}
       propertyPath: m_LocalPosition.z
       value: -29.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 4522729520686755304, guid: 3278d896a16b67f4ea35fbbdac2813ec, type: 3}
-      propertyPath: roomIndex
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4575802041565042029, guid: 3278d896a16b67f4ea35fbbdac2813ec, type: 3}
       propertyPath: trapsDamage
@@ -7672,22 +7664,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 5178849030670905515, guid: 8c9bd58e58dafe94b89974c84be9dbce, type: 3}
-      insertIndex: 4
-      addedObject: {fileID: 412190312}
+    m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c9bd58e58dafe94b89974c84be9dbce, type: 3}
---- !u!4 &7909633643432563607 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5178849030670905515, guid: 8c9bd58e58dafe94b89974c84be9dbce, type: 3}
-  m_PrefabInstance: {fileID: 7909633643432563606}
-  m_PrefabAsset: {fileID: 0}
---- !u!20 &7909633643432563608 stripped
-Camera:
-  m_CorrespondingSourceObject: {fileID: 1975354072611306758, guid: 8c9bd58e58dafe94b89974c84be9dbce, type: 3}
-  m_PrefabInstance: {fileID: 7909633643432563606}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8648770329094292106
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9924,3 +9903,4 @@ SceneRoots:
   - {fileID: 1879110975}
   - {fileID: 1334058922}
   - {fileID: 1694231132}
+  - {fileID: 7909633643432563606}
