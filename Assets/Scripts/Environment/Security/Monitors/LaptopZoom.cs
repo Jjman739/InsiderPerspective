@@ -18,13 +18,18 @@ public class LaptopZoom : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+    }
+
+    void OnMouseOver()
+    {
         if (Input.GetMouseButtonDown(0))
         {
             guardCam.fieldOfView = defaultFov / 2.5f;
             Cursor.lockState = CursorLockMode.None;
             laptopUI.SetActive(true);
 
-        } 
+        }
         else if (Input.GetMouseButtonDown(1))
         {
             guardCam.fieldOfView = defaultFov;
