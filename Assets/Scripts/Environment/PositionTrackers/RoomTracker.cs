@@ -7,8 +7,7 @@ using Enumerations;
 public class RoomTracker : MonoBehaviour
 {
     [SerializeField] private int roomIndex = -1;
-
-    private TileRoomRandomizer tileRoomRandomizer;
+    private TileFloorRandomizer tileFloorRandomizer;
 
     private void OnTriggerEnter(Collider other)
     {

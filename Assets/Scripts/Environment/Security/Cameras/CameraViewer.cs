@@ -82,7 +82,7 @@ public class CameraViewer : Singleton<CameraViewer>
             ExitCamera();
         }
 
-        for (int i = 0; i < 9; i++)
+        for (int i = 0; i < cameraSwapButtons.childCount; i++)
         {
             if (Input.GetButtonDown((i + 1).ToString()))
             {
@@ -115,13 +115,13 @@ public class CameraViewer : Singleton<CameraViewer>
 
         //TODO: These checks are hacky and shitty and will probably change for the better once we have full difficulty-based randomization for rooms
         GameObject viewingRoom = currentCamera.transform.parent.parent.gameObject;
-        bool viewingTileRoom = viewingRoom.GetComponentInChildren<TileRoomRandomizer>() is not null;
+        bool viewingTileRoom = viewingRoom.GetComponentInChildren<TileFloorRandomizer>() is not null;
         bool viewingPlatformRoom = viewingRoom.GetComponentInChildren<FixedTrapManager>() is not null;
 
         if (viewingTileRoom)
         {
-            bool shockTileRoom = viewingRoom.GetComponentInChildren<TileRoomRandomizer>().trapsDamage;
-            bool guardTileRoom = viewingRoom.GetComponentInChildren<TileRoomRandomizer>().trapsAlertGuard;
+            bool shockTileRoom = viewingRoom.GetComponentInChildren<TileFloorRandomizer>().DoTrapsDamage();
+            bool guardTileRoom = viewingRoom.GetComponentInChildren<TileFloorRandomizer>().DoTrapsAlertGuards();
 
             if (shockTileRoom)
             {

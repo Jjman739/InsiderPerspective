@@ -12,4 +12,19 @@ namespace Enumerations
         PLATFORMER_ROOM,
         GAME_END
     }
+
+    public enum RoomDifficulty
+    {
+        EASY,
+        MEDIUM,
+        HARD,
+        LEET
+    }
+
+    public enum TrapType
+    {
+        SHOCK,
+        ALERT_GUARD,
+        ADD_SHADER
+    }
 }

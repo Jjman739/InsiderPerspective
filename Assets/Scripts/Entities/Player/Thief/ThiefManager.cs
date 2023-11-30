@@ -24,7 +24,6 @@ public class ThiefManager : MonoBehaviour
 
     public void TakeDamage()
     {
-        Debug.Log("Hit a trap.");
         hitEffects.TakeHit();
         ScrambleControls(ref movement.forwardButton, ref movement.backwardButton, ref movement.leftButton, ref movement.rightButton, ref movement.jumpButton, ref photo.photoButton);
         needsRepair = true;
@@ -38,7 +37,6 @@ public class ThiefManager : MonoBehaviour
     {
         if (treasure.treasureCount >= treasure.goal)
         {
-            Debug.Log("Win!");
             SceneManager.LoadScene("WinScene");
             return true;
         }
@@ -47,8 +45,6 @@ public class ThiefManager : MonoBehaviour
 
     public void Repair()
     {
-        Debug.Log("Repairing!");
-
         hitEffects.Repair();
         movement.forwardButton = "ThiefMoveUp";
         movement.backwardButton = "ThiefMoveDown";

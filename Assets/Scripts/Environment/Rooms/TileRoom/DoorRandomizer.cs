@@ -1,32 +1,65 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class DoorRandomizer : MonoBehaviour
 {
+    [SerializeField] private List<GameObject> doors;
     [SerializeField] private GameObject openWall;
+    [SerializeField] private int doorMinWidth = 2; 
+    [SerializeField] private int doorMaxWidth = 6;
+    private List<int> doorWidths = new();
     private List<GameObject> closedWalls;
-
-    public int openingWidthMin;
-    public int openingWidthMax;
+    private TileRoomModifiers tileRoomModifiers;
 
     void Start()
     {
-        closedWalls = new List<GameObject>();
+        tileRoomModifiers = transform.parent.GetComponent<TileRoomModifiers>();
 
-        foreach (Transform child in transform)
+        for (int i = 0; i < doors.Count; i++)
         {
-            closedWalls.Add(child.gameObject);
+            doorWidths.Add(doorMaxWidth);
         }
 
-        int openingWidth = Random.Range(openingWidthMin, openingWidthMax);
-        int openStart = Random.Range(1, closedWalls.Count - (1 + openingWidth));
-        
-        for (int i = openStart; i < openStart + openingWidth; i++)
+        List<int> possibleIndices = Enumerable.Range(0, doorWidths.Count).ToList();
+        List<int> maxedOutDoorIndices = new();
+
+        for (int i = 0; i < tileRoomModifiers.GetModifierLevelByType(typeof(TileRoomDoorwayWidth)); i++)
         {
-            GameObject wall = closedWalls[i];
-            Instantiate(openWall, wall.transform.position, wall.transform.rotation, transform);
-            Destroy(wall);
+            foreach (int index in maxedOutDoorIndices)
+            {
+                possibleIndices.Remove(index);
+            }
+
+            maxedOutDoorIndices.Clear();
+
+            int chosenIndex = possibleIndices[Random.Range(0, possibleIndices.Count)];
+            doorWidths[chosenIndex] -= 1;
+            if (doorWidths[chosenIndex] <= doorMinWidth)
+            {
+                maxedOutDoorIndices.Add(chosenIndex);
+            }
+        }
+
+        for (int i = 0; i < doors.Count; i++)
+        {
+            closedWalls = new List<GameObject>();
+
+            foreach (Transform child in doors[i].transform)
+            {
+                closedWalls.Add(child.gameObject);
+            }
+
+            int openingWidth = doorWidths[i];
+            int openStart = Random.Range(1, closedWalls.Count - (1 + openingWidth));
+            
+            for (int j = openStart; j < openStart + openingWidth; j++)
+            {
+                GameObject wall = closedWalls[j];
+                Instantiate(openWall, wall.transform.position, wall.transform.rotation, doors[i].transform);
+                Destroy(wall);
+            }
         }
     }
 }
