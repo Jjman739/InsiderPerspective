@@ -9615,6 +9615,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8313507890116461742, guid: 28d58d5839fc0be4a85526eb4c61eca5, type: 3}
+      propertyPath: guardCam
+      value: 
+      objectReference: {fileID: 1251304040}
+    - target: {fileID: 8313507890116461742, guid: 28d58d5839fc0be4a85526eb4c61eca5, type: 3}
+      propertyPath: laptopUI
+      value: 
+      objectReference: {fileID: 3657126605243886233}
     - target: {fileID: 8332482722547343286, guid: 28d58d5839fc0be4a85526eb4c61eca5, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.9642212
@@ -9779,7 +9787,8 @@ PrefabInstance:
       propertyPath: attachedCamera
       value: 
       objectReference: {fileID: 585571231}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1931187844518564839, guid: 28d58d5839fc0be4a85526eb4c61eca5, type: 3}
     m_RemovedGameObjects:
     - {fileID: 3785494177566467695, guid: 28d58d5839fc0be4a85526eb4c61eca5, type: 3}
     - {fileID: 7637042290064286814, guid: 28d58d5839fc0be4a85526eb4c61eca5, type: 3}

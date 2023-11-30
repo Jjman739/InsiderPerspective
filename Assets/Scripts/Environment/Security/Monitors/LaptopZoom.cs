@@ -9,8 +9,6 @@ public class LaptopZoom : MonoBehaviour
     public float defaultFov;
     public GameObject laptopUI;
 
-    private bool zoomed = false;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -20,27 +18,21 @@ public class LaptopZoom : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-  
-    }
-
-    private void OnMouseDown()
-    {
-        if (zoomed == false)
+        if (Input.GetMouseButtonDown(0))
         {
             guardCam.fieldOfView = defaultFov / 2.5f;
-            zoomed = true;
             Cursor.lockState = CursorLockMode.None;
             laptopUI.SetActive(true);
 
-        }
-        else
+        } 
+        else if (Input.GetMouseButtonDown(1))
         {
             guardCam.fieldOfView = defaultFov;
-            zoomed = false;
             Cursor.lockState = CursorLockMode.Locked;
             laptopUI.SetActive(false);
         }
-    }
 
+
+    }
 
 }
