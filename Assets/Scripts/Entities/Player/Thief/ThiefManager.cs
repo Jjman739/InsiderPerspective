@@ -77,4 +77,17 @@ public class ThiefManager : MonoBehaviour
         jump = values[4];
         cam = values[5];
     }
+
+    public List<string> ReturnControls()
+    {
+        string forward = movement.forwardButton;
+        string back = movement.backwardButton;
+        string left = movement.leftButton;
+        string right = movement.rightButton;
+        string jump = movement.jumpButton;
+        string cam = photo.photoButton;
+
+        List<string> controls = new List<string> { forward, back, left, right, jump, cam };
+        return controls;
+    }
 }
