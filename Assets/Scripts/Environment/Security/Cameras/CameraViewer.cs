@@ -113,10 +113,31 @@ public class CameraViewer : Singleton<CameraViewer>
 
         SwapCamera(currentCameraIndex);
 
-        if (camera.IsFishEye())
+        //TODO: These checks are hacky and shitty and will probably change for the better once we have full difficulty-based randomization for rooms
+        GameObject viewingRoom = currentCamera.transform.parent.parent.gameObject;
+        bool viewingTileRoom = viewingRoom.GetComponentInChildren<TileRoomRandomizer>() is not null;
+        bool viewingPlatformRoom = viewingRoom.GetComponentInChildren<FixedTrapManager>() is not null;
+
+        if (viewingTileRoom)
         {
-            DialogueManager.Instance.PlayDialogue(DialogueEvent.VIEW_MONITOR_FISH_EYE);
+            bool shockTileRoom = viewingRoom.GetComponentInChildren<TileRoomRandomizer>().trapsDamage;
+            bool guardTileRoom = viewingRoom.GetComponentInChildren<TileRoomRandomizer>().trapsAlertGuard;
+
+            if (shockTileRoom)
+            {
+                DialogueManager.Instance.PlayDialogue(DialogueEvent.ENTER_TILE_ROOM_SHOCK);
+            }
+            else if (guardTileRoom)
+            {
+                DialogueManager.Instance.PlayDialogue(DialogueEvent.ENTER_TILE_ROOM_GUARD);
+            }
         }
+
+        else if (viewingPlatformRoom)
+        {
+            DialogueManager.Instance.PlayDialogue(DialogueEvent.PLATFORMER_ROOM);
+        }
+
         else
         {
             DialogueManager.Instance.PlayDialogue(DialogueEvent.VIEW_MONITOR);

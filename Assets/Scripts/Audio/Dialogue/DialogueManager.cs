@@ -71,6 +71,9 @@ public class DialogueManager : Singleton<DialogueManager>
 
         dialogueToPlay.Play(audioSource);
         currentDialogue = dialogueToPlay;
+
+        //Uncomment this if you need to test dialogue events but cannot listen to the result because you are in class
+        //Debug.Log($"Now playing {dialogueEvent}...");
     }
 
     private DialogueObject getDialogueObjectByEvent(DialogueEvent dialogueEvent)
