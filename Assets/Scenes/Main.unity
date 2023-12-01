@@ -7815,79 +7815,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6501310672267175682, guid: 7604196884fb4ff41b12b946132a92fe, type: 3}
   m_PrefabInstance: {fileID: 193774427}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &2094456826
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: -4216859302048453862, guid: 936f7f9d54ae59e46904f3d7c5454b63, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.0018682999
-      objectReference: {fileID: 0}
-    - target: {fileID: -4216859302048453862, guid: 936f7f9d54ae59e46904f3d7c5454b63, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.0018682999
-      objectReference: {fileID: 0}
-    - target: {fileID: -4216859302048453862, guid: 936f7f9d54ae59e46904f3d7c5454b63, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.0018682999
-      objectReference: {fileID: 0}
-    - target: {fileID: -4216859302048453862, guid: 936f7f9d54ae59e46904f3d7c5454b63, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -166.23
-      objectReference: {fileID: 0}
-    - target: {fileID: -4216859302048453862, guid: 936f7f9d54ae59e46904f3d7c5454b63, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 5.23
-      objectReference: {fileID: 0}
-    - target: {fileID: -4216859302048453862, guid: 936f7f9d54ae59e46904f3d7c5454b63, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 7.47
-      objectReference: {fileID: 0}
-    - target: {fileID: -4216859302048453862, guid: 936f7f9d54ae59e46904f3d7c5454b63, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.18130147
-      objectReference: {fileID: 0}
-    - target: {fileID: -4216859302048453862, guid: 936f7f9d54ae59e46904f3d7c5454b63, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: -4216859302048453862, guid: 936f7f9d54ae59e46904f3d7c5454b63, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.98342764
-      objectReference: {fileID: 0}
-    - target: {fileID: -4216859302048453862, guid: 936f7f9d54ae59e46904f3d7c5454b63, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: -4216859302048453862, guid: 936f7f9d54ae59e46904f3d7c5454b63, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -4216859302048453862, guid: 936f7f9d54ae59e46904f3d7c5454b63, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 159.109
-      objectReference: {fileID: 0}
-    - target: {fileID: -4216859302048453862, guid: 936f7f9d54ae59e46904f3d7c5454b63, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -1504981713932161579, guid: 936f7f9d54ae59e46904f3d7c5454b63, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 8a9a8442ee1082a43b0410dc47b5e3ee, type: 2}
-    - target: {fileID: -927199367670048503, guid: 936f7f9d54ae59e46904f3d7c5454b63, type: 3}
-      propertyPath: m_Name
-      value: Laptop_UV (1)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 936f7f9d54ae59e46904f3d7c5454b63, type: 3}
 --- !u!1001 &2105486670
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10187,7 +10114,7 @@ PrefabInstance:
     - target: {fileID: 2611047102599760895, guid: 28d58d5839fc0be4a85526eb4c61eca5, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 8a9a8442ee1082a43b0410dc47b5e3ee, type: 2}
+      objectReference: {fileID: 2100000, guid: 18f5d6cf96f720f43ab1b4369574c671, type: 2}
     - target: {fileID: 2820550561802460140, guid: 28d58d5839fc0be4a85526eb4c61eca5, type: 3}
       propertyPath: m_Name
       value: WaypointsMinimap
@@ -12306,4 +12233,3 @@ SceneRoots:
   - {fileID: 1334058922}
   - {fileID: 1694231132}
   - {fileID: 1795036827}
-  - {fileID: 2094456826}
