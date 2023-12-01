@@ -75,6 +75,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68b7dcb7e7cb204498fab1086dedd03c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  doRaycast: 1
+  eyePoint: {fileID: 1697118712380563293}
 --- !u!1 &1749842188120264919
 GameObject:
   m_ObjectHideFlags: 0
@@ -713,6 +715,37 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &5041435292093002030
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1697118712380563293}
+  m_Layer: 0
+  m_Name: EyesPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1697118712380563293
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5041435292093002030}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.4, z: 0.6}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3348841602411470165}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6091264764621200470
 GameObject:
   m_ObjectHideFlags: 0
@@ -726,7 +759,7 @@ GameObject:
   - component: {fileID: 7415781110953365774}
   - component: {fileID: 5648480417026276074}
   m_Layer: 0
-  m_Name: Capsule
+  m_Name: DetectionAura
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -790,6 +823,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68b7dcb7e7cb204498fab1086dedd03c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  doRaycast: 0
+  eyePoint: {fileID: 1697118712380563293}
 --- !u!1 &6501310672267175682
 GameObject:
   m_ObjectHideFlags: 0
@@ -826,6 +861,7 @@ Transform:
   - {fileID: 5289214699321865220}
   - {fileID: 3164999448672521134}
   - {fileID: 3887277321650527103}
+  - {fileID: 1697118712380563293}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &7909075326472278700
@@ -1467,6 +1503,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68b7dcb7e7cb204498fab1086dedd03c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  doRaycast: 1
+  eyePoint: {fileID: 1697118712380563293}
 --- !u!4 &581018189582251544 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 8ba645fc0c00dc34e87e33260e9b9253, type: 3}
