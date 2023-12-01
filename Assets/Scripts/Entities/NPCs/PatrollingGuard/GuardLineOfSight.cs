@@ -14,10 +14,13 @@ public class GuardLineOfSight : MonoBehaviour
             if (doRaycast)
             {
                 RaycastHit hit;
-                Physics.Raycast(eyePoint.position, other.gameObject.transform.position, out hit);
-                if (hit.collider != null)
+                Physics.Raycast(eyePoint.position, other.gameObject.transform.position - eyePoint.position, out hit);
+                if (hit.collider == null)
                 {
-                    Debug.Log(hit.collider.gameObject.name);
+                    return;
+                }
+                if (!hit.collider.gameObject.CompareTag("Player"))
+                {
                     return;
                 }
             }
