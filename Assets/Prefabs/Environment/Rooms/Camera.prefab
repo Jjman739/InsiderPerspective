@@ -101,6 +101,7 @@ MonoBehaviour:
   rotMaxX: 45
   rotMinY: 0
   rotMaxY: 90
+  isFishEye: 0
 --- !u!81 &6107849139314823314
 AudioListener:
   m_ObjectHideFlags: 0

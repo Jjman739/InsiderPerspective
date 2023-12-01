@@ -113,7 +113,6 @@ public class ThiefMovementScript : MonoBehaviour
             currentAlertTimer -= Time.deltaTime;
             if (currentAlertTimer <= 0)
             {
-                Debug.Log("Caught");
                 SceneManager.LoadScene("LoseScene");
             }
         }
@@ -139,7 +138,6 @@ public class ThiefMovementScript : MonoBehaviour
             }
             else
             {
-                Debug.Log("Out of battery.");
                 SceneManager.LoadScene("LoseScene");
             }
         }

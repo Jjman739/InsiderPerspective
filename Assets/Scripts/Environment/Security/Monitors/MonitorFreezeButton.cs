@@ -20,9 +20,6 @@ public class MonitorFreezeButton : Pressable
             if (currentFreezeTime > 0) {
                   currentFreezeTime -= Time.deltaTime;
                   indicatorGauge.transform.localScale = new Vector3(currentFreezeTime / freezeDuration, gaugeBaseScale.y, gaugeBaseScale.z);
-                  if (currentFreezeTime <= 0) {
-                        Debug.Log("Resumed camera: "+source.name);
-                  }
             } else {
                   indicatorGauge.transform.localScale = new Vector3(0, gaugeBaseScale.y, gaugeBaseScale.z);
             }
@@ -30,6 +27,5 @@ public class MonitorFreezeButton : Pressable
 
       override public void Press() {
             currentFreezeTime = freezeDuration;
-            Debug.Log("Suppressed camera: "+source.name);
       }
 }

@@ -4,7 +4,7 @@ using UnityEngine;
 
 [ExecuteInEditMode]
 [RequireComponent(typeof(Camera))]
-public class ColorInvertLens : MonoBehaviour
+public class ColorInvertLens : ShaderBase
 {
     public bool m_invert = false;
     public bool m_blackAndWhite = false;
@@ -15,19 +15,7 @@ public class ColorInvertLens : MonoBehaviour
     [Range(0.0f, 1.0f)]
     public float m_blue = 1.0f;
 
-    private Material baseMaterial;
-
-    public void Start()
-    {
-        SetShaderVariables();
-    }
-
-    private void OnValidate()
-    {
-        SetShaderVariables();
-    }
-
-    private void SetShaderVariables()
+    public override void ApplyShaderVariables()
     {
         baseMaterial = new Material(Shader.Find("Hidden/ColorInvertShader"));
 
@@ -36,10 +24,5 @@ public class ColorInvertLens : MonoBehaviour
         baseMaterial.SetFloat("_Red", m_red);
         baseMaterial.SetFloat("_Green", m_green);
         baseMaterial.SetFloat("_Blue", m_blue);
-    }
-
-    private void OnRenderImage(RenderTexture source, RenderTexture destination)
-    {
-        Graphics.Blit(source, destination, baseMaterial);
     }
 }
