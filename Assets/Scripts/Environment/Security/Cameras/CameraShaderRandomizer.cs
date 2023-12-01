@@ -127,4 +127,20 @@ public class CameraShaderRandomizer : MonoBehaviour
 
         shader.ApplyShaderVariables();
     }
+
+    public GameObject getCurrentCamera()
+    {
+        foreach (Transform cameraTransform in transform)
+        {
+            Camera camera = cameraTransform.gameObject.GetComponent<Camera>();
+            if (camera.enabled)
+            {
+                return cameraTransform.gameObject;
+            }
+        }
+
+        // If no camera is active, something is very wrong, but choose the first one.
+        Debug.Log("No camera active in room!");
+        return transform.GetChild(0).gameObject;
+    }
 }
