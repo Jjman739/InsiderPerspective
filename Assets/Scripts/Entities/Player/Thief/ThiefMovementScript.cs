@@ -13,7 +13,7 @@ public class ThiefMovementScript : MonoBehaviour
     private CharacterController controller;
     private AudioSource audioSource;
     private float currentAlertTimer;
-    private bool inLineOfSight;
+    private int lineOfSightCount;
 
     private float chargeTimer = 60;
 
@@ -108,7 +108,7 @@ public class ThiefMovementScript : MonoBehaviour
         controller.Move(transform.rotation * move * moveSpeed);
         transform.Rotate(turnSpeed * twist);
 
-        if (inLineOfSight)
+        if (lineOfSightCount > 0)
         {
             currentAlertTimer -= Time.deltaTime;
             if (currentAlertTimer <= 0)
@@ -146,6 +146,17 @@ public class ThiefMovementScript : MonoBehaviour
 
     public void SetMoveSpeed(float speed) { moveSpeed = speed; }
     public void SetTurnSpeed(float speed) { turnSpeed = speed; }
-    public void SetInLineOfSight(bool inSight) { inLineOfSight = inSight; }
     public void SetAlertTimer(float time) { alertTimer = time; }
+
+    public void SetInLineOfSight(bool inSight)
+    {
+        if (inSight)
+        {
+            lineOfSightCount++;
+        }
+        else
+        {
+            lineOfSightCount--;
+        }
+    }
 }
