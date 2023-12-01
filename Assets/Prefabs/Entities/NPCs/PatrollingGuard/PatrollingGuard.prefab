@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5739873305398756560}
   - component: {fileID: 5208248515461483378}
   - component: {fileID: 4582488361021083790}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -91,7 +91,7 @@ GameObject:
   - component: {fileID: 821285761018947061}
   - component: {fileID: 294263390798031947}
   - component: {fileID: 161701885813007707}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: LineOfSight(Shown)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -581,7 +581,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5289214699321865220}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -620,7 +620,7 @@ GameObject:
   - component: {fileID: 4005093099784115202}
   - component: {fileID: 4578403958941164096}
   - component: {fileID: 4098618366234392882}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: RightLeg
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -724,7 +724,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1697118712380563293}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: EyesPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -758,7 +758,7 @@ GameObject:
   - component: {fileID: 5537559784141525929}
   - component: {fileID: 7415781110953365774}
   - component: {fileID: 5648480417026276074}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: DetectionAura
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -838,7 +838,7 @@ GameObject:
   - component: {fileID: 2261609528579273078}
   - component: {fileID: 4705605659090736837}
   - component: {fileID: 834473241140816224}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: PatrollingGuard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -965,7 +965,7 @@ GameObject:
   - component: {fileID: 3807616709888591591}
   - component: {fileID: 5549221540950087761}
   - component: {fileID: 2628543061399733618}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: LeftLeg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1072,7 +1072,7 @@ GameObject:
   - component: {fileID: 1246326688590764261}
   - component: {fileID: 9117572770040831670}
   - component: {fileID: 5884678892470537918}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1179,7 +1179,7 @@ GameObject:
   - component: {fileID: 3199956700520432692}
   - component: {fileID: 3287290840691978725}
   - component: {fileID: 4212810176948003087}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Visor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1286,7 +1286,7 @@ GameObject:
   - component: {fileID: 4187273840933891883}
   - component: {fileID: 5687590747850059808}
   - component: {fileID: 8126540534932790803}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Backpack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1451,7 +1451,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 8ba645fc0c00dc34e87e33260e9b9253, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

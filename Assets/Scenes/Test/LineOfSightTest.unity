@@ -4124,6 +4124,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 599346550}
+    - target: {fileID: 242033688935099554, guid: 7a73716f833a39d43aee89db56f1afeb, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 294263390798031947, guid: 7a73716f833a39d43aee89db56f1afeb, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -4132,13 +4136,29 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1521150854833109193, guid: 7a73716f833a39d43aee89db56f1afeb, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1749842188120264919, guid: 7a73716f833a39d43aee89db56f1afeb, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1781154973029045837, guid: 7a73716f833a39d43aee89db56f1afeb, type: 3}
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 599346550}
+    - target: {fileID: 2259825659330486151, guid: 7a73716f833a39d43aee89db56f1afeb, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2818186077121079709, guid: 7a73716f833a39d43aee89db56f1afeb, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3348841602411470165, guid: 7a73716f833a39d43aee89db56f1afeb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -168.7816
+      value: -170.38159
       objectReference: {fileID: 0}
     - target: {fileID: 3348841602411470165, guid: 7a73716f833a39d43aee89db56f1afeb, type: 3}
       propertyPath: m_LocalPosition.y
@@ -4176,9 +4196,37 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5041435292093002030, guid: 7a73716f833a39d43aee89db56f1afeb, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6091264764621200470, guid: 7a73716f833a39d43aee89db56f1afeb, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6501310672267175682, guid: 7a73716f833a39d43aee89db56f1afeb, type: 3}
       propertyPath: m_Name
       value: PatrollingGuard
+      objectReference: {fileID: 0}
+    - target: {fileID: 6501310672267175682, guid: 7a73716f833a39d43aee89db56f1afeb, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6800124188568921770, guid: 7a73716f833a39d43aee89db56f1afeb, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6821018477321233876, guid: 7a73716f833a39d43aee89db56f1afeb, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6973934764682580099, guid: 7a73716f833a39d43aee89db56f1afeb, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7175805992872134369, guid: 7a73716f833a39d43aee89db56f1afeb, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
