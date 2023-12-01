@@ -16,7 +16,7 @@ public class TileFloorRandomizer : MonoBehaviour
     {
         {TrapType.SHOCK, false},
         {TrapType.ALERT_GUARD, false},
-        //{TrapType.ADD_SHADER, false}
+        {TrapType.ADD_SHADER, false}
     };
     private TileRoomModifiers tileRoomModifiers;
     [SerializeField] private DoorpointManager doorpointManager;
@@ -156,7 +156,7 @@ public class TileFloorRandomizer : MonoBehaviour
                 break;
 
             case 2:
-                //trapTypes[TrapType.ADD_SHADER] = true;
+                trapTypes[TrapType.ADD_SHADER] = true;
                 break;
             
             default:
@@ -180,7 +180,7 @@ public class TileFloorRandomizer : MonoBehaviour
                     toggler.trapCollider.damage = trapTypes[TrapType.SHOCK];
                     toggler.trapCollider.selfDelete = trapsSelfDelete;
                     toggler.trapCollider.alertGuard = trapTypes[TrapType.ALERT_GUARD];
-                    //TODO: add ADD_SHADER to trapCollider
+                    toggler.trapCollider.addShader = trapTypes[TrapType.ADD_SHADER];
                 }
                 toggler.trapCollider.GetComponent<TrapCollider>().SetDoorPointManager(doorpointManager);
             }

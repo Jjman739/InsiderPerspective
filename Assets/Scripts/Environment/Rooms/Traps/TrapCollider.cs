@@ -9,6 +9,7 @@ public class TrapCollider : MonoBehaviour
     public bool damage = true;
     public bool selfDelete = true;
     public bool alertGuard = false;
+    public bool addShader = false;
 
     void OnTriggerEnter(Collider other)
     {
