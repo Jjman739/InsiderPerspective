@@ -140,6 +140,12 @@ public class CameraShaderRandomizer : MonoBehaviour
 
     public GameObject getCurrentCamera()
     {
+        if (CameraViewer.Instance.GetCurrentCameraGroup() == transform)
+        {
+            Debug.Log("Current camera found.");
+            return CameraViewer.Instance.GetCamera().gameObject;
+        }
+
         foreach (Transform cameraTransform in transform)
         {
             Camera camera = cameraTransform.gameObject.GetComponent<Camera>();

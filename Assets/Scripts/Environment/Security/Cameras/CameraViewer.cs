@@ -241,4 +241,8 @@ public class CameraViewer : Singleton<CameraViewer>
         }
         else { return false; }
     }
+
+    public ControllableCamera GetCamera() { return currentCamera; }
+
+    public Transform GetCurrentCameraGroup() { return currentCameraGroup; }
 }
