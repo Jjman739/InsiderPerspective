@@ -19,7 +19,9 @@ public class TileFloorRandomizer : MonoBehaviour
         {TrapType.ADD_SHADER, false}
     };
     private TileRoomModifiers tileRoomModifiers;
+
     [SerializeField] private DoorpointManager doorpointManager;
+    [SerializeField] private CameraShaderRandomizer cameraShaderRandomizer;
 
     void Start()
     {
@@ -183,6 +185,7 @@ public class TileFloorRandomizer : MonoBehaviour
                     toggler.trapCollider.addShader = trapTypes[TrapType.ADD_SHADER];
                 }
                 toggler.trapCollider.GetComponent<TrapCollider>().SetDoorPointManager(doorpointManager);
+                toggler.trapCollider.GetComponent<TrapCollider>().SetCameraManager(cameraShaderRandomizer);
             }
         }
     }
