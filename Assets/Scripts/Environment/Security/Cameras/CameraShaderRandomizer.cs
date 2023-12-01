@@ -18,6 +18,16 @@ public class CameraShaderRandomizer : MonoBehaviour
         typeof(FlipLens)
     };
 
+    private List<Type> allShaders = new List<Type>
+    {
+        typeof(BlurLens),
+        typeof(ColorInvertLens),
+        typeof(ColorStepper),
+        typeof(FishEyeLens),
+        typeof(DarkSpotLens),
+        typeof(FlipLens)
+    };
+
     private TileRoomModifiers tileRoomModifiers;
 
     public void Start()
@@ -142,5 +152,18 @@ public class CameraShaderRandomizer : MonoBehaviour
         // If no camera is active, something is very wrong, but choose the first one.
         Debug.Log("No camera active in room!");
         return transform.GetChild(0).gameObject;
+    }
+
+    public void applyRandomShader()
+    {
+        GameObject camera = getCurrentCamera();
+        Type chosenShader = allShaders[UnityEngine.Random.Range(0, allShaders.Count)];
+
+        if (camera.GetComponent(chosenShader) is null)
+        {
+            Debug.Log("adding component");
+            camera.AddComponent(chosenShader);
+            randomizeShaderValues(camera.GetComponent(chosenShader) as ShaderBase);
+        }
     }
 }
