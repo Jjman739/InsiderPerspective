@@ -23,7 +23,11 @@ public class RelicPickup : MonoBehaviour
 
             if (inv.treasureCount >= inv.goal)
             {
-                DialogueManager.Instance.PlayDialogue(DialogueEvent.GAME_END);
+                DialogueManager.Instance.PlayDialogue(DialogueEvent.ALL_RELICS);
+            }
+            else
+            {
+                DialogueManager.Instance.PlayDialogue(DialogueEvent.RELIC);
             }
         }
     }

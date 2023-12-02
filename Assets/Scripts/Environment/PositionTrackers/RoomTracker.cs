@@ -29,4 +29,6 @@ public class RoomTracker : MonoBehaviour
             Minimap.Instance.ExitRoom();
         }
     }
+
+    public int GetRoomIndex() { return roomIndex; }
 }

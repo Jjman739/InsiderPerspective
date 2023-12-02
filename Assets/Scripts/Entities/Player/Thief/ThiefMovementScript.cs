@@ -60,6 +60,11 @@ public class ThiefMovementScript : MonoBehaviour
         if (Input.GetButton(leftButton)) { turnAxis -= 1; }
         if (Input.GetButton(rightButton)) { turnAxis += 1; }
 
+        if (moveAxis != 0 || turnAxis != 0)
+        {
+            DialogueManager.Instance.PlayDialogue(DialogueEvent.MOVE_ROBOT);
+        }
+
         move = new Vector3(0, 0, moveAxis);
         twist = new Vector3(0, turnAxis, 0);
 
