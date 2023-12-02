@@ -5,10 +5,12 @@ public class TrapCollider : MonoBehaviour
     [SerializeField] private TrapToggle toggler;
 
     private DoorpointManager doorpointManager;
+    private CameraShaderRandomizer cameraShaderRandomizer;
 
     public bool damage = true;
     public bool selfDelete = true;
     public bool alertGuard = false;
+    public bool addShader = false;
 
     void OnTriggerEnter(Collider other)
     {
@@ -18,11 +20,17 @@ public class TrapCollider : MonoBehaviour
             if (damage) { thiefManager.TakeDamage(); }
             if (selfDelete) { toggler.TrapDisable(); }
             if (alertGuard) { doorpointManager.SendGuardToRoom(); }
+            if (addShader) { cameraShaderRandomizer.applyRandomShader(); }
         }
     }
 
     public void SetDoorPointManager(DoorpointManager dm)
     {
         doorpointManager = dm;
+    }
+
+    public void SetCameraManager(CameraShaderRandomizer csr)
+    {
+        cameraShaderRandomizer = csr;
     }
 }

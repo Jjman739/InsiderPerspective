@@ -1419,6 +1419,10 @@ PrefabInstance:
       propertyPath: doorpointManager
       value: 
       objectReference: {fileID: 6430467403654335234}
+    - target: {fileID: 2415157217698355272, guid: dd0db8e9aa5f6d34781298db4a5f18b1, type: 3}
+      propertyPath: cameraShaderRandomizer
+      value: 
+      objectReference: {fileID: 9221557392123708305}
     - target: {fileID: 5105530073306788308, guid: dd0db8e9aa5f6d34781298db4a5f18b1, type: 3}
       propertyPath: doorpointManager
       value: 

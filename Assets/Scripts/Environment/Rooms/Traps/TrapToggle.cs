@@ -25,7 +25,7 @@ public class TrapToggle : MonoBehaviour
             item.SetActive(true);
             trapIndicator.materials[0].color = new Color(
                 trapCollider.alertGuard ? 1 : 0,
-                0,
+                trapCollider.addShader ? 1 : 0,
                 trapCollider.damage ? 1 : 0,
                 0.5f
             );
