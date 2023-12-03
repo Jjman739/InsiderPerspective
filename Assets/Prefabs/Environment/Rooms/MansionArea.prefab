@@ -4446,6 +4446,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 9107001984964667295}
     m_Modifications:
+    - target: {fileID: 144435791789285885, guid: 8c9bd58e58dafe94b89974c84be9dbce, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 6.42
+      objectReference: {fileID: 0}
     - target: {fileID: 2420580061888318842, guid: 8c9bd58e58dafe94b89974c84be9dbce, type: 3}
       propertyPath: m_LocalPosition.x
       value: 20.4
@@ -4456,7 +4460,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2420580061888318842, guid: 8c9bd58e58dafe94b89974c84be9dbce, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -87.6
+      value: -87.2
       objectReference: {fileID: 0}
     - target: {fileID: 2420580061888318842, guid: 8c9bd58e58dafe94b89974c84be9dbce, type: 3}
       propertyPath: m_LocalRotation.w
@@ -4491,7 +4495,9 @@ PrefabInstance:
       value: StartRoom
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 8173537013519764187, guid: 8c9bd58e58dafe94b89974c84be9dbce, type: 3}
+    - {fileID: 6155780765135096355, guid: 8c9bd58e58dafe94b89974c84be9dbce, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c9bd58e58dafe94b89974c84be9dbce, type: 3}

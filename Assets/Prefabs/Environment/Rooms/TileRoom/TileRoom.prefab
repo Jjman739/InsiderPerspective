@@ -1171,7 +1171,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6914967957502152015, guid: 92eebf8231d195d4fa75dbe5bc29ca10, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.578448
+      value: -6.58
       objectReference: {fileID: 0}
     - target: {fileID: 6914967957502152015, guid: 92eebf8231d195d4fa75dbe5bc29ca10, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1179,7 +1179,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6914967957502152015, guid: 92eebf8231d195d4fa75dbe5bc29ca10, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -5.441423
+      value: -5.48
       objectReference: {fileID: 0}
     - target: {fileID: 6914967957502152015, guid: 92eebf8231d195d4fa75dbe5bc29ca10, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1560,7 +1560,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6914967957502152015, guid: 92eebf8231d195d4fa75dbe5bc29ca10, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.565829
+      value: -6.57
       objectReference: {fileID: 0}
     - target: {fileID: 6914967957502152015, guid: 92eebf8231d195d4fa75dbe5bc29ca10, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1568,7 +1568,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6914967957502152015, guid: 92eebf8231d195d4fa75dbe5bc29ca10, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 6.758573
+      value: 6.93
       objectReference: {fileID: 0}
     - target: {fileID: 6914967957502152015, guid: 92eebf8231d195d4fa75dbe5bc29ca10, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1935,6 +1935,10 @@ PrefabInstance:
       propertyPath: doorpointManager
       value: 
       objectReference: {fileID: 6430467403654335234}
+    - target: {fileID: 2415157217698355272, guid: dd0db8e9aa5f6d34781298db4a5f18b1, type: 3}
+      propertyPath: cameraShaderRandomizer
+      value: 
+      objectReference: {fileID: 9221557392123708305}
     - target: {fileID: 5105530073306788308, guid: dd0db8e9aa5f6d34781298db4a5f18b1, type: 3}
       propertyPath: doorpointManager
       value: 
