@@ -6861,6 +6861,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 0c971987e2d1c5f4db231765b27ac896, type: 2}
+    - target: {fileID: 6428138477327701455, guid: 3278d896a16b67f4ea35fbbdac2813ec, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 50.76
+      objectReference: {fileID: 0}
     - target: {fileID: 6581129556150957663, guid: 3278d896a16b67f4ea35fbbdac2813ec, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -7903,6 +7907,7 @@ PrefabInstance:
     - {fileID: 4636476486134463215, guid: 28d58d5839fc0be4a85526eb4c61eca5, type: 3}
     - {fileID: 6559531075321335006, guid: 28d58d5839fc0be4a85526eb4c61eca5, type: 3}
     - {fileID: 8418585058750887616, guid: 28d58d5839fc0be4a85526eb4c61eca5, type: 3}
+    - {fileID: 6879807219160061648, guid: 28d58d5839fc0be4a85526eb4c61eca5, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 28d58d5839fc0be4a85526eb4c61eca5, type: 3}
@@ -8141,6 +8146,4 @@ SceneRoots:
   - {fileID: 1879110975}
   - {fileID: 1334058922}
   - {fileID: 1694231132}
-  - {fileID: 7909633643432563606}
   - {fileID: 1795036827}
-main
