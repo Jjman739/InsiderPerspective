@@ -117,30 +117,26 @@ public class CameraViewer : Singleton<CameraViewer>
         GameObject viewingRoom = currentCamera.transform.parent.parent.gameObject;
         bool viewingTileRoom = viewingRoom.GetComponentInChildren<TileFloorRandomizer>() is not null;
         bool viewingPlatformRoom = viewingRoom.GetComponentInChildren<FixedTrapManager>() is not null;
+        bool viewingStartRoom = viewingRoom.GetComponentInChildren<RoomTracker>()?.GetRoomIndex() == 0;
 
         if (viewingTileRoom)
         {
-            bool shockTileRoom = viewingRoom.GetComponentInChildren<TileFloorRandomizer>().DoTrapsDamage();
-            bool guardTileRoom = viewingRoom.GetComponentInChildren<TileFloorRandomizer>().DoTrapsAlertGuards();
-
-            if (shockTileRoom)
-            {
-                DialogueManager.Instance.PlayDialogue(DialogueEvent.ENTER_TILE_ROOM_SHOCK);
-            }
-            else if (guardTileRoom)
-            {
-                DialogueManager.Instance.PlayDialogue(DialogueEvent.ENTER_TILE_ROOM_GUARD);
-            }
+            DialogueManager.Instance.PlayDialogue(DialogueEvent.VIEW_TILE_ROOM);
         }
 
         else if (viewingPlatformRoom)
         {
-            DialogueManager.Instance.PlayDialogue(DialogueEvent.PLATFORMER_ROOM);
+            DialogueManager.Instance.PlayDialogue(DialogueEvent.VIEW_PLATFORMER_ROOM);
+        }
+
+        else if (viewingStartRoom)
+        {
+            DialogueManager.Instance.PlayDialogue(DialogueEvent.VIEW_START_ROOM);
         }
 
         else
         {
-            DialogueManager.Instance.PlayDialogue(DialogueEvent.VIEW_MONITOR);
+            DialogueManager.Instance.PlayDialogue(DialogueEvent.VIEW_HALLWAY);
         }
     }
 

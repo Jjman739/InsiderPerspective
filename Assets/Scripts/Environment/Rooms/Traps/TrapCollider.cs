@@ -17,10 +17,25 @@ public class TrapCollider : MonoBehaviour
         ThiefManager thiefManager = other.gameObject.GetComponent<ThiefManager>();
         if (thiefManager != null)
         {
-            if (damage) { thiefManager.TakeDamage(); }
-            if (selfDelete) { toggler.TrapDisable(); }
-            if (alertGuard) { doorpointManager.SendGuardToRoom(); }
-            if (addShader) { cameraShaderRandomizer.applyRandomShader(); }
+            if (damage)
+            {
+                thiefManager.TakeDamage();
+                DialogueManager.Instance.PlayDialogue(Enumerations.DialogueEvent.TRAP_SHOCK);
+            }
+            if (selfDelete)
+            {
+                toggler.TrapDisable();
+            }
+            if (alertGuard)
+            {
+                doorpointManager.SendGuardToRoom();
+                DialogueManager.Instance.PlayDialogue(Enumerations.DialogueEvent.TRAP_GUARD);
+            }
+            if (addShader)
+            {
+                cameraShaderRandomizer.applyRandomShader();
+                DialogueManager.Instance.PlayDialogue(Enumerations.DialogueEvent.TRAP_CAMERA);
+            }
         }
     }
 

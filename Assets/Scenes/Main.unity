@@ -1151,14 +1151,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameStart: {fileID: 8300000, guid: 8c69f8e29abed6c4ea9721a01995d336, type: 3}
-  viewLaptop: {fileID: 8300000, guid: 40ca6fd126390af4fb0043a107cb249f, type: 3}
-  viewMonitor: {fileID: 8300000, guid: 93168b3865a12c44195cd16ab5117805, type: 3}
-  viewFishEyeMonitor: {fileID: 8300000, guid: 2661a382cfa548840913f91588f7b9f8, type: 3}
-  guardTileRoom: {fileID: 8300000, guid: 53344801511865a45bb445ea46b38397, type: 3}
-  shockTileRoom: {fileID: 8300000, guid: acba687c335fdfc4cbdd07913ff2ccaf, type: 3}
-  shockRobot: {fileID: 8300000, guid: 6bec95eae56717e4cb8b4544cc14124e, type: 3}
-  platformerRoom: {fileID: 8300000, guid: 912d55089bf2e16438d53822ffbdf2d7, type: 3}
-  gameEnd: {fileID: 8300000, guid: dbb9848458a40c74eb10112c8e8072ab, type: 3}
+  moveRobot: {fileID: 8300000, guid: 8417d897133a8c744992407faef16f7e, type: 3}
+  viewStartRoom: {fileID: 8300000, guid: 547ea97372a741a4e84371bece0099b1, type: 3}
+  viewHallway: {fileID: 8300000, guid: 16c500686bad9af45ad815aca9b7474b, type: 3}
+  viewTileRoom: {fileID: 8300000, guid: 83dab756c3a54304dbaa524d618d61a3, type: 3}
+  viewPlatformerRoom: {fileID: 8300000, guid: dcf00fedf7122484fb92f41aa3fa1ad2, type: 3}
+  trapShock: {fileID: 8300000, guid: 27ff5ba99c21dd8409ea73eea7c78bb2, type: 3}
+  trapGuard: {fileID: 8300000, guid: 469506bc3954196458f1d2182f8e7d9d, type: 3}
+  trapCamera: {fileID: 8300000, guid: 2f51305b13707414bbc07f3291ea92ba, type: 3}
+  repairKit: {fileID: 8300000, guid: e3f74fb55115a2e4093baa8b229ded80, type: 3}
+  relic: {fileID: 8300000, guid: 2b0e273a5c16542469004ab55e3a6b4b, type: 3}
+  allRelics: {fileID: 8300000, guid: 1cb9563dde8fefb4b9dfe05f3372c4de, type: 3}
+  gameEndLose: {fileID: 8300000, guid: f447639607e2fa54e82017a1c342b72f, type: 3}
+  gameEndWin: {fileID: 8300000, guid: 3b02719b6c0d15f4f9f66af59008adb8, type: 3}
   skipDialogueText: {fileID: 191177198}
 --- !u!1 &382787177
 GameObject:
