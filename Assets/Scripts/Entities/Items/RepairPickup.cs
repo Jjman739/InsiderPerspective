@@ -12,6 +12,7 @@ public class RepairPickup : MonoBehaviour
             if (thief.needsRepair)
             {
                 thief.Repair();
+                DialogueManager.Instance.PlayDialogue(Enumerations.DialogueEvent.REPAIR_KIT);
                 Destroy(gameObject);
             }
         }

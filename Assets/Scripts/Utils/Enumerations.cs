@@ -3,14 +3,19 @@ namespace Enumerations
     public enum DialogueEvent
     {
         GAME_START,
-        VIEW_LAPTOP,
-        VIEW_MONITOR,
-        VIEW_MONITOR_FISH_EYE,
-        ENTER_TILE_ROOM_GUARD,
-        ENTER_TILE_ROOM_SHOCK,
-        SHOCK_ROBOT,
-        PLATFORMER_ROOM,
-        GAME_END
+        MOVE_ROBOT,
+        VIEW_START_ROOM,
+        VIEW_HALLWAY,
+        VIEW_TILE_ROOM,
+        VIEW_PLATFORMER_ROOM,
+        TRAP_SHOCK,
+        TRAP_GUARD,
+        TRAP_CAMERA,
+        REPAIR_KIT,
+        RELIC,
+        ALL_RELICS,
+        GAME_END_LOSE,
+        GAME_END_WIN
     }
 
     public enum RoomDifficulty

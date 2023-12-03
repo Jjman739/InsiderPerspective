@@ -1383,7 +1383,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 56f7bdec7d1771b4c9a82e39bff0b416, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 3b02719b6c0d15f4f9f66af59008adb8, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -1482,6 +1482,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreText: {fileID: 264734658}
+  maxScore: 0
 --- !u!114 &1754436059
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -30,7 +30,7 @@ public class ThiefManager : MonoBehaviour
         audioSource.clip = hurtSound;
         audioSource.loop = false;
         audioSource.Play();
-        DialogueManager.Instance.PlayDialogue(DialogueEvent.SHOCK_ROBOT);
+        DialogueManager.Instance.PlayDialogue(DialogueEvent.TRAP_SHOCK);
     }
 
     public bool AttemptWin()

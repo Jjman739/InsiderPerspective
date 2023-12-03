@@ -7,14 +7,19 @@ using Enumerations;
 public class DialogueManager : Singleton<DialogueManager>
 {
     [SerializeField] private AudioClip gameStart;
-    [SerializeField] private AudioClip viewLaptop;
-    [SerializeField] private AudioClip viewMonitor;
-    [SerializeField] private AudioClip viewFishEyeMonitor;
-    [SerializeField] private AudioClip guardTileRoom;
-    [SerializeField] private AudioClip shockTileRoom;
-    [SerializeField] private AudioClip shockRobot;
-    [SerializeField] private AudioClip platformerRoom;
-    [SerializeField] private AudioClip gameEnd;
+    [SerializeField] private AudioClip moveRobot;
+    [SerializeField] private AudioClip viewStartRoom;
+    [SerializeField] private AudioClip viewHallway;
+    [SerializeField] private AudioClip viewTileRoom;
+    [SerializeField] private AudioClip viewPlatformerRoom;
+    [SerializeField] private AudioClip trapShock;
+    [SerializeField] private AudioClip trapGuard;
+    [SerializeField] private AudioClip trapCamera;
+    [SerializeField] private AudioClip repairKit;
+    [SerializeField] private AudioClip relic;
+    [SerializeField] private AudioClip allRelics;
+    [SerializeField] private AudioClip gameEndLose;
+    [SerializeField] private AudioClip gameEndWin;
     [SerializeField] private GameObject skipDialogueText;
 
     private AudioSource audioSource;
@@ -33,14 +38,19 @@ public class DialogueManager : Singleton<DialogueManager>
     private void initializeDialogueObjects()
     {
         dialogueObjects.Add(new DialogueObject(gameStart, DialogueEvent.GAME_START));
-        dialogueObjects.Add(new DialogueObject(viewLaptop, DialogueEvent.VIEW_LAPTOP));
-        dialogueObjects.Add(new DialogueObject(viewMonitor, DialogueEvent.VIEW_MONITOR));
-        dialogueObjects.Add(new DialogueObject(viewFishEyeMonitor, DialogueEvent.VIEW_MONITOR_FISH_EYE));
-        dialogueObjects.Add(new DialogueObject(guardTileRoom, DialogueEvent.ENTER_TILE_ROOM_GUARD));
-        dialogueObjects.Add(new DialogueObject(shockTileRoom, DialogueEvent.ENTER_TILE_ROOM_SHOCK));
-        dialogueObjects.Add(new DialogueObject(shockRobot, DialogueEvent.SHOCK_ROBOT));
-        dialogueObjects.Add(new DialogueObject(platformerRoom, DialogueEvent.PLATFORMER_ROOM));
-        dialogueObjects.Add(new DialogueObject(gameEnd, DialogueEvent.GAME_END));
+        dialogueObjects.Add(new DialogueObject(moveRobot, DialogueEvent.MOVE_ROBOT));
+        dialogueObjects.Add(new DialogueObject(viewStartRoom, DialogueEvent.VIEW_START_ROOM));
+        dialogueObjects.Add(new DialogueObject(viewHallway, DialogueEvent.VIEW_HALLWAY));
+        dialogueObjects.Add(new DialogueObject(viewTileRoom, DialogueEvent.VIEW_TILE_ROOM));
+        dialogueObjects.Add(new DialogueObject(viewPlatformerRoom, DialogueEvent.VIEW_PLATFORMER_ROOM));
+        dialogueObjects.Add(new DialogueObject(trapShock, DialogueEvent.TRAP_SHOCK));
+        dialogueObjects.Add(new DialogueObject(trapGuard, DialogueEvent.TRAP_GUARD));
+        dialogueObjects.Add(new DialogueObject(trapCamera, DialogueEvent.TRAP_CAMERA));
+        dialogueObjects.Add(new DialogueObject(repairKit, DialogueEvent.REPAIR_KIT));
+        dialogueObjects.Add(new DialogueObject(relic, DialogueEvent.RELIC));
+        dialogueObjects.Add(new DialogueObject(allRelics, DialogueEvent.ALL_RELICS));
+        dialogueObjects.Add(new DialogueObject(gameEndLose, DialogueEvent.GAME_END_LOSE));
+        dialogueObjects.Add(new DialogueObject(gameEndWin, DialogueEvent.GAME_END_WIN));
     }
 
     private void Update()
