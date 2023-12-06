@@ -7,6 +7,8 @@ public class CameraFramerateManager : MonoBehaviour
     private AttachCamera[] cameras;
     private int camIndex = 0;
 
+    [SerializeField] private int RendersPerFrame = 1; 
+
     void Start()
     {
         cameras = FindObjectsOfType<AttachCamera>();
@@ -14,11 +16,14 @@ public class CameraFramerateManager : MonoBehaviour
 
     void Update()
     {
-        cameras[camIndex].RenderFrame();
-        camIndex++;
-        if (camIndex >= cameras.Length)
+        for (int i = 0; i < RendersPerFrame; i++)
         {
-            camIndex = 0;
+            cameras[camIndex].RenderFrame();
+            camIndex++;
+            if (camIndex >= cameras.Length)
+            {
+                camIndex = 0;
+            }
         }
     }
 }
