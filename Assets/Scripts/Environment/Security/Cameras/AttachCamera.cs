@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// This class is for a group of cameras attached to a single monitor, able to switch between them.
+
 public class AttachCamera : MonoBehaviour
 {
     [SerializeField] private Camera attachedCamera;

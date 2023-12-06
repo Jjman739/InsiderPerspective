@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// This class is for a single camera that can be viewed through a monitor.
+
 public class ControllableCamera : MonoBehaviour
 {
     [SerializeField] private float rotMinX;
