@@ -45,18 +45,18 @@ public class ControllableCamera : MonoBehaviour
         rotX = transform.localRotation.eulerAngles.x;
         rotY = transform.localRotation.eulerAngles.y;
 
-        if (camera.targetTexture is null)
+        /*if (camera.targetTexture is null)
         {
             camera.enabled = false;
-        }
+        }*/
     }
 
     private void Update()
     {
-        if (camera.enabled && camera.targetTexture is null && !viewing)
+        /*if (camera.enabled && camera.targetTexture is null && !viewing)
         {
             camera.enabled = false;
-        }
+        }*/
 
         audioListener.enabled = viewing;
 
@@ -131,20 +131,20 @@ public class ControllableCamera : MonoBehaviour
     public void EnterView()
     {
         camera.targetTexture = null;
-        camera.enabled = true;
+        //camera.enabled = true;
         viewing = true;
     }
 
     public void ExitView()
     {
         camera.targetTexture = targetTexture;
-        camera.enabled = true;
+        //camera.enabled = true;
         viewing = false;
     }
 
     public void SwapView()
     {
-        camera.enabled = false;
+        //camera.enabled = false;
         viewing = false;
     }
     

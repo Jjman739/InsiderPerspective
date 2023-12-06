@@ -18,7 +18,8 @@ public class AttachCamera : MonoBehaviour
         texture = new RenderTexture(256, 256, 0);
         monitor.GetComponent<MeshRenderer>().materials[0].SetTexture("_MainTex", texture);
         attachedCamera.targetTexture = texture;
-        attachedCamera.enabled = true;
+
+        RenderFrame();
     }
 
     public Camera GetAttachedCamera() { return attachedCamera; }
