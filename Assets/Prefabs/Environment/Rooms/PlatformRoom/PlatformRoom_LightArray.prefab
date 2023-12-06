@@ -14,7 +14,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &2974951494055580656
 Transform:
@@ -55,9 +55,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2974951494055580656}
     m_Modifications:
+    - target: {fileID: 1491077089437676942, guid: 11b5d3de628ea36488ef77a498bacc99, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8337326950578429376, guid: 11b5d3de628ea36488ef77a498bacc99, type: 3}
       propertyPath: m_Name
       value: LightFixture (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8337326950578429376, guid: 11b5d3de628ea36488ef77a498bacc99, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8718953609363244922, guid: 11b5d3de628ea36488ef77a498bacc99, type: 3}
       propertyPath: m_LocalPosition.x
@@ -117,9 +125,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2974951494055580656}
     m_Modifications:
+    - target: {fileID: 1491077089437676942, guid: 11b5d3de628ea36488ef77a498bacc99, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8337326950578429376, guid: 11b5d3de628ea36488ef77a498bacc99, type: 3}
       propertyPath: m_Name
       value: LightFixture (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8337326950578429376, guid: 11b5d3de628ea36488ef77a498bacc99, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8718953609363244922, guid: 11b5d3de628ea36488ef77a498bacc99, type: 3}
       propertyPath: m_LocalPosition.x
@@ -179,9 +195,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2974951494055580656}
     m_Modifications:
+    - target: {fileID: 1491077089437676942, guid: 11b5d3de628ea36488ef77a498bacc99, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8337326950578429376, guid: 11b5d3de628ea36488ef77a498bacc99, type: 3}
       propertyPath: m_Name
       value: LightFixture
+      objectReference: {fileID: 0}
+    - target: {fileID: 8337326950578429376, guid: 11b5d3de628ea36488ef77a498bacc99, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8718953609363244922, guid: 11b5d3de628ea36488ef77a498bacc99, type: 3}
       propertyPath: m_LocalPosition.x
@@ -241,9 +265,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2974951494055580656}
     m_Modifications:
+    - target: {fileID: 1491077089437676942, guid: 11b5d3de628ea36488ef77a498bacc99, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8337326950578429376, guid: 11b5d3de628ea36488ef77a498bacc99, type: 3}
       propertyPath: m_Name
       value: LightFixture (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8337326950578429376, guid: 11b5d3de628ea36488ef77a498bacc99, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8718953609363244922, guid: 11b5d3de628ea36488ef77a498bacc99, type: 3}
       propertyPath: m_LocalPosition.x
@@ -303,9 +335,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2974951494055580656}
     m_Modifications:
+    - target: {fileID: 1491077089437676942, guid: 11b5d3de628ea36488ef77a498bacc99, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8337326950578429376, guid: 11b5d3de628ea36488ef77a498bacc99, type: 3}
       propertyPath: m_Name
       value: LightFixture (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8337326950578429376, guid: 11b5d3de628ea36488ef77a498bacc99, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8718953609363244922, guid: 11b5d3de628ea36488ef77a498bacc99, type: 3}
       propertyPath: m_LocalPosition.x
@@ -365,9 +405,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2974951494055580656}
     m_Modifications:
+    - target: {fileID: 1491077089437676942, guid: 11b5d3de628ea36488ef77a498bacc99, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8337326950578429376, guid: 11b5d3de628ea36488ef77a498bacc99, type: 3}
       propertyPath: m_Name
       value: LightFixture (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8337326950578429376, guid: 11b5d3de628ea36488ef77a498bacc99, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8718953609363244922, guid: 11b5d3de628ea36488ef77a498bacc99, type: 3}
       propertyPath: m_LocalPosition.x
@@ -427,9 +475,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2974951494055580656}
     m_Modifications:
+    - target: {fileID: 1491077089437676942, guid: 11b5d3de628ea36488ef77a498bacc99, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8337326950578429376, guid: 11b5d3de628ea36488ef77a498bacc99, type: 3}
       propertyPath: m_Name
       value: LightFixture (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8337326950578429376, guid: 11b5d3de628ea36488ef77a498bacc99, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8718953609363244922, guid: 11b5d3de628ea36488ef77a498bacc99, type: 3}
       propertyPath: m_LocalPosition.x
@@ -489,9 +545,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2974951494055580656}
     m_Modifications:
+    - target: {fileID: 1491077089437676942, guid: 11b5d3de628ea36488ef77a498bacc99, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8337326950578429376, guid: 11b5d3de628ea36488ef77a498bacc99, type: 3}
       propertyPath: m_Name
       value: LightFixture (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8337326950578429376, guid: 11b5d3de628ea36488ef77a498bacc99, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8718953609363244922, guid: 11b5d3de628ea36488ef77a498bacc99, type: 3}
       propertyPath: m_LocalPosition.x
@@ -551,9 +615,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2974951494055580656}
     m_Modifications:
+    - target: {fileID: 1491077089437676942, guid: 11b5d3de628ea36488ef77a498bacc99, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8337326950578429376, guid: 11b5d3de628ea36488ef77a498bacc99, type: 3}
       propertyPath: m_Name
       value: LightFixture (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8337326950578429376, guid: 11b5d3de628ea36488ef77a498bacc99, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8718953609363244922, guid: 11b5d3de628ea36488ef77a498bacc99, type: 3}
       propertyPath: m_LocalPosition.x
@@ -613,9 +685,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2974951494055580656}
     m_Modifications:
+    - target: {fileID: 1491077089437676942, guid: 11b5d3de628ea36488ef77a498bacc99, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8337326950578429376, guid: 11b5d3de628ea36488ef77a498bacc99, type: 3}
       propertyPath: m_Name
       value: LightFixture (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8337326950578429376, guid: 11b5d3de628ea36488ef77a498bacc99, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8718953609363244922, guid: 11b5d3de628ea36488ef77a498bacc99, type: 3}
       propertyPath: m_LocalPosition.x
@@ -675,9 +755,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2974951494055580656}
     m_Modifications:
+    - target: {fileID: 1491077089437676942, guid: 11b5d3de628ea36488ef77a498bacc99, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8337326950578429376, guid: 11b5d3de628ea36488ef77a498bacc99, type: 3}
       propertyPath: m_Name
       value: LightFixture (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8337326950578429376, guid: 11b5d3de628ea36488ef77a498bacc99, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8718953609363244922, guid: 11b5d3de628ea36488ef77a498bacc99, type: 3}
       propertyPath: m_LocalPosition.x
@@ -737,9 +825,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2974951494055580656}
     m_Modifications:
+    - target: {fileID: 1491077089437676942, guid: 11b5d3de628ea36488ef77a498bacc99, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8337326950578429376, guid: 11b5d3de628ea36488ef77a498bacc99, type: 3}
       propertyPath: m_Name
       value: LightFixture (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8337326950578429376, guid: 11b5d3de628ea36488ef77a498bacc99, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8718953609363244922, guid: 11b5d3de628ea36488ef77a498bacc99, type: 3}
       propertyPath: m_LocalPosition.x
@@ -799,9 +895,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2974951494055580656}
     m_Modifications:
+    - target: {fileID: 1491077089437676942, guid: 11b5d3de628ea36488ef77a498bacc99, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8337326950578429376, guid: 11b5d3de628ea36488ef77a498bacc99, type: 3}
       propertyPath: m_Name
       value: LightFixture (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8337326950578429376, guid: 11b5d3de628ea36488ef77a498bacc99, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8718953609363244922, guid: 11b5d3de628ea36488ef77a498bacc99, type: 3}
       propertyPath: m_LocalPosition.x
@@ -861,9 +965,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2974951494055580656}
     m_Modifications:
+    - target: {fileID: 1491077089437676942, guid: 11b5d3de628ea36488ef77a498bacc99, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8337326950578429376, guid: 11b5d3de628ea36488ef77a498bacc99, type: 3}
       propertyPath: m_Name
       value: LightFixture (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8337326950578429376, guid: 11b5d3de628ea36488ef77a498bacc99, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8718953609363244922, guid: 11b5d3de628ea36488ef77a498bacc99, type: 3}
       propertyPath: m_LocalPosition.x
@@ -923,9 +1035,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2974951494055580656}
     m_Modifications:
+    - target: {fileID: 1491077089437676942, guid: 11b5d3de628ea36488ef77a498bacc99, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8337326950578429376, guid: 11b5d3de628ea36488ef77a498bacc99, type: 3}
       propertyPath: m_Name
       value: LightFixture (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8337326950578429376, guid: 11b5d3de628ea36488ef77a498bacc99, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8718953609363244922, guid: 11b5d3de628ea36488ef77a498bacc99, type: 3}
       propertyPath: m_LocalPosition.x
@@ -985,9 +1105,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2974951494055580656}
     m_Modifications:
+    - target: {fileID: 1491077089437676942, guid: 11b5d3de628ea36488ef77a498bacc99, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8337326950578429376, guid: 11b5d3de628ea36488ef77a498bacc99, type: 3}
       propertyPath: m_Name
       value: LightFixture (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8337326950578429376, guid: 11b5d3de628ea36488ef77a498bacc99, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8718953609363244922, guid: 11b5d3de628ea36488ef77a498bacc99, type: 3}
       propertyPath: m_LocalPosition.x
