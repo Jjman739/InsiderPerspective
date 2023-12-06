@@ -34,4 +34,9 @@ public class AttachCamera : MonoBehaviour
     {
         return attachedCamera.GetComponent<ControllableCamera>();
     }
+
+    public void RenderFrame()
+    {
+        attachedCamera.Render();
+    }
 }
