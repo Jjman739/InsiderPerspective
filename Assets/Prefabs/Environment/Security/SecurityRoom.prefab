@@ -2412,7 +2412,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: d5b4412230af1814bb20534c5a311a39, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 2147483647
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5467,7 +5467,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: d5b4412230af1814bb20534c5a311a39, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 2147483647
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5850,6 +5850,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: a464fd42bf8d6fa4db7bcb1dd510af51, type: 3}
       propertyPath: m_Name
       value: SecondaryDoor_LP
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a464fd42bf8d6fa4db7bcb1dd510af51, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: a464fd42bf8d6fa4db7bcb1dd510af51, type: 3}
       propertyPath: m_StaticEditorFlags
