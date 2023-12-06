@@ -131,20 +131,20 @@ public class ControllableCamera : MonoBehaviour
     public void EnterView()
     {
         camera.targetTexture = null;
-        //camera.enabled = true;
+        camera.enabled = true;
         viewing = true;
     }
 
     public void ExitView()
     {
         camera.targetTexture = targetTexture;
-        //camera.enabled = true;
+        camera.enabled = false;
         viewing = false;
     }
 
     public void SwapView()
     {
-        //camera.enabled = false;
+        camera.enabled = false;
         viewing = false;
     }
     
