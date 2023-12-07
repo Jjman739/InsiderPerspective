@@ -30,7 +30,7 @@ public class ThiefManager : MonoBehaviour
         hitEffects.TakeHit();
         ScrambleControls(ref movement.forwardButton, ref movement.backwardButton, ref movement.leftButton, ref movement.rightButton, ref movement.jumpButton, ref photo.photoButton);
         needsRepair = true;
-        PlayAlarmSound();
+        PlayHurtSound();
         DialogueManager.Instance.PlayDialogue(DialogueEvent.TRAP_SHOCK);
     }
 
