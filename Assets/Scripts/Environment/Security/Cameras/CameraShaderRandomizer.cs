@@ -29,6 +29,7 @@ public class CameraShaderRandomizer : MonoBehaviour
     };
 
     private TileRoomModifiers tileRoomModifiers;
+    [SerializeField] private AttachCamera attachCamera;
 
     public void Start()
     {
@@ -140,36 +141,29 @@ public class CameraShaderRandomizer : MonoBehaviour
 
     public GameObject getCurrentCamera()
     {
-        if (CameraViewer.Instance.GetCurrentCameraGroup() == transform)
-        {
-            Debug.Log("Current camera found.");
-            return CameraViewer.Instance.GetCamera().gameObject;
-        }
-
-        foreach (Transform cameraTransform in transform)
-        {
-            Camera camera = cameraTransform.gameObject.GetComponent<Camera>();
-            if (camera.enabled)
-            {
-                return cameraTransform.gameObject;
-            }
-        }
-
-        // If no camera is active, something is very wrong, but choose the first one.
-        Debug.Log("No camera active in room!");
-        return transform.GetChild(0).gameObject;
+        GameObject cam = attachCamera.GetAttachedCamera().gameObject;
+        return cam;
     }
 
-    public void applyRandomShader()
+    public void applyRandomShader(GameObject camera = null)
     {
-        GameObject camera = getCurrentCamera();
+        if (camera == null)
+        {
+            camera = getCurrentCamera();
+        }
+        
         Type chosenShader = allShaders[UnityEngine.Random.Range(0, allShaders.Count)];
 
         if (camera.GetComponent(chosenShader) is null)
         {
-            Debug.Log("adding component");
+            Debug.Log("adding component to " + camera.name);
             camera.AddComponent(chosenShader);
             randomizeShaderValues(camera.GetComponent(chosenShader) as ShaderBase);
         }
+    }
+
+    public void SetAttachCamera(AttachCamera ac)
+    {
+        attachCamera = ac;
     }
 }

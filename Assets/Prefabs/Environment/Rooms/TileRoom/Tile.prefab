@@ -164,6 +164,7 @@ MonoBehaviour:
   selfDelete: 0
   alertGuard: 0
   addShader: 0
+  shaderRobotChance: 0.2
 --- !u!23 &7594298265691484278
 MeshRenderer:
   m_ObjectHideFlags: 0

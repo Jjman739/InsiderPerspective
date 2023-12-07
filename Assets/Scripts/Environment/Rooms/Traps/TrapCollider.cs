@@ -12,6 +12,8 @@ public class TrapCollider : MonoBehaviour
     public bool alertGuard = false;
     public bool addShader = false;
 
+    public float shaderRobotChance = 0.2f;
+
     void OnTriggerEnter(Collider other)
     {
         ThiefManager thiefManager = other.gameObject.GetComponent<ThiefManager>();
@@ -35,6 +37,13 @@ public class TrapCollider : MonoBehaviour
             {
                 cameraShaderRandomizer.applyRandomShader();
                 DialogueManager.Instance.PlayDialogue(Enumerations.DialogueEvent.TRAP_CAMERA);
+                float rval = Random.value;
+                if (rval <= shaderRobotChance)
+                {
+                    Debug.Log("Apply shader to robot");
+                    cameraShaderRandomizer.applyRandomShader(thiefManager.GetCameraObject());
+                    thiefManager.needsRepair = true;
+                }
             }
         }
     }
