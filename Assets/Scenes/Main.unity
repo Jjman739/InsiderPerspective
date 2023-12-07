@@ -8522,6 +8522,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 16773998745483019, guid: 28d58d5839fc0be4a85526eb4c61eca5, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 195137475176146441, guid: 28d58d5839fc0be4a85526eb4c61eca5, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
@@ -8634,6 +8638,10 @@ PrefabInstance:
       propertyPath: attachedCamera
       value: 
       objectReference: {fileID: 81475894}
+    - target: {fileID: 5713407288078532835, guid: 28d58d5839fc0be4a85526eb4c61eca5, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5934112391314500096, guid: 28d58d5839fc0be4a85526eb4c61eca5, type: 3}
       propertyPath: m_CastShadows
       value: 0
@@ -8691,6 +8699,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7114245882557332340, guid: 28d58d5839fc0be4a85526eb4c61eca5, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7209764427581510997, guid: 28d58d5839fc0be4a85526eb4c61eca5, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
@@ -8799,6 +8811,10 @@ PrefabInstance:
       value: -90
       objectReference: {fileID: 0}
     - target: {fileID: 8677275636784807681, guid: 28d58d5839fc0be4a85526eb4c61eca5, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8873328326957403850, guid: 28d58d5839fc0be4a85526eb4c61eca5, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
