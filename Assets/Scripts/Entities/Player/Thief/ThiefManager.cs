@@ -90,4 +90,9 @@ public class ThiefManager : MonoBehaviour
         List<string> controls = new List<string> { forward, back, left, right, jump, cam };
         return controls;
     }
+
+    public GameObject GetCameraObject()
+    {
+        return cameraRoot.transform.GetChild(0).gameObject;
+    }
 }

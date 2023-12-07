@@ -145,14 +145,18 @@ public class CameraShaderRandomizer : MonoBehaviour
         return cam;
     }
 
-    public void applyRandomShader()
+    public void applyRandomShader(GameObject camera = null)
     {
-        GameObject camera = getCurrentCamera();
+        if (camera == null)
+        {
+            camera = getCurrentCamera();
+        }
+        
         Type chosenShader = allShaders[UnityEngine.Random.Range(0, allShaders.Count)];
 
         if (camera.GetComponent(chosenShader) is null)
         {
-            Debug.Log("adding component");
+            Debug.Log("adding component to " + camera.name);
             camera.AddComponent(chosenShader);
             randomizeShaderValues(camera.GetComponent(chosenShader) as ShaderBase);
         }
