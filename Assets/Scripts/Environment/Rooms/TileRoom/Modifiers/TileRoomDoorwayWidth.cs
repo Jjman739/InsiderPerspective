@@ -1,9 +1,9 @@
 public class TileRoomDoorwayWidth : RoomModifier
 {
-    public TileRoomDoorwayWidth()
+    public TileRoomDoorwayWidth(int weight, int weightDecay, int cost)
     {
-        weight = 18;
-        weightDecay = 3;
-        cost = 3;
+        this.weight = weight;
+        this.weightDecay = weightDecay;
+        this.cost = cost;
     }
 }

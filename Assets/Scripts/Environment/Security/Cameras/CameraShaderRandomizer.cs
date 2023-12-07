@@ -6,7 +6,6 @@ public class CameraShaderRandomizer : MonoBehaviour
 {  
     private List<Type> easyShaders = new List<Type>
     {
-        typeof(BlurLens),
         typeof(ColorInvertLens),
         typeof(ColorStepper),
         typeof(FishEyeLens)
@@ -14,6 +13,7 @@ public class CameraShaderRandomizer : MonoBehaviour
     
     private List<Type> hardShaders = new List<Type>
     {
+        typeof(BlurLens),
         typeof(DarkSpotLens),
         typeof(FlipLens)
     };
@@ -28,16 +28,16 @@ public class CameraShaderRandomizer : MonoBehaviour
         typeof(FlipLens)
     };
 
-    private TileRoomModifiers tileRoomModifiers;
+    private RoomDifficultyBuilder modifiers;
     [SerializeField] private AttachCamera attachCamera;
 
     public void Start()
     {
-        tileRoomModifiers = transform.parent.GetComponent<TileRoomModifiers>();
+        modifiers = transform.parent.GetComponent<RoomDifficultyBuilder>();
 
-        if (tileRoomModifiers is null) return;
+        if (modifiers is null) return;
 
-        for (int i = 0; i < tileRoomModifiers.GetModifierLevelByType(typeof(TileRoomEasyShaders)); i++)
+        for (int i = 0; i < modifiers.GetModifierLevelByType(typeof(EasyShaders)); i++)
         {
             Type chosenShader = easyShaders[UnityEngine.Random.Range(0, easyShaders.Count)];
 
@@ -53,7 +53,7 @@ public class CameraShaderRandomizer : MonoBehaviour
             randomizeShaderValues(camera.GetComponent(chosenShader) as ShaderBase);
         }
 
-        for (int i = 0; i < tileRoomModifiers.GetModifierLevelByType(typeof(TileRoomHardShaders)); i++)
+        for (int i = 0; i < modifiers.GetModifierLevelByType(typeof(HardShaders)); i++)
         {
             Type chosenShader = hardShaders[UnityEngine.Random.Range(0, hardShaders.Count)];
 

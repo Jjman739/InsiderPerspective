@@ -1,9 +1,9 @@
 public class TileRoomColumnCount : RoomModifier
 {
-    public TileRoomColumnCount()
+    public TileRoomColumnCount(int weight, int weightDecay, int cost)
     {
-        weight = 20;
-        weightDecay = 10;
-        cost = 10;
+        this.weight = weight;
+        this.weightDecay = weightDecay;
+        this.cost = cost;
     }
 }
