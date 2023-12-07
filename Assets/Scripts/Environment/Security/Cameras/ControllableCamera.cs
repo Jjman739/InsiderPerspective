@@ -22,7 +22,7 @@ public class ControllableCamera : MonoBehaviour
         RIGHT,
         NONE
     }
-    private float rotationInterval = 0.2f;
+    private float rotationInterval = 15f;
     private float delayTimer = 0.5f;
     private float currentDelayTimer;
     private new Camera camera;
@@ -90,10 +90,10 @@ public class ControllableCamera : MonoBehaviour
     {
         if (positive)
         {
-            rotY = Mathf.Min(rotMaxY, rotY + rotationInterval);
+            rotY = Mathf.Min(rotMaxY, rotY + (rotationInterval * Time.deltaTime));
         } else
         {
-            rotY = Mathf.Max(rotMinY, rotY - rotationInterval);
+            rotY = Mathf.Max(rotMinY, rotY - (rotationInterval * Time.deltaTime));
         }
         transform.localRotation = Quaternion.Euler(rotX, rotY, 0);
     }
@@ -102,11 +102,11 @@ public class ControllableCamera : MonoBehaviour
     {
         if (positive)
         {
-            rotX = Mathf.Min(rotMaxX, rotX + rotationInterval);
+            rotX = Mathf.Min(rotMaxX, rotX + (rotationInterval * Time.deltaTime));
         }
         else
         {
-            rotX = Mathf.Max(rotMinX, rotX - rotationInterval);
+            rotX = Mathf.Max(rotMinX, rotX - (rotationInterval * Time.deltaTime));
         }
         transform.localRotation = Quaternion.Euler(rotX, rotY, 0);
     }
