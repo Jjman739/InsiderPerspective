@@ -38,11 +38,11 @@ public class TrapCollider : MonoBehaviour
                 cameraShaderRandomizer.applyRandomShader();
                 DialogueManager.Instance.PlayDialogue(Enumerations.DialogueEvent.TRAP_CAMERA);
                 float rval = Random.value;
-                Debug.Log(rval);
                 if (rval <= shaderRobotChance)
                 {
                     Debug.Log("Apply shader to robot");
                     cameraShaderRandomizer.applyRandomShader(thiefManager.GetCameraObject());
+                    thiefManager.needsRepair = true;
                 }
             }
         }

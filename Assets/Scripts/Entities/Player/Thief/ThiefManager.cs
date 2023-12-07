@@ -46,12 +46,20 @@ public class ThiefManager : MonoBehaviour
     public void Repair()
     {
         hitEffects.Repair();
+
         movement.forwardButton = "ThiefMoveUp";
         movement.backwardButton = "ThiefMoveDown";
         movement.leftButton = "ThiefMoveLeft";
         movement.rightButton = "ThiefMoveRight";
         movement.jumpButton = "Jump";
         photo.photoButton = "ThiefPhoto";
+
+        GameObject cameraObject = GetCameraObject();
+        foreach (ShaderBase shader in cameraObject.GetComponents<ShaderBase>())
+        {
+            Destroy(shader);
+        }
+
         repairsRemaining--;
         needsRepair = false;
     }
