@@ -29,11 +29,13 @@ public class TrapCollider : MonoBehaviour
             if (alertGuard)
             {
                 doorpointManager.SendGuardToRoom();
+                thiefManager.PlayAlarmSound();
                 DialogueManager.Instance.PlayDialogue(Enumerations.DialogueEvent.TRAP_GUARD);
             }
             if (addShader)
             {
                 cameraShaderRandomizer.applyRandomShader();
+                thiefManager.PlayHurtSound();
                 DialogueManager.Instance.PlayDialogue(Enumerations.DialogueEvent.TRAP_CAMERA);
             }
         }
