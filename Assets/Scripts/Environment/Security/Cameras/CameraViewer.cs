@@ -6,6 +6,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using Enumerations;
 
+// This singleton handles UI and input for whichever monitor is currently zoomed in.
+
 public class CameraViewer : Singleton<CameraViewer>
 {
     [SerializeField] private Camera mainCamera;

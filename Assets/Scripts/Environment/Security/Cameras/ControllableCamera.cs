@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// This class is for a single camera that can be viewed through a monitor.
+
 public class ControllableCamera : MonoBehaviour
 {
     [SerializeField] private float rotMinX;
@@ -43,18 +45,18 @@ public class ControllableCamera : MonoBehaviour
         rotX = transform.localRotation.eulerAngles.x;
         rotY = transform.localRotation.eulerAngles.y;
 
-        if (camera.targetTexture is null)
+        /*if (camera.targetTexture is null)
         {
             camera.enabled = false;
-        }
+        }*/
     }
 
     private void Update()
     {
-        if (camera.enabled && camera.targetTexture is null && !viewing)
+        /*if (camera.enabled && camera.targetTexture is null && !viewing)
         {
             camera.enabled = false;
-        }
+        }*/
 
         audioListener.enabled = viewing;
 
@@ -136,7 +138,7 @@ public class ControllableCamera : MonoBehaviour
     public void ExitView()
     {
         camera.targetTexture = targetTexture;
-        camera.enabled = true;
+        camera.enabled = false;
         viewing = false;
     }
 

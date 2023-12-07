@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// This class is for a group of cameras attached to a single monitor, able to switch between them.
+
 public class AttachCamera : MonoBehaviour
 {
     [SerializeField] private Camera attachedCamera;
@@ -16,7 +18,8 @@ public class AttachCamera : MonoBehaviour
         texture = new RenderTexture(256, 256, 0);
         monitor.GetComponent<MeshRenderer>().materials[0].SetTexture("_MainTex", texture);
         attachedCamera.targetTexture = texture;
-        attachedCamera.enabled = true;
+
+        RenderFrame();
     }
 
     public Camera GetAttachedCamera() { return attachedCamera; }
@@ -31,5 +34,10 @@ public class AttachCamera : MonoBehaviour
     public ControllableCamera GetControllableCamera()
     {
         return attachedCamera.GetComponent<ControllableCamera>();
+    }
+
+    public void RenderFrame()
+    {
+        attachedCamera.Render();
     }
 }

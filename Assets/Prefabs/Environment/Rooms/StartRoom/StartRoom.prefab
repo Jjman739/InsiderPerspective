@@ -16,7 +16,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &9062762006424774401
 Transform:
@@ -208,7 +208,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &7772703764022103087
 Transform:
@@ -241,7 +241,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &6878609470266391457
 Transform:
@@ -557,6 +557,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shelf (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9b98cba3573e5f848b19c1e3ea80d1f4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -578,6 +582,10 @@ PrefabInstance:
     - target: {fileID: 403571822506476028, guid: 955d466056156834780bd7ed4e2950d1, type: 3}
       propertyPath: m_Name
       value: DormantRobot (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 403571822506476028, guid: 955d466056156834780bd7ed4e2950d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 1067941091290602310, guid: 955d466056156834780bd7ed4e2950d1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -618,6 +626,14 @@ PrefabInstance:
     - target: {fileID: 1067941091290602310, guid: 955d466056156834780bd7ed4e2950d1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3191661115872790838, guid: 955d466056156834780bd7ed4e2950d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199287805817453332, guid: 955d466056156834780bd7ed4e2950d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -697,6 +713,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Barrel_LP (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 42927bc612fe9584b8b65f3e3fd6e3f4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1214824004972775095, guid: 42927bc612fe9584b8b65f3e3fd6e3f4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -775,6 +799,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shelf (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9b98cba3573e5f848b19c1e3ea80d1f4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -796,6 +824,10 @@ PrefabInstance:
     - target: {fileID: 403571822506476028, guid: 955d466056156834780bd7ed4e2950d1, type: 3}
       propertyPath: m_Name
       value: DormantRobot (23)
+      objectReference: {fileID: 0}
+    - target: {fileID: 403571822506476028, guid: 955d466056156834780bd7ed4e2950d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 1067941091290602310, guid: 955d466056156834780bd7ed4e2950d1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -836,6 +868,14 @@ PrefabInstance:
     - target: {fileID: 1067941091290602310, guid: 955d466056156834780bd7ed4e2950d1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3191661115872790838, guid: 955d466056156834780bd7ed4e2950d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199287805817453332, guid: 955d466056156834780bd7ed4e2950d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -999,6 +1039,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DormantRobot (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 403571822506476028, guid: 955d466056156834780bd7ed4e2950d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 1067941091290602310, guid: 955d466056156834780bd7ed4e2950d1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 8.11
@@ -1039,6 +1083,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3191661115872790838, guid: 955d466056156834780bd7ed4e2950d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199287805817453332, guid: 955d466056156834780bd7ed4e2950d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1060,6 +1112,10 @@ PrefabInstance:
     - target: {fileID: 403571822506476028, guid: 955d466056156834780bd7ed4e2950d1, type: 3}
       propertyPath: m_Name
       value: DormantRobot (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 403571822506476028, guid: 955d466056156834780bd7ed4e2950d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 1067941091290602310, guid: 955d466056156834780bd7ed4e2950d1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1100,6 +1156,14 @@ PrefabInstance:
     - target: {fileID: 1067941091290602310, guid: 955d466056156834780bd7ed4e2950d1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3191661115872790838, guid: 955d466056156834780bd7ed4e2950d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199287805817453332, guid: 955d466056156834780bd7ed4e2950d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1327,6 +1391,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Barrel_LP (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 42927bc612fe9584b8b65f3e3fd6e3f4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1214824004972775095, guid: 42927bc612fe9584b8b65f3e3fd6e3f4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1553,6 +1625,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shelf
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9b98cba3573e5f848b19c1e3ea80d1f4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1574,6 +1650,10 @@ PrefabInstance:
     - target: {fileID: 403571822506476028, guid: 955d466056156834780bd7ed4e2950d1, type: 3}
       propertyPath: m_Name
       value: DormantRobot (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 403571822506476028, guid: 955d466056156834780bd7ed4e2950d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 1067941091290602310, guid: 955d466056156834780bd7ed4e2950d1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1615,6 +1695,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3191661115872790838, guid: 955d466056156834780bd7ed4e2950d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199287805817453332, guid: 955d466056156834780bd7ed4e2950d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1636,6 +1724,10 @@ PrefabInstance:
     - target: {fileID: 403571822506476028, guid: 955d466056156834780bd7ed4e2950d1, type: 3}
       propertyPath: m_Name
       value: DormantRobot (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 403571822506476028, guid: 955d466056156834780bd7ed4e2950d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 1067941091290602310, guid: 955d466056156834780bd7ed4e2950d1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1676,6 +1768,14 @@ PrefabInstance:
     - target: {fileID: 1067941091290602310, guid: 955d466056156834780bd7ed4e2950d1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3191661115872790838, guid: 955d466056156834780bd7ed4e2950d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199287805817453332, guid: 955d466056156834780bd7ed4e2950d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1754,6 +1854,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 9b98cba3573e5f848b19c1e3ea80d1f4, type: 3}
       propertyPath: m_Name
       value: Shelf (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9b98cba3573e5f848b19c1e3ea80d1f4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1987,6 +2091,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DormantRobot (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 403571822506476028, guid: 955d466056156834780bd7ed4e2950d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 1067941091290602310, guid: 955d466056156834780bd7ed4e2950d1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 9.14
@@ -2026,6 +2134,14 @@ PrefabInstance:
     - target: {fileID: 1067941091290602310, guid: 955d466056156834780bd7ed4e2950d1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3191661115872790838, guid: 955d466056156834780bd7ed4e2950d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199287805817453332, guid: 955d466056156834780bd7ed4e2950d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2251,6 +2367,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DormantRobot (21)
       objectReference: {fileID: 0}
+    - target: {fileID: 403571822506476028, guid: 955d466056156834780bd7ed4e2950d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 1067941091290602310, guid: 955d466056156834780bd7ed4e2950d1, type: 3}
       propertyPath: m_LocalPosition.x
       value: -8.06
@@ -2290,6 +2410,14 @@ PrefabInstance:
     - target: {fileID: 1067941091290602310, guid: 955d466056156834780bd7ed4e2950d1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3191661115872790838, guid: 955d466056156834780bd7ed4e2950d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199287805817453332, guid: 955d466056156834780bd7ed4e2950d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2368,6 +2496,14 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 42927bc612fe9584b8b65f3e3fd6e3f4, type: 3}
       propertyPath: m_Name
       value: SM_Barrel_LP (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 42927bc612fe9584b8b65f3e3fd6e3f4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1214824004972775095, guid: 42927bc612fe9584b8b65f3e3fd6e3f4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2509,6 +2645,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Camera_LP 1 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 03d403f911479ed40af903b303c00f16, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2586,6 +2726,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 9b98cba3573e5f848b19c1e3ea80d1f4, type: 3}
       propertyPath: m_Name
       value: Shelf (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9b98cba3573e5f848b19c1e3ea80d1f4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2813,6 +2957,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Barrel_LP (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 42927bc612fe9584b8b65f3e3fd6e3f4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1214824004972775095, guid: 42927bc612fe9584b8b65f3e3fd6e3f4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2890,6 +3042,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 9b98cba3573e5f848b19c1e3ea80d1f4, type: 3}
       propertyPath: m_Name
       value: Shelf (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9b98cba3573e5f848b19c1e3ea80d1f4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3039,6 +3195,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Barrel_LP
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 42927bc612fe9584b8b65f3e3fd6e3f4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1214824004972775095, guid: 42927bc612fe9584b8b65f3e3fd6e3f4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3060,6 +3224,10 @@ PrefabInstance:
     - target: {fileID: 403571822506476028, guid: 955d466056156834780bd7ed4e2950d1, type: 3}
       propertyPath: m_Name
       value: DormantRobot (22)
+      objectReference: {fileID: 0}
+    - target: {fileID: 403571822506476028, guid: 955d466056156834780bd7ed4e2950d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 1067941091290602310, guid: 955d466056156834780bd7ed4e2950d1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3101,6 +3269,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3191661115872790838, guid: 955d466056156834780bd7ed4e2950d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199287805817453332, guid: 955d466056156834780bd7ed4e2950d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3122,6 +3298,10 @@ PrefabInstance:
     - target: {fileID: 403571822506476028, guid: 955d466056156834780bd7ed4e2950d1, type: 3}
       propertyPath: m_Name
       value: DormantRobot (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 403571822506476028, guid: 955d466056156834780bd7ed4e2950d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 1067941091290602310, guid: 955d466056156834780bd7ed4e2950d1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3162,6 +3342,14 @@ PrefabInstance:
     - target: {fileID: 1067941091290602310, guid: 955d466056156834780bd7ed4e2950d1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3191661115872790838, guid: 955d466056156834780bd7ed4e2950d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199287805817453332, guid: 955d466056156834780bd7ed4e2950d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3241,6 +3429,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Barrel_LP (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 42927bc612fe9584b8b65f3e3fd6e3f4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1214824004972775095, guid: 42927bc612fe9584b8b65f3e3fd6e3f4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3262,6 +3458,10 @@ PrefabInstance:
     - target: {fileID: 403571822506476028, guid: 955d466056156834780bd7ed4e2950d1, type: 3}
       propertyPath: m_Name
       value: DormantRobot (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 403571822506476028, guid: 955d466056156834780bd7ed4e2950d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 1067941091290602310, guid: 955d466056156834780bd7ed4e2950d1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3303,6 +3503,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3191661115872790838, guid: 955d466056156834780bd7ed4e2950d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199287805817453332, guid: 955d466056156834780bd7ed4e2950d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3324,6 +3532,10 @@ PrefabInstance:
     - target: {fileID: 403571822506476028, guid: 955d466056156834780bd7ed4e2950d1, type: 3}
       propertyPath: m_Name
       value: DormantRobot (20)
+      objectReference: {fileID: 0}
+    - target: {fileID: 403571822506476028, guid: 955d466056156834780bd7ed4e2950d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 1067941091290602310, guid: 955d466056156834780bd7ed4e2950d1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3365,6 +3577,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3191661115872790838, guid: 955d466056156834780bd7ed4e2950d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199287805817453332, guid: 955d466056156834780bd7ed4e2950d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3386,6 +3606,10 @@ PrefabInstance:
     - target: {fileID: 403571822506476028, guid: 955d466056156834780bd7ed4e2950d1, type: 3}
       propertyPath: m_Name
       value: DormantRobot (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 403571822506476028, guid: 955d466056156834780bd7ed4e2950d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 1067941091290602310, guid: 955d466056156834780bd7ed4e2950d1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3426,6 +3650,14 @@ PrefabInstance:
     - target: {fileID: 1067941091290602310, guid: 955d466056156834780bd7ed4e2950d1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3191661115872790838, guid: 955d466056156834780bd7ed4e2950d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199287805817453332, guid: 955d466056156834780bd7ed4e2950d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3501,6 +3733,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Camera_LP 1 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 03d403f911479ed40af903b303c00f16, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3522,6 +3758,10 @@ PrefabInstance:
     - target: {fileID: 403571822506476028, guid: 955d466056156834780bd7ed4e2950d1, type: 3}
       propertyPath: m_Name
       value: DormantRobot (24)
+      objectReference: {fileID: 0}
+    - target: {fileID: 403571822506476028, guid: 955d466056156834780bd7ed4e2950d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 1067941091290602310, guid: 955d466056156834780bd7ed4e2950d1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3562,6 +3802,14 @@ PrefabInstance:
     - target: {fileID: 1067941091290602310, guid: 955d466056156834780bd7ed4e2950d1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3191661115872790838, guid: 955d466056156834780bd7ed4e2950d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199287805817453332, guid: 955d466056156834780bd7ed4e2950d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3636,6 +3884,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 03d403f911479ed40af903b303c00f16, type: 3}
       propertyPath: m_Name
       value: Camera_LP 1 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 03d403f911479ed40af903b303c00f16, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3785,6 +4037,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Barrel_LP (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 42927bc612fe9584b8b65f3e3fd6e3f4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1214824004972775095, guid: 42927bc612fe9584b8b65f3e3fd6e3f4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3925,6 +4185,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Camera_LP 1 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 03d403f911479ed40af903b303c00f16, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4002,6 +4266,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 9b98cba3573e5f848b19c1e3ea80d1f4, type: 3}
       propertyPath: m_Name
       value: Shelf (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9b98cba3573e5f848b19c1e3ea80d1f4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4161,6 +4429,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DormantRobot
       objectReference: {fileID: 0}
+    - target: {fileID: 403571822506476028, guid: 955d466056156834780bd7ed4e2950d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 1067941091290602310, guid: 955d466056156834780bd7ed4e2950d1, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.1100086
@@ -4201,6 +4473,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3191661115872790838, guid: 955d466056156834780bd7ed4e2950d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199287805817453332, guid: 955d466056156834780bd7ed4e2950d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4222,6 +4502,10 @@ PrefabInstance:
     - target: {fileID: 403571822506476028, guid: 955d466056156834780bd7ed4e2950d1, type: 3}
       propertyPath: m_Name
       value: DormantRobot (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 403571822506476028, guid: 955d466056156834780bd7ed4e2950d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 1067941091290602310, guid: 955d466056156834780bd7ed4e2950d1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4262,6 +4546,14 @@ PrefabInstance:
     - target: {fileID: 1067941091290602310, guid: 955d466056156834780bd7ed4e2950d1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3191661115872790838, guid: 955d466056156834780bd7ed4e2950d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199287805817453332, guid: 955d466056156834780bd7ed4e2950d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4340,6 +4632,14 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 42927bc612fe9584b8b65f3e3fd6e3f4, type: 3}
       propertyPath: m_Name
       value: SM_Barrel_LP (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 42927bc612fe9584b8b65f3e3fd6e3f4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1214824004972775095, guid: 42927bc612fe9584b8b65f3e3fd6e3f4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4456,6 +4756,10 @@ PrefabInstance:
     - target: {fileID: 4900169476381128665, guid: b91a409196749b34f88f70cf386c9f7d, type: 3}
       propertyPath: m_Name
       value: Camera
+      objectReference: {fileID: 0}
+    - target: {fileID: 4900169476381128665, guid: b91a409196749b34f88f70cf386c9f7d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 7712274910360272697, guid: b91a409196749b34f88f70cf386c9f7d, type: 3}
       propertyPath: m_LocalScale.x
@@ -4821,6 +5125,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Barrel_LP (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 42927bc612fe9584b8b65f3e3fd6e3f4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1214824004972775095, guid: 42927bc612fe9584b8b65f3e3fd6e3f4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5057,6 +5369,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DormantRobot (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 403571822506476028, guid: 955d466056156834780bd7ed4e2950d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 1067941091290602310, guid: 955d466056156834780bd7ed4e2950d1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 9.14
@@ -5097,6 +5413,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3191661115872790838, guid: 955d466056156834780bd7ed4e2950d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199287805817453332, guid: 955d466056156834780bd7ed4e2950d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5118,6 +5442,10 @@ PrefabInstance:
     - target: {fileID: 403571822506476028, guid: 955d466056156834780bd7ed4e2950d1, type: 3}
       propertyPath: m_Name
       value: DormantRobot (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 403571822506476028, guid: 955d466056156834780bd7ed4e2950d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 1067941091290602310, guid: 955d466056156834780bd7ed4e2950d1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5159,6 +5487,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3191661115872790838, guid: 955d466056156834780bd7ed4e2950d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199287805817453332, guid: 955d466056156834780bd7ed4e2950d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5180,6 +5516,10 @@ PrefabInstance:
     - target: {fileID: 403571822506476028, guid: 955d466056156834780bd7ed4e2950d1, type: 3}
       propertyPath: m_Name
       value: DormantRobot (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 403571822506476028, guid: 955d466056156834780bd7ed4e2950d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 1067941091290602310, guid: 955d466056156834780bd7ed4e2950d1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5221,6 +5561,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -170.478
       objectReference: {fileID: 0}
+    - target: {fileID: 3191661115872790838, guid: 955d466056156834780bd7ed4e2950d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199287805817453332, guid: 955d466056156834780bd7ed4e2950d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5242,6 +5590,10 @@ PrefabInstance:
     - target: {fileID: 403571822506476028, guid: 955d466056156834780bd7ed4e2950d1, type: 3}
       propertyPath: m_Name
       value: DormantRobot (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 403571822506476028, guid: 955d466056156834780bd7ed4e2950d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 1067941091290602310, guid: 955d466056156834780bd7ed4e2950d1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5282,6 +5634,14 @@ PrefabInstance:
     - target: {fileID: 1067941091290602310, guid: 955d466056156834780bd7ed4e2950d1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3191661115872790838, guid: 955d466056156834780bd7ed4e2950d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199287805817453332, guid: 955d466056156834780bd7ed4e2950d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5423,6 +5783,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Barrel_LP (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 42927bc612fe9584b8b65f3e3fd6e3f4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1214824004972775095, guid: 42927bc612fe9584b8b65f3e3fd6e3f4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5501,6 +5869,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Barrel_LP (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 42927bc612fe9584b8b65f3e3fd6e3f4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1214824004972775095, guid: 42927bc612fe9584b8b65f3e3fd6e3f4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5575,6 +5951,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Camera_LP 1
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 03d403f911479ed40af903b303c00f16, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5596,6 +5976,10 @@ PrefabInstance:
     - target: {fileID: 403571822506476028, guid: 955d466056156834780bd7ed4e2950d1, type: 3}
       propertyPath: m_Name
       value: DormantRobot (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 403571822506476028, guid: 955d466056156834780bd7ed4e2950d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 1067941091290602310, guid: 955d466056156834780bd7ed4e2950d1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5637,6 +6021,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3191661115872790838, guid: 955d466056156834780bd7ed4e2950d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199287805817453332, guid: 955d466056156834780bd7ed4e2950d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5658,6 +6050,10 @@ PrefabInstance:
     - target: {fileID: 403571822506476028, guid: 955d466056156834780bd7ed4e2950d1, type: 3}
       propertyPath: m_Name
       value: DormantRobot (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 403571822506476028, guid: 955d466056156834780bd7ed4e2950d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 1067941091290602310, guid: 955d466056156834780bd7ed4e2950d1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5698,6 +6094,14 @@ PrefabInstance:
     - target: {fileID: 1067941091290602310, guid: 955d466056156834780bd7ed4e2950d1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3191661115872790838, guid: 955d466056156834780bd7ed4e2950d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199287805817453332, guid: 955d466056156834780bd7ed4e2950d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6005,6 +6409,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DormantRobot (25)
       objectReference: {fileID: 0}
+    - target: {fileID: 403571822506476028, guid: 955d466056156834780bd7ed4e2950d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 1067941091290602310, guid: 955d466056156834780bd7ed4e2950d1, type: 3}
       propertyPath: m_LocalPosition.x
       value: -7.0399933
@@ -6045,6 +6453,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3191661115872790838, guid: 955d466056156834780bd7ed4e2950d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199287805817453332, guid: 955d466056156834780bd7ed4e2950d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6066,6 +6482,10 @@ PrefabInstance:
     - target: {fileID: 403571822506476028, guid: 955d466056156834780bd7ed4e2950d1, type: 3}
       propertyPath: m_Name
       value: DormantRobot (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 403571822506476028, guid: 955d466056156834780bd7ed4e2950d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 1067941091290602310, guid: 955d466056156834780bd7ed4e2950d1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6106,6 +6526,14 @@ PrefabInstance:
     - target: {fileID: 1067941091290602310, guid: 955d466056156834780bd7ed4e2950d1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3191661115872790838, guid: 955d466056156834780bd7ed4e2950d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199287805817453332, guid: 955d466056156834780bd7ed4e2950d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6918,6 +7346,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DormantRobot (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 403571822506476028, guid: 955d466056156834780bd7ed4e2950d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 1067941091290602310, guid: 955d466056156834780bd7ed4e2950d1, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.73
@@ -6958,6 +7390,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3191661115872790838, guid: 955d466056156834780bd7ed4e2950d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199287805817453332, guid: 955d466056156834780bd7ed4e2950d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6979,6 +7419,10 @@ PrefabInstance:
     - target: {fileID: 403571822506476028, guid: 955d466056156834780bd7ed4e2950d1, type: 3}
       propertyPath: m_Name
       value: DormantRobot (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 403571822506476028, guid: 955d466056156834780bd7ed4e2950d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 1067941091290602310, guid: 955d466056156834780bd7ed4e2950d1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7019,6 +7463,14 @@ PrefabInstance:
     - target: {fileID: 1067941091290602310, guid: 955d466056156834780bd7ed4e2950d1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3191661115872790838, guid: 955d466056156834780bd7ed4e2950d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199287805817453332, guid: 955d466056156834780bd7ed4e2950d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
