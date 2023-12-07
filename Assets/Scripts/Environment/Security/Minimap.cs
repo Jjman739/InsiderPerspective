@@ -13,12 +13,12 @@ public class Minimap : Singleton<Minimap>
 
     private void Start()
     {
-        foreach (Transform child in transform.GetChild(0))
+        foreach (Transform child in transform.GetChild(1))
         {
             mapAreas.Add(child.gameObject);
         }
 
-        foreach (Transform child in transform.GetChild(1))
+        foreach (Transform child in transform.GetChild(2))
         {
             mapRooms.Add(child.gameObject);
         }
@@ -46,7 +46,7 @@ public class Minimap : Singleton<Minimap>
     
         clearMarkedLocations();
 
-        mapAreas[areaIndex].GetComponent<MeshRenderer>().materials[0].color = Color.blue;
+        mapAreas[areaIndex].GetComponent<MeshRenderer>().enabled = true;
     }
 
     public void ExitRoom()
@@ -55,16 +55,11 @@ public class Minimap : Singleton<Minimap>
         UpdatePlayerHallwayLocation(currentHallwayLocation);
     }
 
-    public Vector3 CameraWorldCoordinateToMinimap(Vector3 worldCoordinate)
-    {
-        return Vector3.zero;
-    }
-
     private void clearMarkedLocations()
     {
         foreach (GameObject area in mapAreas)
         {
-            area.GetComponent<MeshRenderer>().materials[0].color = Color.gray;
+            area.GetComponent<MeshRenderer>().enabled = false;
         }
 
         foreach (GameObject room in mapRooms)

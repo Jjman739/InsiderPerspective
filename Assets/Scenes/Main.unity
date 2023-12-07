@@ -8526,10 +8526,26 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 159369115303172153, guid: 28d58d5839fc0be4a85526eb4c61eca5, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 159369115303172153, guid: 28d58d5839fc0be4a85526eb4c61eca5, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e3e7cad2e7a3f0648a469c13123c4649, type: 2}
     - target: {fileID: 195137475176146441, guid: 28d58d5839fc0be4a85526eb4c61eca5, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 615782704947757192, guid: 28d58d5839fc0be4a85526eb4c61eca5, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 615782704947757192, guid: 28d58d5839fc0be4a85526eb4c61eca5, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e3e7cad2e7a3f0648a469c13123c4649, type: 2}
     - target: {fileID: 694979019439825269, guid: 28d58d5839fc0be4a85526eb4c61eca5, type: 3}
       propertyPath: attachedCamera
       value: 
@@ -8538,6 +8554,18 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 779992969024190152, guid: 28d58d5839fc0be4a85526eb4c61eca5, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1404309422917965339, guid: 28d58d5839fc0be4a85526eb4c61eca5, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1404309422917965339, guid: 28d58d5839fc0be4a85526eb4c61eca5, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e3e7cad2e7a3f0648a469c13123c4649, type: 2}
     - target: {fileID: 1473556003965025696, guid: 28d58d5839fc0be4a85526eb4c61eca5, type: 3}
       propertyPath: m_Range
       value: 20
@@ -8574,6 +8602,14 @@ PrefabInstance:
       propertyPath: attachedCamera
       value: 
       objectReference: {fileID: 81475894}
+    - target: {fileID: 2278423775663279362, guid: 28d58d5839fc0be4a85526eb4c61eca5, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2278423775663279362, guid: 28d58d5839fc0be4a85526eb4c61eca5, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e3e7cad2e7a3f0648a469c13123c4649, type: 2}
     - target: {fileID: 2518600653467951731, guid: 28d58d5839fc0be4a85526eb4c61eca5, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
@@ -8582,6 +8618,14 @@ PrefabInstance:
       propertyPath: attachedCamera
       value: 
       objectReference: {fileID: 518652194}
+    - target: {fileID: 2569990235204435970, guid: 28d58d5839fc0be4a85526eb4c61eca5, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2569990235204435970, guid: 28d58d5839fc0be4a85526eb4c61eca5, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e3e7cad2e7a3f0648a469c13123c4649, type: 2}
     - target: {fileID: 2820550561802460140, guid: 28d58d5839fc0be4a85526eb4c61eca5, type: 3}
       propertyPath: m_Name
       value: WaypointsMinimap
@@ -8626,6 +8670,14 @@ PrefabInstance:
       propertyPath: patrollingGuards.Array.data[1]
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 4893001170909983325, guid: 28d58d5839fc0be4a85526eb4c61eca5, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4893001170909983325, guid: 28d58d5839fc0be4a85526eb4c61eca5, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e3e7cad2e7a3f0648a469c13123c4649, type: 2}
     - target: {fileID: 5079771319373990677, guid: 28d58d5839fc0be4a85526eb4c61eca5, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -8638,6 +8690,14 @@ PrefabInstance:
       propertyPath: attachedCamera
       value: 
       objectReference: {fileID: 81475894}
+    - target: {fileID: 5348751043504600246, guid: 28d58d5839fc0be4a85526eb4c61eca5, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5348751043504600246, guid: 28d58d5839fc0be4a85526eb4c61eca5, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e3e7cad2e7a3f0648a469c13123c4649, type: 2}
     - target: {fileID: 5713407288078532835, guid: 28d58d5839fc0be4a85526eb4c61eca5, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
@@ -8678,10 +8738,30 @@ PrefabInstance:
       propertyPath: m_BoundingSphereOverride.z
       value: 1.6115e-41
       objectReference: {fileID: 0}
+    - target: {fileID: 6588831005812973055, guid: 28d58d5839fc0be4a85526eb4c61eca5, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6588831005812973055, guid: 28d58d5839fc0be4a85526eb4c61eca5, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e3e7cad2e7a3f0648a469c13123c4649, type: 2}
+    - target: {fileID: 6605634130828562924, guid: 28d58d5839fc0be4a85526eb4c61eca5, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6605634130828562924, guid: 28d58d5839fc0be4a85526eb4c61eca5, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e3e7cad2e7a3f0648a469c13123c4649, type: 2}
     - target: {fileID: 6664461937328305581, guid: 28d58d5839fc0be4a85526eb4c61eca5, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6682102239116752341, guid: 28d58d5839fc0be4a85526eb4c61eca5, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b051b9b7d45a58d418e9a2e16e054ae5, type: 2}
     - target: {fileID: 6932367681223180802, guid: 28d58d5839fc0be4a85526eb4c61eca5, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
@@ -8717,6 +8797,10 @@ PrefabInstance:
     - target: {fileID: 7328004140817273379, guid: 28d58d5839fc0be4a85526eb4c61eca5, type: 3}
       propertyPath: m_LocalPosition.z
       value: -2.27
+      objectReference: {fileID: 0}
+    - target: {fileID: 7360674100503945049, guid: 28d58d5839fc0be4a85526eb4c61eca5, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7451680981068744088, guid: 28d58d5839fc0be4a85526eb4c61eca5, type: 3}
       propertyPath: attachedCamera
