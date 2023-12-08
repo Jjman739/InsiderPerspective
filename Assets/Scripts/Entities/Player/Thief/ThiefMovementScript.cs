@@ -31,6 +31,7 @@ public class ThiefMovementScript : MonoBehaviour
     [SerializeField] private Slider alertMeter;
     [SerializeField] private AudioClip robotJump;
     [SerializeField] private AudioClip robotWalk;
+    [SerializeField] private ParticleSystem jumpEffect;
 
     public string forwardButton = "ThiefMoveUp";
     public string backwardButton = "ThiefMoveDown";
@@ -85,6 +86,7 @@ public class ThiefMovementScript : MonoBehaviour
         if (grounded)
         {
             jumpTimer = .2f;
+            jumpEffect.Stop();
         }
 
         if (jumpTimer > 0)
@@ -106,6 +108,7 @@ public class ThiefMovementScript : MonoBehaviour
             audioSource.clip = robotJump;
             audioSource.loop = false;
             audioSource.Play();
+            jumpEffect.Play();
         }
 
         move.y = jumpSpeed;

@@ -12,6 +12,8 @@ public class ThiefManager : MonoBehaviour
     [SerializeField] private ThiefTreasure treasure;
     [SerializeField] private AudioClip hurtSound;
     [SerializeField] private ThiefHitEffects hitEffects;
+    [SerializeField] private ParticleSystem shockEffect;
+    
     private AudioSource audioSource;
 
     public int repairsRemaining = 3;
@@ -20,6 +22,7 @@ public class ThiefManager : MonoBehaviour
     private void Start()
     {
         audioSource = GetComponents<AudioSource>()[1];
+        shockEffect.Stop();
     }
 
     public void TakeDamage()
@@ -30,6 +33,7 @@ public class ThiefManager : MonoBehaviour
         audioSource.clip = hurtSound;
         audioSource.loop = false;
         audioSource.Play();
+        shockEffect.Play();
         DialogueManager.Instance.PlayDialogue(DialogueEvent.TRAP_SHOCK);
     }
 
