@@ -23,6 +23,11 @@ public class SettingsScript : MonoBehaviour
 
     private void Start()
     {
+        SetVolumeSettings();
+    }
+
+    public void SetVolumeSettings()
+    {
         initializeVolumeSettings();
 
         masterVolumeSlider.value = masterVolume;
@@ -34,7 +39,7 @@ public class SettingsScript : MonoBehaviour
     private void initializeVolumeSettings()
     {
         masterVolume = PlayerPrefs.HasKey(MASTER_VOL_STRING) ? PlayerPrefs.GetFloat(MASTER_VOL_STRING) : 1f;
-        musicVolume = PlayerPrefs.HasKey(MUSIC_VOL_STRING) ? PlayerPrefs.GetFloat(MUSIC_VOL_STRING) : 0.3f;
+        musicVolume = PlayerPrefs.HasKey(MUSIC_VOL_STRING) ? PlayerPrefs.GetFloat(MUSIC_VOL_STRING) : 0.1f;
         sfxVolume = PlayerPrefs.HasKey(SFX_VOL_STRING) ? PlayerPrefs.GetFloat(SFX_VOL_STRING) : 1f;
         dialogueVolume = PlayerPrefs.HasKey(DIALOGUE_VOL_STRING) ? PlayerPrefs.GetFloat(DIALOGUE_VOL_STRING) : 1f;
 

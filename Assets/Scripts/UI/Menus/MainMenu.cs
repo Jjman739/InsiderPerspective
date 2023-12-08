@@ -14,6 +14,7 @@ public class MainMenu : MonoBehaviour
         mainMenu.SetActive(true);
         instructions.SetActive(false);
         settings.SetActive(false);
+        settings.GetComponent<SettingsScript>().SetVolumeSettings();
     }
 
     public void OpenInstructions()
