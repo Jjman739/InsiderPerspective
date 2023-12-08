@@ -114,4 +114,9 @@ public class ThiefManager : MonoBehaviour
     {
         return cameraRoot.transform.GetChild(0).gameObject;
     }
+
+    public void Stun(float duration)
+    {
+        movement.stunTimer = duration;
+    }
 }
