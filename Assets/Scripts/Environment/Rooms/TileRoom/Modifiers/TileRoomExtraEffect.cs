@@ -1,6 +1,6 @@
-public class TileRoomExtraEffect : RoomModifier
+public class ExtraTrapEffect : RoomModifier
 {
-    public TileRoomExtraEffect(int weight, int weightDecay, int cost)
+    public ExtraTrapEffect(int weight, int weightDecay, int cost)
     {
         this.weight = weight;
         this.weightDecay = weightDecay;

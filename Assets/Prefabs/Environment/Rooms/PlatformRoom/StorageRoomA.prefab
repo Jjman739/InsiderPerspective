@@ -516,10 +516,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebd6c19c89a6a0d4ebf10a59147f594c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trapsDamage: 1
-  trapsSelfDelete: 1
-  trapsAlertGuard: 0
   doorpointManager: {fileID: 2573588812405160362}
+  cameraShaderRandomizer: {fileID: 8968981130347542693}
 --- !u!1 &4981736547193613327
 GameObject:
   m_ObjectHideFlags: 0

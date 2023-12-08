@@ -28,12 +28,12 @@ public class CameraShaderRandomizer : MonoBehaviour
         typeof(FlipLens)
     };
 
-    private RoomDifficultyBuilder modifiers;
+    private RoomModifiers modifiers;
     [SerializeField] private AttachCamera attachCamera;
 
     public void Start()
     {
-        modifiers = transform.parent.GetComponent<RoomDifficultyBuilder>();
+        modifiers = transform.parent.GetComponent<RoomModifiers>();
 
         if (modifiers is null) return;
 
