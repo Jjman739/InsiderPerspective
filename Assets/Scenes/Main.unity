@@ -367,6 +367,10 @@ PrefabInstance:
       propertyPath: alertTimer
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: -7040398787914363862, guid: 7604196884fb4ff41b12b946132a92fe, type: 3}
+      propertyPath: jumpEffect
+      value: 
+      objectReference: {fileID: 1874687520}
     - target: {fileID: 371028469789500382, guid: 7604196884fb4ff41b12b946132a92fe, type: 3}
       propertyPath: hurtSound
       value: 
@@ -379,6 +383,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 369ac66e629066a4383227bb0c31350d, type: 2}
+    - target: {fileID: 2726181745210741351, guid: 7604196884fb4ff41b12b946132a92fe, type: 3}
+      propertyPath: m_RenderMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3348841602411470165, guid: 7604196884fb4ff41b12b946132a92fe, type: 3}
       propertyPath: m_LocalPosition.x
       value: -165.04
@@ -5250,6 +5258,11 @@ RectTransform:
   m_AnchoredPosition: {x: -29.511, y: 72}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!198 &1874687520 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 2374173207823999920, guid: 7604196884fb4ff41b12b946132a92fe, type: 3}
+  m_PrefabInstance: {fileID: 193774427}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1879110975
 PrefabInstance:
   m_ObjectHideFlags: 0

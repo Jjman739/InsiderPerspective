@@ -13,6 +13,9 @@ public class ThiefManager : MonoBehaviour
     [SerializeField] private AudioClip hurtSound;
     [SerializeField] private AudioClip alarmSound;
     [SerializeField] private ThiefHitEffects hitEffects;
+    [SerializeField] private ParticleSystem shockEffect;
+    
+
     private AudioSource zapAudioSource;
     private AudioSource alarmAudioSource;
 
@@ -21,6 +24,7 @@ public class ThiefManager : MonoBehaviour
 
     private void Start()
     {
+        shockEffect.Stop();
         zapAudioSource = GetComponents<AudioSource>()[1];
         alarmAudioSource = GetComponents<AudioSource>()[2];
     }
@@ -30,6 +34,8 @@ public class ThiefManager : MonoBehaviour
         hitEffects.TakeHit();
         ScrambleControls(ref movement.forwardButton, ref movement.backwardButton, ref movement.leftButton, ref movement.rightButton, ref movement.jumpButton, ref photo.photoButton);
         needsRepair = true;
+        shockEffect.Play();
+
         PlayHurtSound();
         DialogueManager.Instance.PlayDialogue(DialogueEvent.TRAP_SHOCK);
     }
