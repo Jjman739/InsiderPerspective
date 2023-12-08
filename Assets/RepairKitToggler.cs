@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class RepairKitToggler : MonoBehaviour
 {
-    private TileRoomModifiers tileRoomModifiers;
+    private RoomModifiers modifiers;
     private List<GameObject> repairKits = new();
 
     void Start()
     {
-        tileRoomModifiers = transform.parent.GetComponent<TileRoomModifiers>();
+        modifiers = transform.parent.GetComponent<RoomModifiers>();
 
-        int disabledRepairKits = tileRoomModifiers.GetModifierLevelByType(typeof(TileRoomRepairKitCount));
+        int disabledRepairKits = modifiers.GetModifierLevelByType(typeof(RepairKitCount));
 
         foreach (Transform child in transform)
         {

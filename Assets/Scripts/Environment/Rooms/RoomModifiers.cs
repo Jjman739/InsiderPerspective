@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Enumerations;
 
-public abstract class RoomDifficultyBuilder : MonoBehaviour
+public abstract class RoomModifiers : MonoBehaviour
 {
     [SerializeField] protected RoomDifficulty difficulty;
     protected List<RoomModifier> modifiers = new();
