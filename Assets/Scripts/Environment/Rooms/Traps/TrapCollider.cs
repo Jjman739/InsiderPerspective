@@ -13,12 +13,14 @@ public class TrapCollider : MonoBehaviour
     public bool addShader = false;
 
     public float shaderRobotChance = 0.2f;
+    public float stunDuration = 0.2f;
 
     void OnTriggerEnter(Collider other)
     {
         ThiefManager thiefManager = other.gameObject.GetComponent<ThiefManager>();
         if (thiefManager != null)
         {
+            thiefManager.Stun(stunDuration);
             if (damage)
             {
                 thiefManager.TakeDamage();
@@ -31,11 +33,13 @@ public class TrapCollider : MonoBehaviour
             if (alertGuard)
             {
                 doorpointManager.SendGuardToRoom();
+                thiefManager.PlayAlarmSound();
                 DialogueManager.Instance.PlayDialogue(Enumerations.DialogueEvent.TRAP_GUARD);
             }
             if (addShader)
             {
                 cameraShaderRandomizer.applyRandomShader();
+                thiefManager.PlayHurtSound();
                 DialogueManager.Instance.PlayDialogue(Enumerations.DialogueEvent.TRAP_CAMERA);
                 float rval = Random.value;
                 if (rval <= shaderRobotChance)

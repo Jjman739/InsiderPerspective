@@ -39,6 +39,8 @@ public class ThiefMovementScript : MonoBehaviour
     public string rightButton = "ThiefMoveRight";
     public string jumpButton = "Jump";
 
+    public float stunTimer = 0;
+
     private void Start()
     {
         controller = GetComponent<CharacterController>();
@@ -54,6 +56,8 @@ public class ThiefMovementScript : MonoBehaviour
             return;
         }
 
+        stunTimer -= Time.deltaTime;
+
         float moveAxis = 0;
         if (Input.GetButton(forwardButton)) { moveAxis += 1; }
         if (Input.GetButton(backwardButton)) { moveAxis -= 1; }
@@ -68,6 +72,12 @@ public class ThiefMovementScript : MonoBehaviour
 
         move = new Vector3(0, 0, moveAxis);
         twist = new Vector3(0, turnAxis, 0);
+
+        if (stunTimer > 0)
+        {
+            move = new Vector3(0, 0, 0);
+            twist = new Vector3(0, 0, 0);
+        }
 
         //jump control
         bool grounded = controller.isGrounded;
@@ -101,7 +111,7 @@ public class ThiefMovementScript : MonoBehaviour
 
         jumpSpeed += gravity * Time.deltaTime;
 
-        if (jumpTimer > 0 && Input.GetButton(jumpButton))
+        if (jumpTimer > 0 && Input.GetButton(jumpButton) && stunTimer <= 0)
         {
             jumpTimer = 0;
             jumpSpeed = Mathf.Sqrt(jumpHeight * -gravity * 2);

@@ -11,18 +11,22 @@ public class ThiefManager : MonoBehaviour
     [SerializeField] private ThiefMovementScript movement;
     [SerializeField] private ThiefTreasure treasure;
     [SerializeField] private AudioClip hurtSound;
+    [SerializeField] private AudioClip alarmSound;
     [SerializeField] private ThiefHitEffects hitEffects;
     [SerializeField] private ParticleSystem shockEffect;
     
-    private AudioSource audioSource;
+
+    private AudioSource zapAudioSource;
+    private AudioSource alarmAudioSource;
 
     public int repairsRemaining = 3;
     public bool needsRepair = false;
 
     private void Start()
     {
-        audioSource = GetComponents<AudioSource>()[1];
         shockEffect.Stop();
+        zapAudioSource = GetComponents<AudioSource>()[1];
+        alarmAudioSource = GetComponents<AudioSource>()[2];
     }
 
     public void TakeDamage()
@@ -30,11 +34,20 @@ public class ThiefManager : MonoBehaviour
         hitEffects.TakeHit();
         ScrambleControls(ref movement.forwardButton, ref movement.backwardButton, ref movement.leftButton, ref movement.rightButton, ref movement.jumpButton, ref photo.photoButton);
         needsRepair = true;
-        audioSource.clip = hurtSound;
-        audioSource.loop = false;
-        audioSource.Play();
         shockEffect.Play();
+
+        PlayHurtSound();
         DialogueManager.Instance.PlayDialogue(DialogueEvent.TRAP_SHOCK);
+    }
+
+    public void PlayHurtSound()
+    {
+        zapAudioSource.Play();
+    }
+
+    public void PlayAlarmSound()
+    {
+        alarmAudioSource.Play();
     }
 
     public bool AttemptWin()
@@ -106,5 +119,10 @@ public class ThiefManager : MonoBehaviour
     public GameObject GetCameraObject()
     {
         return cameraRoot.transform.GetChild(0).gameObject;
+    }
+
+    public void Stun(float duration)
+    {
+        movement.stunTimer = duration;
     }
 }
