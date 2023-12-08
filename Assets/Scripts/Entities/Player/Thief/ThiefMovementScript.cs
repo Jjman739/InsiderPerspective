@@ -20,6 +20,7 @@ public class ThiefMovementScript : MonoBehaviour
     private float jumpTimer;
     private float jumpSpeed;
     private GameObject pauseControl;
+    private float shrinkTimer;
 
     [SerializeField] private float moveSpeed = 0.1f;
     [SerializeField] private float turnSpeed = 5f;
@@ -31,12 +32,15 @@ public class ThiefMovementScript : MonoBehaviour
     [SerializeField] private Slider alertMeter;
     [SerializeField] private AudioClip robotJump;
     [SerializeField] private AudioClip robotWalk;
+    [SerializeField] private Vector3 shrinkSize;
+    [SerializeField] private float shrinkDuration;
 
     public string forwardButton = "ThiefMoveUp";
     public string backwardButton = "ThiefMoveDown";
     public string leftButton = "ThiefMoveLeft";
     public string rightButton = "ThiefMoveRight";
     public string jumpButton = "Jump";
+    public string shrinkButton = "Shrink";
 
     private void Start()
     {
@@ -146,6 +150,15 @@ public class ThiefMovementScript : MonoBehaviour
                 SceneManager.LoadScene("LoseScene");
             }
         }
+
+        if (Input.GetButton(shrinkButton))
+        {
+            shrinkTimer = Mathf.Min(shrinkTimer + Time.deltaTime, shrinkDuration);
+        } else
+        {
+            shrinkTimer = Mathf.Max(shrinkTimer - Time.deltaTime, 0);
+        }
+        transform.localScale = Vector3.Slerp(new Vector3(1,1,1), shrinkSize, shrinkTimer / shrinkDuration);
 
     }
 
