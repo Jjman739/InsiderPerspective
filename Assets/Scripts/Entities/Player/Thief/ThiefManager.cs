@@ -28,7 +28,7 @@ public class ThiefManager : MonoBehaviour
     public void TakeDamage()
     {
         hitEffects.TakeHit();
-        ScrambleControls(ref movement.forwardButton, ref movement.backwardButton, ref movement.leftButton, ref movement.rightButton, ref movement.jumpButton, ref photo.photoButton);
+        ScrambleControls(ref movement.forwardButton, ref movement.backwardButton, ref movement.leftButton, ref movement.rightButton, ref movement.jumpButton, ref movement.shrinkButton);
         needsRepair = true;
         PlayHurtSound();
         DialogueManager.Instance.PlayDialogue(DialogueEvent.TRAP_SHOCK);
@@ -63,7 +63,7 @@ public class ThiefManager : MonoBehaviour
         movement.leftButton = "ThiefMoveLeft";
         movement.rightButton = "ThiefMoveRight";
         movement.jumpButton = "Jump";
-        photo.photoButton = "ThiefPhoto";
+        movement.shrinkButton = "Shrink";
 
         GameObject cameraObject = GetCameraObject();
         foreach (ShaderBase shader in cameraObject.GetComponents<ShaderBase>())
@@ -75,16 +75,16 @@ public class ThiefManager : MonoBehaviour
         needsRepair = false;
     }
 
-    private void ScrambleControls(ref string forward, ref string backward, ref string left, ref string right, ref string jump, ref string cam)
+    private void ScrambleControls(ref string forward, ref string backward, ref string left, ref string right, ref string jump, ref string shrink)
     {
-        int buttonId1 = Random.Range(0,5);
-        int buttonId2 = Random.Range(0,4);
+        int buttonId1 = Random.Range(0,6);
+        int buttonId2 = Random.Range(0,5);
         if (buttonId2 == buttonId1)
         {
             buttonId2++;
         }
 
-        List<string> values = new List<string> { forward, backward, left, right, jump, cam };
+        List<string> values = new List<string> { forward, backward, left, right, jump, shrink };
         string temp = values[buttonId1];
         values[buttonId1] = values[buttonId2];
         values[buttonId2] = temp;
@@ -94,7 +94,7 @@ public class ThiefManager : MonoBehaviour
         left = values[2];
         right = values[3];
         jump = values[4];
-        cam = values[5];
+        shrink = values[5];
     }
 
     public List<string> ReturnControls()
@@ -104,9 +104,9 @@ public class ThiefManager : MonoBehaviour
         string left = movement.leftButton;
         string right = movement.rightButton;
         string jump = movement.jumpButton;
-        string cam = photo.photoButton;
+        string shrink = movement.shrinkButton;
 
-        List<string> controls = new List<string> { forward, back, left, right, jump, cam };
+        List<string> controls = new List<string> { forward, back, left, right, jump, shrink };
         return controls;
     }
 
