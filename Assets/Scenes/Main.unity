@@ -8993,6 +8993,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LaptopUI
       objectReference: {fileID: 0}
+    - target: {fileID: 7967255001053235488, guid: eb4e4440ee667ba4ba5b0b1bc50d6c98, type: 3}
+      propertyPath: m_text
+      value: Forward   Back   Left   Right   Jump   Shrink
+      objectReference: {fileID: 0}
     - target: {fileID: 8616769712104579303, guid: eb4e4440ee667ba4ba5b0b1bc50d6c98, type: 3}
       propertyPath: m_LocalPosition.x
       value: -382.85852

@@ -13,16 +13,9 @@ public class InputUI : MonoBehaviour
     [SerializeField] private TextMeshProUGUI left;
     [SerializeField] private TextMeshProUGUI right;
     [SerializeField] private TextMeshProUGUI jump;
-    [SerializeField] private TextMeshProUGUI picture;
+    [SerializeField] private TextMeshProUGUI shrink;
 
     private string allInputs;
-
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        picture.SetText("E");
-    }
 
     // Update is called once per frame
     void Update()
@@ -45,6 +38,10 @@ public class InputUI : MonoBehaviour
             {
                 allInputs += "Space ";
             }
+            else if (controls[i].Equals("Shrink"))
+            {
+                allInputs += "Q ";
+            }
         }
 
         string[] updatedInputs = allInputs.Split(' ');
@@ -56,5 +53,6 @@ public class InputUI : MonoBehaviour
         left.SetText(updatedInputs[2]);
         right.SetText(updatedInputs[3]);
         jump.SetText(updatedInputs[4]);
+        shrink.SetText(updatedInputs[5]);
     }
 }
