@@ -656,11 +656,14 @@ MonoBehaviour:
   alertMeter: {fileID: 0}
   robotJump: {fileID: 8300000, guid: da78883ffb1f99f4a813a1f06ee3e33d, type: 3}
   robotWalk: {fileID: 8300000, guid: 3773ee562a14d6447a8feb29386a18e6, type: 3}
+  shrinkSize: {x: 0.1, y: 0.1, z: 0.1}
+  shrinkDuration: 1
   forwardButton: ThiefMoveUp
   backwardButton: ThiefMoveDown
   leftButton: ThiefMoveLeft
   rightButton: ThiefMoveRight
   jumpButton: Jump
+  shrinkButton: Shrink
 --- !u!114 &988405178396776603
 MonoBehaviour:
   m_ObjectHideFlags: 0

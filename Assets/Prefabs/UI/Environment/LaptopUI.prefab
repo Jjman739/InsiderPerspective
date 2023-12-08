@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3667976957519546580}
   - component: {fileID: 3650092953571672920}
   m_Layer: 0
-  m_Name: Photo
+  m_Name: Shrink
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -320,7 +320,7 @@ MonoBehaviour:
   left: {fileID: 6516686052869291748}
   right: {fileID: 1095759493041400066}
   jump: {fileID: 7160620351335000877}
-  picture: {fileID: 3650092953571672920}
+  shrink: {fileID: 3650092953571672920}
 --- !u!1 &3711889982624411777
 GameObject:
   m_ObjectHideFlags: 0
