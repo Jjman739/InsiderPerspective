@@ -3758,6 +3758,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 9107001984964667295}
     m_Modifications:
+    - target: {fileID: 855626864188571330, guid: 51faa5c6fd958d24b82f55ba264f569b, type: 3}
+      propertyPath: difficulty
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1092714709029951619, guid: 51faa5c6fd958d24b82f55ba264f569b, type: 3}
       propertyPath: roomIndex
       value: 4
@@ -4145,6 +4149,10 @@ PrefabInstance:
     - target: {fileID: 3868360972269367235, guid: af6e732255b67f04a8ad2ab892f0488e, type: 3}
       propertyPath: m_Name
       value: TileRoomB
+      objectReference: {fileID: 0}
+    - target: {fileID: 4079198041705764199, guid: af6e732255b67f04a8ad2ab892f0488e, type: 3}
+      propertyPath: difficulty
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6396444353274284996, guid: af6e732255b67f04a8ad2ab892f0488e, type: 3}
       propertyPath: m_LocalPosition.x

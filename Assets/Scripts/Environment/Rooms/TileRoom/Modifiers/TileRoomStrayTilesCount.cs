@@ -1,9 +1,9 @@
 public class TileRoomStrayTilesCount : RoomModifier
 {
-    public TileRoomStrayTilesCount()
+    public TileRoomStrayTilesCount(int weight, int weightDecay, int cost)
     {
-        weight = 10;
-        weightDecay = 2;
-        cost = 2;
+        this.weight = weight;
+        this.weightDecay = weightDecay;
+        this.cost = cost;
     }
 }

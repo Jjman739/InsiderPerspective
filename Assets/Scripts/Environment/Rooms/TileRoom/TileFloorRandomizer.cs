@@ -18,7 +18,7 @@ public class TileFloorRandomizer : MonoBehaviour
         {TrapType.ALERT_GUARD, false},
         {TrapType.ADD_SHADER, false}
     };
-    private TileRoomModifiers tileRoomModifiers;
+    private RoomModifiers roomModifiers;
 
     [SerializeField] private DoorpointManager doorpointManager;
     [SerializeField] private CameraShaderRandomizer cameraShaderRandomizer;
@@ -26,7 +26,7 @@ public class TileFloorRandomizer : MonoBehaviour
     void Start()
     {
         allTraps = new List<TrapToggle>();
-        tileRoomModifiers = transform.parent.GetComponent<TileRoomModifiers>();
+        roomModifiers = transform.parent.GetComponent<RoomModifiers>();
         DisableAllTraps();
         SelectTrapRows();
         SetTrapSettings();
@@ -47,8 +47,8 @@ public class TileFloorRandomizer : MonoBehaviour
              availableCols.Add(i);
         }
 
-        trapRowCount = tileRoomModifiers.GetModifierLevelByType(typeof(TileRoomRowCount)) + 1;
-        trapColumnCount = tileRoomModifiers.GetModifierLevelByType(typeof(TileRoomColumnCount)) + 1;
+        trapRowCount = roomModifiers.GetModifierLevelByType(typeof(TileRoomRowCount)) + 1;
+        trapColumnCount = roomModifiers.GetModifierLevelByType(typeof(TileRoomColumnCount)) + 1;
 
         for (int i = 0; i < trapRowCount; i++)
         {
@@ -127,7 +127,7 @@ public class TileFloorRandomizer : MonoBehaviour
 
     private void EnableStrayTraps()
     {
-        int strayTrapCount = tileRoomModifiers.GetModifierLevelByType(typeof(TileRoomStrayTilesCount));
+        int strayTrapCount = roomModifiers.GetModifierLevelByType(typeof(TileRoomStrayTilesCount));
         for (int i = 0; i < strayTrapCount; i++)
         {
             TrapToggle trap = allTraps[Random.Range(0, allTraps.Count)];
@@ -145,7 +145,7 @@ public class TileFloorRandomizer : MonoBehaviour
 
     private void SetTrapSettings()
     {
-        bool extraEffect = tileRoomModifiers.GetModifierLevelByType(typeof(TileRoomExtraEffect)) > 0;
+        bool extraEffect = roomModifiers.GetModifierLevelByType(typeof(ExtraTrapEffect)) > 0;
 
         switch(Random.Range(0, trapTypes.Count))
         {

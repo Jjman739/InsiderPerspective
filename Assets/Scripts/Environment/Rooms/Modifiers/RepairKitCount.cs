@@ -1,6 +1,6 @@
-public class TileRoomRowCount : RoomModifier
+public class RepairKitCount : RoomModifier
 {
-    public TileRoomRowCount(int weight, int weightDecay, int cost)
+    public RepairKitCount(int weight, int weightDecay, int cost)
     {
         this.weight = weight;
         this.weightDecay = weightDecay;
