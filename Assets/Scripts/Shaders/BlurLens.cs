@@ -6,8 +6,8 @@ using UnityEngine;
 [RequireComponent(typeof(Camera))]
 public class BlurLens : ShaderBase
 {
-    [Range(0.0f, 0.1f)]
-    public float m_blurSize = 0.01f;
+    [Range(0.0f, 0.01f)]
+    public float m_blurSize = 0.004f;
 
     public override void ApplyShaderVariables()
     {
