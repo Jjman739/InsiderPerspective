@@ -1,0 +1,112 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6188894758801230886
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2042747088515319295}
+  m_Layer: 0
+  m_Name: Crate1_V3_UV 2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2042747088515319295
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6188894758801230886}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.0015847, y: 4.7737, z: -0.0078057}
+  m_LocalScale: {x: 0.22887963, y: 0.31941, z: 0.31941}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 4087659665918231397}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &4553404972007613582
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 2042747088515319295}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 385b002bb6ce8d645b67d98996ec45e7, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.0018682999
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 385b002bb6ce8d645b67d98996ec45e7, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.0018682999
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 385b002bb6ce8d645b67d98996ec45e7, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.0018682999
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 385b002bb6ce8d645b67d98996ec45e7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.0020551
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 385b002bb6ce8d645b67d98996ec45e7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 7.014
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 385b002bb6ce8d645b67d98996ec45e7, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.011469
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 385b002bb6ce8d645b67d98996ec45e7, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 385b002bb6ce8d645b67d98996ec45e7, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 385b002bb6ce8d645b67d98996ec45e7, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 385b002bb6ce8d645b67d98996ec45e7, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 385b002bb6ce8d645b67d98996ec45e7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 385b002bb6ce8d645b67d98996ec45e7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 385b002bb6ce8d645b67d98996ec45e7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 385b002bb6ce8d645b67d98996ec45e7, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 312a2a504d2fdb44f8a7fe2a46b7e9f6, type: 2}
+    - target: {fileID: 919132149155446097, guid: 385b002bb6ce8d645b67d98996ec45e7, type: 3}
+      propertyPath: m_Name
+      value: CrateV1_UV
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 385b002bb6ce8d645b67d98996ec45e7, type: 3}
+--- !u!4 &4087659665918231397 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 385b002bb6ce8d645b67d98996ec45e7, type: 3}
+  m_PrefabInstance: {fileID: 4553404972007613582}
+  m_PrefabAsset: {fileID: 0}
