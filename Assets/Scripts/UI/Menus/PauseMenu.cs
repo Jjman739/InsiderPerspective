@@ -5,6 +5,8 @@ using UnityEngine;
 public class PauseMenu : MonoBehaviour
 {
     public GameObject pauseMenu;
+    public GameObject mainPauseMenu;
+    public GameObject settingsMenu;
     public bool paused;
     public GameObject cameraUI;
 
@@ -13,7 +15,7 @@ public class PauseMenu : MonoBehaviour
     {
         pauseMenu.SetActive(false);
         paused = false;
-        
+        settingsMenu.GetComponent<SettingsScript>().SetVolumeSettings();
     }
 
     // Update is called once per frame
@@ -39,6 +41,8 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 0;
         paused = true;
         pauseMenu.SetActive(true);
+        mainPauseMenu.SetActive(true);
+        settingsMenu.SetActive(false);
 
         if (!GameObject.Find("CameraViewer").GetComponent<CameraViewer>().UsingMain())
         {
@@ -59,6 +63,18 @@ public class PauseMenu : MonoBehaviour
             Cursor.lockState = CursorLockMode.None;
         }
         else { Cursor.lockState = CursorLockMode.Locked; }
+    }
+
+    public void OpenSettings()
+    {
+        mainPauseMenu.SetActive(false);
+        settingsMenu.SetActive(true);
+    }
+
+    public void ReturnToMainPauseMenu()
+    {
+        mainPauseMenu.SetActive(true);
+        settingsMenu.SetActive(false);
     }
 
     public bool GetPaused()

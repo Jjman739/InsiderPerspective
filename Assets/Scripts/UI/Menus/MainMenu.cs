@@ -6,30 +6,33 @@ public class MainMenu : MonoBehaviour
 {
     public GameObject mainMenu;
     public GameObject instructions;
+    public GameObject settings;
 
     // Start is called before the first frame update
     void Start()
     {
         mainMenu.SetActive(true);
         instructions.SetActive(false);
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        settings.SetActive(false);
+        settings.GetComponent<SettingsScript>().SetVolumeSettings();
     }
 
     public void OpenInstructions()
     {
-        instructions.SetActive(true) ;
-        mainMenu.SetActive(false) ;
+        mainMenu.SetActive(false);
+        instructions.SetActive(true);
     }
 
-    public void CloseInstructions()
+    public void OpenSettings()
     {
-        instructions.SetActive(false) ;
-        mainMenu.SetActive(true) ;
+        mainMenu.SetActive(false);
+        settings.SetActive(true);
+    }
+
+    public void ReturnToMainMenu()
+    {
+        mainMenu.SetActive(true);
+        instructions.SetActive(false);
+        settings.SetActive(false);
     }
 }
