@@ -29,7 +29,6 @@ public class CameraShaderRandomizer : MonoBehaviour
     };
 
     private RoomModifiers modifiers;
-    [SerializeField] private AttachCamera attachCamera;
 
     public void Start()
     {
@@ -141,8 +140,12 @@ public class CameraShaderRandomizer : MonoBehaviour
 
     public GameObject getCurrentCamera()
     {
-        GameObject cam = attachCamera.GetAttachedCamera().gameObject;
-        return cam;
+        if (CameraViewer.Instance.GetCurrentCamera() is not null)
+        {
+            return CameraViewer.Instance.GetCurrentCamera().gameObject;
+        }
+
+        return null;
     }
 
     public void applyRandomShader(GameObject camera = null)
@@ -150,6 +153,10 @@ public class CameraShaderRandomizer : MonoBehaviour
         if (camera == null)
         {
             camera = getCurrentCamera();
+            if (camera == null)
+            {
+                return;
+            }
         }
 
         Type chosenShader = allShaders[UnityEngine.Random.Range(0, allShaders.Count)];
@@ -158,12 +165,8 @@ public class CameraShaderRandomizer : MonoBehaviour
         {
             Debug.Log("adding component to " + camera.name);
             camera.AddComponent(chosenShader);
-            randomizeShaderValues(camera.GetComponent(chosenShader) as ShaderBase);
         }
-    }
 
-    public void SetAttachCamera(AttachCamera ac)
-    {
-        attachCamera = ac;
+        randomizeShaderValues(camera.GetComponent(chosenShader) as ShaderBase);
     }
 }
