@@ -5,12 +5,22 @@ using Enumerations;
 
 public abstract class RoomModifiers : MonoBehaviour
 {
-    [SerializeField] protected RoomDifficulty difficulty;
+    protected RoomDifficulty difficulty;
     protected List<RoomModifier> modifiers = new();
     private int availablePoints;
 
     private void Awake()
     {
+        // this sucks so fucking hard, anyone who does this (me) should be gunned down by every military organization on the planet
+        if (GameModeManager.Instance is null)
+        {
+            difficulty = FindObjectOfType<GameModeManager>().GetCurrentDifficulty();
+        }
+        else
+        {
+            difficulty = GameModeManager.Instance.GetCurrentDifficulty();
+        }
+
         calculateAvailablePoints();
 
         initializeModifiers();
