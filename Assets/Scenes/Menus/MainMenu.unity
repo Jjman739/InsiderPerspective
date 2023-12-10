@@ -337,9 +337,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "You are a security guard looking to get some extra cash. Use your robot\r
-    to get through your boss's mansion using your monitors to find obstacles and\r
-    navigate to the treasures.\r DON'T GET CAUGHT! "
+  m_text: "You are a security guard looking to get some extra cash. Use your robot
+    to get through your boss's mansion using your\nmonitors to find obstacles and\r                                                  
+    navigate to the treasures.\nDON'T GET CAUGHT! "
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1190170671ebee044bf8fe1daa5af12c, type: 2}
   m_sharedMaterial: {fileID: 6658444963916742679, guid: 1190170671ebee044bf8fe1daa5af12c, type: 2}
@@ -402,7 +402,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: -22.828918}
+  m_margin: {x: 0, y: 0, z: 0, w: -21.14434}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -633,7 +633,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &238835189
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5664,45 +5664,41 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1573680801}
     m_Modifications:
+    - target: {fileID: 261759068260892433, guid: 1035c34cc15e92b4d9cf05ba399f26fc, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 912006243292386250, guid: 1035c34cc15e92b4d9cf05ba399f26fc, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1036885341818748717, guid: 1035c34cc15e92b4d9cf05ba399f26fc, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1259142112519045127, guid: 1035c34cc15e92b4d9cf05ba399f26fc, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1345411237440110520, guid: 1035c34cc15e92b4d9cf05ba399f26fc, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1631373548239627976, guid: 1035c34cc15e92b4d9cf05ba399f26fc, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1644027002675693484, guid: 1035c34cc15e92b4d9cf05ba399f26fc, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -10.999999
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2630043499783552944, guid: 1035c34cc15e92b4d9cf05ba399f26fc, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4446795597219124652, guid: 1035c34cc15e92b4d9cf05ba399f26fc, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -10.999999
-      objectReference: {fileID: 0}
-    - target: {fileID: 4648174072513489449, guid: 1035c34cc15e92b4d9cf05ba399f26fc, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -11
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5375317323056288092, guid: 1035c34cc15e92b4d9cf05ba399f26fc, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5640712222161151505, guid: 1035c34cc15e92b4d9cf05ba399f26fc, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6934151913660587039, guid: 1035c34cc15e92b4d9cf05ba399f26fc, type: 3}
       propertyPath: m_Name
@@ -5710,7 +5706,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6934151913660587039, guid: 1035c34cc15e92b4d9cf05ba399f26fc, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8611877555931914522, guid: 1035c34cc15e92b4d9cf05ba399f26fc, type: 3}
       propertyPath: m_Pivot.x
@@ -5798,11 +5794,7 @@ PrefabInstance:
       objectReference: {fileID: 902953407}
     - target: {fileID: 9116516418643086480, guid: 1035c34cc15e92b4d9cf05ba399f26fc, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9211382296190711322, guid: 1035c34cc15e92b4d9cf05ba399f26fc, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -10.999999
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
