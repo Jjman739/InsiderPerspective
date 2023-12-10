@@ -55,7 +55,7 @@ public class ParameterMenu : MonoBehaviour
     public void UpdateMouseSensitivity(float sensitivity)
     {
         if (!menuOpen) return;
-        GameManager.Instance.SetMouseSensitivity(sensitivity);
+        guard.GetComponent<GuardMovement>().SetTurnSpeed(sensitivity);
         mouseSensitivityText.text = sensitivity.ToString();
     }
 

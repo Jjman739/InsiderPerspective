@@ -12,17 +12,14 @@ public class SettingsScript : MonoBehaviour
     [SerializeField] private Slider musicVolumeSlider;
     [SerializeField] private Slider sfxVolumeSlider;
     [SerializeField] private Slider dialogueVolumeSlider;
-    [SerializeField] private Slider mouseSensitivitySlider;
     private float masterVolume;
     private float musicVolume;
     private float sfxVolume;
     private float dialogueVolume;
-    private float mouseSensitivity;
     const string MASTER_VOL_STRING = "Master";
     const string MUSIC_VOL_STRING = "Music";
     const string SFX_VOL_STRING = "SFX";
     const string DIALOGUE_VOL_STRING = "Dialogue";
-    const string MOUSE_SENSITIVITY_STRING = "MouseSensitivity";
 
     private void Start()
     {
@@ -37,7 +34,6 @@ public class SettingsScript : MonoBehaviour
         musicVolumeSlider.value = musicVolume;
         sfxVolumeSlider.value = sfxVolume;
         dialogueVolumeSlider.value = dialogueVolume;
-        mouseSensitivitySlider.value = mouseSensitivity;
     }
 
     private void initializeVolumeSettings()
@@ -46,13 +42,11 @@ public class SettingsScript : MonoBehaviour
         musicVolume = PlayerPrefs.HasKey(MUSIC_VOL_STRING) ? PlayerPrefs.GetFloat(MUSIC_VOL_STRING) : 0.1f;
         sfxVolume = PlayerPrefs.HasKey(SFX_VOL_STRING) ? PlayerPrefs.GetFloat(SFX_VOL_STRING) : 1f;
         dialogueVolume = PlayerPrefs.HasKey(DIALOGUE_VOL_STRING) ? PlayerPrefs.GetFloat(DIALOGUE_VOL_STRING) : 1f;
-        mouseSensitivity = PlayerPrefs.HasKey(MOUSE_SENSITIVITY_STRING) ? PlayerPrefs.GetFloat(MOUSE_SENSITIVITY_STRING) : 5f;
 
         SetMasterVolume(masterVolume);
         SetMusicVolume(musicVolume);
         SetSFXVolume(sfxVolume);
         SetDialogueVolume(dialogueVolume);
-        SetMouseSensitivity(mouseSensitivity);
     }
 
     public void SetMasterVolume(float sliderValue)
@@ -83,21 +77,14 @@ public class SettingsScript : MonoBehaviour
         updateSliderValue(dialogueVolumeSlider, sliderValue);
     }
 
-    public void SetMouseSensitivity(float sliderValue)
-    {
-        mouseSensitivity = sliderValue;
-        GameManager.Instance.SetMouseSensitivity(sliderValue);
-        updateSliderValue(mouseSensitivitySlider, sliderValue, 10f);
-    }
-
     private void setVolume(string channel, float vol)
     {
         masterAudioMixer.SetFloat(channel, Mathf.Log10(vol) * 20);
         PlayerPrefs.SetFloat(channel, vol);
     }
 
-    private void updateSliderValue(Slider slider, float value, float factor = 100f)
+    private void updateSliderValue(Slider slider, float value)
     {
-        slider.transform.GetChild(4).GetComponent<TextMeshProUGUI>().text = string.Format("{0}", Mathf.Round(value * factor));     
+        slider.transform.GetChild(4).GetComponent<TextMeshProUGUI>().text = string.Format("{0}", Mathf.Round(value * 100f));     
     }
 }

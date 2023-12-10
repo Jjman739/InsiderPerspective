@@ -30,7 +30,7 @@ public class WaypointInfo : BaseWaypoint
 
     public List<BaseWaypoint> GetConnectedWaypoints() { return attachedWaypoints; }
 
-    public List<BaseWaypoint> GetConnectedWaypointsShuffled() { return attachedWaypoints.OrderBy((item) => GameManager.RNG.Next(0,999)).ToList(); }
+    public List<BaseWaypoint> GetConnectedWaypointsShuffled() { return attachedWaypoints.OrderBy((item) => UnityEngine.Random.Range(0,999)).ToList(); }
 
     public WaypointInfo GetConnectedWaypoint(int index) { return attachedWaypoints[index] as WaypointInfo; }
     public int GetIndex() { return transform.GetSiblingIndex(); }

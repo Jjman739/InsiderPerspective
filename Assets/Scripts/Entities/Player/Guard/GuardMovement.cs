@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class GuardMovement : MonoBehaviour {
     private CharacterController controller;
+
+    [SerializeField] private float turnSpeed = 5f;
     private bool interacting = false;
     private AudioListener audioListener;
     private Camera mainCamera;
@@ -28,7 +30,7 @@ public class GuardMovement : MonoBehaviour {
         if (Cursor.lockState != CursorLockMode.Locked) return;
 
         Vector3 euler = transform.rotation.eulerAngles;
-        euler += GameManager.Instance.GetMouseSensitivity() * new Vector3(Input.GetAxis("GuardY"), Input.GetAxis("GuardX"), 0);
+        euler += turnSpeed * new Vector3(Input.GetAxis("GuardY"), Input.GetAxis("GuardX"), 0);
         if (euler.x > 45 && euler.x < 180) {
             euler.x = 45;
         } else if (euler.x < 315 && euler.x > 180) {
@@ -53,4 +55,6 @@ public class GuardMovement : MonoBehaviour {
             }
         }
     }
+
+    public void SetTurnSpeed(float speed) { turnSpeed = speed; }
 }
