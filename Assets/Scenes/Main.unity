@@ -10038,6 +10038,14 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -62.722
       objectReference: {fileID: 0}
+    - target: {fileID: 4153377808742547937, guid: 3278d896a16b67f4ea35fbbdac2813ec, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4153377808742547937, guid: 3278d896a16b67f4ea35fbbdac2813ec, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 4209017995173332959, guid: 3278d896a16b67f4ea35fbbdac2813ec, type: 3}
       propertyPath: m_Name
       value: MansionArea
@@ -11182,6 +11190,25 @@ PrefabInstance:
     - {fileID: 7494645336790032848, guid: 3278d896a16b67f4ea35fbbdac2813ec, type: 3}
     - {fileID: 8596258634169540307, guid: 3278d896a16b67f4ea35fbbdac2813ec, type: 3}
     - {fileID: 5702568606915869952, guid: 3278d896a16b67f4ea35fbbdac2813ec, type: 3}
+    - {fileID: 3395331232125794026, guid: 3278d896a16b67f4ea35fbbdac2813ec, type: 3}
+    - {fileID: 426212876209309070, guid: 3278d896a16b67f4ea35fbbdac2813ec, type: 3}
+    - {fileID: 6114269376425988191, guid: 3278d896a16b67f4ea35fbbdac2813ec, type: 3}
+    - {fileID: 4775499063664880059, guid: 3278d896a16b67f4ea35fbbdac2813ec, type: 3}
+    - {fileID: 1767257180318047979, guid: 3278d896a16b67f4ea35fbbdac2813ec, type: 3}
+    - {fileID: 3184063692300369968, guid: 3278d896a16b67f4ea35fbbdac2813ec, type: 3}
+    - {fileID: 3708750557454636019, guid: 3278d896a16b67f4ea35fbbdac2813ec, type: 3}
+    - {fileID: 5300348098035002741, guid: 3278d896a16b67f4ea35fbbdac2813ec, type: 3}
+    - {fileID: 1613002146692543625, guid: 3278d896a16b67f4ea35fbbdac2813ec, type: 3}
+    - {fileID: 3922765090175300992, guid: 3278d896a16b67f4ea35fbbdac2813ec, type: 3}
+    - {fileID: 2736424711067110599, guid: 3278d896a16b67f4ea35fbbdac2813ec, type: 3}
+    - {fileID: 3478217647514163749, guid: 3278d896a16b67f4ea35fbbdac2813ec, type: 3}
+    - {fileID: 2366782353199100336, guid: 3278d896a16b67f4ea35fbbdac2813ec, type: 3}
+    - {fileID: 1277414590071670159, guid: 3278d896a16b67f4ea35fbbdac2813ec, type: 3}
+    - {fileID: 1653311633587330692, guid: 3278d896a16b67f4ea35fbbdac2813ec, type: 3}
+    - {fileID: 5086956925886485067, guid: 3278d896a16b67f4ea35fbbdac2813ec, type: 3}
+    - {fileID: 6952501759617306754, guid: 3278d896a16b67f4ea35fbbdac2813ec, type: 3}
+    - {fileID: 5983459854492483327, guid: 3278d896a16b67f4ea35fbbdac2813ec, type: 3}
+    - {fileID: 8475843927846568430, guid: 3278d896a16b67f4ea35fbbdac2813ec, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 9107001984964667295, guid: 3278d896a16b67f4ea35fbbdac2813ec, type: 3}
       insertIndex: 6
