@@ -7321,6 +7321,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BaseRoom
       objectReference: {fileID: 0}
+    - target: {fileID: 9062805031284425975, guid: 3f9585c85ebcf0e49902f93d849449b0, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 3830401432226977766, guid: 3f9585c85ebcf0e49902f93d849449b0, type: 3}
