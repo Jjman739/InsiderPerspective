@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class CameraShaderRandomizer : MonoBehaviour
-{  
+{
     private List<Type> easyShaders = new List<Type>
     {
         typeof(ColorInvertLens),
         typeof(ColorStepper),
         typeof(FishEyeLens)
     };
-    
+
     private List<Type> hardShaders = new List<Type>
     {
         typeof(BlurLens),
@@ -73,17 +73,17 @@ public class CameraShaderRandomizer : MonoBehaviour
         if (shader is BlurLens)
         {
             BlurLens blurLens = shader as BlurLens;
-            blurLens.m_blurSize += 0.01f * (UnityEngine.Random.Range(0,2) == 1 ? 1 : -1);
+            blurLens.m_blurSize += 0.004f * (UnityEngine.Random.Range(0, 2) == 1 ? 1 : -1);
         }
 
         else if (shader is ColorInvertLens)
         {
             ColorInvertLens colorInvertLens = shader as ColorInvertLens;
-            int random = UnityEngine.Random.Range(0,6);
+            int random = UnityEngine.Random.Range(0, 6);
             if (random < 3)
             {
                 float decrement = 0.2f;
-                switch(UnityEngine.Random.Range(0,3))
+                switch (UnityEngine.Random.Range(0, 3))
                 {
                     case 0:
                         colorInvertLens.m_red -= decrement;
@@ -126,14 +126,14 @@ public class CameraShaderRandomizer : MonoBehaviour
         {
             FishEyeLens fishEyeLens = shader as FishEyeLens;
             fishEyeLens.m_power += 1.0f;
-            fishEyeLens.m_excludeOuterPixels = UnityEngine.Random.Range(0,2) == 1;
+            fishEyeLens.m_excludeOuterPixels = UnityEngine.Random.Range(0, 2) == 1;
         }
 
         else if (shader is FlipLens)
         {
             FlipLens flipLens = shader as FlipLens;
-            flipLens.m_flipHorizontally = UnityEngine.Random.Range(0,2) == 1;
-            flipLens.m_flipVertically = UnityEngine.Random.Range(0,2) == 1;
+            flipLens.m_flipHorizontally = UnityEngine.Random.Range(0, 2) == 1;
+            flipLens.m_flipVertically = UnityEngine.Random.Range(0, 2) == 1;
         }
 
         shader.ApplyShaderVariables();
@@ -151,7 +151,7 @@ public class CameraShaderRandomizer : MonoBehaviour
         {
             camera = getCurrentCamera();
         }
-        
+
         Type chosenShader = allShaders[UnityEngine.Random.Range(0, allShaders.Count)];
 
         if (camera.GetComponent(chosenShader) is null)
