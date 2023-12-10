@@ -798,7 +798,7 @@ RectTransform:
   m_GameObject: {fileID: 1201782325}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 5.0048614, y: 6.07415, z: 6.416736}
+  m_LocalScale: {x: 2.439069, y: 2.9601762, z: 3.1271322}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1833764267}
@@ -806,7 +806,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -855, y: 448}
+  m_AnchoredPosition: {x: -394.37, y: 217.11}
   m_SizeDelta: {x: 29.1748, y: 21.7953}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1201782327
@@ -1073,14 +1073,14 @@ RectTransform:
   m_GameObject: {fileID: 1643727831}
   m_LocalRotation: {x: 0.0011305505, y: -0.0009445773, z: 0.037439175, w: 0.99929786}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 9.264705, y: 9.264705, z: 9.264705}
+  m_LocalScale: {x: 5.5923553, y: 5.5923553, z: 5.5923553}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 606589494}
   m_LocalEulerAnglesHint: {x: 0.134, y: -0.103, z: 4.291}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 9, y: 100}
+  m_AnchoredPosition: {x: -2, y: 47.52}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1643727833
@@ -1473,7 +1473,7 @@ RectTransform:
   m_GameObject: {fileID: 2077602013}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3.5805838, y: 3.5805838, z: 3.5805838}
+  m_LocalScale: {x: 1.7449617, y: 1.7449617, z: 1.7449617}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 391960754}
@@ -1481,7 +1481,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 633, y: -442}
+  m_AnchoredPosition: {x: 330.78, y: -216.62}
   m_SizeDelta: {x: 157.97, y: 32.019}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2077602015
