@@ -4,7 +4,7 @@ Shader "Hidden/SlideLinesShader"
     {
         _MainTex ("Texture", 2D) = "white" {}
 		_Frequency("Size", float) = 1.0
-		_Speed("Horizontal Location", float) = 1.0
+		_Speed("Speed", float) = 1.0
         _RadiansCounterClockwise("Radians Counter Clockwise", float) = 0.0
 		_TrippyMode("Trippy Mode", Integer) = 0
     }
