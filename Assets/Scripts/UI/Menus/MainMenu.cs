@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour
 {
@@ -8,6 +10,7 @@ public class MainMenu : MonoBehaviour
     public GameObject gameModes;
     public GameObject instructions;
     public GameObject settings;
+    public TMP_InputField seedInput;
 
     // Start is called before the first frame update
     void Start()
@@ -43,5 +46,16 @@ public class MainMenu : MonoBehaviour
         gameModes.SetActive(false);
         instructions.SetActive(false);
         settings.SetActive(false);
+    }
+
+    public void SetSeed()
+    {
+        int seed;
+        if (int.TryParse(seedInput.text, out seed))
+        {
+            Debug.Log("setting seed");
+            Debug.Log(seed);
+            Random.InitState(seed);
+        }
     }
 }
