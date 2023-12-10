@@ -8,7 +8,8 @@ public class CameraShaderRandomizer : MonoBehaviour
     {
         typeof(ColorInvertLens),
         typeof(ColorStepper),
-        typeof(FishEyeLens)
+        typeof(FishEyeLens),
+        typeof(SlideLinesLens)
     };
 
     private List<Type> hardShaders = new List<Type>
@@ -25,7 +26,8 @@ public class CameraShaderRandomizer : MonoBehaviour
         typeof(ColorStepper),
         typeof(FishEyeLens),
         typeof(DarkSpotLens),
-        typeof(FlipLens)
+        typeof(FlipLens),
+        typeof(SlideLinesLens)
     };
 
     private RoomModifiers modifiers;
@@ -134,6 +136,15 @@ public class CameraShaderRandomizer : MonoBehaviour
             FlipLens flipLens = shader as FlipLens;
             flipLens.m_flipHorizontally = UnityEngine.Random.Range(0, 2) == 1;
             flipLens.m_flipVertically = UnityEngine.Random.Range(0, 2) == 1;
+        }
+
+        else if (shader is SlideLinesLens)
+        {
+            SlideLinesLens slideLines = shader as SlideLinesLens;
+            slideLines.m_frequency = UnityEngine.Random.Range(0.1f, 5.0f);
+            slideLines.m_speed = UnityEngine.Random.Range(0.1f, 5.0f);
+            slideLines.m_angleDegreesCounterClockwise = UnityEngine.Random.Range(0.0f, 360.0f);
+            slideLines.m_trippyMode = UnityEngine.Random.Range(0, 2) == 1;
         }
 
         shader.ApplyShaderVariables();
