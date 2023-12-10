@@ -14,6 +14,7 @@ public class SceneControl : MonoBehaviour
 
     public void StartGame()
     {
+        Debug.Log("loading scene");
         SceneManager.LoadScene("Main");
     }
 
