@@ -140,7 +140,12 @@ public class CameraShaderRandomizer : MonoBehaviour
 
     public GameObject getCurrentCamera()
     {
-        return CameraViewer.Instance.GetCurrentCamera().gameObject;
+        if (CameraViewer.Instance.GetCurrentCamera() is not null)
+        {
+            return CameraViewer.Instance.GetCurrentCamera().gameObject;
+        }
+
+        return null;
     }
 
     public void applyRandomShader(GameObject camera = null)
@@ -148,6 +153,10 @@ public class CameraShaderRandomizer : MonoBehaviour
         if (camera == null)
         {
             camera = getCurrentCamera();
+            if (camera == null)
+            {
+                return;
+            }
         }
 
         Type chosenShader = allShaders[UnityEngine.Random.Range(0, allShaders.Count)];
