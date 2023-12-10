@@ -5,6 +5,7 @@ using UnityEngine;
 public class MainMenu : MonoBehaviour
 {
     public GameObject mainMenu;
+    public GameObject gameModes;
     public GameObject instructions;
     public GameObject settings;
 
@@ -12,9 +13,16 @@ public class MainMenu : MonoBehaviour
     void Start()
     {
         mainMenu.SetActive(true);
+        gameModes.SetActive(false);
         instructions.SetActive(false);
         settings.SetActive(false);
         settings.GetComponent<SettingsScript>().SetVolumeSettings();
+    }
+
+    public void OpenGameModes()
+    {
+        mainMenu.SetActive(false);
+        gameModes.SetActive(true);
     }
 
     public void OpenInstructions()
@@ -32,6 +40,7 @@ public class MainMenu : MonoBehaviour
     public void ReturnToMainMenu()
     {
         mainMenu.SetActive(true);
+        gameModes.SetActive(false);
         instructions.SetActive(false);
         settings.SetActive(false);
     }

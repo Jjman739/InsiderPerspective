@@ -26,6 +26,12 @@ namespace Enumerations
         LEET
     }
 
+    public enum GameMode
+    {
+        NORMAL,
+        SURVIVAL
+    }
+
     public enum TrapType
     {
         SHOCK,
