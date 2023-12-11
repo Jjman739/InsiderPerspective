@@ -49,12 +49,13 @@ Shader "Hidden/DarkSpotShader"
             fixed4 frag (v2f i) : SV_Target
             {                
                 fixed4 col = tex2D(_MainTex, i.uv);
-                fixed2 pos = i.uv.xy * 2.0 - 1.0;
-                pos.xy += fixed2(-1.0 * _HorizontalLocation, -1.0 * _VerticalLocation);
-                pos.x = pos.x * _ScreenParams.x / _ScreenParams.y;
-                float d = length(pos) - _Size;
-                
-                col.rgb *= smoothstep(0.0f, 0.4f, d + 0.5);
+                float2 xy = (2.0 * i.uv - 1.0) - float2(_HorizontalLocation, _VerticalLocation);
+                float d = length(xy);
+
+                if (d <= _Size)
+                {
+                    return fixed4(0.0f, 0.0f, 0.0f, col.w);
+                }
 
                 return col;
             }

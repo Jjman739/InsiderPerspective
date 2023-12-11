@@ -4265,7 +4265,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1236457500}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2665befcfde4a4b40be6b32b2654c19d, type: 3}
+  m_Script: {fileID: 11500000, guid: a264014648968ad4bb651236e8e99476, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   gameMode: 0
@@ -9969,13 +9969,6 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 0c971987e2d1c5f4db231765b27ac896, type: 2}
-    - target: {fileID: 2031962301863968164, guid: 3278d896a16b67f4ea35fbbdac2813ec, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2031962301863968164, guid: 3278d896a16b67f4ea35fbbdac2813ec, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -6
     - target: {fileID: 2021772530546158542, guid: 3278d896a16b67f4ea35fbbdac2813ec, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
@@ -11960,13 +11953,6 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6559121502136445020, guid: 3278d896a16b67f4ea35fbbdac2813ec, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.0186
-      objectReference: {fileID: 0}
-    - target: {fileID: 6559121502136445020, guid: 3278d896a16b67f4ea35fbbdac2813ec, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.0356
     - target: {fileID: 6529719500981048850, guid: 3278d896a16b67f4ea35fbbdac2813ec, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0

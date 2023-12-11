@@ -8,16 +8,14 @@ public class CameraShaderRandomizer : MonoBehaviour
     {
         typeof(ColorInvertLens),
         typeof(ColorStepper),
-        typeof(FishEyeLens),
-        typeof(SlideLinesLens)
+        typeof(FishEyeLens)
     };
 
     private List<Type> hardShaders = new List<Type>
     {
         typeof(BlurLens),
         typeof(DarkSpotLens),
-        typeof(FlipLens),
-        typeof(TVStaticLens)
+        typeof(FlipLens)
     };
 
     private List<Type> allShaders = new List<Type>
@@ -27,12 +25,11 @@ public class CameraShaderRandomizer : MonoBehaviour
         typeof(ColorStepper),
         typeof(FishEyeLens),
         typeof(DarkSpotLens),
-        typeof(FlipLens),
-        typeof(SlideLinesLens),
-        typeof(TVStaticLens)
+        typeof(FlipLens)
     };
 
     private RoomModifiers modifiers;
+    [SerializeField] private AttachCamera attachCamera;
 
     public void Start()
     {
@@ -139,34 +136,13 @@ public class CameraShaderRandomizer : MonoBehaviour
             flipLens.m_flipVertically = UnityEngine.Random.Range(0, 2) == 1;
         }
 
-        else if (shader is SlideLinesLens)
-        {
-            SlideLinesLens slideLines = shader as SlideLinesLens;
-            slideLines.m_frequency = UnityEngine.Random.Range(0.1f, 5.0f);
-            slideLines.m_speed = UnityEngine.Random.Range(0.1f, 5.0f);
-            slideLines.m_angleDegreesCounterClockwise = UnityEngine.Random.Range(0.0f, 360.0f);
-            slideLines.m_trippyMode = UnityEngine.Random.Range(0, 2) == 1;
-        }
-
-        else if (shader is TVStaticLens)
-        {
-            TVStaticLens tvStaticLens = shader as TVStaticLens;
-            tvStaticLens.m_blackPixelChance = UnityEngine.Random.Range(0.5f, 0.95f);
-            tvStaticLens.m_opacity = UnityEngine.Random.Range(0.6f, 0.95f);
-            tvStaticLens.m_colorMode = UnityEngine.Random.Range(0, 2) == 1;
-        }
-
         shader.ApplyShaderVariables();
     }
 
     public GameObject getCurrentCamera()
     {
-        if (CameraViewer.Instance.GetCurrentCamera() is not null)
-        {
-            return CameraViewer.Instance.GetCurrentCamera().gameObject;
-        }
-
-        return null;
+        GameObject cam = attachCamera.GetAttachedCamera().gameObject;
+        return cam;
     }
 
     public void applyRandomShader(GameObject camera = null)
@@ -174,10 +150,6 @@ public class CameraShaderRandomizer : MonoBehaviour
         if (camera == null)
         {
             camera = getCurrentCamera();
-            if (camera == null)
-            {
-                return;
-            }
         }
 
         Type chosenShader = allShaders[UnityEngine.Random.Range(0, allShaders.Count)];
@@ -186,8 +158,12 @@ public class CameraShaderRandomizer : MonoBehaviour
         {
             Debug.Log("adding component to " + camera.name);
             camera.AddComponent(chosenShader);
+            randomizeShaderValues(camera.GetComponent(chosenShader) as ShaderBase);
         }
+    }
 
-        randomizeShaderValues(camera.GetComponent(chosenShader) as ShaderBase);
+    public void SetAttachCamera(AttachCamera ac)
+    {
+        attachCamera = ac;
     }
 }

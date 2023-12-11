@@ -19,6 +19,12 @@ public class AttachCamera : MonoBehaviour
         monitor.GetComponent<MeshRenderer>().materials[0].SetTexture("_MainTex", texture);
         attachedCamera.targetTexture = texture;
 
+        CameraShaderRandomizer csr = attachedCamera.transform.parent.GetComponent<CameraShaderRandomizer>();
+        if (csr != null)
+        {
+            csr.SetAttachCamera(this);
+        }
+
         RenderFrame();
     }
 

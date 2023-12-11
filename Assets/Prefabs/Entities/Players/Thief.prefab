@@ -664,6 +664,7 @@ MonoBehaviour:
   leftButton: ThiefMoveLeft
   rightButton: ThiefMoveRight
   jumpButton: Jump
+  stunTimer: 0
 --- !u!114 &988405178396776603
 MonoBehaviour:
   m_ObjectHideFlags: 0
