@@ -12,13 +12,13 @@ public abstract class RoomModifiers : MonoBehaviour
     private void Awake()
     {
         // this sucks so fucking hard, anyone who does this (me) should be gunned down by every military organization on the planet
-        if (GameModeManager.Instance is null)
+        if (GameManager.Instance is null)
         {
-            difficulty = FindObjectOfType<GameModeManager>().GetCurrentDifficulty();
+            difficulty = FindObjectOfType<GameManager>().GetCurrentDifficulty();
         }
         else
         {
-            difficulty = GameModeManager.Instance.GetCurrentDifficulty();
+            difficulty = GameManager.Instance.GetCurrentDifficulty();
         }
 
         calculateAvailablePoints();

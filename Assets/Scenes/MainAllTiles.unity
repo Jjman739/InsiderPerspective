@@ -1146,14 +1146,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameStart: {fileID: 8300000, guid: 8c69f8e29abed6c4ea9721a01995d336, type: 3}
-  viewLaptop: {fileID: 8300000, guid: 40ca6fd126390af4fb0043a107cb249f, type: 3}
-  viewMonitor: {fileID: 8300000, guid: 93168b3865a12c44195cd16ab5117805, type: 3}
-  viewFishEyeMonitor: {fileID: 8300000, guid: 2661a382cfa548840913f91588f7b9f8, type: 3}
-  guardTileRoom: {fileID: 8300000, guid: 53344801511865a45bb445ea46b38397, type: 3}
-  shockTileRoom: {fileID: 8300000, guid: acba687c335fdfc4cbdd07913ff2ccaf, type: 3}
-  shockRobot: {fileID: 8300000, guid: 6bec95eae56717e4cb8b4544cc14124e, type: 3}
-  platformerRoom: {fileID: 8300000, guid: 912d55089bf2e16438d53822ffbdf2d7, type: 3}
-  gameEnd: {fileID: 8300000, guid: dbb9848458a40c74eb10112c8e8072ab, type: 3}
+  moveRobot: {fileID: 0}
+  viewStartRoom: {fileID: 0}
+  viewHallway: {fileID: 0}
+  viewTileRoom: {fileID: 0}
+  viewPlatformerRoom: {fileID: 0}
+  trapShock: {fileID: 0}
+  trapGuard: {fileID: 0}
+  trapCamera: {fileID: 0}
+  repairKit: {fileID: 0}
+  relic: {fileID: 0}
+  allRelics: {fileID: 0}
+  gameEndLose: {fileID: 0}
+  gameEndWin: {fileID: 0}
   skipDialogueText: {fileID: 191177198}
 --- !u!1 &382787177
 GameObject:
@@ -7137,6 +7142,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: 14.76001
       objectReference: {fileID: 0}
+    - target: {fileID: 4333789784339558813, guid: 28d58d5839fc0be4a85526eb4c61eca5, type: 3}
+      propertyPath: guardCam
+      value: 
+      objectReference: {fileID: 1251304040}
     - target: {fileID: 4341934397154879676, guid: 28d58d5839fc0be4a85526eb4c61eca5, type: 3}
       propertyPath: m_LocalScale.x
       value: 7.9051948

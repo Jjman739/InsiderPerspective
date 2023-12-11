@@ -13,7 +13,7 @@ public class ThiefHitEffects : MonoBehaviour
     public void TakeHit()
     {
         hitTimeRemaining = 1f;
-        cameraTurnSpeed = Random.Range(1080f, 1440f);
+        cameraTurnSpeed = GameManager.RNG.Next(1080, 1440);
         foreach (GameObject effect in zapEffects)
         {
             effect.SetActive(true);

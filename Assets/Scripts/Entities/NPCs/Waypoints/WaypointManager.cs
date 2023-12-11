@@ -43,7 +43,7 @@ public class WaypointManager : Singleton<WaypointManager>
     public BaseWaypoint GetNextWaypoint(BaseWaypoint currentWaypoint)
     {
         if (currentWaypoint is null)
-            return waypointParent.GetChild(Random.Range(0,waypointParent.childCount)).GetComponent<WaypointInfo>();
+            return waypointParent.GetChild(GameManager.RNG.Next(0,waypointParent.childCount)).GetComponent<WaypointInfo>();
 
         if (currentWaypoint is DoorpointInfo)
         {
@@ -52,7 +52,7 @@ public class WaypointManager : Singleton<WaypointManager>
 
         List<BaseWaypoint> possibleWaypoints = (currentWaypoint as WaypointInfo).GetConnectedWaypoints();
 
-        return possibleWaypoints[Random.Range(0,possibleWaypoints.Count)];
+        return possibleWaypoints[GameManager.RNG.Next(0,possibleWaypoints.Count)];
     }
 
     public WaypointInfo GetNextWaypointWithOverride(BaseWaypoint waypoint, WaypointInfo target)
