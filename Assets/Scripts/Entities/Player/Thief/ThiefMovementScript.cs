@@ -148,6 +148,7 @@ public class ThiefMovementScript : MonoBehaviour
             if (chargeTimer > 0)
             {
                 chargeTimer -= Time.deltaTime;
+                chargeMeter.value = chargeTimer;
             }
             else
             {
