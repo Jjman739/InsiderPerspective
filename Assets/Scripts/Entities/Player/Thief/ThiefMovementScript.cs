@@ -29,6 +29,7 @@ public class ThiefMovementScript : MonoBehaviour
     [SerializeField] private float alertTimer = 0.5f;
     [SerializeField] private float alertDecayScalar = 0.5f;
     [SerializeField] private Slider alertMeter;
+    [SerializeField] private Slider chargeMeter;
     [SerializeField] private AudioClip robotJump;
     [SerializeField] private AudioClip robotWalk;
     [SerializeField] private ParticleSystem jumpEffect;

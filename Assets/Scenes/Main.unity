@@ -371,6 +371,10 @@ PrefabInstance:
       propertyPath: jumpEffect
       value: 
       objectReference: {fileID: 1874687520}
+    - target: {fileID: -7040398787914363862, guid: 7604196884fb4ff41b12b946132a92fe, type: 3}
+      propertyPath: chargeMeter
+      value: 
+      objectReference: {fileID: 844278460}
     - target: {fileID: 73963052499264772, guid: 7604196884fb4ff41b12b946132a92fe, type: 3}
       propertyPath: OutputAudioMixerGroup
       value: 
@@ -3057,6 +3061,17 @@ RectTransform:
 --- !u!114 &844278459 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7272848552841135690, guid: e6e69a227d581034ab7d74cb03a83ab5, type: 3}
+  m_PrefabInstance: {fileID: 844278457}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &844278460 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3006511614364607027, guid: e6e69a227d581034ab7d74cb03a83ab5, type: 3}
   m_PrefabInstance: {fileID: 844278457}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
