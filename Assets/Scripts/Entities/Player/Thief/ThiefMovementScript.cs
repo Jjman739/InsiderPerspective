@@ -15,7 +15,8 @@ public class ThiefMovementScript : MonoBehaviour
     private float currentAlertTimer;
     private int lineOfSightCount;
 
-    private float chargeTimer = 60;
+    public float maxChargeTimer = 60;
+    public float chargeTimer = 60;
 
     private float jumpTimer;
     private float jumpSpeed;
@@ -25,7 +26,6 @@ public class ThiefMovementScript : MonoBehaviour
     [SerializeField] private float turnSpeed = 5f;
     [SerializeField] private float jumpHeight = .5f;
     [SerializeField] private float gravity = -10f;
-    [SerializeField] private int charge = 5;
     [SerializeField] private float alertTimer = 0.5f;
     [SerializeField] private float alertDecayScalar = 0.5f;
     [SerializeField] private Slider alertMeter;
@@ -142,17 +142,11 @@ public class ThiefMovementScript : MonoBehaviour
 
         alertMeter.value = alertTimer - currentAlertTimer;
 
-        //timer to reduce charge
-        if (chargeTimer > 0)
+        if (GameManager.Instance.GetCurrentGameMode() == GameMode.SURVIVAL)
         {
-            chargeTimer -= Time.deltaTime;
-        }
-        else
-        {
-            chargeTimer = 60;
-            if(chargeTimer > 1)
+            if (chargeTimer > 0)
             {
-                charge -= 1;
+                chargeTimer -= Time.deltaTime;
             }
             else
             {

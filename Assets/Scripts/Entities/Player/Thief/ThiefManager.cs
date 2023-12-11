@@ -62,6 +62,12 @@ public class ThiefManager : MonoBehaviour
 
     public void Repair()
     {
+        if (GameManager.Instance.GetCurrentGameMode() == GameMode.SURVIVAL)
+        {
+            movement.chargeTimer = movement.maxChargeTimer;
+            return;
+        }
+
         hitEffects.Repair();
 
         movement.forwardButton = "ThiefMoveUp";
