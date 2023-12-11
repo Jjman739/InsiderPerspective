@@ -10537,6 +10537,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 0c971987e2d1c5f4db231765b27ac896, type: 2}
+    - target: {fileID: 2856671502639885811, guid: 3278d896a16b67f4ea35fbbdac2813ec, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 9.308
+      objectReference: {fileID: 0}
     - target: {fileID: 2868493788311166041, guid: 3278d896a16b67f4ea35fbbdac2813ec, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
@@ -13339,6 +13343,7 @@ PrefabInstance:
     - {fileID: 1350000200709338617, guid: 3278d896a16b67f4ea35fbbdac2813ec, type: 3}
     - {fileID: 3978578195760999546, guid: 3278d896a16b67f4ea35fbbdac2813ec, type: 3}
     - {fileID: 2349387471538441360, guid: 3278d896a16b67f4ea35fbbdac2813ec, type: 3}
+    - {fileID: 3662913324816800453, guid: 3278d896a16b67f4ea35fbbdac2813ec, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 9107001984964667295, guid: 3278d896a16b67f4ea35fbbdac2813ec, type: 3}
       insertIndex: 6
