@@ -6,14 +6,29 @@ public class ThiefHitEffects : MonoBehaviour
 {
     [SerializeField] private List<GameObject> cameraTurners;
     [SerializeField] private List<GameObject> zapEffects;
+    [SerializeField] private float pitchExtent = 20;
+    [SerializeField] private float pitchCenter = 0;
+    [SerializeField] private float rollExtent = 40;
+    [SerializeField] private float rollCenter = 0;
 
     private float hitTimeRemaining = 0;
     private float cameraTurnSpeed;
+    private float pitchSpeed;
+    private float rollSpeed;
+    private float pitchTimer;
+    private float rollTimer;
 
     public void TakeHit()
     {
         hitTimeRemaining = 1f;
         cameraTurnSpeed = GameManager.RNG.Next(1080, 1440);
+        pitchSpeed = 0.01f * GameManager.RNG.Next(500, 2000);
+        rollSpeed = 0.01f * GameManager.RNG.Next(500, 2000);
+
+        GameObject sampleTurner = cameraTurners[0];
+        pitchTimer = Mathf.Asin(sampleTurner.transform.rotation.eulerAngles.x);
+        rollTimer = Mathf.Asin(sampleTurner.transform.rotation.eulerAngles.z);
+
         foreach (GameObject effect in zapEffects)
         {
             effect.SetActive(true);
