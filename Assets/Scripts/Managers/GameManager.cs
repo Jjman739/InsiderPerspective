@@ -6,7 +6,7 @@ public class GameManager : Singleton<GameManager>
     [SerializeField] private GameMode gameMode;
     [SerializeField] private RoomDifficulty difficulty;
     private float mouseSensitivity;
-    public static System.Random RNG = new System.Random();
+        public static System.Random RNG = new System.Random();
 
     public GameMode GetCurrentGameMode() { return gameMode; }
     public RoomDifficulty GetCurrentDifficulty() { return difficulty; }
