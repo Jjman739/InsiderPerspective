@@ -26,8 +26,8 @@ public class ThiefHitEffects : MonoBehaviour
         rollSpeed = 0.01f * GameManager.RNG.Next(500, 2000);
 
         GameObject sampleTurner = cameraTurners[0];
-        pitchTimer = Mathf.Asin(sampleTurner.transform.rotation.eulerAngles.x);
-        rollTimer = Mathf.Asin(sampleTurner.transform.rotation.eulerAngles.z);
+        pitchTimer = Mathf.Asin((sampleTurner.transform.rotation.eulerAngles.x / pitchExtent) - pitchCenter);
+        rollTimer = Mathf.Asin((sampleTurner.transform.rotation.eulerAngles.z / rollExtent) - rollCenter);
 
         foreach (GameObject effect in zapEffects)
         {
@@ -56,13 +56,17 @@ public class ThiefHitEffects : MonoBehaviour
             HitEnd();
         } else
         {
+            pitchTimer += Time.deltaTime * pitchSpeed;
+            rollTimer += Time.deltaTime * rollSpeed;
+            float newPitch = pitchCenter + (pitchExtent * Mathf.Sin(pitchTimer));
+            float newRoll = rollCenter + (rollExtent * Mathf.Sin(rollTimer));
             foreach (GameObject camera in cameraTurners)
             {
                 Quaternion rotation = camera.transform.localRotation;
                 rotation.eulerAngles = new Vector3(
-                    rotation.eulerAngles.x,
+                    newPitch,
                     rotation.eulerAngles.y + (cameraTurnSpeed * Time.deltaTime),
-                    rotation.eulerAngles.z);
+                    newRoll);
                 camera.transform.localRotation = rotation;
             }
             cameraTurnSpeed -= 900f * Time.deltaTime;
