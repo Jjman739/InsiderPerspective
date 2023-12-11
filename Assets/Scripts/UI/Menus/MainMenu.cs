@@ -8,6 +8,8 @@ public class MainMenu : MonoBehaviour
     public GameObject gameModes;
     public GameObject instructions;
     public GameObject settings;
+    public Camera menuCam;
+    public Camera roomCam;
 
     // Start is called before the first frame update
     void Start()
