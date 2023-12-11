@@ -15,8 +15,8 @@ public class ThiefHitEffects : MonoBehaviour
     private float cameraTurnSpeed;
     private float pitchSpeed;
     private float rollSpeed;
-    private float pitchTimer;
-    private float rollTimer;
+    private float pitchTimer = 0;
+    private float rollTimer = 0;
 
     public void TakeHit()
     {
@@ -26,8 +26,6 @@ public class ThiefHitEffects : MonoBehaviour
         rollSpeed = 0.01f * GameManager.RNG.Next(500, 2000);
 
         GameObject sampleTurner = cameraTurners[0];
-        pitchTimer = Mathf.Asin((sampleTurner.transform.rotation.eulerAngles.x / pitchExtent) - pitchCenter);
-        rollTimer = Mathf.Asin((sampleTurner.transform.rotation.eulerAngles.z / rollExtent) - rollCenter);
 
         foreach (GameObject effect in zapEffects)
         {
