@@ -91,7 +91,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 0db97add6ade64348b765299af4ff1bf, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 18f5d6cf96f720f43ab1b4369574c671, type: 2}
+      objectReference: {fileID: 2100000, guid: 585bed7d6d39c6840892751a0e829978, type: 2}
     - target: {fileID: 919132149155446097, guid: 0db97add6ade64348b765299af4ff1bf, type: 3}
       propertyPath: m_Name
       value: ModernExteriorLight_UV
@@ -99,8 +99,37 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0db97add6ade64348b765299af4ff1bf, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3863603813345158632}
   m_SourcePrefab: {fileID: 100100000, guid: 0db97add6ade64348b765299af4ff1bf, type: 3}
+--- !u!1 &7359365814318823731 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 0db97add6ade64348b765299af4ff1bf, type: 3}
+  m_PrefabInstance: {fileID: 7701386150902842466}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &3863603813345158632
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7359365814318823731}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 942.4615, y: 1293.6206, z: 1173.8569}
+  m_Center: {x: -0.00012207031, y: 0, z: 0.000030517578}
 --- !u!4 &7884229116689392521 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0db97add6ade64348b765299af4ff1bf, type: 3}
