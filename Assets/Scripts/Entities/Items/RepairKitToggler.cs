@@ -20,7 +20,9 @@ public class RepairKitToggler : MonoBehaviour
 
         List<GameObject> repairKitsShuffled = repairKits.OrderBy( x => Random.value ).ToList();
 
-        for (int i = 0; i < disabledRepairKits; i++)
+		int kitsToHide = Mathf.Min(disabledRepairKits, repairKitsShuffled.Count);
+
+        for (int i = 0; i < kitsToHide; i++)
         {
             repairKitsShuffled[i].gameObject.SetActive(false);
         }
